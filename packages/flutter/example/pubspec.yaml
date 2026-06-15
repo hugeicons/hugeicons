@@ -1,0 +1,13 @@
+name: example
+description: A new Flutter project to demonstrate the usage of hugeicons.
+
+publish_to: 'none' # This ensures the example app won't be published to pub.dev
+
+environment:
+  sdk: ">=2.12.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  hugeicons:
+    path: ../

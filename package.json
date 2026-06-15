@@ -1,0 +1,22 @@
+{
+  "name": "hugeicons",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Official Hugeicons libraries for React, Vue, Svelte, Angular, React Native, Flutter, and more.",
+  "homepage": "https://hugeicons.com",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hugeicons/hugeicons.git"
+  },
+  "license": "MIT",
+  "packageManager": "pnpm@10.30.0",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "build": "pnpm -r run build",
+    "typecheck": "pnpm -r run typecheck",
+    "test": "pnpm -r run test",
+    "clean": "pnpm -r run clean"
+  }
+}

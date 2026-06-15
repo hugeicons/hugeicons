@@ -1,0 +1,70 @@
+{
+  "name": "@hugeicons/react-native",
+  "version": "1.0.13",
+  "description": "Hugeicons React Native Component Library https://hugeicons.com",
+  "homepage": "https://hugeicons.com",
+  "license": "MIT",
+  "amdName": "hugeicons-pro-react-native",
+  "main": "./dist/cjs/index.js",
+  "module": "./dist/esm/index.js",
+  "types": "./dist/types/index.d.ts",
+  "sideEffects": false,
+  "files": [
+    "dist",
+    "CHANGELOG.md",
+    "LICENSE.md",
+    "PRO-LICENSE.md",
+    "README.md"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hugeicons/react-native.git"
+  },
+  "bugs": {
+    "url": "https://github.com/hugeicons/react-native/issues"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/types/index.d.ts",
+      "import": "./dist/esm/index.js",
+      "require": "./dist/cjs/index.js"
+    }
+  },
+  "author": "Hugeicons",
+  "scripts": {
+    "build": "pnpm clean && pnpm typecheck && pnpm build:bundles",
+    "build:bundles": "rollup -c ./rollup.config.mjs",
+    "typecheck": "tsc",
+    "clean": "rm -rf dist",
+    "publish:beta": "pnpm build && npm publish --tag beta --no-git-checks",
+    "publish:prod": "pnpm build && npm publish --no-git-checks"
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^25.0.0",
+    "@rollup/plugin-node-resolve": "^15.0.0",
+    "@rollup/plugin-terser": "^0.4.0",
+    "@rollup/plugin-typescript": "^11.0.0",
+    "@types/react": "^18.0.0",
+    "@types/react-native": "^0.72.0",
+    "rollup": "^3.0.0",
+    "rollup-plugin-dts": "^5.0.0",
+    "tslib": "^2.6.0",
+    "typescript": "^5.0.0"
+  },
+  "peerDependencies": {
+    "react": ">=16.0.0",
+    "react-native": ">=0.60.0",
+    "react-native-svg": ">=12.0.0"
+  },
+  "keywords": [
+    "hugeicons",
+    "react-native",
+    "icons",
+    "react-native-icons",
+    "svg-icons",
+    "svg",
+    "vector-icons",
+    "icon-library",
+    "typescript"
+  ]
+}

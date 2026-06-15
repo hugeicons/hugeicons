@@ -1,0 +1,10 @@
+# Exclude files and directories from being published to pub.dev
+.dart_tool/
+.idea/
+.git/
+build/
+.DS_Store
+*.iml
+
+# Don't exclude the font files
+!lib/fonts/ 

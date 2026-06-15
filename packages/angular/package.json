@@ -1,0 +1,61 @@
+{
+  "name": "@hugeicons/angular",
+  "version": "1.0.7",
+  "description": "Hugeicons Angular Component Library https://hugeicons.com",
+  "homepage": "https://hugeicons.com",
+  "license": "MIT",
+  "type": "module",
+  "main": "./dist/bundles/hugeicons-angular.umd.js",
+  "module": "./dist/fesm2022/hugeicons-angular.mjs",
+  "typings": "./dist/index.d.ts",
+  "sideEffects": false,
+  "files": [
+    "dist",
+    "CHANGELOG.md",
+    "LICENSE.md",
+    "PRO-LICENSE.md",
+    "README.md"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hugeicons/angular.git"
+  },
+  "bugs": {
+    "url": "https://github.com/hugeicons/angular/issues"
+  },
+  "author": "Hugeicons",
+  "scripts": {
+    "build": "pnpm clean && ng-packagr -p ng-package.json",
+    "clean": "rm -rf dist",
+    "test": "ng test",
+    "publish:beta": "pnpm build && npm publish --tag beta --no-git-checks",
+    "publish:prod": "pnpm build && npm publish --no-git-checks"
+  },
+  "dependencies": {
+    "tslib": "^2.6.0"
+  },
+  "peerDependencies": {
+    "@angular/common": ">=17.1.0 <21.0.0",
+    "@angular/core": ">=17.1.0 <21.0.0"
+  },
+  "devDependencies": {
+    "@angular/common": "^17.0.0",
+    "@angular/compiler": "^17.0.0",
+    "@angular/compiler-cli": "^17.0.0",
+    "@angular/core": "^17.0.0",
+    "@angular-devkit/build-angular": "^17.0.0",
+    "ng-packagr": "^17.0.0",
+    "typescript": "~5.2.0"
+  },
+  "keywords": [
+    "hugeicons",
+    "angular",
+    "icons",
+    "angular-icons",
+    "svg-icons",
+    "svg",
+    "vector-icons",
+    "icon-library",
+    "typescript"
+  ]
+}

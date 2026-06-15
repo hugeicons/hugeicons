@@ -1,0 +1,133 @@
+#hugeicons-pro-icons-modal {
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+#hugeicons-icon-browser-app {
+    height: 100%;
+}
+
+@media (prefers-color-scheme: dark) {
+    .hugeicons-icons-list__content img {
+        filter: contrast(0) brightness(0) saturate(100%) grayscale(100%) invert(100%);
+    }
+}
+
+.hugeicons-icons-list {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow-y: auto;
+}
+
+.hugeicons-icons-list__sidebar {
+    flex: 0 0 200px;
+    padding-right: 10px;
+    border-right: 1px solid var(--e-a-border-color);
+    height: 100%;
+    text-align: left;
+    overflow-y: auto;
+}
+
+.hugeicons-icons-list__sidebar a.hugeicons-icons-list__sidebar__category {
+    cursor: pointer;
+    color: var(--e-a-color-txt);
+    text-decoration: none;
+    font-size: 12px;
+    padding-left: 10px;
+    padding-right: 10px;
+    height: 31px;
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+    border-radius: 3px;
+    border: none !important;
+}
+
+.hugeicons-icons-list__sidebar a.hugeicons-icons-list__sidebar__category:hover,
+.hugeicons-icons-list__sidebar__category--selected {
+    background-color: var(--e-a-bg-hover);
+}
+
+.hugeicons-icons-list__content {
+    flex: 1;
+}
+
+.hugeicons-icons-list__content__filter {
+    display: flex;
+    align-items: center;
+    padding: 0 10px 15px 10px;
+    border-bottom: 1px solid var(--e-a-border-color);
+}
+
+.hugeicons-icons-list__content__filter__search {
+    background-color: var(--e-a-bg-hover);
+    color: white;
+    border: 1px solid var(--e-a-bg-active);
+    border-radius: 3px;
+    padding: 5px;
+    font-size: 14px;
+    margin-right: 10px;
+    flex: 1;
+}
+
+.hugeicons-icons-list__content__filter__search input {
+    background-color: transparent;
+    color: white;
+    border: none;
+    outline: none;
+    font-size: 14px;
+    width: 100%;
+}
+
+.hugeicons-icons-list__content__filter__style select {
+    background-color: var(--e-a-bg-hover);
+    color: var(--e-a-color-txt);
+    border: 1px solid var(--e-a-bg-active);
+    border-radius: 3px;
+    padding: 5px;
+    font-size: 14px;
+    margin-right: 10px;
+    width: 200px;
+    height: 38px;
+}
+
+.hugeicons-icon {
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    border: 1px solid var(--e-a-border-color);
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    margin-bottom: 10px;
+    aspect-ratio: 1 / 1;
+}
+
+.hugeicons-icon--selected {
+    border-color: var(--e-a-border-color-bold);
+    background-color: var(--e-a-bg-active);
+}
+
+.hugeicons-icon__image {
+    width: 28px;
+    height: 28px;
+}
+
+.hugeicons-icon__name {
+    text-align: center;
+    font-size: 11px;
+    color: var(--e-a-color-txt-muted);
+}
+
+#hugeicons__selected-icon-svg {
+    visibility: hidden;
+    position: absolute;
+    top: -1000px;
+    left: -1000px;
+}

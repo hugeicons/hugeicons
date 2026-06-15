@@ -1,0 +1,73 @@
+{
+  "name": "@hugeicons/svelte",
+  "version": "1.1.2",
+  "description": "Hugeicons Svelte Component Library https://hugeicons.com",
+  "homepage": "https://hugeicons.com",
+  "license": "MIT",
+  "type": "module",
+  "main": "./dist/index.umd.js",
+  "module": "./dist/index.es.js",
+  "types": "./dist/index.d.ts",
+  "svelte": "./dist/index.js",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "svelte": "./dist/index.js",
+      "import": "./dist/index.js",
+      "require": "./dist/index.umd.js"
+    }
+  },
+  "sideEffects": false,
+  "files": [
+    "dist",
+    "scripts",
+    "CHANGELOG.md",
+    "LICENSE.md",
+    "PRO-LICENSE.md",
+    "README.md"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hugeicons/svelte.git"
+  },
+  "bugs": {
+    "url": "https://github.com/hugeicons/svelte/issues"
+  },
+  "scripts": {
+    "prepare": "svelte-kit sync",                                                                                                                
+    "build": "vite build && pnpm run package",
+    "package": "svelte-kit sync && svelte-package",
+    "check": "svelte-check --tsconfig ./tsconfig.json",
+    "prepublishOnly": "pnpm run build",
+    "postinstall": "node ./scripts/postinstall.cjs",
+    "publish:beta": "pnpm build && npm publish --tag beta --no-git-checks",
+    "publish:prod": "pnpm build && npm publish --no-git-checks"
+  },
+  "peerDependencies": {
+    "svelte": "^5.0.0"
+  },
+  "devDependencies": {
+    "@sveltejs/adapter-auto": "^4.0.0",
+    "@sveltejs/kit": "^2.15.0",
+    "@sveltejs/package": "^2.3.0",
+    "@sveltejs/vite-plugin-svelte": "^5.0.0",
+    "@tsconfig/svelte": "^5.0.4",
+    "svelte": "^5.0.0",
+    "svelte-check": "^4.0.0",
+    "tslib": "^2.8.0",
+    "typescript": "^5.7.0",
+    "vite": "^6.0.0"
+  },
+  "keywords": [
+    "hugeicons",
+    "svelte",
+    "icons",
+    "svelte-icons",
+    "svg-icons",
+    "svg",
+    "vector-icons",
+    "icon-library",
+    "typescript"
+  ],
+  "author": "Hugeicons"
+}

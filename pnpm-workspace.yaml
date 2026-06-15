@@ -1,0 +1,8 @@
+packages:
+  # Icon libraries published to npm under @hugeicons/*
+  - "packages/*"
+  # Developer tooling (e.g. @hugeicons/mcp-server)
+  - "tools/*"
+  # Note: icons/ (raw SVG source of truth), packages/flutter (Dart, pub.dev),
+  # and plugins/elementor (PHP, WordPress) live in this repo but are not pnpm
+  # packages. They have no package.json, so pnpm ignores them automatically.
