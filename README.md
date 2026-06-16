@@ -58,7 +58,7 @@ Pick your framework and install:
 
 ## Plugins
 
-Use Hugeicons directly inside your design and no-code tools:
+Use Hugeicons across your favorite tools and platforms:
 
 | Plugin | Get it |
 | --- | --- |
