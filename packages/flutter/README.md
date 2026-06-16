@@ -1,4 +1,4 @@
-![31c9262e-aeea-4403-9086-3c8b88885cab](https://github.com/hugeicons/hugeicons-react/assets/130147052/ff91f2f0-095a-4c6d-8942-3af4759f9021)
+![31c9262e-aeea-4403-9086-3c8b88885cab](https://raw.githubusercontent.com/hugeicons/hugeicons/main/assets/banner.png)
 
 
 # Free Flutter Icons - Hugeicons
@@ -12,7 +12,7 @@ Trusted by over 150,000 creatives worldwide, Hugeicons makes it easy to add a wi
 You can preview out our full collection of icons on the [Hugeicons website](https://hugeicons.com/icons).
 
 
-![a40aa766-1b04-4a2a-a2e6-0ec3c492b96a](https://github.com/hugeicons/hugeicons-react/assets/130147052/f82c0e0e-60ae-4617-802f-812cdc7a58da)
+![a40aa766-1b04-4a2a-a2e6-0ec3c492b96a](https://raw.githubusercontent.com/hugeicons/hugeicons/main/assets/banner.png)
 
 
 ## Table of Contents

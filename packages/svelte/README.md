@@ -1,4 +1,4 @@
-![Hugeicons Logo](https://raw.githubusercontent.com/hugeicons/react/main/assets/logo.png)
+![Hugeicons Logo](https://raw.githubusercontent.com/hugeicons/hugeicons/main/assets/logo.png)
 
 # @hugeicons/svelte
 
@@ -26,7 +26,7 @@ This package (`@hugeicons/svelte`) is a **rendering library** - it provides the 
 
 > **Looking for Pro Icons?** Check out our docs at [hugeicons.com/docs](https://hugeicons.com/docs) for detailed information about pro icons, styles, and advanced usage.
 
-![Hugeicons Icons](https://raw.githubusercontent.com/hugeicons/react/main/assets/icons.png)
+![Hugeicons Icons](https://raw.githubusercontent.com/hugeicons/hugeicons/main/assets/banner.png)
 
 ## Table of Contents
 - [What is Hugeicons?](#what-is-hugeicons)
