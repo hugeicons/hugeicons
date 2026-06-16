@@ -1,6 +1,6 @@
 {
   "name": "@hugeicons/svelte",
-  "version": "1.1.2",
+  "version": "1.1.3",
   "description": "Hugeicons Svelte Component Library https://hugeicons.com",
   "homepage": "https://hugeicons.com",
   "license": "MIT",
@@ -35,7 +35,7 @@
     "url": "https://github.com/hugeicons/hugeicons/issues"
   },
   "scripts": {
-    "prepare": "svelte-kit sync",                                                                                                                
+    "prepare": "svelte-kit sync",
     "build": "vite build && pnpm run package",
     "package": "svelte-kit sync && svelte-package",
     "check": "svelte-check --tsconfig ./tsconfig.json",
