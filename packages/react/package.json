@@ -20,10 +20,11 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/hugeicons/react.git"
+    "url": "https://github.com/hugeicons/hugeicons.git",
+    "directory": "packages/react"
   },
   "bugs": {
-    "url": "https://github.com/hugeicons/react/issues"
+    "url": "https://github.com/hugeicons/hugeicons/issues"
   },
   "exports": {
     ".": {

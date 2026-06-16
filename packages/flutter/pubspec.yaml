@@ -2,8 +2,8 @@ name: hugeicons
 description: "4,700+ Free Flutter Icons with automatic theme color inheritance and dark mode support. Created by Hugeicons Pro Icon Library. The most beautiful icon library for developers."
 version: 1.1.4
 homepage: https://hugeicons.com
-repository: https://github.com/hugeicons/hugeicons-flutter
-issue_tracker: https://github.com/hugeicons/hugeicons-flutter/issues
+repository: https://github.com/hugeicons/hugeicons/tree/main/packages/flutter
+issue_tracker: https://github.com/hugeicons/hugeicons/issues
 documentation: https://docs.hugeicons.com
 
 environment:

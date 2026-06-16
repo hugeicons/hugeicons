@@ -18,10 +18,11 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/hugeicons/vue.git"
+    "url": "https://github.com/hugeicons/hugeicons.git",
+    "directory": "packages/vue"
   },
   "bugs": {
-    "url": "https://github.com/hugeicons/vue/issues"
+    "url": "https://github.com/hugeicons/hugeicons/issues"
   },
   "exports": {
     ".": {

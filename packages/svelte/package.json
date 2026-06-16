@@ -28,10 +28,11 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/hugeicons/svelte.git"
+    "url": "https://github.com/hugeicons/hugeicons.git",
+    "directory": "packages/svelte"
   },
   "bugs": {
-    "url": "https://github.com/hugeicons/svelte/issues"
+    "url": "https://github.com/hugeicons/hugeicons/issues"
   },
   "scripts": {
     "prepare": "svelte-kit sync",                                                                                                                

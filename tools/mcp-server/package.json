@@ -43,6 +43,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/hugeicons/mcp-server.git"
+    "url": "https://github.com/hugeicons/hugeicons.git",
+    "directory": "tools/mcp-server"
   }
 }
