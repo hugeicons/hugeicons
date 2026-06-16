@@ -41,7 +41,7 @@ Every icon is hand-crafted for consistency, clarity, and balance, so your interf
 
 <br/>
 
-## Use it with your stack
+## Packages
 
 Pick your framework and install:
 
@@ -54,7 +54,25 @@ Pick your framework and install:
 | **React Native** | [`@hugeicons/react-native`](packages/react-native) | [![npm](https://img.shields.io/npm/v/@hugeicons/react-native?style=flat-square&label=)](https://www.npmjs.com/package/@hugeicons/react-native) | `npm i @hugeicons/react-native @hugeicons/core-free-icons react-native-svg` |
 | **Flutter** | [`hugeicons`](packages/flutter) | [![pub](https://img.shields.io/pub/v/hugeicons?style=flat-square&label=)](https://pub.dev/packages/hugeicons) | `flutter pub add hugeicons` |
 
-Also available: a [WordPress / Elementor plugin](plugins/elementor), an [MCP server](tools/mcp-server) for AI assistants, and the [raw SVG source](icons) in `icons/`.
+<br/>
+
+## Plugins
+
+Use Hugeicons directly inside your design and no-code tools:
+
+| Plugin | Get it |
+| --- | --- |
+| **Figma** | [Figma Community](https://www.figma.com/community/plugin/1209922740177393208/hugeicons-pro) |
+| **Framer** | [Framer Marketplace](https://www.framer.com/marketplace/plugins/hugeicons/) |
+| **Webflow** | [Webflow Apps](https://webflow.com/apps/detail/hugeicons) |
+
+<br/>
+
+## Tools
+
+| Tool | Get it |
+| --- | --- |
+| **MCP Server** | [`@hugeicons/mcp-server`](https://www.npmjs.com/package/@hugeicons/mcp-server) · [source](tools/mcp-server) |
 
 <br/>
 
