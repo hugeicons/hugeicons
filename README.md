@@ -65,6 +65,8 @@ Use Hugeicons directly inside your design and no-code tools:
 | **Figma** | [Figma Community](https://www.figma.com/community/plugin/1209922740177393208/hugeicons-pro) |
 | **Framer** | [Framer Marketplace](https://www.framer.com/marketplace/plugins/hugeicons/) |
 | **Webflow** | [Webflow Apps](https://webflow.com/apps/detail/hugeicons) |
+| **WordPress** | [WordPress.org](https://wordpress.org/plugins/hugeicons/) |
+| **Elementor** | [`plugins/elementor`](plugins/elementor) |
 
 <br/>
 
