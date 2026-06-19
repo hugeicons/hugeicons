@@ -1,6 +1,6 @@
 {
   "name": "@hugeicons/angular",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "Hugeicons Angular Component Library https://hugeicons.com",
   "homepage": "https://hugeicons.com",
   "license": "MIT",
@@ -36,8 +36,8 @@
     "tslib": "^2.6.0"
   },
   "peerDependencies": {
-    "@angular/common": ">=17.1.0 <21.0.0",
-    "@angular/core": ">=17.1.0 <21.0.0"
+    "@angular/common": ">=17.1.0 <23.0.0",
+    "@angular/core": ">=17.1.0 <23.0.0"
   },
   "devDependencies": {
     "@angular/common": "^17.0.0",

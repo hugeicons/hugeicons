@@ -1,6 +1,13 @@
 # @hugeicons/angular
 
 
+## 1.0.9
+
+### Patch Changes
+
+- Added Angular 22 peer dependency support
+
+
 ## 1.0.7
 
 ### Patch Changes
