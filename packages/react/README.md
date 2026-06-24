@@ -6,18 +6,18 @@
 
 ## What is Hugeicons?
 
-Hugeicons is a beautiful [icon library](https://hugeicons.com/react-icons) for modern web and mobile apps. The free package includes 5,100+ Stroke Rounded React icons. The Pro package provides 51,000+ React icons across 10 styles, including multicolor support for Bulk, Duotone, and Twotone styles.
+Hugeicons is a beautiful [icon library](https://hugeicons.com/react-icons) for modern web and mobile apps. The free package includes 5,400+ Stroke Rounded React icons. The Pro package provides 54,000+ React icons across 10 styles, including multicolor support for Bulk, Duotone, and Twotone styles.
 
 ## How It Works
 
 This package (`@hugeicons/react`) is a **rendering library** - it provides the `HugeiconsIcon` component that displays icons in your React app. The icons themselves come from separate icon packages:
 
-- **Free icons**: `@hugeicons/core-free-icons` (5,100+ icons)
-- **Pro icons**: `@hugeicons-pro/core-*` packages (51,000+ icons, requires license)
+- **Free icons**: `@hugeicons/core-free-icons` (5,400+ icons)
+- **Pro icons**: `@hugeicons-pro/core-*` packages (54,000+ icons, requires license)
 
 ### Key Highlights
-- **5,100+ Free Icons**: Stroke Rounded set for unlimited personal and commercial projects
-- **51,000+ Pro Icons, 10 Styles**: Stroke, Solid, Bulk, Duotone, and Twotone families for sharp, rounded, and standard needs with richer variants
+- **5,400+ Free Icons**: Stroke Rounded set for unlimited personal and commercial projects
+- **54,000+ Pro Icons, 10 Styles**: Stroke, Solid, Bulk, Duotone, and Twotone families for sharp, rounded, and standard needs with richer variants
 - **Pixel Perfect Grid**: Built on a 24x24 grid for crisp rendering at any size
 - **Customizable**: Easily adjust colors, sizes, and styles to match your design needs
 - **Multicolor Support**: Full multicolor customization for Bulk, Duotone, and Twotone styles in the Pro version
@@ -169,7 +169,7 @@ The library supports all modern browsers.
 
 ## Pro Version
 
-> **Want access to 51,000+ icons and 10 unique styles?** 
+> **Want access to 54,000+ icons and 10 unique styles?** 
 > Check out our [Pro Version](https://hugeicons.com/pricing) and visit our [docs](https://hugeicons.com/docs) for detailed documentation.
 
 ### Available Pro Styles
