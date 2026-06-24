@@ -9,6 +9,21 @@ Hugeicons is an SVG icon library with one rendering package per framework plus a
 set. This skill covers **all** official packages. Work in three steps: detect the framework,
 render with its component, then pick icon names from the right catalog.
 
+> ## ⚠️ Read this first: grep the icon lists, never read them whole
+>
+> The reference files under `references/` list **thousands** of icons and run tens of thousands
+> of tokens each. **Never open one in full** — always `grep` for a keyword and copy the exact
+> match:
+>
+> ```bash
+> grep -i search references/icon-list.md          # JS frameworks
+> grep -i home   references/icon-list-flutter.md   # Flutter
+> ```
+>
+> Do **not** rely on memory for icon names — a guessed name may not exist, or may exist but be
+> the wrong glyph (e.g. `LeftToRightBlockQuoteIcon` is quote marks, not the bracket you wanted).
+> Grep, confirm, copy.
+
 ## 1. Detect the framework
 
 Check the project's manifest and match the installed package:
@@ -259,10 +274,9 @@ Props:
 - **Flutter** — `HugeIcons.strokeRounded<Name>` constants (e.g. `HugeIcons.strokeRoundedSearch01`).
   Full list: [references/icon-list-flutter.md](references/icon-list-flutter.md) (4,547 icons).
 
-**Grep these reference files for a keyword — don't read them whole.** They list thousands of
-icons and run tens of thousands of tokens each; reading one entirely wastes context. Search for a
-term (e.g. `grep -i search references/icon-list.md`) and copy the **exact** matching name. Don't
-guess — many icons have numbered variants (`01`, `02`, `03`); pick the one that best fits.
+**Grep these files — don't read them whole** (see the warning at the top). Search for a term,
+copy the **exact** matching name, and don't guess: many icons have numbered variants (`01`, `02`,
+`03`) — pick the one that best fits.
 
 ## 5. Free vs Pro icons
 
