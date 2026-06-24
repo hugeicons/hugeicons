@@ -78,6 +78,24 @@ Use Hugeicons across your favorite tools and platforms:
 
 <br/>
 
+## Agent skill
+
+[`skills/hugeicons`](skills/hugeicons) is an [agent skill](https://www.skills.sh) that gives coding agents like Claude Code, Codex, and other AI coding agents accurate, first-party guidance on using Hugeicons — so they stop guessing icon names and props from stale training data.
+
+One skill covers every framework. The agent detects which one a project uses and applies the right component, props, and icon catalog:
+
+- **Detect → install → render → props** for React, Vue, Svelte, Angular, React Native, and Flutter
+- The complete icon catalog — [`references/icon-list.md`](skills/hugeicons/references/icon-list.md) for the shared JS exports and [`references/icon-list-flutter.md`](skills/hugeicons/references/icon-list-flutter.md) for Flutter constants — so names are copied, never invented
+- Free vs Pro guidance, plus minimal-code conventions (only pass props that override a default)
+
+Install it with the [`skills`](https://www.skills.sh) CLI from your project root — your agent picks it up on the next session:
+
+```bash
+npx skills add hugeicons/hugeicons
+```
+
+<br/>
+
 ## Quick start
 
 Here's React. Every other framework follows the same shape (see each package's README for details):
