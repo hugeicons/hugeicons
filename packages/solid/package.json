@@ -1,0 +1,73 @@
+{
+  "name": "@hugeicons/solid",
+  "version": "1.0.0",
+  "description": "Hugeicons SolidJS Component Library https://hugeicons.com",
+  "homepage": "https://hugeicons.com",
+  "license": "MIT",
+  "amdName": "hugeicons-pro-solid",
+  "main": "./dist/cjs/index.js",
+  "main:umd": "./dist/umd/index.js",
+  "module": "./dist/esm/index.js",
+  "unpkg": "./dist/umd/index.js",
+  "types": "./dist/types/index.d.ts",
+  "sideEffects": false,
+  "files": [
+    "dist",
+    "CHANGELOG.md",
+    "LICENSE.md",
+    "PRO-LICENSE.md",
+    "README.md"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hugeicons/hugeicons.git",
+    "directory": "packages/solid"
+  },
+  "bugs": {
+    "url": "https://github.com/hugeicons/hugeicons/issues"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/types/index.d.ts",
+      "import": "./dist/esm/index.js",
+      "require": "./dist/cjs/index.js"
+    }
+  },
+  "author": "Hugeicons",
+  "scripts": {
+    "build": "pnpm clean && pnpm typecheck && pnpm build:bundles",
+    "build:bundles": "rollup -c ./rollup.config.mjs",
+    "typecheck": "tsc",
+    "clean": "rm -rf dist",
+    "publish:beta": "pnpm build && npm publish --tag beta --no-git-checks",
+    "publish:prod": "pnpm build && npm publish --no-git-checks"
+  },
+  "devDependencies": {
+    "@babel/preset-typescript": "^7.0.0",
+    "@rollup/plugin-babel": "^6.0.0",
+    "@rollup/plugin-commonjs": "^25.0.0",
+    "@rollup/plugin-node-resolve": "^15.0.0",
+    "@rollup/plugin-terser": "^0.4.0",
+    "babel-preset-solid": "^1.8.0",
+    "rollup": "^3.0.0",
+    "rollup-plugin-dts": "^5.0.0",
+    "solid-js": "^1.8.0",
+    "tslib": "^2.6.0",
+    "typescript": "^5.0.0"
+  },
+  "peerDependencies": {
+    "solid-js": "^1.8.0"
+  },
+  "keywords": [
+    "hugeicons",
+    "solid",
+    "solidjs",
+    "icons",
+    "solid-icons",
+    "svg-icons",
+    "svg",
+    "vector-icons",
+    "icon-library",
+    "typescript"
+  ]
+}
