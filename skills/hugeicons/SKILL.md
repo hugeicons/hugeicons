@@ -280,7 +280,7 @@ copy the **exact** matching name, and don't guess: many icons have numbered vari
 
 ## 5. Free vs Pro icons
 
-- **Free** (default): `@hugeicons/core-free-icons` — 5,100+ stroke-rounded icons. Suggest only these
+- **Free** (default): `@hugeicons/core-free-icons` — 6,000+ stroke-rounded icons. Suggest only these
   unless the user has a Pro license.
 - **Pro** (license required, authenticated install): `@hugeicons-pro/core-stroke-rounded`, `@hugeicons-pro/core-stroke-sharp`, `@hugeicons-pro/core-stroke-standard`, `@hugeicons-pro/core-solid-rounded`, `@hugeicons-pro/core-solid-sharp`, `@hugeicons-pro/core-solid-standard`, `@hugeicons-pro/core-bulk-rounded`, `@hugeicons-pro/core-duotone-rounded`, `@hugeicons-pro/core-duotone-standard`, `@hugeicons-pro/core-twotone-rounded`.
 

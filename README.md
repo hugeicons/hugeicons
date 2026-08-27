@@ -7,7 +7,7 @@
 
 ### Beautiful, consistent, pixel-perfect icons for every framework you build with.
 
-**54,000+ icons** · **10 styles** · **5,400+ free** · crafted on a 24×24 grid and trusted by 500,000+ developers.
+**60,000+ icons** · **10 styles** · **6,000+ free** · crafted on a 24×24 grid and trusted by 500,000+ developers.
 
 <br/>
 
@@ -36,7 +36,7 @@ Every icon is hand-crafted for consistency, clarity, and balance, so your interf
 - **Pixel-perfect:** built on a 24×24 grid for crisp rendering at any scale
 - **Tree-shakeable:** ship only the icons you use
 - **Native everywhere:** first-class libraries for React, Vue, Svelte, Angular, React Native and Flutter
-- **5,400+ free icons:** for unlimited personal and commercial use
+- **6,000+ free icons:** for unlimited personal and commercial use
 - **Always growing:** new icons added regularly
 
 <br/>
@@ -118,8 +118,8 @@ function App() {
 
 The framework libraries are renderers. The icons themselves come from:
 
-- **Free:** [`@hugeicons/core-free-icons`](https://www.npmjs.com/package/@hugeicons/core-free-icons) (5,400+ icons)
-- **Pro:** `@hugeicons-pro/core-*` (54,000+ icons across 10 styles)
+- **Free:** [`@hugeicons/core-free-icons`](https://www.npmjs.com/package/@hugeicons/core-free-icons) (6,000+ icons)
+- **Pro:** `@hugeicons-pro/core-*` (60,000+ icons across 10 styles)
 
 <br/>
 
@@ -127,7 +127,7 @@ The framework libraries are renderers. The icons themselves come from:
 
 |  | Free | Pro |
 | --- | --- | --- |
-| Icons | 5,400+ | 54,000+ |
+| Icons | 6,000+ | 60,000+ |
 | Styles | Stroke Rounded | 10 styles (Stroke, Solid, Bulk, Duotone, Twotone × variants) |
 | Use | Personal & commercial | Personal & commercial |
 | License | [MIT](LICENSE.md) | [Pro License](https://hugeicons.com/license-agreement) |

@@ -8,11 +8,11 @@ Stable tag: 1.0.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
-The Hugeicons Elementor Plugin offers access to over 46,000 icons in 10 styles, fully customizable within the Elementor editor.
+The Hugeicons Elementor Plugin offers access to over 60,000 icons in 10 styles, fully customizable within the Elementor editor.
 
 == Description ==
 
-The Hugeicons Elementor Plugin revolutionizes web design by providing an extensive library of over 46,000 high-quality icons available directly within the Elementor editor. With 10 styles across three categories—Rounded (Stroke, Solid, Duotone, Twotone, Bulk), Standard (Stroke, Solid, Duotone), and Sharp (Stroke, Solid)—enhancing your web pages has never been easier or more accessible. Customize colors, sizes, alignments, and much more without ever leaving the Elementor interface.
+The Hugeicons Elementor Plugin revolutionizes web design by providing an extensive library of over 60,000 high-quality icons available directly within the Elementor editor. With 10 styles across three categories—Rounded (Stroke, Solid, Duotone, Twotone, Bulk), Standard (Stroke, Solid, Duotone), and Sharp (Stroke, Solid)—enhancing your web pages has never been easier or more accessible. Customize colors, sizes, alignments, and much more without ever leaving the Elementor interface.
 
 == Widgets ==
 
@@ -26,7 +26,7 @@ The plugin includes 5 powerful widgets:
 
 == Features ==
 
-* Access to over 46,000 icons across 10 unique styles.
+* Access to over 60,000 icons across 10 unique styles.
 * 5 powerful widgets: Icon, Icon Button, Icon Box, Icon List, and FAQ.
 * Customizable icon properties such as color, size, and alignment.
 * Seamless integration with Elementor, enabling direct search and insert functionality.
@@ -45,7 +45,7 @@ The plugin includes 5 powerful widgets:
 1. Open the Elementor page builder for the desired page.
 2. Locate the Hugeicons category in the Elementor panel.
 3. Drag any of our widgets (Icon, Icon Button, Icon Box, Icon List, FAQ) to your page.
-4. Click the icon field to browse and search our library of 46,000+ icons.
+4. Click the icon field to browse and search our library of 60,000+ icons.
 5. Customize your widget using the style options and publish your page.
 
 == Frequently Asked Questions ==
