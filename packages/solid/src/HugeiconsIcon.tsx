@@ -57,7 +57,7 @@ export const HugeiconsIcon: Component<HugeiconsIconProps> = (props) => {
   });
 
   const currentIcon = createMemo(() =>
-    (local.showAlt && local.altIcon) ? local.altIcon : local.icon
+    local.showAlt && local.altIcon ? local.altIcon : local.icon
   );
 
   const sortedChildren = createMemo(() =>
@@ -78,36 +78,52 @@ export const HugeiconsIcon: Component<HugeiconsIconProps> = (props) => {
       width={local.size ?? 24}
       height={local.size ?? 24}
       color={finalColor()}
+      stroke={calculatedStrokeWidth() !== undefined ? 'currentColor' : undefined}
+      stroke-width={calculatedStrokeWidth()}
       class={local.class}
       {...rest}
     >
       <For each={sortedChildren()}>
         {([tag, attrs]) => {
           const isSecondaryPath = attrs.opacity !== undefined;
-          const pathOpacity = (!isSecondaryPath || local.disableSecondaryOpacity) ? undefined : attrs.opacity;
 
-          const fillProps: Record<string, string | number | undefined> = {};
-          if (local.secondaryColor) {
-            if (attrs.stroke !== undefined) {
-              fillProps.stroke = isSecondaryPath ? local.secondaryColor : finalColor();
-            } else {
-              fillProps.fill = isSecondaryPath ? local.secondaryColor : finalColor();
+          const getOpacity = () => {
+            if (!isSecondaryPath) return attrs.opacity as string | number | undefined;
+            return local.disableSecondaryOpacity ? undefined : (attrs.opacity as string | number | undefined);
+          };
+
+          const getStroke = () => {
+            if (local.secondaryColor && attrs.stroke !== undefined) {
+              return isSecondaryPath ? local.secondaryColor : finalColor();
             }
-          }
+            if (calculatedStrokeWidth() !== undefined) {
+              return 'currentColor';
+            }
+            return attrs.stroke as string | undefined;
+          };
 
-          const strokeProps: Record<string, string | number | undefined> = {};
-          if (calculatedStrokeWidth() !== undefined) {
-            strokeProps['stroke-width'] = calculatedStrokeWidth();
-            strokeProps.stroke = 'currentColor';
-          }
+          const getFill = () => {
+            if (local.secondaryColor && attrs.stroke === undefined) {
+              return isSecondaryPath ? local.secondaryColor : finalColor();
+            }
+            return attrs.fill as string | undefined;
+          };
+
+          const getStrokeWidth = () => {
+            if (calculatedStrokeWidth() !== undefined) {
+              return calculatedStrokeWidth();
+            }
+            return (attrs['stroke-width'] ?? attrs.strokeWidth) as string | number | undefined;
+          };
 
           return (
             <Dynamic
               component={tag}
               {...attrs}
-              {...strokeProps}
-              {...fillProps}
-              opacity={pathOpacity}
+              stroke={getStroke()}
+              stroke-width={getStrokeWidth()}
+              fill={getFill()}
+              opacity={getOpacity()}
             />
           );
         }}
