@@ -4,11 +4,10 @@
   "description": "Hugeicons SolidJS Component Library https://hugeicons.com",
   "homepage": "https://hugeicons.com",
   "license": "MIT",
-  "amdName": "hugeicons-pro-solid",
+  "amdName": "hugeicons-solid",
   "main": "./dist/cjs/index.js",
-  "main:umd": "./dist/umd/index.js",
   "module": "./dist/esm/index.js",
-  "unpkg": "./dist/umd/index.js",
+  "solid": "./dist/source/index.jsx",
   "types": "./dist/types/index.d.ts",
   "sideEffects": false,
   "files": [
@@ -28,9 +27,12 @@
   },
   "exports": {
     ".": {
+      "solid": "./dist/source/index.jsx",
       "types": "./dist/types/index.d.ts",
       "import": "./dist/esm/index.js",
-      "require": "./dist/cjs/index.js"
+      "browser": "./dist/esm/index.js",
+      "require": "./dist/cjs/index.js",
+      "node": "./dist/cjs/index.js"
     }
   },
   "author": "Hugeicons",
@@ -43,16 +45,9 @@
     "publish:prod": "pnpm build && npm publish --no-git-checks"
   },
   "devDependencies": {
-    "@babel/preset-typescript": "^7.0.0",
-    "@rollup/plugin-babel": "^6.0.0",
-    "@rollup/plugin-commonjs": "^25.0.0",
-    "@rollup/plugin-node-resolve": "^15.0.0",
-    "@rollup/plugin-terser": "^0.4.0",
-    "babel-preset-solid": "^1.8.0",
     "rollup": "^3.0.0",
-    "rollup-plugin-dts": "^5.0.0",
+    "rollup-preset-solid": "^3.0.0",
     "solid-js": "^1.8.0",
-    "tslib": "^2.6.0",
     "typescript": "^5.0.0"
   },
   "peerDependencies": {
