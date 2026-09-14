@@ -1,0 +1,10 @@
+import type { IconSvgObject } from './types';
+
+const AiBackgroundEraserIcon: IconSvgObject = [
+  ["path", { d: "M5.15314 21.423C5.80958 19.5285 7.88395 18.1309 10.203 18.0276C10.453 18.0164 10.718 18.0071 11.0024 18L11.7984 18.0482C14.1392 18.1901 16.1952 19.5384 16.8487 21.423", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "0" }],
+  ["path", { d: "M10 4H13M20 11V14M2 12V14M6 4C3.79089 4 1.99989 5.79089 2 8M2 18.1953C2 20.2968 3.70362 22.0004 5.80515 22.0004H16.1948C18.2964 22.0004 20 20.2968 20 18.1953", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "1" }],
+  ["path", { d: "M13.5 12.5C13.5 13.8807 12.3807 15 11 15C9.61929 15 8.5 13.8807 8.5 12.5C8.5 11.1193 9.61929 10 11 10C12.3807 10 13.5 11.1193 13.5 12.5Z", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "2" }],
+  ["path", { d: "M19.5 2.9375V4.5M19.5 4.5V6.0625M19.5 4.5H18.25M19.5 4.5H20.75M22 4.5L20.9156 4.13852C20.4179 3.97263 20.0274 3.58211 19.8615 3.08443L19.5 2L19.1385 3.08443C18.9726 3.58211 18.5821 3.97263 18.0844 4.13852L17 4.5L18.0844 4.86148C18.5821 5.02737 18.9726 5.41789 19.1385 5.91557L19.5 7L19.8615 5.91557C20.0274 5.41789 20.4179 5.02737 20.9156 4.86148L22 4.5Z", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "3" }]
+];
+
+export default AiBackgroundEraserIcon;

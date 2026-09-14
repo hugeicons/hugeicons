@@ -1,0 +1,12 @@
+import type { IconSvgObject } from './types';
+
+const BeltIcon: IconSvgObject = [
+  ["path", { d: "M16 8H22M16 16L22 16", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "0" }],
+  ["path", { d: "M6 16C6 16.9319 6 17.3978 6.15224 17.7654C6.35523 18.2554 6.74458 18.6448 7.23463 18.8478C7.60218 19 8.06812 19 9 19H9.33333C11.8256 19 13.0718 19 14 18.4641C14.6081 18.113 15.113 17.6081 15.4641 17C16 16.0718 16 14.8256 16 12.3333V11.6667C16 9.17436 16 7.9282 15.4641 7C15.113 6.39192 14.6081 5.88697 14 5.5359C13.0718 5 11.8256 5 9.33333 5H9C8.06812 5 7.60218 5 7.23463 5.15224C6.74458 5.35523 6.35523 5.74458 6.15224 6.23463C6 6.60218 6 7.06812 6 8", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "1" }],
+  ["path", { d: "M2 16H9C10.4142 16 11.1213 16 11.5607 15.5607C12 15.1213 12 14.4142 12 13V11C12 9.58579 12 8.87868 11.5607 8.43934C11.1213 8 10.4142 8 9 8H2", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "2" }],
+  ["path", { d: "M9 12H13.5", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "3" }],
+  ["path", { d: "M20.127 12H20.002M20.252 12C20.252 12.1381 20.14 12.25 20.002 12.25C19.8639 12.25 19.752 12.1381 19.752 12C19.752 11.8619 19.8639 11.75 20.002 11.75C20.14 11.75 20.252 11.8619 20.252 12Z", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "4" }],
+  ["path", { d: "M4.12695 12H4.00195M4.25195 12C4.25195 12.1381 4.14002 12.25 4.00195 12.25C3.86388 12.25 3.75195 12.1381 3.75195 12C3.75195 11.8619 3.86388 11.75 4.00195 11.75C4.14002 11.75 4.25195 11.8619 4.25195 12Z", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "5" }]
+];
+
+export default BeltIcon;

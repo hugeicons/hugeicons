@@ -1,0 +1,7 @@
+import type { IconSvgObject } from './types';
+
+const Remove02Icon: IconSvgObject = [
+  ["path", { d: "M5.49854 10.5H18.5015C19.3297 10.5 20.001 11.1717 20.0005 12C19.9999 12.8275 19.329 13.498 18.5015 13.498H5.49854C4.67065 13.498 3.99951 12.8269 3.99951 11.999C3.99951 11.1711 4.67065 10.5 5.49854 10.5Z", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "0" }]
+];
+
+export default Remove02Icon;

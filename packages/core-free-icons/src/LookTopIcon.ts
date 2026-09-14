@@ -1,0 +1,9 @@
+import type { IconSvgObject } from './types';
+
+const LookTopIcon: IconSvgObject = [
+  ["path", { d: "M2 12C2 17.5228 6.47715 22 12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12Z", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "0" }],
+  ["path", { d: "M9.5 12C10.2235 12.6334 11.0809 13 12 13C12.9191 13 13.7765 12.6334 14.5 12", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "1" }],
+  ["path", { d: "M15.625 6.887V7.41649M8.375 6.887V7.41649M8.75 7.25C8.75 6.83579 8.58211 6.5 8.375 6.5C8.16789 6.5 8 6.83579 8 7.25C8 7.66421 8.16789 8 8.375 8C8.58211 8 8.75 7.66421 8.75 7.25ZM16 7.25C16 6.83579 15.8321 6.5 15.625 6.5C15.4179 6.5 15.25 6.83579 15.25 7.25C15.25 7.66421 15.4179 8 15.625 8C15.8321 8 16 7.66421 16 7.25Z", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "2" }]
+];
+
+export default LookTopIcon;

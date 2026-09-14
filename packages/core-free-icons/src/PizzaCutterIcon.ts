@@ -1,0 +1,12 @@
+import type { IconSvgObject } from './types';
+
+const PizzaCutterIcon: IconSvgObject = [
+  ["path", { d: "M11.5355 19.5355C9.58291 21.4882 6.41709 21.4882 4.46447 19.5355C2.51184 17.5829 2.51184 14.4171 4.46447 12.4645C6.41709 10.5118 9.58291 10.5118 11.5355 12.4645C13.4882 14.4171 13.4882 17.5829 11.5355 19.5355Z", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "0" }],
+  ["path", { d: "M16.1367 13.375C15.7025 12.1438 14.9931 10.9881 14.0083 10.0034C13.0236 9.01865 11.8679 8.3092 10.6367 7.875", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "1" }],
+  ["path", { d: "M15.5 11.5L20.3787 6.62132C20.7765 6.2235 21 5.68393 21 5.12132C21 3.94975 20.0503 3 18.8787 3C18.3161 3 17.7765 3.2235 17.3787 3.62132L12.5 8.5", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "2" }],
+  ["path", { d: "M16 5L19 8", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "3" }],
+  ["path", { d: "M14 10L12 12", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "4" }],
+  ["path", { d: "M8.125 16H8M8.25 16C8.25 16.1381 8.13807 16.25 8 16.25C7.86193 16.25 7.75 16.1381 7.75 16C7.75 15.8619 7.86193 15.75 8 15.75C8.13807 15.75 8.25 15.8619 8.25 16Z", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "5" }]
+];
+
+export default PizzaCutterIcon;

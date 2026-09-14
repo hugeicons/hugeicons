@@ -1,0 +1,11 @@
+import type { IconSvgObject } from './types';
+
+const CraneTowerIcon: IconSvgObject = [
+  ["path", { d: "M10 21.5V4.25C10 3.73777 10 3.48165 9.92309 3.2773C9.80136 2.95388 9.54612 2.69864 9.2227 2.57691C9.01835 2.5 8.76223 2.5 8.25 2.5C7.73777 2.5 7.48165 2.5 7.2773 2.57691C6.95388 2.69864 6.69864 2.95388 6.57691 3.2773C6.5 3.48165 6.5 3.73777 6.5 4.25V21.5H10Z", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "0" }],
+  ["path", { d: "M20.5998 6.34345L10 4.5V8.5H20.4137C20.4938 8.5 20.5339 8.5 20.5677 8.4977C21.0666 8.46383 21.4638 8.06664 21.4977 7.56773C21.5 7.53391 21.5 7.49383 21.5 7.41369C21.5 7.34517 21.5 7.31091 21.4982 7.28078C21.4716 6.84051 21.1597 6.46966 20.7305 6.36801C20.7011 6.36106 20.6673 6.35519 20.5998 6.34345Z", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "1" }],
+  ["path", { d: "M3.73607 8.5H6.5V4.5L3.18328 6.15836C3.05727 6.22137 2.99426 6.25287 2.94005 6.28951C2.70292 6.44977 2.54582 6.70396 2.50853 6.98772C2.5 7.0526 2.5 7.12304 2.5 7.26393C2.5 7.48329 2.5 7.59297 2.51714 7.68435C2.59317 8.08972 2.91028 8.40683 3.31565 8.48286C3.40703 8.5 3.51671 8.5 3.73607 8.5Z", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "2" }],
+  ["path", { d: "M20.5 16.5C20.5 17.6046 19.6046 18.5 18.5 18.5C17.3954 18.5 16.5 17.6046 16.5 16.5C16.5 15.3954 17.3954 14.5 18.5 14.5V8.5", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "3" }],
+  ["path", { d: "M4.5 21.5H12", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "4" }]
+];
+
+export default CraneTowerIcon;

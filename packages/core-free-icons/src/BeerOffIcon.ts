@@ -1,0 +1,13 @@
+import type { IconSvgObject } from './types';
+
+const BeerOffIcon: IconSvgObject = [
+  ["path", { d: "M16.5 12.5V9", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "0" }],
+  ["path", { d: "M16.5 16.5C16.497 18.9983 16.4468 20.296 15.6215 21.1213C14.7428 22 13.3286 22 10.5001 22C7.67163 22 6.25739 22 5.37869 21.1213C4.5 20.2426 4.5 18.8284 4.5 16V9", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "1" }],
+  ["path", { d: "M20.1109 15.9492C20.1748 15.8624 20.2315 15.7706 20.2806 15.6747C20.5 15.2458 20.5 14.7332 20.5 13.7082C20.5 12.1046 20.5 11.3028 20.0666 10.7568C19.9716 10.6369 19.8631 10.5284 19.7432 10.4334C19.1972 10 18.3954 10 16.7918 10H16.5", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "2" }],
+  ["path", { d: "M10.5 10.5V12C10.5 12.8284 9.82843 13.5 9 13.5C8.17157 13.5 7.5 12.8284 7.5 12V8.50018C7.08217 8.81403 6.5628 9 6 9C4.61929 9 3.5 7.88071 3.5 6.5C3.5 5.6822 3.89267 4.95611 4.49976 4.5", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "3" }],
+  ["path", { d: "M12.502 8.37101C12.6724 8.25192 12.8317 8.11803 12.9781 7.97122C13.4327 8.59478 14.1688 9 14.9996 9C16.3803 9 17.4996 7.88071 17.4996 6.5C17.4996 5.11929 16.3803 4 14.9996 4C14.5617 4 14.1502 4.11257 13.7922 4.31035C13.3053 2.96298 12.0149 2 10.4996 2C9.31023 2 8.25942 2.59326 7.62695 3.5", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "4" }],
+  ["path", { d: "M12.5 14.5V19M8.5 16.5V19", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "5" }],
+  ["path", { d: "M2 2L22 22", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "6" }]
+];
+
+export default BeerOffIcon;

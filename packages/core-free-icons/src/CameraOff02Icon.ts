@@ -1,0 +1,11 @@
+import type { IconSvgObject } from './types';
+
+const CameraOff02Icon: IconSvgObject = [
+  ["path", { d: "M5 9H6", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "0" }],
+  ["path", { d: "M2 2L22 22", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "1" }],
+  ["path", { d: "M16.4889 16.4889C15.9102 16.8144 15.2423 17 14.531 17C12.3219 17 10.531 15.2091 10.531 13C10.531 12.2887 10.7167 11.6208 11.0421 11.0421M13.2199 9.21983C13.6306 9.07739 14.0718 9 14.531 9C16.7401 9 18.531 10.7909 18.531 13C18.531 13.4592 18.4536 13.9004 18.3112 14.3111", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "2" }],
+  ["path", { d: "M20.5 20.4983H8C5.17157 20.4983 3.75736 20.4983 2.87868 19.6196C2 18.7409 2 17.3267 2 14.4983V11.9983C2 9.16987 2 7.75566 2.87868 6.87698C3.51998 6.23568 4.44655 6.06243 6 6.01562", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "3" }],
+  ["path", { d: "M22 18V8.02617C22 6.90715 21.0929 6 19.9738 6C19.3583 6 18.7762 5.72021 18.3917 5.23957L17.8 4.5C17.6049 4.25611 17.5073 4.13416 17.3979 4.03281C17.1031 3.75969 16.7328 3.58172 16.3354 3.52212C16.1879 3.5 16.0317 3.5 15.7194 3.5H13.9225C12.9779 3.5 12.5056 3.5 12.0949 3.69739C11.6842 3.89479 11.3891 4.2636 10.799 5.00122L10 6", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "4" }]
+];
+
+export default CameraOff02Icon;

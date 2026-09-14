@@ -1,0 +1,11 @@
+import type { IconSvgObject } from './types';
+
+const PropertyEditIcon: IconSvgObject = [
+  ["path", { d: "M11.5 20.5C7.25736 20.5 5.13604 20.5 3.81802 19.182C2.5 17.864 2.5 15.7426 2.5 11.5C2.5 7.25736 2.5 5.13604 3.81802 3.81802C5.13604 2.5 7.25736 2.5 11.5 2.5C15.7426 2.5 17.864 2.5 19.182 3.81802C20.5 5.13604 20.5 7.25736 20.5 11.5", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "0" }],
+  ["path", { d: "M3 7.5H20", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "1" }],
+  ["path", { d: "M11.5 16H12.5M6.5 16H7.5", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "2" }],
+  ["path", { d: "M11.5 12H16.5M6.5 12H7.5", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "3" }],
+  ["path", { d: "M15.2844 18.5846L19.0505 14.8295C19.4916 14.3902 20.2068 14.3902 20.6478 14.8295L21.1692 15.3488C21.6103 15.7881 21.6103 16.5004 21.1692 16.9397L17.4378 20.7114C17.223 20.9254 16.9481 21.0696 16.6494 21.1252L14.9566 21.4912C14.6893 21.549 14.4513 21.3126 14.5086 21.0463L14.8689 19.3698C14.9247 19.0723 15.0695 18.7986 15.2844 18.5846Z", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "4" }]
+];
+
+export default PropertyEditIcon;

@@ -1,0 +1,10 @@
+import type { IconSvgObject } from './types';
+
+const IdentityCardCheckIcon: IconSvgObject = [
+  ["path", { d: "M22 12V11.5C22 7.72876 22 5.84315 20.8284 4.67157C19.6569 3.5 17.7712 3.5 14 3.5H10C6.22876 3.5 4.34315 3.5 3.17157 4.67157C2 5.84315 2 7.72876 2 11.5V12.5C2 16.2712 2 18.1569 3.17157 19.3284C4.34315 20.5 6.22876 20.5 10 20.5H12", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "0" }],
+  ["path", { d: "M5.5 16C6.53569 13.4189 10.3962 13.2491 11.5 16M10.25 9.75C10.25 10.7165 9.4665 11.5 8.5 11.5C7.5335 11.5 6.75 10.7165 6.75 9.75C6.75 8.7835 7.5335 8 8.5 8C9.4665 8 10.25 8.7835 10.25 9.75Z", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "1" }],
+  ["path", { d: "M14 8.5H18.5M14 12H18.5", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "2" }],
+  ["path", { d: "M15 18.4167C15 18.4167 15.875 18.8333 16.75 20.5C16.75 20.5 19.5294 16.3333 22 15.5", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "3" }]
+];
+
+export default IdentityCardCheckIcon;

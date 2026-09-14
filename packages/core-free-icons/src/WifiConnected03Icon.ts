@@ -1,0 +1,8 @@
+import type { IconSvgObject } from './types';
+
+const WifiConnected03Icon: IconSvgObject = [
+  ["path", { d: "M2 8.31966C4.75011 5.85989 8.31034 4.5 12 4.5M5 12.3587C6.86929 10.5264 9.38247 9.50009 12 9.50009M8.5 15.9287C9.43464 15.0125 10.6912 14.4994 12 14.4994C13.3088 14.4994 14.5654 15.0125 15.5 15.9287M12.1256 19.25H12.0006M12.2506 19.25C12.2506 19.3881 12.1387 19.5 12.0006 19.5C11.8625 19.5 11.7506 19.3881 11.7506 19.25C11.7506 19.1119 11.8625 19 12.0006 19C12.1387 19 12.2506 19.1119 12.2506 19.25Z", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "0" }],
+  ["path", { d: "M15 7.5C15.4706 7.66026 16.5935 8.12407 17 9.5C17 9.5 19.5294 5.33333 22 4.5", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "1" }]
+];
+
+export default WifiConnected03Icon;

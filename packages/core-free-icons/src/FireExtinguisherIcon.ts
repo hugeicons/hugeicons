@@ -1,0 +1,11 @@
+import type { IconSvgObject } from './types';
+
+const FireExtinguisherIcon: IconSvgObject = [
+  ["path", { d: "M10 18V10C10 7.79086 11.7909 6 14 6C16.2091 6 18 7.79086 18 10V18C18 19.8856 18 20.8284 17.4142 21.4142C16.8284 22 15.8856 22 14 22C12.1144 22 11.1716 22 10.5858 21.4142C10 20.8284 10 19.8856 10 18Z", stroke: "currentColor", strokeLinecap: "round", strokeWidth: "1.5", key: "0" }],
+  ["path", { d: "M10 13H18", stroke: "currentColor", strokeLinecap: "round", strokeWidth: "1.5", key: "1" }],
+  ["path", { d: "M12 6V4C12 3.25231 12 2.87846 12.1608 2.6C12.2661 2.41758 12.4176 2.26609 12.6 2.16077C12.8785 2 13.2523 2 14 2C14.7477 2 15.1215 2 15.4 2.16077C15.5824 2.26609 15.7339 2.41758 15.8392 2.6C16 2.87846 16 3.25231 16 4V6", stroke: "currentColor", strokeLinecap: "round", strokeWidth: "1.5", key: "2" }],
+  ["path", { d: "M12 3H11C8.23855 3 5.99997 5.23858 5.99997 8V14C5.99997 15.1046 5.10454 16 3.99997 16", stroke: "currentColor", strokeLinecap: "round", strokeWidth: "1.5", key: "3" }],
+  ["path", { d: "M16 3H20", stroke: "currentColor", strokeLinecap: "round", strokeWidth: "1.5", key: "4" }]
+];
+
+export default FireExtinguisherIcon;

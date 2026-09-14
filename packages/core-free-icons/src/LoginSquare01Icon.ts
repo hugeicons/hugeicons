@@ -1,0 +1,8 @@
+import type { IconSvgObject } from './types';
+
+const LoginSquare01Icon: IconSvgObject = [
+  ["path", { d: "M9 6C9.04665 4.90658 9.18531 4.20985 9.59747 3.67376C9.7574 3.46574 9.94396 3.27954 10.1524 3.11992C10.9619 2.5 12.137 2.5 14.4872 2.5H14.9882C17.8222 2.5 19.2391 2.5 20.1196 3.37867C21 4.25734 21 5.67157 21 8.49997L21 15.5C21 18.3284 21 19.7426 20.1196 20.6213C19.2392 21.5 17.8222 21.5 14.9882 21.5H14.4872C12.137 21.5 10.9619 21.5 10.1524 20.8801C9.94398 20.7205 9.75744 20.5343 9.59752 20.3263C9.1853 19.7901 9.04664 19.0933 9 17.9996", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "0" }],
+  ["path", { d: "M15 12H3M12.5 15.5001C12.5 15.5001 16 12.9224 16 12.0001C16 11.0778 12.5 8.50011 12.5 8.50011", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "1" }]
+];
+
+export default LoginSquare01Icon;

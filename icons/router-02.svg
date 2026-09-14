@@ -1,7 +1,8 @@
 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M18 22H6C4.11438 22 3.17157 22 2.58579 21.4142C2 20.8284 2 19.8856 2 18C2 16.1144 2 15.1716 2.58579 14.5858C3.17157 14 4.11438 14 6 14H18C19.8856 14 20.8284 14 21.4142 14.5858C22 15.1716 22 16.1144 22 18C22 19.8856 22 20.8284 21.4142 21.4142C20.8284 22 19.8856 22 18 22Z" stroke="#141B34" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M9 14L9 6" stroke="#141B34" stroke-width="1.5" stroke-linecap="round"/>
-<path d="M13.9908 18H13.9998M9.99533 18H10.0043M5.99982 18H6.00879" stroke="#141B34" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M3.47776 10C2.54314 8.85117 2 7.47913 2 6.00543C2 4.52709 2.54657 3.15104 3.48661 2M6 3.82574C5.59087 4.48184 5.36068 5.22209 5.36068 6.00543C5.36068 6.78484 5.58856 7.52159 5.99385 8.17523" stroke="#141B34" stroke-width="1.5" stroke-linecap="round"/>
-<path d="M8.99609 5.99683H9.00245" stroke="#141B34" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M14 14V6.5" stroke="#141B34" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M20.2755 10.5C22.5748 8.15279 22.5748 4.34721 20.2755 2M17.5 7.66667C18.2664 6.88426 18.2664 5.61574 17.5 4.83333" stroke="#141B34" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M10.125 18H10M10.25 18C10.25 18.1381 10.1381 18.25 10 18.25C9.86193 18.25 9.75 18.1381 9.75 18C9.75 17.8619 9.86193 17.75 10 17.75C10.1381 17.75 10.25 17.8619 10.25 18Z" stroke="#141B34" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M14.125 18H14M14.25 18C14.25 18.1381 14.1381 18.25 14 18.25C13.8619 18.25 13.75 18.1381 13.75 18C13.75 17.8619 13.8619 17.75 14 17.75C14.1381 17.75 14.25 17.8619 14.25 18Z" stroke="#141B34" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M6.125 18H6M6.25 18C6.25 18.1381 6.13807 18.25 6 18.25C5.86193 18.25 5.75 18.1381 5.75 18C5.75 17.8619 5.86193 17.75 6 17.75C6.13807 17.75 6.25 17.8619 6.25 18Z" stroke="#141B34" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>

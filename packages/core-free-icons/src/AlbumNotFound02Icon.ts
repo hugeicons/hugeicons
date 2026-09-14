@@ -1,0 +1,10 @@
+import type { IconSvgObject } from './types';
+
+const AlbumNotFound02Icon: IconSvgObject = [
+  ["path", { d: "M18.25 5.75C18.25 6.02614 18.0261 6.25 17.75 6.25M18.25 5.75C18.25 5.47386 18.0261 5.25 17.75 5.25M18.25 5.75H17.25M17.75 6.25C17.4739 6.25 17.25 6.02614 17.25 5.75M17.75 6.25V5.25M17.25 5.75C17.25 5.47386 17.4739 5.25 17.75 5.25", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "0" }],
+  ["path", { d: "M5.97699 6C4.34415 6.38565 3.41577 6.74951 2.89636 7.54303C2.20773 8.5951 2.5069 9.99155 3.10526 12.7844L3.95147 16.7342C4.54983 19.5271 4.84901 20.9235 5.90942 21.6068C6.96983 22.29 8.37736 21.9931 11.1924 21.3995C11.8743 21.2557 12.4735 21.1293 13 21.0054", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "1" }],
+  ["path", { d: "M9.53636 5.53636C9.60511 4.25736 9.80391 3.45345 10.3787 2.87868C11.2574 2 12.6716 2 15.5 2C18.3284 2 19.7426 2 20.6213 2.87868C21.5 3.75736 21.5 5.17157 21.5 8V12C21.5 14.5559 21.5 15.957 20.8516 16.8516L16.1441 10.9017C15.7399 10.3358 15.0873 10 14.3919 10C14.27 10 14.1491 10.0103 14.0305 10.0305M9.5 9.5V12C9.5 14.8284 9.5 16.2426 10.3787 17.1213C11.2574 18 12.6716 18 15.5 18C16.4783 18 17.2874 18 17.9636 17.9636", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "2" }],
+  ["path", { d: "M2 2L22 22", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "3" }]
+];
+
+export default AlbumNotFound02Icon;

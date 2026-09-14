@@ -1,0 +1,10 @@
+import type { IconSvgObject } from './types';
+
+const KidIcon: IconSvgObject = [
+  ["circle", { cx: "12", cy: "12", r: "10", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "0" }],
+  ["path", { d: "M12 2C14 2 15.5 3.26953 15.5 4.71181C15.5 5.64505 15.0282 7 13.5 7C12.6809 7 12.1578 6.39447 12 6", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "1" }],
+  ["path", { d: "M15.625 10.387V10.9165M8.375 10.387V10.9165M8.75 10.75C8.75 10.3358 8.58211 10 8.375 10C8.16789 10 8 10.3358 8 10.75C8 11.1642 8.16789 11.5 8.375 11.5C8.58211 11.5 8.75 11.1642 8.75 10.75ZM16 10.75C16 10.3358 15.8321 10 15.625 10C15.4179 10 15.25 10.3358 15.25 10.75C15.25 11.1642 15.4179 11.5 15.625 11.5C15.8321 11.5 16 11.1642 16 10.75Z", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "2" }],
+  ["path", { d: "M8 16C8.91212 17.2144 10.3643 18 12 18C13.6357 18 15.0879 17.2144 16 16", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "3" }]
+];
+
+export default KidIcon;

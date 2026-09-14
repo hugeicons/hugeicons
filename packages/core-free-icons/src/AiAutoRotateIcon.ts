@@ -1,0 +1,11 @@
+import type { IconSvgObject } from './types';
+
+const AiAutoRotateIcon: IconSvgObject = [
+  ["path", { d: "M21 21V20C21 18.1144 21 17.1716 20.4142 16.5858C19.8284 16 18.8856 16 17 16H16", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "0" }],
+  ["path", { d: "M3 12C3 16.9706 7.02944 21 12 21C15.6737 21 18.0821 19.313 20 16.7137", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "1" }],
+  ["path", { d: "M3 3V4C3 5.88562 3 6.82843 3.58579 7.41421C4.17157 8 5.11438 8 7 8H8", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "2" }],
+  ["path", { d: "M15 3.51212C14.0617 3.18046 13.0519 3 12 3C8.32632 3 5.91788 4.68699 4 7.2863", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "3" }],
+  ["path", { d: "M19.5 5.9375V7.5M19.5 7.5V9.0625M19.5 7.5H18.25M19.5 7.5H20.75M22 7.5L20.9156 7.13852C20.4179 6.97263 20.0274 6.58211 19.8615 6.08443L19.5 5L19.1385 6.08443C18.9726 6.58211 18.5821 6.97263 18.0844 7.13852L17 7.5L18.0844 7.86148C18.5821 8.02737 18.9726 8.41789 19.1385 8.91557L19.5 10L19.8615 8.91557C20.0274 8.41789 20.4179 8.02737 20.9156 7.86148L22 7.5Z", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "4" }]
+];
+
+export default AiAutoRotateIcon;

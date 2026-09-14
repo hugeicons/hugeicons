@@ -1,0 +1,12 @@
+import type { IconSvgObject } from './types';
+
+const SharedDriveIcon: IconSvgObject = [
+  ["path", { d: "M20 19V10C20 6.22876 20 4.34315 18.8973 3.17157C17.7947 2 16.02 2 12.4706 2L11.5294 2C7.98001 2 6.20531 2 5.10266 3.17157C4 4.34315 4 6.22876 4 10L4 19", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "0" }],
+  ["path", { d: "M17 16H7C5.34315 16 4 17.3431 4 19C4 20.6569 5.34315 22 7 22H17C18.6569 22 20 20.6569 20 19C20 17.3431 18.6569 16 17 16Z", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "1" }],
+  ["path", { d: "M8 11H11M9.5 6.75V7M9 10H10C11.1046 10 12 10.8954 12 12H7C7 10.8954 7.89543 10 9 10ZM10.25 6.75C10.25 7.16421 9.91421 7.5 9.5 7.5C9.08579 7.5 8.75 7.16421 8.75 6.75C8.75 6.33579 9.08579 6 9.5 6C9.91421 6 10.25 6.33579 10.25 6.75Z", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "2" }],
+  ["path", { d: "M14.5 11H16M14.5 6.75V7M14.5 10H15C16.1046 10 17 10.8954 17 12H14.5V10ZM15.25 6.75C15.25 7.16421 14.9142 7.5 14.5 7.5C14.0858 7.5 13.75 7.16421 13.75 6.75C13.75 6.33579 14.0858 6 14.5 6C14.9142 6 15.25 6.33579 15.25 6.75Z", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "3" }],
+  ["path", { d: "M7.375 19H7.25M7.5 19C7.5 19.1381 7.38807 19.25 7.25 19.25C7.11193 19.25 7 19.1381 7 19C7 18.8619 7.11193 18.75 7.25 18.75C7.38807 18.75 7.5 18.8619 7.5 19Z", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "4" }],
+  ["path", { d: "M10.875 19H10.75M11 19C11 19.1381 10.8881 19.25 10.75 19.25C10.6119 19.25 10.5 19.1381 10.5 19C10.5 18.8619 10.6119 18.75 10.75 18.75C10.8881 18.75 11 18.8619 11 19Z", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "5" }]
+];
+
+export default SharedDriveIcon;

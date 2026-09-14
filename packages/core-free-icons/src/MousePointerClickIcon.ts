@@ -1,0 +1,8 @@
+import type { IconSvgObject } from './types';
+
+const MousePointerClickIcon: IconSvgObject = [
+  ["path", { d: "M12.6612 8.35811L17.6891 10.3256C20.5891 11.4604 22.0391 12.0277 21.991 12.9278C21.943 13.8278 20.4297 14.2405 17.4032 15.0659C16.5021 15.3117 16.0515 15.4346 15.7391 15.7469C15.4267 16.0593 15.3039 16.5099 15.0581 17.4111C14.2327 20.4375 13.82 21.9508 12.92 21.9988C12.0199 22.0469 11.4525 20.5969 10.3178 17.6969L8.3503 12.669C7.16223 9.63279 6.56819 8.1147 7.33754 7.34535C8.10688 6.57601 9.62497 7.17004 12.6612 8.35811Z", stroke: "currentColor", strokeLinejoin: "round", strokeWidth: "1.5", key: "0" }],
+  ["path", { d: "M8.99219 4V2M4.99219 5L3.49219 3.5M3.99219 9H1.99219M4.99219 13L3.49219 14.5M14.4922 3.5L12.9922 5", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "1" }]
+];
+
+export default MousePointerClickIcon;

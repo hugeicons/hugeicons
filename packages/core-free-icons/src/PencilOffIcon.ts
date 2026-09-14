@@ -1,0 +1,10 @@
+import type { IconSvgObject } from './types';
+
+const PencilOffIcon: IconSvgObject = [
+  ["path", { d: "M1.99219 2L21.9922 22", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "0" }],
+  ["path", { d: "M16.5509 11.4392L19.1114 8.87868C19.994 7.99612 20.4353 7.55483 20.4841 7.01325C20.4921 6.92372 20.4921 6.83364 20.4841 6.74411C20.4353 6.20253 19.994 5.76124 19.1114 4.87868C18.2289 3.99612 17.7876 3.55483 17.246 3.50605C17.1565 3.49798 17.0664 3.49798 16.9769 3.50605C16.4353 3.55483 15.994 3.99612 15.1114 4.87868L12.5508 7.43934", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "1" }],
+  ["path", { d: "M13.9922 13.9998L9.24932 18.7426C8.38223 19.6097 7.94868 20.0433 7.39737 20.2716C6.84606 20.5 6.23293 20.5 5.00668 20.5H3.49196V18.9853C3.49196 17.759 3.49196 17.1459 3.72032 16.5946C3.94868 16.0433 4.38223 15.6097 5.24932 14.7426L9.99196 10", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "2" }],
+  ["path", { d: "M13.4922 6.49902L17.4922 10.499", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "3" }]
+];
+
+export default PencilOffIcon;

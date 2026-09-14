@@ -1,0 +1,10 @@
+import type { IconSvgObject } from './types';
+
+const MapPinpoint02Icon: IconSvgObject = [
+  ["path", { d: "M17.5 11C15.0147 11 13 12.9898 13 15.4444C13 16.8479 13.5625 17.9392 14.6875 18.914C15.4104 19.5404 16.6734 20.8207 17.3279 21.7429C17.412 21.8613 17.5921 21.8641 17.6783 21.7472C18.3507 20.8362 19.5895 19.5404 20.3125 18.914C21.4375 17.9392 22 16.8479 22 15.4444C22 12.9898 19.9853 11 17.5 11Z", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "0" }],
+  ["path", { d: "M10.0352 13.5C8.10216 13.5 6.53516 11.933 6.53516 10C6.53516 8.067 8.10216 6.5 10.0352 6.5C11.6207 6.5 12.9599 7.55426 13.3902 9", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "1" }],
+  ["path", { d: "M17.7323 8C16.8236 4.54549 13.7061 2 10 2C5.58172 2 2 5.61783 2 10.0807C2 12.6325 3 14.6167 5 16.389C6.3374 17.5741 8.71455 20.0468 9.83043 21.7335C9.91154 21.8561 10.0933 21.8581 10.1772 21.7374C10.5383 21.2184 11.0139 20.6174 11.5381 20", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "2" }],
+  ["path", { d: "M17.625 15.5H17.5M17.75 15.5C17.75 15.6381 17.6381 15.75 17.5 15.75C17.3619 15.75 17.25 15.6381 17.25 15.5C17.25 15.3619 17.3619 15.25 17.5 15.25C17.6381 15.25 17.75 15.3619 17.75 15.5Z", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "3" }]
+];
+
+export default MapPinpoint02Icon;

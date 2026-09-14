@@ -1,0 +1,9 @@
+import type { IconSvgObject } from './types';
+
+const LollipopIcon: IconSvgObject = [
+  ["circle", { cx: "12", cy: "8", r: "6", stroke: "currentColor", strokeLinecap: "round", strokeWidth: "1.5", key: "0" }],
+  ["path", { d: "M12 14V22", stroke: "currentColor", strokeLinecap: "round", strokeWidth: "1.5", key: "1" }],
+  ["path", { d: "M6 7.96552C7 6.49994 9 5.66926 10.2857 6.12258C11.7609 6.6427 12.0271 8.38074 13.5 8.90693C15 9.4428 15.5 7.46972 18 7.93534", stroke: "currentColor", strokeLinecap: "round", strokeWidth: "1.5", key: "2" }]
+];
+
+export default LollipopIcon;

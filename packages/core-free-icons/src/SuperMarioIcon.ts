@@ -1,0 +1,13 @@
+import type { IconSvgObject } from './types';
+
+const SuperMarioIcon: IconSvgObject = [
+  ["path", { d: "M4 12L3.14238 10.0719C2.992 9.69926 2.95328 9.28893 3.06223 8.90243C4.12979 5.11545 7.19777 2 12 2C16.8022 2 19.8702 5.11545 20.9378 8.90243C21.0467 9.28893 21.008 9.69926 20.8576 10.0719L20 12", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "0" }],
+  ["path", { d: "M18 10C16.3248 8.74353 14.2485 8 12 8C9.75148 8 7.67523 8.74353 6 10", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "1" }],
+  ["path", { d: "M15 8C15 4.00001 9.0001 3.99998 9 8", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "2" }],
+  ["path", { d: "M9 17C9.50046 17.433 10.9991 17.866 12 17C13.0009 17.866 14.4995 17.433 15 17", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "3" }],
+  ["path", { d: "M18.493 14.5L18.9926 13C19.2463 12.4227 19.8115 11.9988 20.4914 12C21.6084 12.002 22.0683 13.0407 21.9919 14C21.8184 16.1755 20.8763 18 18.493 18C17.2373 20.5328 14.8971 21.9003 12 22C9.10286 21.9003 6.76266 20.5328 5.50701 18C3.12369 18 2.18156 16.1755 2.00813 14C1.93166 13.0407 2.39156 12.002 3.50863 12C4.18852 11.9988 4.7537 12.4227 5.00741 13L5.50701 14.5", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "4" }],
+  ["path", { d: "M9.125 13H9M9.25 13C9.25 13.1381 9.13807 13.25 9 13.25C8.86193 13.25 8.75 13.1381 8.75 13C8.75 12.8619 8.86193 12.75 9 12.75C9.13807 12.75 9.25 12.8619 9.25 13Z", stroke: "currentColor", strokeLinecap: "round", strokeWidth: "1.5", key: "5" }],
+  ["path", { d: "M15.125 13H15M15.25 13C15.25 13.1381 15.1381 13.25 15 13.25C14.8619 13.25 14.75 13.1381 14.75 13C14.75 12.8619 14.8619 12.75 15 12.75C15.1381 12.75 15.25 12.8619 15.25 13Z", stroke: "currentColor", strokeLinecap: "round", strokeWidth: "1.5", key: "6" }]
+];
+
+export default SuperMarioIcon;

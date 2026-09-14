@@ -1,0 +1,9 @@
+import type { IconSvgObject } from './types';
+
+const RssIcon: IconSvgObject = [
+  ["path", { d: "M19.5 19.5C19.5 11.2157 12.7843 4.5 4.5 4.5", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "0" }],
+  ["path", { d: "M12.5 19.5C12.5 15.0817 8.91828 11.5 4.5 11.5", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "1" }],
+  ["path", { d: "M5.25 19H5M5.5 19C5.5 19.2761 5.27614 19.5 5 19.5C4.72386 19.5 4.5 19.2761 4.5 19C4.5 18.7239 4.72386 18.5 5 18.5C5.27614 18.5 5.5 18.7239 5.5 19Z", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "2" }]
+];
+
+export default RssIcon;

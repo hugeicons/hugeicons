@@ -1,0 +1,8 @@
+import type { IconSvgObject } from './types';
+
+const WifiCircleIcon: IconSvgObject = [
+  ["path", { d: "M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12Z", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "0" }],
+  ["path", { d: "M9.5 12.8647C10.2106 12.2981 11.0929 11.9904 12.0018 11.9922C12.9106 11.994 13.7917 12.3053 14.5 12.8747M12 16H12.01M7 9.755C8.4189 8.61897 10.1824 8 12 8C13.8176 8 15.5811 8.61897 17 9.755", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "1" }]
+];
+
+export default WifiCircleIcon;

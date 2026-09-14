@@ -1,0 +1,9 @@
+import type { IconSvgObject } from './types';
+
+const HdIcon: IconSvgObject = [
+  ["path", { d: "M2 11C2 8.17157 2 6.75736 2.87868 5.87868C3.75736 5 5.17157 5 8 5H16C18.8284 5 20.2426 5 21.1213 5.87868C22 6.75736 22 8.17157 22 11V13C22 15.8284 22 17.2426 21.1213 18.1213C20.2426 19 18.8284 19 16 19H8C5.17157 19 3.75736 19 2.87868 18.1213C2 17.2426 2 15.8284 2 13V11Z", stroke: "currentColor", strokeWidth: "1.5", key: "0" }],
+  ["path", { d: "M10 9V15M6 9V15M6 12H10", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "1" }],
+  ["path", { d: "M14 15V9H15C15.9319 9 16.3978 9 16.7654 9.15224C17.2554 9.35523 17.6448 9.74458 17.8478 10.2346C18 10.6022 18 11.0681 18 12C18 12.9319 18 13.3978 17.8478 13.7654C17.6448 14.2554 17.2554 14.6448 16.7654 14.8478C16.3978 15 15.9319 15 15 15H14Z", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "2" }]
+];
+
+export default HdIcon;

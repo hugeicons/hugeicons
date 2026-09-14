@@ -1,0 +1,14 @@
+import type { IconSvgObject } from './types';
+
+const BrainCircuitIcon: IconSvgObject = [
+  ["path", { d: "M10.2222 22C10.5126 22 10.7972 21.9626 11.074 21.897C11.7831 21.729 12.1377 21.6449 12.5688 21.0996C13 20.5543 13 19.9909 13 18.864V4.80464C13 3.71729 13 3.17361 12.4167 2.58825L12.4117 2.58333C11.8264 2 11.4768 2 10.7778 2C8.69873 2 6.9531 3.42754 6.46761 5.35589C4.51798 5.5659 3 7.21679 3 9.22223C3 10.3104 3.44693 11.2942 4.16723 12C3.44693 12.7058 3 13.6896 3 14.7777C3 16.4037 3.99774 17.7964 5.41435 18.3774C6.01243 20.469 7.93854 22 10.2222 22Z", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "0" }],
+  ["path", { d: "M13 9C13 11.2091 11.2091 13 9 13", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "1" }],
+  ["path", { d: "M13 12H20.5", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "2" }],
+  ["path", { d: "M18.5 3.25V3.5M19 3.5C19 3.77614 18.7761 4 18.5 4C18.2239 4 18 3.77614 18 3.5C18 3.22386 18.2239 3 18.5 3C18.7761 3 19 3.22386 19 3.5Z", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "3" }],
+  ["path", { d: "M18.5 3.5V4C18.5 5.88562 18.5 6.82843 17.9142 7.41421C17.3284 8 16.3856 8 14.5 8H13", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "4" }],
+  ["path", { d: "M18.5 20.5V20C18.5 18.1144 18.5 17.1716 17.9142 16.5858C17.3284 16 16.3856 16 14.5 16H13", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "5" }],
+  ["path", { d: "M18.5 20.75V20.5M19 20.5C19 20.2239 18.7761 20 18.5 20C18.2239 20 18 20.2239 18 20.5C18 20.7761 18.2239 21 18.5 21C18.7761 21 19 20.7761 19 20.5Z", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "6" }],
+  ["path", { d: "M20.5 11.75V12M21 12C21 12.2761 20.7761 12.5 20.5 12.5C20.2239 12.5 20 12.2761 20 12C20 11.7239 20.2239 11.5 20.5 11.5C20.7761 11.5 21 11.7239 21 12Z", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "7" }]
+];
+
+export default BrainCircuitIcon;

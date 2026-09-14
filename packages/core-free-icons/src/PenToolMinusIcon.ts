@@ -1,0 +1,11 @@
+import type { IconSvgObject } from './types';
+
+const PenToolMinusIcon: IconSvgObject = [
+  ["path", { d: "M11.5 14L5 20.5", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "0" }],
+  ["path", { d: "M12.5 14C12.5 14.5523 12.0523 15 11.5 15C10.9477 15 10.5 14.5523 10.5 14C10.5 13.4477 10.9477 13 11.5 13C12.0523 13 12.5 13.4477 12.5 14Z", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "1" }],
+  ["path", { d: "M18.5 12.5152L17.0047 15.933C16.2833 17.5819 15.9226 18.4064 15.2437 18.9351C14.5649 19.4639 13.6772 19.6119 11.9019 19.9078L5.34848 21C4.87988 21 4.5 20.6201 4.5 20.1515L5.59223 13.5981C5.88812 11.8228 6.03607 10.9351 6.56486 10.2563C7.09365 9.5774 7.91811 9.2167 9.56704 8.49529L12.9848 7", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "2" }],
+  ["path", { d: "M18.5685 11.997L13.503 6.93155C13.1809 6.6095 13 6.1727 13 5.71726C13 4.76884 13.7688 4 14.7173 4C15.1727 4 15.6095 4.18093 15.9315 4.50297L20.997 9.56846C21.3191 9.8905 21.5 10.3273 21.5 10.7827C21.5 11.7312 20.7312 12.5 19.7827 12.5C19.3273 12.5 18.8905 12.3191 18.5685 11.997Z", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "3" }],
+  ["path", { d: "M2.5 3H8.5", stroke: "currentColor", strokeLinecap: "round", strokeWidth: "1.5", key: "4" }]
+];
+
+export default PenToolMinusIcon;

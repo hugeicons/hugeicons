@@ -1,0 +1,10 @@
+import type { IconSvgObject } from './types';
+
+const DeviceAccessIcon: IconSvgObject = [
+  ["path", { d: "M16.8606 5C16.7255 4.13105 16.4698 3.5086 15.9859 3.02513C14.9599 2 13.3086 2 10.006 2C6.70332 2 5.052 2 4.026 3.02513C3 4.05025 3 5.70017 3 9V15C3 18.2998 3 19.9497 4.026 20.9749C5.052 22 6.70332 22 10.006 22C13.3086 22 14.9599 22 15.9859 20.9749C16.7796 20.1819 16.9593 19.0151 17 17", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "0" }],
+  ["path", { d: "M18 14C19.6569 14 21 12.6569 21 11C21 9.34315 19.6569 8 18 8C16.8896 8 15.9201 8.6033 15.4013 9.5H8L7 11L9 13.5L10.5 12.5L12 13.5L13.5 12.5H15.4013C15.9201 13.3967 16.8896 14 18 14Z", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "1" }],
+  ["path", { d: "M10.125 19H10M10.25 19C10.25 19.1381 10.1381 19.25 10 19.25C9.86193 19.25 9.75 19.1381 9.75 19C9.75 18.8619 9.86193 18.75 10 18.75C10.1381 18.75 10.25 18.8619 10.25 19Z", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "2" }],
+  ["path", { d: "M18.125 11H18M18.25 11C18.25 11.1381 18.1381 11.25 18 11.25C17.8619 11.25 17.75 11.1381 17.75 11C17.75 10.8619 17.8619 10.75 18 10.75C18.1381 10.75 18.25 10.8619 18.25 11Z", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "3" }]
+];
+
+export default DeviceAccessIcon;

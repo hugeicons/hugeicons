@@ -1,0 +1,8 @@
+import type { IconSvgObject } from './types';
+
+const PenLineIcon: IconSvgObject = [
+  ["path", { d: "M12.4922 20.5H20.4922", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "0" }],
+  ["path", { d: "M3.49196 18.9853V20.5H5.00668C6.23293 20.5 6.84606 20.5 7.39737 20.2716C7.94868 20.0433 8.38223 19.6097 9.24932 18.7426L19.1133 8.87868C19.9958 7.99612 20.4371 7.55483 20.4859 7.01325C20.494 6.92372 20.494 6.83364 20.4859 6.74411C20.4371 6.20253 19.9958 5.76124 19.1133 4.87868C18.2307 3.99612 17.7894 3.55483 17.2479 3.50605C17.1583 3.49798 17.0682 3.49798 16.9787 3.50605C16.4371 3.55483 15.9958 3.99612 15.1133 4.87868L5.24932 14.7426C4.38223 15.6097 3.94868 16.0433 3.72032 16.5946C3.49196 17.1459 3.49196 17.759 3.49196 18.9853Z", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "1" }]
+];
+
+export default PenLineIcon;

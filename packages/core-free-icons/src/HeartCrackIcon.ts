@@ -1,0 +1,8 @@
+import type { IconSvgObject } from './types';
+
+const HeartCrackIcon: IconSvgObject = [
+  ["path", { d: "M12 6C11.298 6.792 10.8256 7.33 10.5606 8L12.8536 10.146C12.9474 10.2398 13 10.3669 13 10.4995C13 10.6321 12.9474 10.7592 12.8536 10.853L10.6464 13.1465C10.5527 13.2403 10.5 13.3674 10.5 13.5C10.5 13.6326 10.5527 13.7597 10.6464 13.8535L11.7066 15", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "0" }],
+  ["path", { d: "M10.4107 19.9677C7.58942 17.858 2 13.0348 2 8.69444C2 5.82563 4.10526 3.5 7 3.5C8.5 3.5 10 4 12 6C14 4 15.5 3.5 17 3.5C19.8947 3.5 22 5.82563 22 8.69444C22 13.0348 16.4106 17.858 13.5893 19.9677C12.6399 20.6776 11.3601 20.6776 10.4107 19.9677Z", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "1" }]
+];
+
+export default HeartCrackIcon;

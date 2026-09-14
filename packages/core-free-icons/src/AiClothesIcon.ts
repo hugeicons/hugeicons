@@ -1,0 +1,12 @@
+import type { IconSvgObject } from './types';
+
+const AiClothesIcon: IconSvgObject = [
+  ["path", { d: "M21 13.5V10C21 9.07003 21 8.60504 20.8978 8.22354C20.6204 7.18827 19.8117 6.37962 18.7765 6.10222C18.395 6 17.93 6 17 6M13.5 21H9C6.17157 21 4.75736 21 3.87868 20.1213C3 19.2426 3 17.8284 3 15V10C3 9.07003 3 8.60504 3.10222 8.22354C3.37962 7.18827 4.18827 6.37962 5.22354 6.10222C5.60504 6 6.07003 6 7 6", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "0" }],
+  ["path", { d: "M14.2244 9.88978L12 9L9.77555 9.88978C9.59352 9.96259 9.39927 10 9.20322 10C8.49608 10 7.87968 9.51873 7.70818 8.83271L7 6L7.77208 3.68377C7.90819 3.27543 8.29033 3 8.72076 3H15.2792C15.7097 3 16.0918 3.27543 16.2279 3.68377L17 6L16.2918 8.83271C16.1203 9.51873 15.5039 10 14.7968 10C14.6007 10 14.4065 9.96259 14.2244 9.88978Z", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "1" }],
+  ["path", { d: "M12 9L16 3.5", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "2" }],
+  ["path", { d: "M12 9L8 3.5", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "3" }],
+  ["path", { d: "M12 9V14", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "4" }],
+  ["path", { d: "M19.5 17.9375V19.5M19.5 19.5V21.0625M19.5 19.5H18.25M19.5 19.5H20.75M22 19.5L20.9156 19.1385C20.4179 18.9726 20.0274 18.5821 19.8615 18.0844L19.5 17L19.1385 18.0844C18.9726 18.5821 18.5821 18.9726 18.0844 19.1385L17 19.5L18.0844 19.8615C18.5821 20.0274 18.9726 20.4179 19.1385 20.9156L19.5 22L19.8615 20.9156C20.0274 20.4179 20.4179 20.0274 20.9156 19.8615L22 19.5Z", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "5" }]
+];
+
+export default AiClothesIcon;

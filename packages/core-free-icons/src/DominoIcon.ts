@@ -1,0 +1,11 @@
+import type { IconSvgObject } from './types';
+
+const DominoIcon: IconSvgObject = [
+  ["path", { d: "M19 16C19 18.8284 19 20.2426 17.9749 21.1213C16.9497 22 15.2998 22 12 22C8.70017 22 7.05025 22 6.02513 21.1213C5 20.2426 5 18.8284 5 16L5 8C5 5.17157 5 3.75736 6.02513 2.87868C7.05026 2 8.70017 2 12 2C15.2998 2 16.9497 2 17.9749 2.87868C19 3.75736 19 5.17157 19 8L19 16Z", stroke: "currentColor", strokeWidth: "1.5", key: "0" }],
+  ["path", { d: "M19 12L5 12", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "1" }],
+  ["path", { d: "M12.125 7H12M12.25 7C12.25 7.13807 12.1381 7.25 12 7.25C11.8619 7.25 11.75 7.13807 11.75 7C11.75 6.86193 11.8619 6.75 12 6.75C12.1381 6.75 12.25 6.86193 12.25 7Z", stroke: "currentColor", strokeLinecap: "round", strokeWidth: "1.5", key: "2" }],
+  ["path", { d: "M9.625 16H9.5M9.75 16C9.75 16.1381 9.63807 16.25 9.5 16.25C9.36193 16.25 9.25 16.1381 9.25 16C9.25 15.8619 9.36193 15.75 9.5 15.75C9.63807 15.75 9.75 15.8619 9.75 16Z", stroke: "currentColor", strokeLinecap: "round", strokeWidth: "1.5", key: "3" }],
+  ["path", { d: "M14.625 18H14.5M14.75 18C14.75 18.1381 14.6381 18.25 14.5 18.25C14.3619 18.25 14.25 18.1381 14.25 18C14.25 17.8619 14.3619 17.75 14.5 17.75C14.6381 17.75 14.75 17.8619 14.75 18Z", stroke: "currentColor", strokeLinecap: "round", strokeWidth: "1.5", key: "4" }]
+];
+
+export default DominoIcon;

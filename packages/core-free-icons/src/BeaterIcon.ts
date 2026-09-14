@@ -1,0 +1,10 @@
+import type { IconSvgObject } from './types';
+
+const BeaterIcon: IconSvgObject = [
+  ["path", { d: "M17.5 15H14.5C13.6716 15 13 15.6716 13 16.5V19.5C13 20.3284 13.6716 21 14.5 21H17.5C18.3284 21 19 20.3284 19 19.5V16.5C19 15.6716 18.3284 15 17.5 15Z", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "0" }],
+  ["path", { d: "M16 11V21", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "1" }],
+  ["path", { d: "M18.7143 11H7C5.11438 11 4.17157 11 3.58579 10.4142C3 9.82843 3 8.88562 3 7C3 5.11438 3 4.17157 3.58579 3.58579C4.17157 3 5.11438 3 7 3H15.2857C15.9491 3 16.2808 3 16.5598 3.03144C18.8779 3.29263 20.7074 5.12208 20.9686 7.44018C21 7.71921 21 8.0509 21 8.71429C21 8.97964 21 9.11232 20.9874 9.22393C20.8829 10.1512 20.1512 10.8829 19.2239 10.9874C19.1123 11 18.9796 11 18.7143 11Z", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "2" }],
+  ["path", { d: "M6 7H10", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "3" }]
+];
+
+export default BeaterIcon;

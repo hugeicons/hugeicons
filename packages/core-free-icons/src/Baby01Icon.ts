@@ -1,0 +1,10 @@
+import type { IconSvgObject } from './types';
+
+const Baby01Icon: IconSvgObject = [
+  ["path", { d: "M10 16C10.4561 16.6072 11.1822 17 12 17C12.8178 17 13.5439 16.6072 14 16", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "0" }],
+  ["path", { d: "M15.625 11.258V11.611M8.375 11.258V11.611M8.75 11.5C8.75 11.2239 8.58211 11 8.375 11C8.16789 11 8 11.2239 8 11.5C8 11.7761 8.16789 12 8.375 12C8.58211 12 8.75 11.7761 8.75 11.5ZM16 11.5C16 11.2239 15.8321 11 15.625 11C15.4179 11 15.25 11.2239 15.25 11.5C15.25 11.7761 15.4179 12 15.625 12C15.8321 12 16 11.7761 16 11.5Z", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "1" }],
+  ["path", { d: "M3.1856 10.1728C2.48694 10.4846 2 11.1855 2 12C2 12.8145 2.48694 13.5154 3.1856 13.8272C4.02998 17.9217 7.6555 21 12 21C16.3445 21 19.97 17.9217 20.8144 13.8272C21.5131 13.5154 22 12.8145 22 12C22 11.1855 21.5131 10.4846 20.8144 10.1728C19.97 6.07831 16.3445 3 12 3C7.6555 3 4.02998 6.07831 3.1856 10.1728Z", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "2" }],
+  ["path", { d: "M12 3C14 3 15.5 4.26953 15.5 5.71181C15.5 6.64505 15.0282 8 13.5 8C12.6809 8 12.1578 7.39447 12 7", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "3" }]
+];
+
+export default Baby01Icon;

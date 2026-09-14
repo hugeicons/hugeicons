@@ -1,0 +1,9 @@
+import type { IconSvgObject } from './types';
+
+const ShoppingBag03Icon: IconSvgObject = [
+  ["path", { d: "M7 6C7 7.65685 8.34315 9 10 9C11.6569 9 13 7.65685 13 6", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "0" }],
+  ["path", { d: "M11.1117 3H8.88824C6.2172 3 4.88168 3 4.01968 3.82064C3.15769 4.64128 3.08361 5.98325 2.93545 8.66719L2.60424 14.6672C2.44025 17.6379 2.35826 19.1233 3.2403 20.0616C4.12235 21 5.60058 21 8.55703 21H11.443C14.3994 21 15.8777 21 16.7597 20.0616C17.6417 19.1233 17.5597 17.6379 17.3957 14.6672L17.0645 8.66717C16.9163 5.98324 16.8423 4.64127 15.9803 3.82064C15.1183 3 13.7828 3 11.1117 3Z", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "1" }],
+  ["path", { d: "M12.8882 3H15.1117C17.7827 3 19.1182 3 19.9802 3.82064C20.8422 4.64127 20.9163 5.98324 21.0645 8.66717L21.3957 14.6672C21.5597 17.6379 21.6417 19.1233 20.7597 20.0616C19.8776 21 18.3994 21 15.4429 21H12.557", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "2" }]
+];
+
+export default ShoppingBag03Icon;

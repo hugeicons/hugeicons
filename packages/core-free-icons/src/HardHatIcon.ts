@@ -1,0 +1,10 @@
+import type { IconSvgObject } from './types';
+
+const HardHatIcon: IconSvgObject = [
+  ["path", { d: "M19.5 16H4.5C3.11929 16 2 17.1193 2 18.5C2 19.3284 2.67157 20 3.5 20H20.5C21.3284 20 22 19.3284 22 18.5C22 17.1193 20.8807 16 19.5 16Z", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "0" }],
+  ["path", { d: "M15.25 16L14.4369 6.24223C14.3689 5.42642 14.3349 5.01852 14.1471 4.71354C14.002 4.47782 13.7944 4.28687 13.5475 4.16181C13.228 4 12.8186 4 12 4C11.1814 4 10.772 4 10.4525 4.16181C10.2056 4.28687 9.99804 4.47782 9.85291 4.71354C9.66512 5.01852 9.63113 5.42642 9.56315 6.24223L8.75 16", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "1" }],
+  ["path", { d: "M15 6.0957C18.1368 6.69199 21 10.0038 21 14V16.5", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "2" }],
+  ["path", { d: "M9 6.0957C5.86324 6.69199 3 10.0038 3 14V16.5", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "3" }]
+];
+
+export default HardHatIcon;

@@ -1,0 +1,9 @@
+import type { IconSvgObject } from './types';
+
+const UserLock01Icon: IconSvgObject = [
+  ["path", { d: "M11.993 13.5646L10.998 13.4983C10.6426 13.508 10.3113 13.5209 9.99881 13.5362C6.29798 13.7176 3.28216 16.8041 2.99799 20.4985", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "0" }],
+  ["path", { d: "M19.498 16.9983V15.4983C19.498 14.3937 18.6026 13.4983 17.498 13.4983C16.3934 13.4983 15.498 14.3937 15.498 15.4983V16.9983M19.498 16.9983H19.998C20.5503 16.9983 20.998 17.446 20.998 17.9983V20.4983C20.998 21.0506 20.5503 21.4983 19.998 21.4983H14.998C14.4457 21.4983 13.998 21.0506 13.998 20.4983V17.9983C13.998 17.446 14.4457 16.9983 14.998 16.9983H15.498M19.498 16.9983H15.498", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "1" }],
+  ["circle", { cx: "10.998", cy: "6.49829", r: "4", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "2" }]
+];
+
+export default UserLock01Icon;

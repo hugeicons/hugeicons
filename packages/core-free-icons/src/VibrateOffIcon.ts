@@ -1,0 +1,11 @@
+import type { IconSvgObject } from './types';
+
+const VibrateOffIcon: IconSvgObject = [
+  ["path", { d: "M17 12.5V9C17 6.64298 17 5.46447 16.2678 4.73223C15.5355 4 14.357 4 12 4C10.3267 4 9.24738 4 8.5 4.26198", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "0" }],
+  ["path", { d: "M16.9724 17C16.9178 18.0967 16.7546 18.7809 16.2678 19.2678C15.5355 20 14.357 20 12 20C9.64298 20 8.46447 20 7.73223 19.2678C7 18.5355 7 17.357 7 15V9C7 8.21019 7 7.55271 7.02755 7", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "1" }],
+  ["path", { d: "M22 8L20.3578 9.23167C20.1325 9.40059 20 9.66569 20 9.94721C20 10.286 20.1914 10.5957 20.4944 10.7472L21.5528 11.2764C21.8269 11.4134 22 11.6936 22 12C22 12.3064 21.8269 12.5866 21.5528 12.7236L20.4944 13.2528C20.1914 13.4043 20 13.714 20 14.0528C20 14.3343 20.1325 14.5994 20.3578 14.7683L22 16", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "2" }],
+  ["path", { d: "M2 8L3.64223 9.23167C3.86745 9.40059 4 9.66569 4 9.94721C4 10.286 3.80859 10.5957 3.50557 10.7472L2.44721 11.2764C2.17313 11.4134 2 11.6936 2 12C2 12.3064 2.17313 12.5866 2.44721 12.7236L3.50557 13.2528C3.80859 13.4043 4 13.714 4 14.0528C4 14.3343 3.86745 14.5994 3.64223 14.7683L2 16", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "3" }],
+  ["path", { d: "M2 2L22 22", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "4" }]
+];
+
+export default VibrateOffIcon;

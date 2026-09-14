@@ -1,0 +1,10 @@
+import type { IconSvgObject } from './types';
+
+const RotateThreeDIcon: IconSvgObject = [
+  ["path", { d: "M11.9922 17C6.46934 17 1.99219 14.7614 1.99219 12C1.99219 10.5996 3.14362 9.33368 4.99893 8.42598M19.3536 15.3842C20.9918 14.4937 21.9922 13.3053 21.9922 12C21.9922 9.23858 17.515 7 11.9922 7C11.4022 7 10.8241 7.02555 10.2622 7.07455", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "0" }],
+  ["path", { d: "M7.05084 13C7.01221 12.532 6.99219 12.0529 6.99219 11.5652C6.99219 6.28249 9.34198 2 12.2406 2C13.7106 2 15.0394 3.10137 15.9922 4.87602", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "1" }],
+  ["path", { d: "M16.876 10C16.9521 10.6849 16.9922 11.3964 16.9922 12.1264C16.9922 17.5794 14.7536 22 11.9922 22", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "2" }],
+  ["path", { d: "M9.99219 14L10.8575 14.6574C12.2806 15.7385 12.9922 16.2791 12.9922 17C12.9922 17.7209 12.2806 18.2615 10.8575 19.3426L9.99219 20", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "3" }]
+];
+
+export default RotateThreeDIcon;

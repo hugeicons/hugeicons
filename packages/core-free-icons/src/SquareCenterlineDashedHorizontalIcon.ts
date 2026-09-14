@@ -1,0 +1,9 @@
+import type { IconSvgObject } from './types';
+
+const SquareCenterlineDashedHorizontalIcon: IconSvgObject = [
+  ["path", { d: "M11.9922 21.002V20.002M11.9922 17.002V16.002M11.9922 12.502V11.502M11.9922 8.00195V7.00195M11.9922 3.00195V4.00195", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "0" }],
+  ["path", { d: "M7.99219 20.0014C6.69208 19.8719 5.81694 19.5792 5.16376 18.9176C3.99219 17.731 3.99219 15.8213 3.99219 12.0017C3.99219 8.18212 3.99219 6.27233 5.16376 5.08575C5.81694 4.42419 6.69207 4.13147 7.99219 4.00195", stroke: "currentColor", strokeLinecap: "round", strokeWidth: "1.5", key: "1" }],
+  ["path", { d: "M15.9922 20.0018C17.2923 19.8722 18.1674 19.5795 18.8206 18.918C19.9922 17.7314 19.9922 15.8216 19.9922 12.002C19.9922 8.18246 19.9922 6.27267 18.8206 5.08608C18.192 4.44937 17.3577 4.15431 16.1368 4.01758", stroke: "currentColor", strokeLinecap: "round", strokeWidth: "1.5", key: "2" }]
+];
+
+export default SquareCenterlineDashedHorizontalIcon;

@@ -1,0 +1,10 @@
+import type { IconSvgObject } from './types';
+
+const Quiz02Icon: IconSvgObject = [
+  ["path", { d: "M17.2916 16C18.9525 14.5341 20 12.3894 20 10C20 5.58173 16.4182 2 12 2C7.58173 2 4 5.58173 4 10C4 12.3894 5.04751 14.5341 6.70836 16", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "0" }],
+  ["path", { d: "M12.0532 13.8996H12.0032M10 8C10 6.89544 10.8954 6 12 6C13.1046 6 14 6.89544 14 8C14 8.75709 13.5793 9.41593 12.959 9.75553C12.4745 10.0207 12 10.4477 12 11M12.1032 13.8996C12.1032 13.9548 12.0584 13.9996 12.0032 13.9996C11.948 13.9996 11.9032 13.9548 11.9032 13.8996C11.9032 13.8443 11.948 13.7996 12.0032 13.7996C12.0584 13.7996 12.1032 13.8443 12.1032 13.8996Z", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "1" }],
+  ["path", { d: "M8.5 19H15.5", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "2" }],
+  ["path", { d: "M10 22H14", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "3" }]
+];
+
+export default Quiz02Icon;

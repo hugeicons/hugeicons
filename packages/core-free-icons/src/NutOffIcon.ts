@@ -1,0 +1,9 @@
+import type { IconSvgObject } from './types';
+
+const NutOffIcon: IconSvgObject = [
+  ["path", { d: "M7.01157 7.01147C4.59766 8.35216 2.30645 10.4949 2.05453 12.9515C1.67875 16.6161 3.39301 18.293 2.70241 20.2975C4.70687 19.6069 6.38382 21.3212 10.0484 20.9454C12.505 20.6935 14.6478 18.4022 15.9884 15.9883", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "0" }],
+  ["path", { d: "M22 4.50589C21.3879 4.00538 19.5 3.5 17.2591 5.13655M9.20221 4.20221C9.28486 4.05849 9.38944 3.9244 9.50947 3.80438C9.57693 3.73692 9.64738 3.67365 9.72794 3.62254C10.8062 2.93847 14.2401 2.10551 17.5673 5.43273C20.8945 8.75994 20.0615 12.1938 19.3775 13.2721C19.3264 13.3526 19.2631 13.4231 19.1956 13.4905C19.0756 13.6106 18.9415 13.7151 18.7978 13.7978", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "1" }],
+  ["path", { d: "M2 2L22 22", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "2" }]
+];
+
+export default NutOffIcon;

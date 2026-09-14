@@ -1,0 +1,8 @@
+import type { IconSvgObject } from './types';
+
+const StepBackIcon: IconSvgObject = [
+  ["path", { d: "M4.0571 12.6258C4.31149 13.8374 5.66514 14.7077 8.37243 16.4481C11.3169 18.3411 12.7892 19.2876 13.9817 18.9229C14.3856 18.7994 14.7576 18.5823 15.0699 18.2876C15.9922 17.4178 15.9922 15.6118 15.9922 12C15.9922 8.38816 15.9922 6.58224 15.0699 5.71235C14.7576 5.41773 14.3856 5.20057 13.9817 5.07707C12.7892 4.71243 11.3169 5.6589 8.37243 7.55186C5.66514 9.29233 4.31149 10.1626 4.0571 11.3742C3.97055 11.7865 3.97055 12.2135 4.0571 12.6258Z", stroke: "currentColor", strokeLinejoin: "round", strokeWidth: "1.5", key: "0" }],
+  ["path", { d: "M19.9922 5V19", stroke: "currentColor", strokeLinecap: "round", strokeWidth: "1.5", key: "1" }]
+];
+
+export default StepBackIcon;

@@ -194,8 +194,8 @@ The code in this package (`@hugeicons/react`) is licensed under the MIT License.
 This package only provides rendering utilities. It does not include or grant any rights to Hugeicons icon assets. Using Pro icon styles requires a valid Hugeicons Pro license.
 
 Hugeicons icon packs are licensed separately:
-- **Free icon packs**: use the license included with the specific free icon package you install.
-- **Pro icon packs (`@hugeicons-pro/*`)**: require a paid Hugeicons Pro license and are governed by the Hugeicons Pro Terms (see [Pro License](PRO-LICENSE.md).).
+- **Free icon packs** (`@hugeicons/core-free-icons`): MIT License. The `LICENSE.md` ships in the package.
+- **Pro icon packs (`@hugeicons-pro/*`)**: require a paid Hugeicons Pro license and are governed by the [Hugeicons License Agreement](https://hugeicons.com/license-agreement) (summary in the package's `PRO-LICENSE.md`).
 
 
 ## Related

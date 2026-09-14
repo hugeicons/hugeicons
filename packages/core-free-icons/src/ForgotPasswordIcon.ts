@@ -1,0 +1,12 @@
+import type { IconSvgObject } from './types';
+
+const ForgotPasswordIcon: IconSvgObject = [
+  ["path", { d: "M17 9.58959C16.5251 9.30167 15.9781 9.126 15.395 9.09909C13.9836 9.03397 12.5498 9 10.9709 9C9.39194 9 7.95815 9.03397 6.5467 9.09909C4.8693 9.17649 3.4909 10.485 3.26684 12.1553C3.1206 13.2453 3 14.3624 3 15.5C3 16.6376 3.12061 17.7547 3.26684 18.8447C3.4909 20.515 4.8693 21.8235 6.5467 21.9009C7.95815 21.966 9.39194 22 10.9709 22C12.4027 22 13.7153 21.9721 15 21.9183", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "0" }],
+  ["path", { d: "M6.5 9V6.5C6.5 4.01472 8.51472 2 11 2C13.4853 2 15.5 4.01472 15.5 6.5V9", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "1" }],
+  ["path", { d: "M12.125 15.5H12M12.25 15.5C12.25 15.6381 12.1381 15.75 12 15.75C11.8619 15.75 11.75 15.6381 11.75 15.5C11.75 15.3619 11.8619 15.25 12 15.25C12.1381 15.25 12.25 15.3619 12.25 15.5Z", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "2" }],
+  ["path", { d: "M19.125 21.75H19M19.25 21.75C19.25 21.8881 19.1381 22 19 22C18.8619 22 18.75 21.8881 18.75 21.75C18.75 21.6119 18.8619 21.5 19 21.5C19.1381 21.5 19.25 21.6119 19.25 21.75Z", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "3" }],
+  ["path", { d: "M8.125 15.5H8M8.25 15.5C8.25 15.6381 8.13807 15.75 8 15.75C7.86193 15.75 7.75 15.6381 7.75 15.5C7.75 15.3619 7.86193 15.25 8 15.25C8.13807 15.25 8.25 15.3619 8.25 15.5Z", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "4" }],
+  ["path", { d: "M17 15C17 13.8954 17.8954 13 19 13C20.1046 13 21 13.8954 21 15C21 15.5778 20.755 16.0983 20.3632 16.4634C19.7572 17.0282 19 17.6716 19 18.5", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "5" }]
+];
+
+export default ForgotPasswordIcon;

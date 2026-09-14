@@ -1,0 +1,9 @@
+import type { IconSvgObject } from './types';
+
+const BathIcon: IconSvgObject = [
+  ["path", { d: "M19 10H5C3.89543 10 3 10.8954 3 12C3 15.3137 5.68629 18 9 18H15C18.3137 18 21 15.3137 21 12C21 10.8954 20.1046 10 19 10Z", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "0" }],
+  ["path", { d: "M5 10V6.5C5 5.67157 5.67157 5 6.5 5C7.32843 5 8 5.67157 8 6.5V7", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "1" }],
+  ["path", { d: "M7 18L6 19M17 18L18 19", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "2" }]
+];
+
+export default BathIcon;

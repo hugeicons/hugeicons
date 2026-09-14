@@ -1,0 +1,12 @@
+import type { IconSvgObject } from './types';
+
+const CardSimIcon: IconSvgObject = [
+  ["path", { d: "M13 9.5H11C9.11438 9.5 8.17157 9.5 7.58579 10.0858C7 10.6716 7 11.6144 7 13.5V14.5C7 16.3856 7 17.3284 7.58579 17.9142C8.17157 18.5 9.11438 18.5 11 18.5H13C14.8856 18.5 15.8284 18.5 16.4142 17.9142C17 17.3284 17 16.3856 17 14.5V13.5C17 11.6144 17 10.6716 16.4142 10.0858C15.8284 9.5 14.8856 9.5 13 9.5Z", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "0" }],
+  ["path", { d: "M13.5 16L13.5 18", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "1" }],
+  ["path", { d: "M13.5 10L13.5 12", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "2" }],
+  ["path", { d: "M10.5 16L10.5 18", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "3" }],
+  ["path", { d: "M10.5 10L10.5 12", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "4" }],
+  ["path", { d: "M3 11.8584C3 7.28199 3 4.99376 4.38674 3.54394C4.43797 3.49038 4.49038 3.43797 4.54394 3.38674C5.99376 2 8.28199 2 12.8584 2C13.943 2 14.4655 2.00376 14.9628 2.18936C15.4417 2.3681 15.8429 2.70239 16.6452 3.37099L18.8411 5.20092C19.9027 6.08561 20.4335 6.52795 20.7168 7.13266C21 7.73737 21 8.42833 21 9.81025V13C21 16.7497 21 18.6246 20.0451 19.9389C19.7367 20.3634 19.3634 20.7367 18.9389 21.0451C17.6246 22 15.7497 22 12 22C8.25027 22 6.3754 22 5.06107 21.0451C4.6366 20.7367 4.26331 20.3634 3.95491 19.9389C3 18.6246 3 16.7497 3 13V11.8584Z", stroke: "currentColor", strokeWidth: "1.5", key: "5" }]
+];
+
+export default CardSimIcon;

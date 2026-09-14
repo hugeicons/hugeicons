@@ -1,0 +1,11 @@
+import type { IconSvgObject } from './types';
+
+const ListTodoIcon: IconSvgObject = [
+  ["path", { d: "M12.9961 6L20.9961 6", stroke: "currentColor", strokeLinecap: "round", strokeWidth: "1.5", key: "0" }],
+  ["path", { d: "M12.9961 12L20.9961 12", stroke: "currentColor", strokeLinecap: "round", strokeWidth: "1.5", key: "1" }],
+  ["path", { d: "M12.9961 18L20.9961 18", stroke: "currentColor", strokeLinecap: "round", strokeWidth: "1.5", key: "2" }],
+  ["path", { d: "M4.23073 19.3478C4.59827 19.5 5.06421 19.5 5.99609 19.5C6.92798 19.5 7.39392 19.5 7.76146 19.3478C8.25152 19.1448 8.64086 18.7554 8.84385 18.2654C8.99609 17.8978 8.99609 17.4319 8.99609 16.5C8.99609 15.5681 8.99609 15.1022 8.84385 14.7346C8.64086 14.2446 8.25152 13.8552 7.76146 13.6522C7.39392 13.5 6.92798 13.5 5.99609 13.5C5.06421 13.5 4.59827 13.5 4.23073 13.6522C3.74067 13.8552 3.35132 14.2446 3.14833 14.7346C2.99609 15.1022 2.99609 15.5681 2.99609 16.5C2.99609 17.4319 2.99609 17.8978 3.14833 18.2654C3.35132 18.7554 3.74067 19.1448 4.23073 19.3478Z", stroke: "currentColor", strokeLinejoin: "round", strokeWidth: "1.5", key: "3" }],
+  ["path", { d: "M2.99609 7.16667C2.99609 7.16667 3.74609 7.16667 4.49609 8.5C4.49609 8.5 6.87845 5.16667 8.99609 4.5", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "4" }]
+];
+
+export default ListTodoIcon;

@@ -1,0 +1,10 @@
+import type { IconSvgObject } from './types';
+
+const DecimalsArrowRightIcon: IconSvgObject = [
+  ["path", { d: "M12 10.5V6.5C12 4.84315 10.6569 3.5 9 3.5C7.34315 3.5 6 4.84315 6 6.5V10.5C6 12.1569 7.34315 13.5 9 13.5C10.6569 13.5 12 12.1569 12 10.5Z", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "0" }],
+  ["path", { d: "M3.25 13.125V13.25M3.5 13.25C3.5 13.3881 3.38807 13.5 3.25 13.5C3.11193 13.5 3 13.3881 3 13.25C3 13.1119 3.11193 13 3.25 13C3.38807 13 3.5 13.1119 3.5 13.25Z", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "1" }],
+  ["path", { d: "M21 10.5V6.5C21 4.84315 19.6569 3.5 18 3.5C16.3431 3.5 15 4.84315 15 6.5V10.5C15 12.1569 16.3431 13.5 18 13.5C19.6569 13.5 21 12.1569 21 10.5Z", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "2" }],
+  ["path", { d: "M20.0901 19H19.0751M19.0751 19H14M19.0751 19V18.2748C19.0751 17.8049 19.0751 17.57 19.2317 17.5115C19.3884 17.4531 19.5727 17.6192 19.9414 17.9514L20.7462 18.6766C20.9154 18.8291 21 18.9053 21 19C21 19.0947 20.9154 19.1709 20.7462 19.3234L19.9414 20.0486C19.5727 20.3808 19.3884 20.5469 19.2317 20.4885C19.0751 20.43 19.0751 20.1951 19.0751 19.7252V19Z", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "3" }]
+];
+
+export default DecimalsArrowRightIcon;

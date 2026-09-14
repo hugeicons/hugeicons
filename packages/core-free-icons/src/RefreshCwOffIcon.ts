@@ -1,0 +1,10 @@
+import type { IconSvgObject } from './types';
+
+const RefreshCwOffIcon: IconSvgObject = [
+  ["path", { d: "M3 3.00012L21 21.0001", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "0" }],
+  ["path", { d: "M19.5 6.50012C17.5 4.00012 15 3.00012 12 3.00012C10.8144 3.00012 9.68239 3.22936 8.64581 3.64593M4.5 17.5001C6.5 20.0001 9 21.0001 12 21.0001C14.4853 21.0001 16.7353 19.9928 18.364 18.3641M20.9451 11.0001C20.9814 11.3285 21 11.6621 21 12.0001C21 13.1857 20.7708 14.3177 20.3542 15.3543M3.05493 13.0001C3.01863 12.6718 3 12.3381 3 12.0001C3 9.51484 4.00736 7.26484 5.63604 5.63616", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "1" }],
+  ["path", { d: "M16 6.77886C16 6.77886 19.2808 7.27671 19.7787 6.77883C20.2766 6.28096 19.7787 3.00012 19.7787 3.00012", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "2" }],
+  ["path", { d: "M8 17.2211C8 17.2211 4.71917 16.7233 4.22128 17.2212C3.72339 17.719 4.22129 20.9999 4.22129 20.9999", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "3" }]
+];
+
+export default RefreshCwOffIcon;

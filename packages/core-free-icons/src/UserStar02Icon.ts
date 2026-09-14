@@ -1,0 +1,9 @@
+import type { IconSvgObject } from './types';
+
+const UserStar02Icon: IconSvgObject = [
+  ["circle", { cx: "10", cy: "7", r: "4", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "0" }],
+  ["path", { d: "M10 14C5 14 2 16.5 2 19C2 20.1046 2.89543 21 4 21H16C17.1046 21 18 20.1046 18 19C18 16.5 15 14 10 14Z", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "1" }],
+  ["path", { d: "M19.5183 8.39715L20.0462 9.37304C20.1182 9.50889 20.3102 9.63919 20.4722 9.66414L21.4291 9.81108C22.041 9.90534 22.185 10.3157 21.744 10.7204L21.0001 11.408C20.8741 11.5244 20.8051 11.749 20.8441 11.9098L21.0571 12.7609C21.2251 13.4346 20.8381 13.6952 20.1932 13.3431L19.2963 12.8524C19.1343 12.7637 18.8674 12.7637 18.7024 12.8524L17.8055 13.3431C17.1636 13.6952 16.7736 13.4319 16.9416 12.7609L17.1546 11.9098C17.1935 11.749 17.1246 11.5244 16.9986 11.408L16.2547 10.7204C15.8167 10.3157 15.9577 9.90534 16.5696 9.81108L17.5265 9.66414C17.6855 9.63919 17.8775 9.50889 17.9495 9.37304L18.4774 8.39715C18.7654 7.86762 19.2333 7.86762 19.5183 8.39715Z", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "2" }]
+];
+
+export default UserStar02Icon;
