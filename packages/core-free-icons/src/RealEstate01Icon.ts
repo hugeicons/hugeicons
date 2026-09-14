@@ -1,0 +1,13 @@
+import type { IconSvgObject } from './types';
+
+const RealEstate01Icon: IconSvgObject = [
+  ["path", { d: "M3 17V14.7963C3 13.9119 3 13.4697 3.17552 13.0788C3.35104 12.688 3.68154 12.3942 4.34254 11.8066L7.1263 9.33218C7.36703 9.1182 7.67791 9 8 9C8.32209 9 8.63297 9.1182 8.8737 9.33218L11.6575 11.8066C12.3185 12.3942 12.649 12.688 12.8245 13.0788C13 13.4697 13 13.9119 13 14.7963V17C13 18.8856 13 19.8284 12.4142 20.4142C11.8284 21 10.8856 21 9 21H7C5.11438 21 4.17157 21 3.58579 20.4142C3 19.8284 3 18.8856 3 17Z", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "0" }],
+  ["path", { d: "M8 17V21", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "1" }],
+  ["path", { d: "M9 21H16C18.357 21 19.5355 21 20.2678 20.2678C21 19.5355 21 18.357 21 16V8C21 5.64298 21 4.46447 20.2678 3.73223C19.5355 3 18.357 3 16 3H14C11.643 3 10.4645 3 9.73223 3.73223C9 4.46447 9 5.64298 9 8V9", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "2" }],
+  ["path", { d: "M13.125 7H13M13.25 7C13.25 7.13807 13.1381 7.25 13 7.25C12.8619 7.25 12.75 7.13807 12.75 7C12.75 6.86193 12.8619 6.75 13 6.75C13.1381 6.75 13.25 6.86193 13.25 7Z", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "3" }],
+  ["path", { d: "M17.125 7H17M17.25 7C17.25 7.13807 17.1381 7.25 17 7.25C16.8619 7.25 16.75 7.13807 16.75 7C16.75 6.86193 16.8619 6.75 17 6.75C17.1381 6.75 17.25 6.86193 17.25 7Z", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "4" }],
+  ["path", { d: "M17.125 11H17M17.25 11C17.25 11.1381 17.1381 11.25 17 11.25C16.8619 11.25 16.75 11.1381 16.75 11C16.75 10.8619 16.8619 10.75 17 10.75C17.1381 10.75 17.25 10.8619 17.25 11Z", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "5" }],
+  ["path", { d: "M17.125 15H17M17.25 15C17.25 15.1381 17.1381 15.25 17 15.25C16.8619 15.25 16.75 15.1381 16.75 15C16.75 14.8619 16.8619 14.75 17 14.75C17.1381 14.75 17.25 14.8619 17.25 15Z", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "6" }]
+];
+
+export default RealEstate01Icon;

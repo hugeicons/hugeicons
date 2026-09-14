@@ -1,0 +1,9 @@
+import type { IconSvgObject } from './types';
+
+const UndoDotIcon: IconSvgObject = [
+  ["path", { d: "M11.9991 21C16.9696 21 20.9991 16.9706 20.9991 12C20.9991 7.02944 16.9696 3 11.9991 3C8.66782 3 5.75927 4.80989 4.20312 7.5", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "0" }],
+  ["path", { d: "M3 3V4.27816C3 6.47004 3 7.56599 3.70725 8.16512C4.4145 8.76425 5.49553 8.58408 7.6576 8.22373L9 8", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "1" }],
+  ["path", { d: "M12 12V11.2M13 12C13 11.4477 12.5523 11 12 11C11.4477 11 11 11.4477 11 12C11 12.5523 11.4477 13 12 13C12.5523 13 13 12.5523 13 12Z", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "2" }]
+];
+
+export default UndoDotIcon;

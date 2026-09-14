@@ -1,0 +1,11 @@
+import type { IconSvgObject } from './types';
+
+const Cardiogram01Icon: IconSvgObject = [
+  ["path", { d: "M4.25273 20.302C5.65537 21.5 7.77024 21.5 12 21.5C16.2297 21.5 18.3446 21.5 19.7472 20.302C19.9464 20.1319 20.1319 19.9464 20.302 19.7472C21.5 18.3446 21.5 16.2297 21.5 12C21.5 7.77027 21.5 5.6554 20.302 4.25276C20.1319 4.05358 19.9464 3.86808 19.7472 3.69797C18.3446 2.5 16.2297 2.5 12 2.5C7.77024 2.5 5.65537 2.5 4.25273 3.69797C4.05355 3.86808 3.86805 4.05358 3.69794 4.25276C2.49997 5.6554 2.49997 7.77027 2.49997 12C2.49997 16.2297 2.49997 18.3446 3.69794 19.7472C3.86805 19.9464 4.05355 20.1319 4.25273 20.302Z", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "0" }],
+  ["path", { d: "M3.00003 15.5H21", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "1" }],
+  ["path", { d: "M7.125 18.5H7M7.25 18.5C7.25 18.6381 7.13807 18.75 7 18.75C6.86193 18.75 6.75 18.6381 6.75 18.5C6.75 18.3619 6.86193 18.25 7 18.25C7.13807 18.25 7.25 18.3619 7.25 18.5Z", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "2" }],
+  ["path", { d: "M11.125 18.5H11M11.25 18.5C11.25 18.6381 11.1381 18.75 11 18.75C10.8619 18.75 10.75 18.6381 10.75 18.5C10.75 18.3619 10.8619 18.25 11 18.25C11.1381 18.25 11.25 18.3619 11.25 18.5Z", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "3" }],
+  ["path", { d: "M17 9L15.5 9L13.5 6.5L10.5 11.5L8.5 9H7", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "4" }]
+];
+
+export default Cardiogram01Icon;

@@ -1,0 +1,11 @@
+import type { IconSvgObject } from './types';
+
+const PackageCheckIcon: IconSvgObject = [
+  ["path", { d: "M20.4922 7V12M2.49219 7C2.49219 10.0645 2.49219 16.7742 2.49219 17.1613C2.49219 18.5438 4.43783 19.3657 8.32911 21.0095C9.89238 21.6698 10.674 22 11.4922 22L11.4922 11.3548", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "0" }],
+  ["path", { d: "M7.81811 9.69138L4.8969 8.27785C3.29376 7.5021 2.49219 7.11423 2.49219 6.5C2.49219 5.88577 3.29376 5.4979 4.8969 4.72215L7.81811 3.30862C9.62102 2.43621 10.5225 2 11.4922 2C12.4619 2 13.3634 2.4362 15.1663 3.30862L18.0875 4.72215C19.6906 5.4979 20.4922 5.88577 20.4922 6.5C20.4922 7.11423 19.6906 7.5021 18.0875 8.27785L15.1663 9.69138C13.3634 10.5638 12.4619 11 11.4922 11C10.5225 11 9.62102 10.5638 7.81811 9.69138Z", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "1" }],
+  ["path", { d: "M5.49219 12L7.49219 13", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "2" }],
+  ["path", { d: "M16.4922 4L6.49219 9", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "3" }],
+  ["path", { d: "M14.4922 19C14.4922 19 15.3672 19 16.2422 21C16.2422 21 19.0216 16 21.4922 15", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "4" }]
+];
+
+export default PackageCheckIcon;

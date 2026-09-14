@@ -1,0 +1,9 @@
+import type { IconSvgObject } from './types';
+
+const AudioBook03Icon: IconSvgObject = [
+  ["path", { d: "M20 22H6C4.89543 22 4 21.1046 4 20M4 20C4 18.8954 4.89543 18 6 18H20V6C20 4.11438 20 3.17157 19.4142 2.58579C18.8284 2 17.8856 2 16 2H10C7.17157 2 5.75736 2 4.87868 2.87868C4 3.75736 4 5.17157 4 8V20Z", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "0" }],
+  ["path", { d: "M19.5 18C19.5 18 18.5 18.7628 18.5 20C18.5 21.2372 19.5 22 19.5 22", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "1" }],
+  ["path", { d: "M11.5 8.55078H10.5C10.0341 8.55078 9.80109 8.55078 9.61732 8.6269C9.37229 8.7284 9.17761 8.92307 9.07612 9.1681C9 9.35187 9 9.58484 9 10.0508C9 10.5167 9 10.7497 9.07612 10.9335C9.17761 11.1785 9.37229 11.3732 9.61732 11.4747C9.80109 11.5508 10.0341 11.5508 10.5 11.5508H11.5L15 14V6L11.5 8.55078Z", stroke: "currentColor", strokeLinejoin: "round", strokeWidth: "1.5", key: "2" }]
+];
+
+export default AudioBook03Icon;

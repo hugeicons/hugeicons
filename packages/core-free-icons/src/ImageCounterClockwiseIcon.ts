@@ -1,0 +1,10 @@
+import type { IconSvgObject } from './types';
+
+const ImageCounterClockwiseIcon: IconSvgObject = [
+  ["path", { d: "M10 7H8.4C5.38301 7 3.87452 7 2.93726 7.91122C2 8.82245 2 10.289 2 13.2222V14.7778C2 17.711 2 19.1776 2.93726 20.0888C3.87452 21 5.38301 21 8.4 21H11.6C14.617 21 16.1255 21 17.0627 20.0888C18 19.1776 18 17.711 18 14.7778V11", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "0" }],
+  ["path", { d: "M17.5 17.2857L13.4327 13.2712C13.2576 13.0984 13.0104 13 12.7513 13C12.5061 13 12.271 13.0881 12.0977 13.2449L8.42105 16.5714L6.71522 15.0281C6.54372 14.8729 6.31111 14.7857 6.06857 14.7857C5.80735 14.7857 5.5586 14.8868 5.38506 15.0634L2.5 18", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "1" }],
+  ["path", { d: "M13 7C13.9122 5.78555 15.3645 5 17.0004 5C19.7618 5 22.0004 7.23858 22.0004 10C22.0004 11.1258 21.6283 12.1647 21.0004 13.0005M13 7L14.0004 3M13 7L16.5004 8", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "2" }],
+  ["path", { d: "M7.625 11.5H7.5M7.75 11.5C7.75 11.6381 7.63807 11.75 7.5 11.75C7.36193 11.75 7.25 11.6381 7.25 11.5C7.25 11.3619 7.36193 11.25 7.5 11.25C7.63807 11.25 7.75 11.3619 7.75 11.5Z", stroke: "currentColor", strokeLinecap: "round", strokeWidth: "1.5", key: "3" }]
+];
+
+export default ImageCounterClockwiseIcon;

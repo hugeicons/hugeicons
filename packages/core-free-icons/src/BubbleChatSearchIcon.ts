@@ -1,0 +1,8 @@
+import type { IconSvgObject } from './types';
+
+const BubbleChatSearchIcon: IconSvgObject = [
+  ["path", { d: "M21.5 12C21.5 17.2467 17.2467 21.5 12 21.5C10.3719 21.5 8.8394 21.0904 7.5 20.3687C5.63177 19.362 4.37462 20.2979 3.26592 20.4658C3.09774 20.4913 2.93024 20.4302 2.80997 20.31C2.62741 20.1274 2.59266 19.8451 2.6935 19.6074C3.12865 18.5818 3.5282 16.6382 2.98341 15C2.6698 14.057 2.5 13.0483 2.5 12C2.5 6.75329 6.75329 2.5 12 2.5C17.2467 2.5 21.5 6.75329 21.5 12Z", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "0" }],
+  ["path", { d: "M16 15.4998L14.375 13.8748M15 11.4998C15 9.84292 13.6569 8.49977 12 8.49977C10.3431 8.49977 9 9.84292 9 11.4998C9 13.1566 10.3431 14.4998 12 14.4998C12.8284 14.4998 13.5784 14.164 14.1213 13.6211C14.6642 13.0782 15 12.3282 15 11.4998Z", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "1" }]
+];
+
+export default BubbleChatSearchIcon;

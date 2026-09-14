@@ -1,0 +1,11 @@
+import type { IconSvgObject } from './types';
+
+const TestTube02Icon: IconSvgObject = [
+  ["path", { d: "M16 2V18C16 20.2091 14.2091 22 12 22C9.79086 22 8 20.2091 8 18V2", stroke: "currentColor", strokeWidth: "1.5", key: "0" }],
+  ["path", { d: "M8 8.55626C8.88889 7.40291 10.3106 8.23432 12 9.31817C14.2222 10.7439 15.5556 9.65003 16 8.6152", stroke: "currentColor", strokeLinecap: "round", strokeWidth: "1.5", key: "1" }],
+  ["path", { d: "M7 2H17", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "2" }],
+  ["path", { d: "M13.125 14H13M13.25 14C13.25 14.1381 13.1381 14.25 13 14.25C12.8619 14.25 12.75 14.1381 12.75 14C12.75 13.8619 12.8619 13.75 13 13.75C13.1381 13.75 13.25 13.8619 13.25 14Z", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "3" }],
+  ["path", { d: "M11.125 18H11M11.25 18C11.25 18.1381 11.1381 18.25 11 18.25C10.8619 18.25 10.75 18.1381 10.75 18C10.75 17.8619 10.8619 17.75 11 17.75C11.1381 17.75 11.25 17.8619 11.25 18Z", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "4" }]
+];
+
+export default TestTube02Icon;

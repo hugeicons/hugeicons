@@ -1,0 +1,9 @@
+import type { IconSvgObject } from './types';
+
+const BookMarkedIcon: IconSvgObject = [
+  ["path", { d: "M20 14V18H6C4.89543 18 4 18.8954 4 20M10 2C7.17157 2 5.75736 2 4.87868 2.87868C4 3.75736 4 5.17157 4 8V20M4 20C4 21.1046 4.89543 22 6 22H20", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "0" }],
+  ["path", { d: "M14 8.45369V4.98797C14 3.57943 14 2.87515 14.4393 2.43758C14.8787 2 15.5858 2 17 2C18.4142 2 19.1213 2 19.5607 2.43758C20 2.87515 20 3.57942 20 4.98797V8.45369C20 9.37363 20 9.83359 19.7121 9.96791C19.4242 10.1022 19.0694 9.80776 18.3598 9.21883L17.6402 8.62154C17.3341 8.36748 17.181 8.24045 17 8.24045C16.819 8.24045 16.6659 8.36748 16.3598 8.62154L15.6402 9.21883C14.9306 9.80776 14.5758 10.1022 14.2879 9.96791C14 9.83359 14 9.37363 14 8.45369Z", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "1" }],
+  ["path", { d: "M19.5 18C19.5 18 18.5 18.7628 18.5 20C18.5 21.2372 19.5 22 19.5 22", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "2" }]
+];
+
+export default BookMarkedIcon;

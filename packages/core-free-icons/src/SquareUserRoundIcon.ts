@@ -1,0 +1,9 @@
+import type { IconSvgObject } from './types';
+
+const SquareUserRoundIcon: IconSvgObject = [
+  ["path", { d: "M11.4923 2.5L12.4923 2.50001C16.7349 2.50006 18.8562 2.50008 20.1742 3.8181C21.4922 5.13611 21.4922 7.25741 21.4922 11.5V12.5001C21.4922 16.7427 21.4922 18.8641 20.1742 20.1821C18.8561 21.5001 16.7348 21.5001 12.4922 21.5001H11.4922C7.24955 21.5001 5.12823 21.5001 3.81021 20.1821C2.49219 18.8641 2.49219 16.7427 2.49219 12.5001V11.5C2.49219 7.25732 2.49219 5.13598 3.81022 3.81795C5.12826 2.49993 7.2496 2.49995 11.4923 2.5Z", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "0" }],
+  ["path", { d: "M11.9922 7.39453C13.9252 7.39453 15.4922 8.96153 15.4922 10.8945C15.4922 12.8275 13.9252 14.3945 11.9922 14.3945C10.0592 14.3945 8.49219 12.8275 8.49219 10.8945C8.49219 8.96153 10.0592 7.39453 11.9922 7.39453Z", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "1" }],
+  ["path", { d: "M18.9726 20.8945C18.7163 17.2619 15.6881 14.3945 11.9902 14.3945C8.29235 14.3945 5.26419 17.2619 5.00781 20.8945", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "2" }]
+];
+
+export default SquareUserRoundIcon;

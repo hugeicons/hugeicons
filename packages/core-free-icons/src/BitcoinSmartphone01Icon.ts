@@ -1,0 +1,9 @@
+import type { IconSvgObject } from './types';
+
+const BitcoinSmartphone01Icon: IconSvgObject = [
+  ["path", { d: "M11.125 19H11M11.25 19C11.25 19.1381 11.1381 19.25 11 19.25C10.8619 19.25 10.75 19.1381 10.75 19C10.75 18.8619 10.8619 18.75 11 18.75C11.1381 18.75 11.25 18.8619 11.25 19Z", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "0" }],
+  ["path", { d: "M18 15C18 18.2998 18 19.9497 16.9749 20.9749C15.9497 22 14.2998 22 11 22C7.70017 22 6.05025 22 5.02513 20.9749C4 19.9497 4 18.2998 4 15V9C4 5.70017 4 4.05025 5.02513 3.02513C6.05025 2 7.70017 2 11 2", stroke: "currentColor", strokeLinecap: "round", strokeWidth: "1.5", key: "1" }],
+  ["path", { d: "M15 3.5H18C18.8284 3.5 19.5 4.17157 19.5 5V5.5C19.5 6.32843 18.8284 7 18 7H15M15 3.5V7M15 3.5H14M15 7H18.5C19.3284 7 20 7.67157 20 8.5V9C20 9.82843 19.3284 10.5 18.5 10.5H15M15 7V10.5M17 3.5V2M17 10.5V12M15 10.5H14", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "2" }]
+];
+
+export default BitcoinSmartphone01Icon;

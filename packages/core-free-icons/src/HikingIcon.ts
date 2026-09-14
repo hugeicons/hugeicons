@@ -1,0 +1,11 @@
+import type { IconSvgObject } from './types';
+
+const HikingIcon: IconSvgObject = [
+  ["path", { d: "M19 8.5L20 21.5", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "0" }],
+  ["path", { d: "M19 9.5C17.7592 9.6551 14.8441 9.52153 12.5112 7.89038C12.1706 7.65224 11.7724 7.5 11.3568 7.5C10.5558 7.5 9.85377 8.03617 9.64299 8.80903L8.55329 12.8046C8.51792 12.9343 8.5 13.0681 8.5 13.2025C8.5 13.949 9.04461 14.5838 9.78238 14.6973L13.6856 15.2978C14.4418 15.4141 15 16.0648 15 16.8298C15 16.9429 14.9876 17.0557 14.9631 17.1661L14 21.5M12 8.49999L10.5 14M9.5 13L10 13.5L10.8735 8.6957C10.927 8.40166 11.2887 8.28867 11.5 8.5", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "1" }],
+  ["path", { d: "M5.77044 8.00012L4.77044 12.0001M7.27044 7.5L5.77044 13L5.29872 13C4.58146 13 4 12.4186 4 11.7013C4 11.5679 4.02055 11.4353 4.06093 11.3082L4.82751 8.89459C5.09127 8.06413 5.86234 7.5 6.73368 7.5H7.27044Z", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "2" }],
+  ["path", { d: "M8 17L6 21.5", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "3" }],
+  ["path", { d: "M12 3V3.75M12 5C11.3096 5 10.75 4.44035 10.75 3.75C10.75 3.05964 11.3096 2.5 12 2.5C12.6904 2.5 13.25 3.05964 13.25 3.75C13.25 4.44035 12.6904 5 12 5Z", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "4" }]
+];
+
+export default HikingIcon;

@@ -1,0 +1,8 @@
+import type { IconSvgObject } from './types';
+
+const MoreVerticalCircle02Icon: IconSvgObject = [
+  ["path", { d: "M22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22C17.5228 22 22 17.5228 22 12Z", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "0" }],
+  ["path", { d: "M12 12.25V12M12 17.25V17M12 7.25V7M12 12.5C11.7239 12.5 11.5 12.2761 11.5 12C11.5 11.7239 11.7239 11.5 12 11.5C12.2761 11.5 12.5 11.7239 12.5 12C12.5 12.2761 12.2761 12.5 12 12.5ZM12 17.5C11.7239 17.5 11.5 17.2761 11.5 17C11.5 16.7239 11.7239 16.5 12 16.5C12.2761 16.5 12.5 16.7239 12.5 17C12.5 17.2761 12.2761 17.5 12 17.5ZM12 7.5C11.7239 7.5 11.5 7.27614 11.5 7C11.5 6.72386 11.7239 6.5 12 6.5C12.2761 6.5 12.5 6.72386 12.5 7C12.5 7.27614 12.2761 7.5 12 7.5Z", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "1" }]
+];
+
+export default MoreVerticalCircle02Icon;

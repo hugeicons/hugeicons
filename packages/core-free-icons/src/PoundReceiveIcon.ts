@@ -1,0 +1,8 @@
+import type { IconSvgObject } from './types';
+
+const PoundReceiveIcon: IconSvgObject = [
+  ["path", { d: "M14.25 13.025H21.75M14.25 13.025C14.25 13.7252 16.25 15.025 17.25 15.525M14.25 13.025C14.25 12.3248 16.4167 11.025 17.25 10.525", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "0" }],
+  ["path", { d: "M12.662 8.52502C12.662 6.40438 10.9917 3.91085 8.25 4.00232C7.52476 4.02652 6.72455 4.25845 5.86047 4.76706C4.4716 5.68479 2.67966 8.7359 4.84287 11.9369C5.89496 13.4937 6.86653 13.525 9.75 13.525H2.25M6.703 14.0073C6.16468 15.5015 4.53524 18.8988 2.32404 19.987H11.2098C11.6185 19.987 12.8337 20.1991 14.229 18.9241", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "1" }]
+];
+
+export default PoundReceiveIcon;

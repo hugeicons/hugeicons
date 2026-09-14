@@ -1,0 +1,10 @@
+import type { IconSvgObject } from './types';
+
+const BaggageClaimIcon: IconSvgObject = [
+  ["path", { d: "M3 21.5H21", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "0" }],
+  ["path", { d: "M17 10H7", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "1" }],
+  ["path", { d: "M15 6.5H9C6.17157 6.5 4.75736 6.5 3.87868 7.37868C3 8.25736 3 9.67157 3 12.5C3 15.3284 3 16.7426 3.87868 17.6213C4.75736 18.5 6.17157 18.5 9 18.5H15C17.8284 18.5 19.2426 18.5 20.1213 17.6213C21 16.7426 21 15.3284 21 12.5C21 9.67157 21 8.25736 20.1213 7.37868C19.2426 6.5 17.8284 6.5 15 6.5Z", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "2" }],
+  ["path", { d: "M9 6.5V5.5C9 4.56812 9 4.10218 9.15224 3.73463C9.35523 3.24458 9.74458 2.85523 10.2346 2.65224C10.6022 2.5 11.0681 2.5 12 2.5C12.9319 2.5 13.3978 2.5 13.7654 2.65224C14.2554 2.85523 14.6448 3.24458 14.8478 3.73463C15 4.10218 15 4.56812 15 5.5V6.5", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "3" }]
+];
+
+export default BaggageClaimIcon;

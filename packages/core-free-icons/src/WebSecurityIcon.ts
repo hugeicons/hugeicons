@@ -1,0 +1,10 @@
+import type { IconSvgObject } from './types';
+
+const WebSecurityIcon: IconSvgObject = [
+  ["path", { d: "M3 7.5H20", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "0" }],
+  ["path", { d: "M10.5 20.5C6.72876 20.5 4.84315 20.5 3.67157 19.3284C2.5 18.1569 2.5 16.2712 2.5 12.5V10.5C2.5 6.72876 2.5 4.84315 3.67157 3.67157C4.84315 2.5 6.72876 2.5 10.5 2.5H12.5C16.2712 2.5 18.1569 2.5 19.3284 3.67157C20.5 4.84315 20.5 6.72876 20.5 10.5", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "1" }],
+  ["path", { d: "M15.5 16.5V14.5C15.5 13.3954 16.3954 12.5 17.5 12.5C18.6046 12.5 19.5 13.3954 19.5 14.5V16.5", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "2" }],
+  ["path", { d: "M19 16.5H16C15.0654 16.5 14.5981 16.5 14.25 16.701C14.022 16.8326 13.8326 17.022 13.701 17.25C13.5 17.5981 13.5 18.0654 13.5 19C13.5 19.9346 13.5 20.4019 13.701 20.75C13.8326 20.978 14.022 21.1674 14.25 21.299C14.5981 21.5 15.0654 21.5 16 21.5H19C19.9346 21.5 20.4019 21.5 20.75 21.299C20.978 21.1674 21.1674 20.978 21.299 20.75C21.5 20.4019 21.5 19.9346 21.5 19C21.5 18.0654 21.5 17.5981 21.299 17.25C21.1674 17.022 20.978 16.8326 20.75 16.701C20.4019 16.5 19.9346 16.5 19 16.5Z", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "3" }]
+];
+
+export default WebSecurityIcon;

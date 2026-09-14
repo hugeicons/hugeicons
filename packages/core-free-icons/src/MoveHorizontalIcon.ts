@@ -1,0 +1,9 @@
+import type { IconSvgObject } from './types';
+
+const MoveHorizontalIcon: IconSvgObject = [
+  ["path", { d: "M20.4922 12.75C20.9064 12.75 21.2422 12.4142 21.2422 12C21.2422 11.5858 20.9064 11.25 20.4922 11.25V12V12.75ZM3.49219 11.25C3.07797 11.25 2.74219 11.5858 2.74219 12C2.74219 12.4142 3.07797 12.75 3.49219 12.75V12V11.25ZM20.4922 12V11.25H3.49219V12V12.75H20.4922V12Z", fill: "currentColor", key: "0" }],
+  ["path", { d: "M6.99219 16C6.18308 15.2136 2.99216 13.1203 2.99219 12C2.99221 10.8797 6.18306 8.78644 6.99218 8", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "1" }],
+  ["path", { d: "M16.9922 16C17.8013 15.2136 20.9922 13.1203 20.9922 12C20.9922 10.8797 17.8013 8.78644 16.9922 8", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "2" }]
+];
+
+export default MoveHorizontalIcon;

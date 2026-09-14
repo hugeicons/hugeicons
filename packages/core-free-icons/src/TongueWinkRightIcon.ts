@@ -1,0 +1,11 @@
+import type { IconSvgObject } from './types';
+
+const TongueWinkRightIcon: IconSvgObject = [
+  ["path", { d: "M12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 13.2313 21.7775 14.4107 21.3704 15.5", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "0" }],
+  ["path", { d: "M17.659 14C16.8353 16.3304 14.6128 18 12.0004 18C9.38795 18 7.16547 16.3304 6.3418 14", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "1" }],
+  ["path", { d: "M13 18.0004L14.7731 20.7097C15.4725 21.9439 17.0216 22.3668 18.2331 21.6542C19.4446 20.9416 19.8597 19.3634 19.1602 18.1291L17.3872 15.0004", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "2" }],
+  ["path", { d: "M14.5 8.80018C14.842 8.3144 15.3866 8.00018 16 8.00018C16.6134 8.00018 17.158 8.3144 17.5 8.80018", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "3" }],
+  ["path", { d: "M8.375 8.38719V8.91667M8.75 8.75018C8.75 8.33597 8.58211 8.00018 8.375 8.00018C8.16789 8.00018 8 8.33597 8 8.75018C8 9.16439 8.16789 9.50018 8.375 9.50018C8.58211 9.50018 8.75 9.16439 8.75 8.75018Z", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "4" }]
+];
+
+export default TongueWinkRightIcon;

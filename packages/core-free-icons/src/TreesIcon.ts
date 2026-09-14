@@ -1,0 +1,10 @@
+import type { IconSvgObject } from './types';
+
+const TreesIcon: IconSvgObject = [
+  ["path", { d: "M3 13V9C3 7.34315 4.34315 6 6 6H8C9.65685 6 11 7.34315 11 9V13C11 14.6569 9.65685 16 8 16H6C4.34315 16 3 14.6569 3 13Z", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "0" }],
+  ["path", { d: "M10 3.5L11.1599 2.34017C11.3777 2.12236 11.6731 2 11.9811 2C12.3113 2 12.6259 2.14057 12.8462 2.38654L16.7929 6.79289C16.9255 6.9255 17 7.10536 17 7.29289C17 7.68342 16.6834 8 16.2929 8H15L18.7929 11.7929C18.9255 11.9255 19 12.1054 19 12.2929C19 12.6834 18.6834 13 18.2929 13H17L20.7929 16.7929C20.9255 16.9255 21 17.1054 21 17.2929C21 17.6834 20.6834 18 20.2929 18H12", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "1" }],
+  ["path", { d: "M13 18V22", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "2" }],
+  ["path", { d: "M7.00003 11V22", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "3" }]
+];
+
+export default TreesIcon;

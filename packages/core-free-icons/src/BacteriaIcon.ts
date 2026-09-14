@@ -1,0 +1,13 @@
+import type { IconSvgObject } from './types';
+
+const BacteriaIcon: IconSvgObject = [
+  ["path", { d: "M10 12.5C9.44772 11.8333 8.55228 11.8333 8 12.5C7.44772 13.1667 6.55228 13.1667 6 12.5", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "0" }],
+  ["path", { d: "M15.9142 18C16.1896 17.2971 15.7803 16.6255 15 16.5C14.2197 16.3745 13.8104 15.7029 14.0858 15", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "1" }],
+  ["circle", { cx: "12", cy: "12", r: "10", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "2" }],
+  ["circle", { cx: "15", cy: "8", r: "2", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "3" }],
+  ["path", { d: "M9.125 17H9M9.25 17C9.25 17.1381 9.13807 17.25 9 17.25C8.86193 17.25 8.75 17.1381 8.75 17C8.75 16.8619 8.86193 16.75 9 16.75C9.13807 16.75 9.25 16.8619 9.25 17Z", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "4" }],
+  ["path", { d: "M19.125 13H19M19.25 13C19.25 13.1381 19.1381 13.25 19 13.25C18.8619 13.25 18.75 13.1381 18.75 13C18.75 12.8619 18.8619 12.75 19 12.75C19.1381 12.75 19.25 12.8619 19.25 13Z", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "5" }],
+  ["path", { d: "M8.125 8H8M8.25 8C8.25 8.13807 8.13807 8.25 8 8.25C7.86193 8.25 7.75 8.13807 7.75 8C7.75 7.86193 7.86193 7.75 8 7.75C8.13807 7.75 8.25 7.86193 8.25 8Z", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "6" }]
+];
+
+export default BacteriaIcon;

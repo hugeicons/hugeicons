@@ -1,0 +1,9 @@
+import type { IconSvgObject } from './types';
+
+const AnnoyedIcon: IconSvgObject = [
+  ["path", { d: "M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "0" }],
+  ["path", { d: "M8 15H16", stroke: "currentColor", strokeLinecap: "round", strokeWidth: "1.5", key: "1" }],
+  ["path", { d: "M7 8C7.51931 8 8.74652 8 9.5 8.70898M9.5 8.70898C9.71381 8.91016 10 9.22386 10 9.5C10 9.77614 9.77614 10 9.5 10C9.20618 10 8.996 9.75659 9 9.5C9.0046 9.2053 9.33335 8.92413 9.5 8.70898ZM14 8C14.5193 8 15.7465 8 16.5 8.70898M16.5 8.70898C16.7138 8.91016 17 9.22386 17 9.5C17 9.77614 16.7761 10 16.5 10C16.2062 10 15.996 9.75659 16 9.5C16.0046 9.2053 16.3334 8.92413 16.5 8.70898Z", stroke: "currentColor", strokeLinecap: "round", strokeWidth: "1.5", key: "2" }]
+];
+
+export default AnnoyedIcon;

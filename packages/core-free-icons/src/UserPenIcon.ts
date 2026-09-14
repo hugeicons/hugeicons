@@ -1,0 +1,9 @@
+import type { IconSvgObject } from './types';
+
+const UserPenIcon: IconSvgObject = [
+  ["path", { d: "M3.5 19V16.9704C3.5 15.7281 4.05927 14.5099 5.18968 13.9946C6.5685 13.3661 8.22212 13 10 13C11.4418 13 12.8019 13.2407 14 13.667", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "0" }],
+  ["circle", { cx: "10", cy: "6.5", r: "3.5", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "1" }],
+  ["path", { d: "M20.1887 14.9339L19.5661 14.3113C19.151 13.8962 18.478 13.8962 18.0629 14.3113L14.7141 17.6601C14.269 18.1052 13.9656 18.6722 13.8421 19.2895L13.5 21L15.2105 20.6579C15.8278 20.5344 16.3948 20.231 16.8399 19.7859L20.1887 16.4371C20.6038 16.022 20.6038 15.349 20.1887 14.9339Z", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "2" }]
+];
+
+export default UserPenIcon;

@@ -1,0 +1,10 @@
+import type { IconSvgObject } from './types';
+
+const ViberIcon: IconSvgObject = [
+  ["path", { d: "M21 10.5C21 17 18 18.5 12 18.5C11.6569 18.5 11.3235 18.4951 11 18.4846L8.10355 21.3959C8.03727 21.4625 7.94716 21.5 7.85318 21.5C7.65812 21.5 7.5 21.3419 7.5 21.1468V18.026C4.5 17.1924 3 15.0962 3 10.5C3 4 6 2.5 12 2.5C18 2.5 21 4 21 10.5Z", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "0" }],
+  ["path", { d: "M12.7285 13.664C13.4543 14.0595 14.1079 14.3134 14.5308 14.4574C14.8359 14.5612 15.1663 14.47 15.3942 14.2421L16 13.6363L14.3667 12.5474C14.1847 12.4261 13.9424 12.4501 13.7878 12.6047L12.7285 13.664ZM12.7285 13.664C12.0002 13.2673 11.1993 12.7281 10.4856 12.0144C9.77191 11.3007 9.23269 10.4998 8.83595 9.77153M8.83595 9.77153C8.44053 9.04571 8.18665 8.39212 8.04264 7.96915C7.93877 7.66407 8.03004 7.33369 8.25792 7.10581L8.86373 6.5L9.95262 8.13334C10.0739 8.31529 10.0499 8.55756 9.89531 8.71218L8.83595 9.77153ZM8.53935 7.47313L9.1881 8.77063M15.0269 13.9606L13.7294 13.3119", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "1" }],
+  ["path", { d: "M17 10C17 7.79086 15.2091 6 13 6", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "2" }],
+  ["path", { d: "M14 10C14 9.44772 13.5523 9 13 9", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "3" }]
+];
+
+export default ViberIcon;

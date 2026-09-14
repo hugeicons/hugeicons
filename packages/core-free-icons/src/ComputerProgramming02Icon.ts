@@ -1,0 +1,10 @@
+import type { IconSvgObject } from './types';
+
+const ComputerProgramming02Icon: IconSvgObject = [
+  ["path", { d: "M14 21H16M14 21C13.1716 21 12.5 20.3284 12.5 19.5V17L12 17M14 21H10M10 21H8M10 21C10.8284 21 11.5 20.3284 11.5 19.5V17L12 17M12 17V21", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "0" }],
+  ["path", { d: "M15 3H8C5.17157 3 3.75736 3 2.87868 3.87868C2 4.75736 2 6.17157 2 9V11C2 13.8284 2 15.2426 2.87868 16.1213C3.75736 17 5.17157 17 8 17H16C18.8284 17 20.2426 17 21.1213 16.1213C22 15.2426 22 13.8284 22 11V10", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "1" }],
+  ["path", { d: "M8 10H15", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "2" }],
+  ["path", { d: "M15.7844 7.08457L19.5505 3.32949C19.9916 2.89017 20.7068 2.89017 21.1478 3.32949L21.6692 3.84875C22.1103 4.28808 22.1103 5.00037 21.6692 5.43969L17.9378 9.21136C17.723 9.42536 17.4481 9.56963 17.1494 9.62519L15.4566 9.99122C15.1893 10.049 14.9513 9.81264 15.0086 9.54627L15.3689 7.86983C15.4247 7.57232 15.5695 7.29858 15.7844 7.08457Z", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "3" }]
+];
+
+export default ComputerProgramming02Icon;

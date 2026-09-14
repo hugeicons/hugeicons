@@ -1,0 +1,10 @@
+import type { IconSvgObject } from './types';
+
+const UserArrowLeftRightIcon: IconSvgObject = [
+  ["path", { d: "M20 21.0001C19.713 17.269 16.7289 14.3151 12.995 14.0662L12 13.9999C11.6446 14.0096 11.3134 14.0225 11.0008 14.0378C7.3 14.2192 4.28417 17.3057 4 21.0001", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "0" }],
+  ["circle", { cx: "12", cy: "6.99988", r: "4", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "1" }],
+  ["path", { d: "M4.5 9.99988L3.1099 8.8257C2.36997 8.2007 2 7.8882 2 7.49988C2 7.11155 2.36997 6.79905 3.1099 6.17405L4.5 4.99988", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "2" }],
+  ["path", { d: "M19.5 9.99988L20.8901 8.8257C21.63 8.2007 22 7.8882 22 7.49988C22 7.11155 21.63 6.79905 20.8901 6.17405L19.5 4.99988", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "3" }]
+];
+
+export default UserArrowLeftRightIcon;

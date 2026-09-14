@@ -1,0 +1,10 @@
+import type { IconSvgObject } from './types';
+
+const MilkOffIcon: IconSvgObject = [
+  ["path", { d: "M1.99219 2L21.9922 22", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "0" }],
+  ["path", { d: "M15.2397 4.92311C16.5647 7.35227 17.5642 9.45539 17.8847 12M15.2397 4.92311C15.0768 4.97298 13.9938 5 13.9938 5M15.2397 4.92311C15.8893 4.7243 16.3575 4.16227 16.3575 3.5C16.3575 2.67157 15.6249 2 14.7211 2H9.26657C8.78193 2 8.3465 2.19313 8.04688 2.5", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "1" }],
+  ["path", { d: "M17.9749 18C17.9281 19.5534 17.7548 20.48 17.1135 21.1213C16.2348 22 14.8206 22 11.9922 22C9.16376 22 7.74955 22 6.87087 21.1213C5.99219 20.2426 5.99219 18.8284 5.99219 16V13.7771C5.99219 11.6006 6.44579 9.79621 7.19742 8", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "2" }],
+  ["path", { d: "M6.49219 12L13.9922 14", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "3" }]
+];
+
+export default MilkOffIcon;

@@ -1,0 +1,12 @@
+import type { IconSvgObject } from './types';
+
+const DumpTruckIcon: IconSvgObject = [
+  ["path", { d: "M2.5 17.5C2.5 18.8807 3.61929 20 5 20C6.3807 20 7.5 18.8807 7.5 17.5C7.5 16.1193 6.3807 15 5 15C3.61929 15 2.5 16.1193 2.5 17.5Z", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "0-0" }],
+  ["path", { d: "M15.5 17.5C15.5 18.8807 16.6193 20 18 20C19.3807 20 20.5 18.8807 20.5 17.5C20.5 16.1193 19.3807 15 18 15C16.6193 15 15.5 16.1193 15.5 17.5Z", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "0-1" }],
+  ["path", { d: "M20.5 17.5H20.6667C21.4485 17.5 21.8395 17.5 22.1088 17.2934C22.1781 17.2402 22.2402 17.1781 22.2934 17.1088C22.5 16.8395 22.5 16.4485 22.5 15.6667C22.5 14.1029 22.5 13.3211 22.0867 12.7825C21.9803 12.6438 21.8562 12.5197 21.7175 12.4133C21.1789 12 20.3971 12 18.8333 12H16L17 8H17.5C18.3948 8 18.8422 8 19.2143 8.15663C19.5413 8.29425 19.8258 8.51637 20.0386 8.80021C20.2808 9.12324 20.3893 9.55728 20.6063 10.4254L21 12", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "0-2" }],
+  ["path", { d: "M18 4H17.3423C16.2174 4 15.6549 4 15.248 4.31769C14.8412 4.63538 14.7047 5.18105 14.4319 6.27239L12.7825 12.8702C12.6165 13.5342 12.0198 14 11.3354 14C11.1146 14 10.8965 13.951 10.6969 13.8564L2.38791 9.92059C1.8457 9.66375 1.5 9.11748 1.5 8.51751C1.5 8.18159 1.60895 7.85473 1.81051 7.58599L2.1 7.2C2.39315 6.80914 2.53972 6.61371 2.71851 6.4645C2.95688 6.26555 3.23831 6.12484 3.54049 6.0535C3.76713 6 4.01142 6 4.5 6H14", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "0-3" }],
+  ["path", { d: "M7.5 17.5H15.5", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "0-4" }],
+  ["path", { d: "M5 11.5V15", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "0-5" }]
+];
+
+export default DumpTruckIcon;

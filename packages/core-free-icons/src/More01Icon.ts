@@ -1,0 +1,15 @@
+import type { IconSvgObject } from './types';
+
+const More01Icon: IconSvgObject = [
+  ["path", { d: "M6.00449 6.5V6M7.00449 6.5C7.00449 5.94772 6.55677 5.5 6.00449 5.5C5.4522 5.5 5.00449 5.94772 5.00449 6.5C5.00449 7.05228 5.4522 7.5 6.00449 7.5C6.55677 7.5 7.00449 7.05228 7.00449 6.5Z", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "0" }],
+  ["path", { d: "M6.00449 12.5V12M7.00449 12.5C7.00449 11.9477 6.55677 11.5 6.00449 11.5C5.4522 11.5 5.00449 11.9477 5.00449 12.5C5.00449 13.0523 5.4522 13.5 6.00449 13.5C6.55677 13.5 7.00449 13.0523 7.00449 12.5Z", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "1" }],
+  ["path", { d: "M6.00449 18.5V18M7.00449 18.5C7.00449 17.9477 6.55677 17.5 6.00449 17.5C5.4522 17.5 5.00449 17.9477 5.00449 18.5C5.00449 19.0523 5.4522 19.5 6.00449 19.5C6.55677 19.5 7.00449 19.0523 7.00449 18.5Z", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "2" }],
+  ["path", { d: "M18.0045 6.5V6M19.0045 6.5C19.0045 5.94772 18.5568 5.5 18.0045 5.5C17.4522 5.5 17.0045 5.94772 17.0045 6.5C17.0045 7.05228 17.4522 7.5 18.0045 7.5C18.5568 7.5 19.0045 7.05228 19.0045 6.5Z", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "3" }],
+  ["path", { d: "M18.0045 12.5V12M19.0045 12.5C19.0045 11.9477 18.5568 11.5 18.0045 11.5C17.4522 11.5 17.0045 11.9477 17.0045 12.5C17.0045 13.0523 17.4522 13.5 18.0045 13.5C18.5568 13.5 19.0045 13.0523 19.0045 12.5Z", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "4" }],
+  ["path", { d: "M12.0045 12.5V12M13.0045 12.5C13.0045 11.9477 12.5568 11.5 12.0045 11.5C11.4522 11.5 11.0045 11.9477 11.0045 12.5C11.0045 13.0523 11.4522 13.5 12.0045 13.5C12.5568 13.5 13.0045 13.0523 13.0045 12.5Z", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "5" }],
+  ["path", { d: "M12.0045 6.5V6M13.0045 6.5C13.0045 5.94772 12.5568 5.5 12.0045 5.5C11.4522 5.5 11.0045 5.94772 11.0045 6.5C11.0045 7.05228 11.4522 7.5 12.0045 7.5C12.5568 7.5 13.0045 7.05228 13.0045 6.5Z", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "6" }],
+  ["path", { d: "M18.0045 18.5V18M19.0045 18.5C19.0045 17.9477 18.5568 17.5 18.0045 17.5C17.4522 17.5 17.0045 17.9477 17.0045 18.5C17.0045 19.0523 17.4522 19.5 18.0045 19.5C18.5568 19.5 19.0045 19.0523 19.0045 18.5Z", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "7" }],
+  ["path", { d: "M12.0045 18.5V18M13.0045 18.5C13.0045 17.9477 12.5568 17.5 12.0045 17.5C11.4522 17.5 11.0045 17.9477 11.0045 18.5C11.0045 19.0523 11.4522 19.5 12.0045 19.5C12.5568 19.5 13.0045 19.0523 13.0045 18.5Z", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "8" }]
+];
+
+export default More01Icon;

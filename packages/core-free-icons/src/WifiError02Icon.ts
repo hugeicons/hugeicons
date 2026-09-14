@@ -1,0 +1,8 @@
+import type { IconSvgObject } from './types';
+
+const WifiError02Icon: IconSvgObject = [
+  ["path", { d: "M2 8.31974C3.99395 6.5363 6.41376 5.33105 9 4.8031M22 8.31974C20.0061 6.5363 17.5862 5.33105 15 4.8031M5 12.3587C6.13592 11.2453 7.50961 10.4295 9 9.96076M19 12.3587C17.8641 11.2453 16.4904 10.4295 15 9.96076M8.5 15.9287C8.65791 15.774 8.82501 15.6307 9 15.4994M15.5 15.9287C15.3421 15.774 15.175 15.6307 15 15.4994M12.1256 19.2501H12.0006M12.2506 19.2501C12.2506 19.3881 12.1387 19.5001 12.0006 19.5001C11.8625 19.5001 11.7506 19.3881 11.7506 19.2501C11.7506 19.112 11.8625 19.0001 12.0006 19.0001C12.1387 19.0001 12.2506 19.112 12.2506 19.2501Z", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "0" }],
+  ["path", { d: "M12 15.5001V4.50006", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "1" }]
+];
+
+export default WifiError02Icon;

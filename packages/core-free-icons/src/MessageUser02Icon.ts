@@ -1,0 +1,10 @@
+import type { IconSvgObject } from './types';
+
+const MessageUser02Icon: IconSvgObject = [
+  ["path", { d: "M22 12C22 16.9706 19.1328 21 12 21C10.4991 21 9.20689 20.8533 8.0984 20.5815C7.50688 20.4364 6.88252 20.615 6.39239 20.9766C5.70211 21.4858 4.61547 22 3 22C3.99253 21.3333 4.63281 19.5 3.37161 17.5C2.37034 15.9791 2 14.0712 2 12C2 7.02944 4.13281 3 12 3", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "0" }],
+  ["path", { d: "M12.1248 12H11.9998M8.125 12H8M12.2498 12C12.2498 12.1381 12.1379 12.25 11.9998 12.25C11.8618 12.25 11.7498 12.1381 11.7498 12C11.7498 11.8619 11.8618 11.75 11.9998 11.75C12.1379 11.75 12.2498 11.8619 12.2498 12ZM8.25 12C8.25 12.1381 8.13807 12.25 8 12.25C7.86193 12.25 7.75 12.1381 7.75 12C7.75 11.8619 7.86193 11.75 8 11.75C8.13807 11.75 8.25 11.8619 8.25 12Z", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "1" }],
+  ["path", { d: "M18 6C19.1046 6 20 5.10457 20 4C20 2.89543 19.1046 2 18 2C16.8954 2 16 2.89543 16 4C16 5.10457 16.8954 6 18 6Z", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "2" }],
+  ["path", { d: "M21 9C21 7.34315 19.6569 6 18 6C16.3431 6 15 7.34315 15 9", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "3" }]
+];
+
+export default MessageUser02Icon;

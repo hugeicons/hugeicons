@@ -1,0 +1,9 @@
+import type { IconSvgObject } from './types';
+
+const UserShield02Icon: IconSvgObject = [
+  ["circle", { cx: "10", cy: "7", r: "4", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "0" }],
+  ["path", { d: "M10 14C5 14 2 16.5 2 19C2 20.1046 2.89543 21 4 21H16C17.1046 21 18 20.1046 18 19C18 16.5 15 14 10 14Z", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "1" }],
+  ["path", { d: "M22 10.5455V9.49139C22 9.00116 21.5859 8.61051 21.0885 8.51897C20.5628 8.4222 20.1178 8.2587 19.7974 8.11493C19.4559 7.96169 19.0441 7.96169 18.7026 8.11493C18.3822 8.2587 17.9372 8.4222 17.4115 8.51897C16.9141 8.61051 16.5 9.00116 16.5 9.49139V10.5455C16.5 12.7572 18.3205 13.6836 18.999 13.952C19.1607 14.016 19.3393 14.016 19.501 13.952C20.1795 13.6836 22 12.7572 22 10.5455Z", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "2" }]
+];
+
+export default UserShield02Icon;

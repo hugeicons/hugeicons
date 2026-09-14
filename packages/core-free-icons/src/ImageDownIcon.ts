@@ -1,0 +1,12 @@
+import type { IconSvgObject } from './types';
+
+const ImageDownIcon: IconSvgObject = [
+  ["circle", { cx: "8", cy: "8", r: "1.5", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "0" }],
+  ["path", { d: "M21.5 18.5C21.5 18.5 19.2906 21.5 18.5 21.5C17.7094 21.5 15.5 18.5 15.5 18.5", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "1" }],
+  ["path", { d: "M18.5 20.5V14.5", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "2" }],
+  ["path", { d: "M21.5 11.5C21.4981 7.35301 21.4473 5.22972 20.1088 3.89124C18.7176 2.5 16.4784 2.5 12 2.5C7.52168 2.5 5.2825 2.5 3.89125 3.89124C2.5 5.28249 2.5 7.52166 2.5 12C2.5 16.4783 2.5 18.7175 3.89125 20.1088C5.2825 21.5 7.52168 21.5 12 21.5C12.3466 21.5 12.6797 21.5 13 21.4994", stroke: "currentColor", strokeLinecap: "round", strokeWidth: "1.5", key: "3" }],
+  ["path", { d: "M21.5001 12C21.5001 11.8301 21.5001 11.6635 21.5 11.5", stroke: "currentColor", strokeLinecap: "round", strokeWidth: "1.5", key: "4" }],
+  ["path", { d: "M15 12.2393C11.075 13.2795 7.91953 17.511 5 20.9998", stroke: "currentColor", strokeLinecap: "round", strokeWidth: "1.5", key: "5" }]
+];
+
+export default ImageDownIcon;

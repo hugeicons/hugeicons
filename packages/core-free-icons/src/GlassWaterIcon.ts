@@ -1,0 +1,8 @@
+import type { IconSvgObject } from './types';
+
+const GlassWaterIcon: IconSvgObject = [
+  ["path", { d: "M14.3491 2H9.65087C7.63077 2 6.62072 2 6.01552 2.62155C5.41033 3.2431 5.46077 4.22865 5.56165 6.19976L6.08916 16.5069C6.21695 19.0038 6.28085 20.2522 7.05519 21.0561C7.13278 21.1366 7.21487 21.2129 7.30109 21.2846C8.1615 22 9.441 22 12 22C14.559 22 15.8385 22 16.6989 21.2846C16.7851 21.2129 16.8672 21.1366 16.9448 21.0561C17.7192 20.2522 17.783 19.0038 17.9108 16.5069L18.4383 6.19975C18.5392 4.22865 18.5897 3.2431 17.9845 2.62155C17.3793 2 16.3692 2 14.3491 2Z", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "0" }],
+  ["path", { d: "M6 9C6.86548 8.35089 7.91815 8 9 8C10.0819 8 11.1345 8.35089 12 9C12.8655 9.64911 13.9181 10 15 10C16.0819 10 17.1345 9.64911 18 9", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "1" }]
+];
+
+export default GlassWaterIcon;

@@ -1,0 +1,10 @@
+import type { IconSvgObject } from './types';
+
+const WarehouseIcon: IconSvgObject = [
+  ["path", { d: "M7 22V14C7 12.1144 7 11.1716 7.58579 10.5858C8.17157 10 9.11438 10 11 10H13C14.8856 10 15.8284 10 16.4142 10.5858C17 11.1716 17 12.1144 17 14V22H7Z", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "0" }],
+  ["path", { d: "M7 14H17", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "1" }],
+  ["path", { d: "M7 18H17", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "2" }],
+  ["path", { d: "M18.1287 5.23204L15.1287 3.39725C13.6056 2.46575 12.8441 2 12 2C11.1559 2 10.3944 2.46575 8.8713 3.39725L5.8713 5.23204C4.46832 6.0901 3.76683 6.51912 3.38341 7.20331C3 7.8875 3 8.71027 3 10.3558V15.9952C3 18.8259 3 20.2412 3.87868 21.1206C4.75736 22 6.17157 22 9 22H15C17.8284 22 19.2426 22 20.1213 21.1206C21 20.2412 21 18.8259 21 15.9952V10.3558C21 8.71027 21 7.8875 20.6166 7.20331C20.2332 6.51912 19.5317 6.0901 18.1287 5.23204Z", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "3" }]
+];
+
+export default WarehouseIcon;

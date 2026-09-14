@@ -1,0 +1,9 @@
+import type { IconSvgObject } from './types';
+
+const RenewableEnergy01Icon: IconSvgObject = [
+  ["path", { d: "M18 7.26233C20.412 8.60776 22 10.899 22 13.4994C22 15.558 21.0047 17.4229 19.3933 18.7781C19.1517 18.9813 19 19.2756 19 19.5913V21.9994H17L16.2062 20.8667C16.083 20.691 15.8616 20.6146 15.6537 20.6681C13.9248 21.1126 12.0752 21.1126 10.3463 20.6681C10.1384 20.6146 9.91703 20.691 9.79384 20.8667L9 21.9994H7V19.6148C7 19.286 6.83835 18.9782 6.56764 18.7915C5.49285 18.0505 2 16.6008 2 15.0576V13.4994C2 12.9076 2.44771 12.4279 3 12.4279C3.60665 12.4279 4.10188 12.1922 4.30205 11.5654C4.87123 9.78315 6.20828 8.26178 8 7.26233", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "0" }],
+  ["path", { d: "M13.5 2.00061L11 6.00061H15L12.5 10.0006", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "1" }],
+  ["path", { d: "M8.125 12.0006H8M8.25 12.0006C8.25 12.1387 8.13807 12.2506 8 12.2506C7.86193 12.2506 7.75 12.1387 7.75 12.0006C7.75 11.8625 7.86193 11.7506 8 11.7506C8.13807 11.7506 8.25 11.8625 8.25 12.0006Z", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "2" }]
+];
+
+export default RenewableEnergy01Icon;

@@ -1,0 +1,11 @@
+import type { IconSvgObject } from './types';
+
+const MetroIcon: IconSvgObject = [
+  ["path", { d: "M6 19L4 21M18 19L20 21", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "0" }],
+  ["path", { d: "M5 9C9 13 15.5 13 19 9", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "1" }],
+  ["path", { d: "M5.27322 7.89427C6.09442 3.71577 7.23046 3 11.4545 3H12.5455C16.7695 3 17.9056 3.71577 18.7268 7.89427L19.2802 10.71C20.0349 14.5503 20.4123 16.4705 19.312 17.7352C18.2118 19 16.1412 19 12 19C7.85879 19 5.78819 19 4.68796 17.7352C3.58773 16.4705 3.9651 14.5503 4.71984 10.71L5.27322 7.89427Z", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "2" }],
+  ["path", { d: "M15.125 15H15M15.25 15C15.25 15.1381 15.1381 15.25 15 15.25C14.8619 15.25 14.75 15.1381 14.75 15C14.75 14.8619 14.8619 14.75 15 14.75C15.1381 14.75 15.25 14.8619 15.25 15Z", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "3" }],
+  ["path", { d: "M9.125 15H9M9.25 15C9.25 15.1381 9.13807 15.25 9 15.25C8.86193 15.25 8.75 15.1381 8.75 15C8.75 14.8619 8.86193 14.75 9 14.75C9.13807 14.75 9.25 14.8619 9.25 15Z", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "4" }]
+];
+
+export default MetroIcon;

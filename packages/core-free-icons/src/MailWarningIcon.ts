@@ -1,0 +1,10 @@
+import type { IconSvgObject } from './types';
+
+const MailWarningIcon: IconSvgObject = [
+  ["path", { d: "M2.50049 6L9.06786 9.91697C11.489 11.361 12.512 11.361 14.9331 9.91697L21.5005 6", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "0" }],
+  ["path", { d: "M16.0005 18.9913C15.3997 19 14.736 19 14.0005 19H10.0005C6.22925 19 4.34363 19 3.17206 17.8284C2.00049 16.6569 2.00049 14.7712 2.00049 11C2.00049 7.22876 2.00049 5.34315 3.17206 4.17157C4.34363 3 6.22925 3 10.0005 3H14.0005C17.7717 3 19.6573 3 20.8289 4.17157C21.892 5.23467 21.9904 6.8857 21.9996 10", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "1" }],
+  ["path", { d: "M20.0005 17V13", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "2" }],
+  ["path", { d: "M20.1255 20.75H20.0005M20.2505 20.75C20.2505 20.8881 20.1386 21 20.0005 21C19.8624 21 19.7505 20.8881 19.7505 20.75C19.7505 20.6119 19.8624 20.5 20.0005 20.5C20.1386 20.5 20.2505 20.6119 20.2505 20.75Z", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "3" }]
+];
+
+export default MailWarningIcon;

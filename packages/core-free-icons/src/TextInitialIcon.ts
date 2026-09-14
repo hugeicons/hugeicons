@@ -1,0 +1,11 @@
+import type { IconSvgObject } from './types';
+
+const TextInitialIcon: IconSvgObject = [
+  ["path", { d: "M13.5859 3H20.9977", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "0" }],
+  ["path", { d: "M13.5859 9H20.9977", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "1" }],
+  ["path", { d: "M3 15H21", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "2" }],
+  ["path", { d: "M3 21H21", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "3" }],
+  ["path", { d: "M9 9L7.71429 6M7.71429 6L6.58623 3.36786C6.55491 3.2948 6.53926 3.25827 6.51945 3.22724C6.44354 3.10832 6.31395 3.027 6.16623 3.00559C6.12769 3 6.08512 3 6 3C5.91488 3 5.87231 3 5.83377 3.00559C5.68605 3.027 5.55646 3.10831 5.48055 3.22724C5.46074 3.25826 5.44509 3.2948 5.41377 3.36786L4.28571 6M7.71429 6L4.28571 6M4.28571 6L3 9", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "4" }]
+];
+
+export default TextInitialIcon;

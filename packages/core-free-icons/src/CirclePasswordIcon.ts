@@ -1,0 +1,10 @@
+import type { IconSvgObject } from './types';
+
+const CirclePasswordIcon: IconSvgObject = [
+  ["path", { d: "M5 15C5 11.134 8.13401 8 12 8C15.866 8 19 11.134 19 15C19 18.866 15.866 22 12 22C8.13401 22 5 18.866 5 15Z", stroke: "currentColor", strokeWidth: "1.5", key: "0" }],
+  ["path", { d: "M16.5 9.5V6.5C16.5 4.01472 14.4853 2 12 2C9.51472 2 7.5 4.01472 7.5 6.5V9.5", stroke: "currentColor", strokeLinecap: "round", strokeWidth: "1.5", key: "1" }],
+  ["path", { d: "M10.125 15H10M10.25 15C10.25 15.1381 10.1381 15.25 10 15.25C9.86193 15.25 9.75 15.1381 9.75 15C9.75 14.8619 9.86193 14.75 10 14.75C10.1381 14.75 10.25 14.8619 10.25 15Z", stroke: "currentColor", strokeLinecap: "round", strokeWidth: "1.5", key: "2" }],
+  ["path", { d: "M14.125 15H14M14.25 15C14.25 15.1381 14.1381 15.25 14 15.25C13.8619 15.25 13.75 15.1381 13.75 15C13.75 14.8619 13.8619 14.75 14 14.75C14.1381 14.75 14.25 14.8619 14.25 15Z", stroke: "currentColor", strokeLinecap: "round", strokeWidth: "1.5", key: "3" }]
+];
+
+export default CirclePasswordIcon;

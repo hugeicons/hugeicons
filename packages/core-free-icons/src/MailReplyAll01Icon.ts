@@ -1,0 +1,10 @@
+import type { IconSvgObject } from './types';
+
+const MailReplyAll01Icon: IconSvgObject = [
+  ["path", { d: "M21.9999 11.0259C21.9999 10.533 21.9946 10.0402 21.9841 9.54585C21.9188 6.47093 21.8861 4.93347 20.755 3.79456C19.6238 2.65565 18.0496 2.61597 14.9011 2.53662C12.9606 2.48772 11.0392 2.48771 9.09871 2.53661C5.95022 2.61596 4.37597 2.65563 3.24484 3.79454C2.11371 4.93345 2.08103 6.47091 2.01565 9.54584C1.99463 10.5345 1.99464 11.5174 2.01566 12.5061C2.08103 15.581 2.11372 17.1185 3.24485 18.2574C4.30187 19.3217 5.74586 19.426 8.49989 19.4999", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "0" }],
+  ["path", { d: "M1.99989 4.99994L8.91291 8.92456C11.4386 10.3584 12.5612 10.3584 15.0869 8.92456L21.9999 4.99994", stroke: "currentColor", strokeLinejoin: "round", strokeWidth: "1.5", key: "1" }],
+  ["path", { d: "M13.4999 18.4999C12.9942 18.0084 10.9999 16.7001 10.9999 15.9999C10.9999 15.2997 12.9942 13.9914 13.4999 13.4999", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "2" }],
+  ["path", { d: "M22.0001 21.5003C21.884 18.9757 21.9869 18.0573 20.3438 16.8792C19.5362 16.3002 17.9115 15.9188 15.7177 16.1247M17.4519 13.5927L15.1552 15.7463C14.9611 15.9406 14.9597 16.256 15.1519 16.452L17.4519 18.6401", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "3" }]
+];
+
+export default MailReplyAll01Icon;

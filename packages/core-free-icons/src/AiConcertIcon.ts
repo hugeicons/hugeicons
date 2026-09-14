@@ -1,0 +1,16 @@
+import type { IconSvgObject } from './types';
+
+const AiConcertIcon: IconSvgObject = [
+  ["path", { d: "M20.0558 8.5C21.0631 8.84943 21.7356 9.37679 21.9374 10.0655C22.5499 12.1553 18.5972 14.9394 13.109 16.2839C7.62066 17.6285 2.67503 17.0243 2.06257 14.9345C1.79715 14.0288 2.38911 12.9928 3.59186 12", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "0" }],
+  ["path", { d: "M17 12V7C17 5.13077 17 4.19615 16.5981 3.5C16.3348 3.04394 15.9561 2.66523 15.5 2.40192C14.8038 2 13.8692 2 12 2C10.1308 2 9.19615 2 8.5 2.40192C8.04394 2.66523 7.66523 3.04394 7.40192 3.5C7 4.19615 7 5.13077 7 7V10C7 12.8284 7 14.2426 7.87868 15.1213C8.75736 16 10.1716 16 13 16H14", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "1" }],
+  ["path", { d: "M7 6H10", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "2" }],
+  ["path", { d: "M7 9H10", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "3" }],
+  ["path", { d: "M7 12H10", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "4" }],
+  ["path", { d: "M14 9H17", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "5" }],
+  ["path", { d: "M14 6H17", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "6" }],
+  ["path", { d: "M14 12H17", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "7" }],
+  ["path", { d: "M12 20V22M9 22H15", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "8" }],
+  ["path", { d: "M20 17.75V19M20 19V20.25M20 19H19M20 19H21M22 19L21.1325 18.7108C20.7343 18.5781 20.4219 18.2657 20.2892 17.8675L20 17L19.7108 17.8675C19.5781 18.2657 19.2657 18.5781 18.8675 18.7108L18 19L18.8675 19.2892C19.2657 19.4219 19.5781 19.7343 19.7108 20.1325L20 21L20.2892 20.1325C20.4219 19.7343 20.7343 19.4219 21.1325 19.2892L22 19Z", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "9" }]
+];
+
+export default AiConcertIcon;

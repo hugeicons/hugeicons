@@ -1,0 +1,12 @@
+import type { IconSvgObject } from './types';
+
+const DroneIcon: IconSvgObject = [
+  ["path", { d: "M14 6.01527C14.2438 4.31049 15.71 3 17.4822 3C19.425 3 21 4.57498 21 6.51781C21 8.29002 19.6895 9.75615 17.9847 10", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "0" }],
+  ["path", { d: "M10 6.01527C9.75615 4.31049 8.29002 3 6.51781 3C4.57498 3 3 4.57498 3 6.51781C3 8.29002 4.31049 9.75615 6.01527 10", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "1" }],
+  ["path", { d: "M14 17.9847C14.2438 19.6895 15.71 21 17.4822 21C19.425 21 21 19.425 21 17.4822C21 15.71 19.6895 14.2438 17.9847 14", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "2" }],
+  ["path", { d: "M10 17.9847C9.75615 19.6895 8.29002 21 6.51781 21C4.57498 21 3 19.425 3 17.4822C3 15.71 4.31049 14.2438 6.01527 14", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "3" }],
+  ["path", { d: "M10.2346 14.8478C10.6022 15 11.0681 15 12 15C12.9319 15 13.3978 15 13.7654 14.8478C14.2554 14.6448 14.6448 14.2554 14.8478 13.7654C15 13.3978 15 12.9319 15 12C15 11.0681 15 10.6022 14.8478 10.2346C14.6448 9.74458 14.2554 9.35523 13.7654 9.15224C13.3978 9 12.9319 9 12 9C11.0681 9 10.6022 9 10.2346 9.15224C9.74458 9.35523 9.35523 9.74458 9.15224 10.2346C9 10.6022 9 11.0681 9 12C9 12.9319 9 13.3978 9.15224 13.7654C9.35523 14.2554 9.74458 14.6448 10.2346 14.8478Z", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "4" }],
+  ["path", { d: "M14.5 14.5L17 17M9.5 14.5L7 17M14.5 9.5L17 7M9.5 9.5L7 7", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "5" }]
+];
+
+export default DroneIcon;

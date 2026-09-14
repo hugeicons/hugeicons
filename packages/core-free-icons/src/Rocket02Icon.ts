@@ -1,0 +1,9 @@
+import type { IconSvgObject } from './types';
+
+const Rocket02Icon: IconSvgObject = [
+  ["path", { d: "M12 9V6", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "0" }],
+  ["path", { d: "M8.5 15.4736H15.5M8.5 15.4736L6.66384 16.7848C6.26237 17.1167 5.67767 17.0727 5.46234 16.5962C4.73447 14.9855 4.53071 11.8868 7.42582 10.5364M8.5 15.4736C7.88981 13.6532 7.52235 11.9545 7.42582 10.5364M15.5 15.4736L17.3378 16.7848C17.7392 17.1167 18.3239 17.0728 18.5391 16.5963C19.2665 14.9856 19.4677 11.8868 16.5666 10.5364M7.42582 10.5364C7.16746 6.17174 9.05309 3.23691 10.7871 1.91037C11.5084 1.35858 12.4919 1.36399 13.2085 1.92212C14.9207 3.25581 16.7377 6.16394 16.5666 10.5364C16.5102 11.9795 16.0859 13.6174 15.5 15.4736", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "1" }],
+  ["path", { d: "M13.5 18.5V21M10.5 18.5V22.5", stroke: "currentColor", strokeLinecap: "round", strokeWidth: "1.5", key: "2" }]
+];
+
+export default Rocket02Icon;

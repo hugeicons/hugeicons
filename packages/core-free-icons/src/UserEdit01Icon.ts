@@ -1,0 +1,9 @@
+import type { IconSvgObject } from './types';
+
+const UserEdit01Icon: IconSvgObject = [
+  ["circle", { cx: "11", cy: "6.5", r: "4", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "0" }],
+  ["path", { d: "M20.6887 15.4339L20.0661 14.8113C19.651 14.3962 18.978 14.3962 18.5629 14.8113L15.2141 18.1601C14.769 18.6052 14.4656 19.1722 14.3421 19.7895L14 21.5L15.7105 21.1579C16.3278 21.0344 16.8948 20.731 17.3399 20.2859L20.6887 16.9371C21.1038 16.522 21.1038 15.849 20.6887 15.4339Z", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "1" }],
+  ["path", { d: "M3 20.5002C3.28417 16.8058 6.3 13.7193 10.0008 13.5379C10.3134 13.5226 10.6446 13.5097 11 13.5L11.995 13.5663C12.6939 13.6129 13.3665 13.7543 14 13.9777", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "2" }]
+];
+
+export default UserEdit01Icon;

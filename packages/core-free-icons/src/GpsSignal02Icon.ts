@@ -1,0 +1,10 @@
+import type { IconSvgObject } from './types';
+
+const GpsSignal02Icon: IconSvgObject = [
+  ["path", { d: "M9.03027 9.99984C10.4029 8.62725 12.6283 8.62725 14.0008 9.99984C15.3734 11.3724 15.3734 13.5978 14.0008 14.9704", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "0" }],
+  ["path", { d: "M4.85289 19.1471C8.04869 22.3429 12.9127 22.8538 16.6418 20.6797C17.5285 20.1627 17.9719 19.9043 17.999 19.3782C18.0261 18.8522 17.5277 18.4882 16.531 17.7603C14.683 16.4107 12.8636 14.7603 11.0516 12.9484C9.23967 11.1364 7.58927 9.31705 6.23969 7.46904C5.51179 6.47231 5.14784 5.97395 4.62178 6.00105C4.09572 6.02815 3.83725 6.47149 3.32031 7.35818C1.14624 11.0873 1.6571 15.9513 4.85289 19.1471Z", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "1" }],
+  ["path", { d: "M20.875 3.25H20.75M21 3.25C21 3.38807 20.8881 3.5 20.75 3.5C20.6119 3.5 20.5 3.38807 20.5 3.25C20.5 3.11193 20.6119 3 20.75 3C20.8881 3 21 3.11193 21 3.25Z", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "2" }],
+  ["path", { d: "M17.3752 6.75H17.2502M17.5002 6.75C17.5002 6.88807 17.3883 7 17.2502 7C17.1121 7 17.0002 6.88807 17.0002 6.75C17.0002 6.61193 17.1121 6.5 17.2502 6.5C17.3883 6.5 17.5002 6.61193 17.5002 6.75Z", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "3" }]
+];
+
+export default GpsSignal02Icon;

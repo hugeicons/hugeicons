@@ -1,0 +1,8 @@
+import type { IconSvgObject } from './types';
+
+const SquareMIcon: IconSvgObject = [
+  ["path", { d: "M12 21.5H12H12C16.4784 21.5 18.7175 21.5 20.1088 20.1088C21.5 18.7175 21.5 16.4783 21.5 12V12V12C21.5 7.52165 21.5 5.28248 20.1088 3.89124C18.7175 2.5 16.4784 2.5 12 2.5C7.52169 2.5 5.28252 2.5 3.89127 3.89124C2.50003 5.28249 2.50003 7.52166 2.50003 12C2.50003 16.4783 2.50003 18.7175 3.89127 20.1088C5.28251 21.5 7.52168 21.5 12 21.5Z", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "0" }],
+  ["path", { d: "M7.99997 16V8.63849C7.99997 8.28586 8.28583 8 8.63846 8C8.86274 8 9.07057 8.11767 9.18596 8.30999L12 13L14.814 8.30999C14.9294 8.11767 15.1372 8 15.3615 8C15.7141 8 16 8.28586 16 8.63849V16", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "1" }]
+];
+
+export default SquareMIcon;

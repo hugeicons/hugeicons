@@ -1,0 +1,9 @@
+import type { IconSvgObject } from './types';
+
+const ArrowDiagonalIcon: IconSvgObject = [
+  ["path", { d: "M16.5001 3.26621C17.3445 3.25421 20.141 2.67328 20.7339 3.26621C21.3268 3.85913 20.7459 6.65559 20.7339 7.5", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "0" }],
+  ["path", { d: "M3.26631 16.5C3.25431 17.3444 2.67338 20.1409 3.26631 20.7338C3.85923 21.3267 6.65569 20.7458 7.5001 20.7338", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "1" }],
+  ["path", { d: "M3.89561 20.0577L20.1047 3.94238", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "2" }]
+];
+
+export default ArrowDiagonalIcon;

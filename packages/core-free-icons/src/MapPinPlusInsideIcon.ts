@@ -1,0 +1,8 @@
+import type { IconSvgObject } from './types';
+
+const MapPinPlusInsideIcon: IconSvgObject = [
+  ["path", { d: "M13.6129 21.367C13.1792 21.773 12.5996 22 11.9963 22C11.393 22 10.8134 21.773 10.3797 21.367C6.4082 17.626 1.08594 13.4469 3.68145 7.37966C5.08481 4.09916 8.45352 2 11.9963 2C15.5391 2 18.9078 4.09916 20.3111 7.37966C22.9034 13.4393 17.5942 17.6389 13.6129 21.367Z", stroke: "currentColor", strokeWidth: "1.5", key: "0" }],
+  ["path", { d: "M15.4952 11H11.9952M11.9952 11H8.49518M11.9952 11V14.5M11.9952 11L11.9952 7.5", stroke: "currentColor", strokeLinecap: "round", strokeWidth: "1.5", key: "1" }]
+];
+
+export default MapPinPlusInsideIcon;

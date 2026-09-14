@@ -1,0 +1,9 @@
+import type { IconSvgObject } from './types';
+
+const TabletSmartphoneIcon: IconSvgObject = [
+  ["path", { d: "M19.7487 4C19.6186 3.54062 19.4211 3.17848 19.1213 2.87868C18.2426 2 16.8284 2 14 2H9C6.17157 2 4.75736 2 3.87868 2.87868C3 3.75736 3 5.17157 3 8V16C3 18.8284 3 20.2426 3.87868 21.1213C4.64706 21.8897 5.82497 21.9862 8 21.9983", stroke: "currentColor", strokeLinecap: "round", strokeWidth: "1.5", key: "0" }],
+  ["path", { d: "M17.1538 7H14.8462C13.0331 7 12.1265 7 11.5633 7.54917C11 8.09835 11 8.98223 11 10.75V18.25C11 20.0178 11 20.9017 11.5633 21.4508C12.1265 22 13.0331 22 14.8462 22H17.1538C18.9669 22 19.8735 22 20.4367 21.4508C21 20.9017 21 20.0178 21 18.25V10.75C21 8.98223 21 8.09835 20.4367 7.54917C19.8735 7 18.9669 7 17.1538 7Z", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "1" }],
+  ["path", { d: "M17.5 7H14.5L14.875 8H17.125L17.5 7Z", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "2" }]
+];
+
+export default TabletSmartphoneIcon;

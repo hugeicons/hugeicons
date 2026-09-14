@@ -1,0 +1,9 @@
+import type { IconSvgObject } from './types';
+
+const UserSettings01Icon: IconSvgObject = [
+  ["path", { d: "M11 13.5C10.6446 13.5097 10.3134 13.5226 10.0008 13.5379C6.3 13.7193 3.28417 16.8058 3 20.5002", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "0" }],
+  ["path", { d: "M19.6709 16.2593C19.8803 16.6249 20 17.0485 20 17.5C20 17.9514 19.8804 18.3749 19.671 18.7404C19.2402 19.493 18.4293 20 17.5 20M15.3291 16.2593C15.1197 16.6249 15 17.0485 15 17.5C15 17.9514 15.1196 18.3749 15.329 18.7404C15.7598 19.493 16.5707 20 17.5 20M17.5 20L17.5 21.5M17.5 15C18.4292 15 19.24 15.5069 19.6709 16.2593M17.5 15C16.5708 15 15.76 15.5069 15.3291 16.2593M17.5 15L17.5 13.5M21 15.4998L19.6709 16.2593M14 19.4998L15.329 18.7404M21 19.4998L19.671 18.7404M14 15.4998L15.3291 16.2593", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "1" }],
+  ["circle", { cx: "11", cy: "6.5", r: "4", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "2" }]
+];
+
+export default UserSettings01Icon;
