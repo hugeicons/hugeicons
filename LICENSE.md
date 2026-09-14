@@ -19,10 +19,3 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
-
----
-
-The MIT license above applies to the free icons and all package source code in
-this repository. Pro icon packs (`@hugeicons-pro/*`) require a valid Hugeicons
-Pro license. See each package's `PRO-LICENSE.md` or
-https://hugeicons.com/license-agreement for full terms.

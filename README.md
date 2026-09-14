@@ -147,8 +147,9 @@ Upgrade any time. [Explore Pro](https://hugeicons.com/pricing).
 
 ## License
 
-The free icons and all source code here are released under the [MIT License](LICENSE.md).
-Pro icon packs require a valid [Hugeicons Pro license](https://hugeicons.com/license-agreement).
+The free icons (`@hugeicons/core-free-icons`) and all source code in this repository are released under the [MIT License](LICENSE.md). Use, modify and redistribute them in personal and commercial projects.
+
+Pro icon packs (`@hugeicons-pro/*`) are a separate product and require a valid [Hugeicons Pro license](https://hugeicons.com/license-agreement). Pro icons may be used in unlimited end products but may not be redistributed in templates, kits, plugins or open-source code.
 
 <div align="center">
 <br/>
