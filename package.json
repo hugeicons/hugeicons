@@ -17,6 +17,9 @@
     "build": "pnpm -r run build",
     "typecheck": "pnpm -r run typecheck",
     "test": "pnpm -r run test",
-    "clean": "pnpm -r run clean"
+    "clean": "pnpm -r run clean",
+    "skills:icon-lists": "node skills/scripts/build-icon-list.mjs",
+    "skills:legacy-map": "node skills/scripts/build-legacy-map.mjs --compare 4.2.1",
+    "skills:foreign-map": "node skills/scripts/build-foreign-map.mjs"
   }
 }
