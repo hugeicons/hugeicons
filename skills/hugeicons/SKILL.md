@@ -270,7 +270,7 @@ Props:
 - **React, Vue, Svelte, Angular, React Native** — PascalCase named exports ending in `Icon` (e.g. `Search01Icon`, `Home01Icon`,
   `Notification03Icon`). Number words are spelled out: `1st-bracket` → `FirstBracketIcon`,
   `3d-view` → `ThreeDViewIcon`. Import from `@hugeicons/core-free-icons`.
-  Full list: [references/icon-list.md](references/icon-list.md) (5,471 icons).
+  Full list: [references/icon-list.md](references/icon-list.md) (6,025 icons).
 - **Flutter** — `HugeIcons.strokeRounded<Name>` constants (e.g. `HugeIcons.strokeRoundedSearch01`).
   Full list: [references/icon-list-flutter.md](references/icon-list-flutter.md) (4,547 icons).
 
