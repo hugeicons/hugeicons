@@ -3,6 +3,7 @@
 ## [1.2.0] - 2026-09-16
 
 ### Added
+- **`disableSecondaryOpacity`** on `HugeIcon`: draw the secondary layer at full opacity (same option as the React renderer)
 - **900+ New Icons**: Icon set refreshed from the latest hugeicons.com library — 6,027 stroke-rounded icons (903 added since 1.1.7)
 
 ### Changed
@@ -10,6 +11,7 @@
 - **Updated Icons**: 206 existing icons redrawn to match the latest designs on hugeicons.com
 
 ### Fixed
+- **`secondaryColor` by layer**: the secondary layer is now every element the design draws at reduced opacity, matching the React renderer. Previously it was applied by attribute (fill only), so it did nothing for Twotone icons (two strokes) and recolored the whole icon for Bulk icons (two fills). Duotone's faded layer now takes `secondaryColor` for both its fill and its outline.
 - **SVG Attributes**: `stroke-dasharray`, `stroke-miterlimit` and `opacity` now render correctly (previously emitted as invalid camelCase attributes and ignored)
 
 ### Deprecated

@@ -12250,25 +12250,30 @@ class HugeIcons {
 ///   strokeWidth: 2.0,
 /// );
 ///
-/// // Two-color duotone (fill layer in a second color)
+/// // Two-color Duotone / Twotone / Bulk: the faded layer in a second color
 /// HugeIcon(
-///   icon: HugeIconsStrokeRounded.user,
-///   color: Colors.blue,
-///   secondaryColor: Colors.blue.withAlpha(60),
+///   icon: HugeIconsDuotoneRounded.user,
+///   color: Colors.indigo,
+///   secondaryColor: Colors.pink,
 /// );
 /// ```
 class HugeIcon extends StatefulWidget {
   /// The icon data as JSON structure (List<List<dynamic>>).
   final List<List<dynamic>> icon;
 
-  /// The color to use when drawing the icon (applies to stroke elements).
-  /// For duotone icons, this is the foreground/stroke color.
+  /// The color of the icon's primary layer.
   final Color? color;
 
-  /// The secondary color for duotone/twotone icons (applies to fill elements).
-  /// If not specified, defaults to [color] (single color mode).
-  /// Use this to achieve two-color duotone effects.
+  /// The color of the secondary layer of Duotone, Twotone and Bulk icons.
+  ///
+  /// The secondary layer is every element the icon data marks with an
+  /// `opacity` attribute (the faded layer in the design), whether it is a
+  /// stroke or a fill. Defaults to [color], so a single color still works.
   final Color? secondaryColor;
+
+  /// Renders the secondary layer at full opacity instead of the reduced
+  /// opacity baked into the icon. Only meaningful with [secondaryColor].
+  final bool disableSecondaryOpacity;
 
   /// The size of the icon in logical pixels.
   final double? size;
@@ -12284,6 +12289,7 @@ class HugeIcon extends StatefulWidget {
     required this.icon,
     this.color,
     this.secondaryColor,
+    this.disableSecondaryOpacity = false,
     this.size = 24.0,
     this.strokeWidth,
   });
@@ -12299,14 +12305,20 @@ class _HugeIconState extends State<HugeIcon> {
   List<List<dynamic>>? _lastIcon;
   Color? _lastEffectiveColor;
   Color? _lastEffectiveSecondaryColor;
+  bool? _lastDisableSecondaryOpacity;
   double? _lastStrokeWidth;
   double? _lastOpacity;
 
+  static String _hex(Color color) =>
+      // ignore: deprecated_member_use
+      '#${color.value.toRadixString(16).padLeft(8, '0').substring(2)}';
+
   String _buildSvgFromJson(
     List<List<dynamic>> iconData,
-    Color strokeColor,
-    Color fillColor,
+    Color primaryColor,
+    Color secondaryColor,
     double? strokeWidthOverride,
+    bool disableSecondaryOpacity,
   ) {
     final buffer = StringBuffer();
     buffer.write(
@@ -12319,6 +12331,11 @@ class _HugeIconState extends State<HugeIcon> {
 
       buffer.write('<$tagName');
 
+      // Same rule as the React renderer: an element carrying `opacity` is the
+      // secondary layer, whatever it paints with (stroke or fill).
+      final isSecondary = attributes.containsKey('opacity');
+      final layerColor = isSecondary ? secondaryColor : primaryColor;
+
       bool hasStrokeColor = false;
       bool hasFillColor = false;
 
@@ -12329,17 +12346,16 @@ class _HugeIconState extends State<HugeIcon> {
         if (key == 'key') {
           continue;
         }
+        if (key == 'opacity' && disableSecondaryOpacity) {
+          continue;
+        }
 
         String finalValue = value.toString();
         if (key == 'stroke' && value == 'currentColor') {
-          // ignore: deprecated_member_use
-          finalValue =
-              '#${strokeColor.value.toRadixString(16).padLeft(8, '0').substring(2)}';
+          finalValue = _hex(layerColor);
           hasStrokeColor = true;
         } else if (key == 'fill' && value == 'currentColor') {
-          // ignore: deprecated_member_use
-          finalValue =
-              '#${fillColor.value.toRadixString(16).padLeft(8, '0').substring(2)}';
+          finalValue = _hex(layerColor);
           hasFillColor = true;
         } else if (key == 'strokeWidth' && strokeWidthOverride != null) {
           finalValue = strokeWidthOverride.toString();
@@ -12355,12 +12371,16 @@ class _HugeIconState extends State<HugeIcon> {
         buffer.write(' $svgAttrName="$finalValue"');
       }
 
-      // Add opacity attributes if color has transparency
-      if (hasStrokeColor && strokeColor.opacity < 1.0) {
-        buffer.write(' stroke-opacity="${strokeColor.opacity}"');
+      // Add opacity attributes if the layer color has transparency
+      // ignore: deprecated_member_use
+      if (hasStrokeColor && layerColor.opacity < 1.0) {
+        // ignore: deprecated_member_use
+        buffer.write(' stroke-opacity="${layerColor.opacity}"');
       }
-      if (hasFillColor && fillColor.opacity < 1.0) {
-        buffer.write(' fill-opacity="${fillColor.opacity}"');
+      // ignore: deprecated_member_use
+      if (hasFillColor && layerColor.opacity < 1.0) {
+        // ignore: deprecated_member_use
+        buffer.write(' fill-opacity="${layerColor.opacity}"');
       }
 
       buffer.write('/>');
@@ -12411,6 +12431,7 @@ class _HugeIconState extends State<HugeIcon> {
         _lastIcon != widget.icon ||
         _lastEffectiveColor != effectiveColor ||
         _lastEffectiveSecondaryColor != effectiveSecondaryColor ||
+        _lastDisableSecondaryOpacity != widget.disableSecondaryOpacity ||
         _lastStrokeWidth != widget.strokeWidth ||
         _lastOpacity != iconOpacity) {
       _cachedSvg = _buildSvgFromJson(
@@ -12418,10 +12439,12 @@ class _HugeIconState extends State<HugeIcon> {
         effectiveColor,
         effectiveSecondaryColor,
         widget.strokeWidth,
+        widget.disableSecondaryOpacity,
       );
       _lastIcon = widget.icon;
       _lastEffectiveColor = effectiveColor;
       _lastEffectiveSecondaryColor = effectiveSecondaryColor;
+      _lastDisableSecondaryOpacity = widget.disableSecondaryOpacity;
       _lastStrokeWidth = widget.strokeWidth;
       _lastOpacity = iconOpacity;
     }
