@@ -94,6 +94,20 @@ Install it with the [`skills`](https://www.skills.sh) CLI from your project root
 npx skills add hugeicons/hugeicons
 ```
 
+### Migrating to Hugeicons
+
+[`skills/hugeicons-migrate`](skills/hugeicons-migrate) is a second skill for switching an existing project to Hugeicons in bulk — it needs the `hugeicons` skill installed alongside it. It covers:
+
+- The deprecated `hugeicons-react`, `@hugeicons/react-pro`, `hugeicons-react-native` and `@hugeicons/react-native-pro` packages → the current renderer + icon packages, including the `variant`/`type` → Pro package mapping and every renamed icon
+- `@hugeicons/core-free-icons` 4.2 → 4.3 renames
+- `lucide-react`, `@heroicons/react` and `react-icons` → Hugeicons, with prop translation and verified name maps for the common icons
+
+```bash
+npx skills add hugeicons/hugeicons-migrate
+```
+
+Both skills read the same icon catalog. Regenerate it after an icon release with `pnpm skills:icon-lists`.
+
 <br/>
 
 ## Quick start
