@@ -1,5 +1,55 @@
 # Changelog
 
+## [1.2.0] - 2026-09-16
+
+### Added
+- **900+ New Icons**: Icon set refreshed from the latest hugeicons.com library — 6,027 stroke-rounded icons (903 added since 1.1.7)
+
+### Changed
+- **Website Parity**: The package now contains exactly the icons published on [hugeicons.com](https://hugeicons.com/icons), and names follow the same logic as the Flutter snippet shown there — copy the constant from any icon page and it exists (`4k` → `strokeRounded4K`, `c++` → `strokeRoundedCpp`)
+- **Updated Icons**: 206 existing icons redrawn to match the latest designs on hugeicons.com
+
+### Fixed
+- **SVG Attributes**: `stroke-dasharray`, `stroke-miterlimit` and `opacity` now render correctly (previously emitted as invalid camelCase attributes and ignored)
+
+### Deprecated
+- 46 constants from 1.1.x whose source files were misspelled or never published still compile, but are now marked `@Deprecated` and will be removed in the next major version. Most point at the correctly named icon:
+  - `strokeRounded0Circle` … `strokeRounded9Circle`, `strokeRounded0Square` … `strokeRounded3Square` → `strokeRoundedZeroCircle` … `strokeRoundedNineCircle`, `strokeRoundedZeroSquare` … `strokeRoundedThreeSquare`
+  - `strokeRounded1stBrecket*`, `strokeRounded2ndBrecket*`, `strokeRounded3rdBrecket*`, `strokeRoundedRoot1st/2nd/3rdBrecket` → `…Bracket…`
+  - `strokeRounded3DMove`, `strokeRounded3DScale`, `strokeRounded3DRotate` → `strokeRounded3dMove`, `strokeRounded3dScale`, `strokeRounded3dRotate`
+  - `strokeRoundedFourK`, `strokeRoundedModernTv4K` → `strokeRounded4K`, `strokeRoundedModernTvFourK`
+  - `strokeRoundedC` → `strokeRoundedCpp`; `strokeRoundedTropicalStormTracks` → `strokeRoundedTropicalStormTracks02`
+  - Kept as-is with no replacement (not in the published icon set): `strokeRounded4Square` … `strokeRounded9Square`, `strokeRoundedAdvertisement`, `strokeRoundedFolderMoveIn`, `strokeRoundedFolderMoveTo`, `strokeRoundedSingleFire`, `strokeRoundedSquareSingleFire`, `strokeRoundedTinder`, `strokeRoundedTinderSquare`
+
+---
+
+## [1.1.7] - 2026-05-12
+
+### Updated
+- Refreshed icon set from latest `icons/` SVG assets (~5,100+ stroke-rounded icons).
+- Fixed README to accurately describe the free package (stroke-rounded only).
+- Fixed deprecated `.opacity` API usage for future Flutter compatibility.
+
+---
+
+## [1.1.6] - 2026-03-30
+
+### Updated
+- Regenerated Free package (`stroke-rounded` style) from the latest `icons/` SVG assets.
+
+---
+
+## [1.1.5] - 2025-01-14
+
+### Added
+- **Two-Color Duotone Support**: New `secondaryColor` parameter for `HugeIcon` widget
+  - `color` applies to stroke elements (foreground)
+  - `secondaryColor` applies to fill elements (background)
+  - Enables true two-color duotone icon effects
+  - Backward compatible: defaults to `color` if `secondaryColor` is not specified
+
+---
+
 ## [1.1.4] - 2025-01-30
 
 ### Fixed
