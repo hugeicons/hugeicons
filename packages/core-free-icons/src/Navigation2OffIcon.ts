@@ -1,0 +1,8 @@
+import type { IconSvgObject } from './types';
+
+const Navigation2OffIcon: IconSvgObject = [
+  ["path", { d: "M10.0879 5.08785C10.7594 3.69594 11.2753 2.99999 12 3C13.0217 3.00001 13.6283 4.38332 14.8414 7.14995L16.9433 11.9433M8.54625 8.54625L5.88422 14.6171C4.33132 18.1585 3.55488 19.9292 4.26507 20.64C4.35562 20.7306 4.45766 20.8098 4.56877 20.8756C5.4402 21.3918 7.058 20.2738 10.2936 18.0379C11.0738 17.4987 11.464 17.2291 11.9067 17.2031C11.9689 17.1995 12.0312 17.1995 12.0934 17.2031C12.5362 17.2291 12.9263 17.4987 13.7066 18.0379C16.942 20.2738 18.5598 21.3917 19.4312 20.8755C19.5423 20.8097 19.6444 20.7305 19.735 20.6399C19.8937 20.481 19.9782 20.2691 19.9963 19.9963", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "0" }],
+  ["path", { d: "M3 3L21 21", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "1" }]
+];
+
+export default Navigation2OffIcon;

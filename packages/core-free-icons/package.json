@@ -1,6 +1,6 @@
 {
   "name": "@hugeicons/core-free-icons",
-  "version": "4.3.3",
+  "version": "4.3.4",
   "type": "module",
   "main": "./dist/cjs/index.js",
   "module": "./dist/esm/index.js",
