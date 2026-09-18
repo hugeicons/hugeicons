@@ -24,6 +24,102 @@
       },
       "default": "./dist/esm/index.js"
     },
+    "./ArrowDownAzIcon": {
+      "types": "./dist/types/ArrowDownAZIcon.d.ts",
+      "require": "./dist/cjs/ArrowDownAZIcon.js",
+      "import": "./dist/esm/ArrowDownAZIcon.js",
+      "default": "./dist/esm/ArrowDownAZIcon.js"
+    },
+    "./dist/esm/ArrowDownAzIcon": {
+      "types": "./dist/types/ArrowDownAZIcon.d.ts",
+      "require": "./dist/cjs/ArrowDownAZIcon.js",
+      "import": "./dist/esm/ArrowDownAZIcon.js",
+      "default": "./dist/esm/ArrowDownAZIcon.js"
+    },
+    "./ArrowUpZaIcon": {
+      "types": "./dist/types/ArrowUpZAIcon.d.ts",
+      "require": "./dist/cjs/ArrowUpZAIcon.js",
+      "import": "./dist/esm/ArrowUpZAIcon.js",
+      "default": "./dist/esm/ArrowUpZAIcon.js"
+    },
+    "./dist/esm/ArrowUpZaIcon": {
+      "types": "./dist/types/ArrowUpZAIcon.d.ts",
+      "require": "./dist/cjs/ArrowUpZAIcon.js",
+      "import": "./dist/esm/ArrowUpZAIcon.js",
+      "default": "./dist/esm/ArrowUpZAIcon.js"
+    },
+    "./Grid2X2CheckIcon": {
+      "types": "./dist/types/Grid2x2CheckIcon.d.ts",
+      "require": "./dist/cjs/Grid2x2CheckIcon.js",
+      "import": "./dist/esm/Grid2x2CheckIcon.js",
+      "default": "./dist/esm/Grid2x2CheckIcon.js"
+    },
+    "./dist/esm/Grid2X2CheckIcon": {
+      "types": "./dist/types/Grid2x2CheckIcon.d.ts",
+      "require": "./dist/cjs/Grid2x2CheckIcon.js",
+      "import": "./dist/esm/Grid2x2CheckIcon.js",
+      "default": "./dist/esm/Grid2x2CheckIcon.js"
+    },
+    "./Grid2X2Icon": {
+      "types": "./dist/types/Grid2x2Icon.d.ts",
+      "require": "./dist/cjs/Grid2x2Icon.js",
+      "import": "./dist/esm/Grid2x2Icon.js",
+      "default": "./dist/esm/Grid2x2Icon.js"
+    },
+    "./dist/esm/Grid2X2Icon": {
+      "types": "./dist/types/Grid2x2Icon.d.ts",
+      "require": "./dist/cjs/Grid2x2Icon.js",
+      "import": "./dist/esm/Grid2x2Icon.js",
+      "default": "./dist/esm/Grid2x2Icon.js"
+    },
+    "./Grid2X2PlusIcon": {
+      "types": "./dist/types/Grid2x2PlusIcon.d.ts",
+      "require": "./dist/cjs/Grid2x2PlusIcon.js",
+      "import": "./dist/esm/Grid2x2PlusIcon.js",
+      "default": "./dist/esm/Grid2x2PlusIcon.js"
+    },
+    "./dist/esm/Grid2X2PlusIcon": {
+      "types": "./dist/types/Grid2x2PlusIcon.d.ts",
+      "require": "./dist/cjs/Grid2x2PlusIcon.js",
+      "import": "./dist/esm/Grid2x2PlusIcon.js",
+      "default": "./dist/esm/Grid2x2PlusIcon.js"
+    },
+    "./Grid2X2XIcon": {
+      "types": "./dist/types/Grid2x2XIcon.d.ts",
+      "require": "./dist/cjs/Grid2x2XIcon.js",
+      "import": "./dist/esm/Grid2x2XIcon.js",
+      "default": "./dist/esm/Grid2x2XIcon.js"
+    },
+    "./dist/esm/Grid2X2XIcon": {
+      "types": "./dist/types/Grid2x2XIcon.d.ts",
+      "require": "./dist/cjs/Grid2x2XIcon.js",
+      "import": "./dist/esm/Grid2x2XIcon.js",
+      "default": "./dist/esm/Grid2x2XIcon.js"
+    },
+    "./Grid3X2Icon": {
+      "types": "./dist/types/Grid3x2Icon.d.ts",
+      "require": "./dist/cjs/Grid3x2Icon.js",
+      "import": "./dist/esm/Grid3x2Icon.js",
+      "default": "./dist/esm/Grid3x2Icon.js"
+    },
+    "./dist/esm/Grid3X2Icon": {
+      "types": "./dist/types/Grid3x2Icon.d.ts",
+      "require": "./dist/cjs/Grid3x2Icon.js",
+      "import": "./dist/esm/Grid3x2Icon.js",
+      "default": "./dist/esm/Grid3x2Icon.js"
+    },
+    "./Grid3X3Icon": {
+      "types": "./dist/types/Grid3x3Icon.d.ts",
+      "require": "./dist/cjs/Grid3x3Icon.js",
+      "import": "./dist/esm/Grid3x3Icon.js",
+      "default": "./dist/esm/Grid3x3Icon.js"
+    },
+    "./dist/esm/Grid3X3Icon": {
+      "types": "./dist/types/Grid3x3Icon.d.ts",
+      "require": "./dist/cjs/Grid3x3Icon.js",
+      "import": "./dist/esm/Grid3x3Icon.js",
+      "default": "./dist/esm/Grid3x3Icon.js"
+    },
     "./*": {
       "types": "./dist/types/*.d.ts",
       "require": "./dist/cjs/*.js",
@@ -48,6 +144,60 @@
   "react-native": "./dist/esm/index.js",
   "typesVersions": {
     "*": {
+      "dist/types/*": [
+        "./dist/types/*"
+      ],
+      "dist/esm/*": [
+        "./dist/types/*"
+      ],
+      "ArrowDownAzIcon": [
+        "./dist/types/ArrowDownAZIcon.d.ts"
+      ],
+      "dist/esm/ArrowDownAzIcon": [
+        "./dist/types/ArrowDownAZIcon.d.ts"
+      ],
+      "ArrowUpZaIcon": [
+        "./dist/types/ArrowUpZAIcon.d.ts"
+      ],
+      "dist/esm/ArrowUpZaIcon": [
+        "./dist/types/ArrowUpZAIcon.d.ts"
+      ],
+      "Grid2X2CheckIcon": [
+        "./dist/types/Grid2x2CheckIcon.d.ts"
+      ],
+      "dist/esm/Grid2X2CheckIcon": [
+        "./dist/types/Grid2x2CheckIcon.d.ts"
+      ],
+      "Grid2X2Icon": [
+        "./dist/types/Grid2x2Icon.d.ts"
+      ],
+      "dist/esm/Grid2X2Icon": [
+        "./dist/types/Grid2x2Icon.d.ts"
+      ],
+      "Grid2X2PlusIcon": [
+        "./dist/types/Grid2x2PlusIcon.d.ts"
+      ],
+      "dist/esm/Grid2X2PlusIcon": [
+        "./dist/types/Grid2x2PlusIcon.d.ts"
+      ],
+      "Grid2X2XIcon": [
+        "./dist/types/Grid2x2XIcon.d.ts"
+      ],
+      "dist/esm/Grid2X2XIcon": [
+        "./dist/types/Grid2x2XIcon.d.ts"
+      ],
+      "Grid3X2Icon": [
+        "./dist/types/Grid3x2Icon.d.ts"
+      ],
+      "dist/esm/Grid3X2Icon": [
+        "./dist/types/Grid3x2Icon.d.ts"
+      ],
+      "Grid3X3Icon": [
+        "./dist/types/Grid3x3Icon.d.ts"
+      ],
+      "dist/esm/Grid3X3Icon": [
+        "./dist/types/Grid3x3Icon.d.ts"
+      ],
       "loader": [
         "./dist/types/loader.web.d.ts"
       ],
