@@ -1610,8 +1610,8 @@ export { default as BookTextIcon } from './BookTextIcon';
 export { default as BookTextFreeIcons } from './BookTextIcon';
 export { default as BookTypeIcon } from './BookTypeIcon';
 export { default as BookTypeFreeIcons } from './BookTypeIcon';
-export { default as BookUpTwoIcon } from './BookUpTwoIcon';
-export { default as BookUpTwoFreeIcons } from './BookUpTwoIcon';
+export { default as BookUp2Icon } from './BookUp2Icon';
+export { default as BookUp2FreeIcons } from './BookUp2Icon';
 export { default as BookUploadIcon } from './BookUploadIcon';
 export { default as BookUploadFreeIcons } from './BookUploadIcon';
 export { default as BookUserIcon } from './BookUserIcon';
@@ -1948,8 +1948,8 @@ export { default as Bus03Icon } from './Bus03Icon';
 export { default as Bus03FreeIcons } from './Bus03Icon';
 export { default as BusFrontIcon } from './BusFrontIcon';
 export { default as BusFrontFreeIcons } from './BusFrontIcon';
-export { default as CIcon } from './CIcon';
-export { default as CFreeIcons } from './CIcon';
+export { default as CppIcon } from './CppIcon';
+export { default as CppFreeIcons } from './CppIcon';
 export { default as CProgrammingIcon } from './CProgrammingIcon';
 export { default as CProgrammingFreeIcons } from './CProgrammingIcon';
 export { default as Cabinet01Icon } from './Cabinet01Icon';
@@ -2032,8 +2032,8 @@ export { default as CalendarClockIcon } from './CalendarClockIcon';
 export { default as CalendarClockFreeIcons } from './CalendarClockIcon';
 export { default as CalendarCogIcon } from './CalendarCogIcon';
 export { default as CalendarCogFreeIcons } from './CalendarCogIcon';
-export { default as CalendarDateOneIcon } from './CalendarDateOneIcon';
-export { default as CalendarDateOneFreeIcons } from './CalendarDateOneIcon';
+export { default as CalendarDate1Icon } from './CalendarDate1Icon';
+export { default as CalendarDate1FreeIcons } from './CalendarDate1Icon';
 export { default as CalendarDaysIcon } from './CalendarDaysIcon';
 export { default as CalendarDaysFreeIcons } from './CalendarDaysIcon';
 export { default as CalendarDownload01Icon } from './CalendarDownload01Icon';
@@ -3024,8 +3024,8 @@ export { default as CirclePowerIcon } from './CirclePowerIcon';
 export { default as CirclePowerFreeIcons } from './CirclePowerIcon';
 export { default as CircleQuestionMarkIcon } from './CircleQuestionMarkIcon';
 export { default as CircleQuestionMarkFreeIcons } from './CircleQuestionMarkIcon';
-export { default as CircleSlashTwoIcon } from './CircleSlashTwoIcon';
-export { default as CircleSlashTwoFreeIcons } from './CircleSlashTwoIcon';
+export { default as CircleSlash2Icon } from './CircleSlash2Icon';
+export { default as CircleSlash2FreeIcons } from './CircleSlash2Icon';
 export { default as CircleSlashIcon } from './CircleSlashIcon';
 export { default as CircleSlashFreeIcons } from './CircleSlashIcon';
 export { default as CircleSmallIcon } from './CircleSmallIcon';
@@ -3120,30 +3120,30 @@ export { default as ClockCheckIcon } from './ClockCheckIcon';
 export { default as ClockCheckFreeIcons } from './ClockCheckIcon';
 export { default as ClockFadingIcon } from './ClockFadingIcon';
 export { default as ClockFadingFreeIcons } from './ClockFadingIcon';
-export { default as ClockHourOneIcon } from './ClockHourOneIcon';
-export { default as ClockHourOneFreeIcons } from './ClockHourOneIcon';
+export { default as ClockHour1Icon } from './ClockHour1Icon';
+export { default as ClockHour1FreeIcons } from './ClockHour1Icon';
 export { default as ClockHour10Icon } from './ClockHour10Icon';
 export { default as ClockHour10FreeIcons } from './ClockHour10Icon';
 export { default as ClockHour11Icon } from './ClockHour11Icon';
 export { default as ClockHour11FreeIcons } from './ClockHour11Icon';
 export { default as ClockHour12Icon } from './ClockHour12Icon';
 export { default as ClockHour12FreeIcons } from './ClockHour12Icon';
-export { default as ClockHourTwoIcon } from './ClockHourTwoIcon';
-export { default as ClockHourTwoFreeIcons } from './ClockHourTwoIcon';
-export { default as ClockHourThreeIcon } from './ClockHourThreeIcon';
-export { default as ClockHourThreeFreeIcons } from './ClockHourThreeIcon';
-export { default as ClockHourFourIcon } from './ClockHourFourIcon';
-export { default as ClockHourFourFreeIcons } from './ClockHourFourIcon';
-export { default as ClockHourFiveIcon } from './ClockHourFiveIcon';
-export { default as ClockHourFiveFreeIcons } from './ClockHourFiveIcon';
-export { default as ClockHourSixIcon } from './ClockHourSixIcon';
-export { default as ClockHourSixFreeIcons } from './ClockHourSixIcon';
-export { default as ClockHourSevenIcon } from './ClockHourSevenIcon';
-export { default as ClockHourSevenFreeIcons } from './ClockHourSevenIcon';
-export { default as ClockHourEightIcon } from './ClockHourEightIcon';
-export { default as ClockHourEightFreeIcons } from './ClockHourEightIcon';
-export { default as ClockHourNineIcon } from './ClockHourNineIcon';
-export { default as ClockHourNineFreeIcons } from './ClockHourNineIcon';
+export { default as ClockHour2Icon } from './ClockHour2Icon';
+export { default as ClockHour2FreeIcons } from './ClockHour2Icon';
+export { default as ClockHour3Icon } from './ClockHour3Icon';
+export { default as ClockHour3FreeIcons } from './ClockHour3Icon';
+export { default as ClockHour4Icon } from './ClockHour4Icon';
+export { default as ClockHour4FreeIcons } from './ClockHour4Icon';
+export { default as ClockHour5Icon } from './ClockHour5Icon';
+export { default as ClockHour5FreeIcons } from './ClockHour5Icon';
+export { default as ClockHour6Icon } from './ClockHour6Icon';
+export { default as ClockHour6FreeIcons } from './ClockHour6Icon';
+export { default as ClockHour7Icon } from './ClockHour7Icon';
+export { default as ClockHour7FreeIcons } from './ClockHour7Icon';
+export { default as ClockHour8Icon } from './ClockHour8Icon';
+export { default as ClockHour8FreeIcons } from './ClockHour8Icon';
+export { default as ClockHour9Icon } from './ClockHour9Icon';
+export { default as ClockHour9FreeIcons } from './ClockHour9Icon';
 export { default as ClockPlusIcon } from './ClockPlusIcon';
 export { default as ClockPlusFreeIcons } from './ClockPlusIcon';
 export { default as ClosedCaptionAltIcon } from './ClosedCaptionAltIcon';
@@ -3298,8 +3298,8 @@ export { default as ColumnDeleteIcon } from './ColumnDeleteIcon';
 export { default as ColumnDeleteFreeIcons } from './ColumnDeleteIcon';
 export { default as ColumnInsertIcon } from './ColumnInsertIcon';
 export { default as ColumnInsertFreeIcons } from './ColumnInsertIcon';
-export { default as ColumnsThreeCogIcon } from './ColumnsThreeCogIcon';
-export { default as ColumnsThreeCogFreeIcons } from './ColumnsThreeCogIcon';
+export { default as Columns3CogIcon } from './Columns3CogIcon';
+export { default as Columns3CogFreeIcons } from './Columns3CogIcon';
 export { default as CombineIcon } from './CombineIcon';
 export { default as CombineFreeIcons } from './CombineIcon';
 export { default as Comet01Icon } from './Comet01Icon';
@@ -3564,8 +3564,6 @@ export { default as CovidInfoIcon } from './CovidInfoIcon';
 export { default as CovidInfoFreeIcons } from './CovidInfoIcon';
 export { default as CowboyHatIcon } from './CowboyHatIcon';
 export { default as CowboyHatFreeIcons } from './CowboyHatIcon';
-export { default as CppIcon } from './CppIcon';
-export { default as CppFreeIcons } from './CppIcon';
 export { default as CpuChargeIcon } from './CpuChargeIcon';
 export { default as CpuChargeFreeIcons } from './CpuChargeIcon';
 export { default as CpuSettingsIcon } from './CpuSettingsIcon';
@@ -3630,8 +3628,8 @@ export { default as CrownIcon } from './CrownIcon';
 export { default as CrownFreeIcons } from './CrownIcon';
 export { default as CryingIcon } from './CryingIcon';
 export { default as CryingFreeIcons } from './CryingIcon';
-export { default as CssThreeIcon } from './CssThreeIcon';
-export { default as CssThreeFreeIcons } from './CssThreeIcon';
+export { default as Css3Icon } from './Css3Icon';
+export { default as Css3FreeIcons } from './Css3Icon';
 export { default as CssFile01Icon } from './CssFile01Icon';
 export { default as CssFile01FreeIcons } from './CssFile01Icon';
 export { default as CssFileIcon } from './CssFile01Icon';
@@ -4080,10 +4078,10 @@ export { default as DisabilityIcon } from './Disability01Icon';
 export { default as DisabilityFreeIcons } from './Disability01Icon';
 export { default as Disability02Icon } from './Disability02Icon';
 export { default as Disability02FreeIcons } from './Disability02Icon';
-export { default as DiscTwoIcon } from './DiscTwoIcon';
-export { default as DiscTwoFreeIcons } from './DiscTwoIcon';
-export { default as DiscThreeIcon } from './DiscThreeIcon';
-export { default as DiscThreeFreeIcons } from './DiscThreeIcon';
+export { default as Disc2Icon } from './Disc2Icon';
+export { default as Disc2FreeIcons } from './Disc2Icon';
+export { default as Disc3Icon } from './Disc3Icon';
+export { default as Disc3FreeIcons } from './Disc3Icon';
 export { default as DiscAlbumIcon } from './DiscAlbumIcon';
 export { default as DiscAlbumFreeIcons } from './DiscAlbumIcon';
 export { default as DiscIcon } from './DiscIcon';
@@ -5072,8 +5070,8 @@ export { default as FolderFavouriteIcon } from './FolderFavouriteIcon';
 export { default as FolderFavouriteFreeIcons } from './FolderFavouriteIcon';
 export { default as FolderFileStorageIcon } from './FolderFileStorageIcon';
 export { default as FolderFileStorageFreeIcons } from './FolderFileStorageIcon';
-export { default as FolderGitTwoIcon } from './FolderGitTwoIcon';
-export { default as FolderGitTwoFreeIcons } from './FolderGitTwoIcon';
+export { default as FolderGit2Icon } from './FolderGit2Icon';
+export { default as FolderGit2FreeIcons } from './FolderGit2Icon';
 export { default as FolderGitIcon } from './FolderGitIcon';
 export { default as FolderGitFreeIcons } from './FolderGitIcon';
 export { default as FolderHeartIcon } from './FolderHeartIcon';
@@ -5118,8 +5116,8 @@ export { default as FolderRemoveIcon } from './FolderRemoveIcon';
 export { default as FolderRemoveFreeIcons } from './FolderRemoveIcon';
 export { default as FolderRootIcon } from './FolderRootIcon';
 export { default as FolderRootFreeIcons } from './FolderRootIcon';
-export { default as FolderSearchTwoIcon } from './FolderSearchTwoIcon';
-export { default as FolderSearchTwoFreeIcons } from './FolderSearchTwoIcon';
+export { default as FolderSearch2Icon } from './FolderSearch2Icon';
+export { default as FolderSearch2FreeIcons } from './FolderSearch2Icon';
 export { default as FolderSearchIcon } from './FolderSearchIcon';
 export { default as FolderSearchFreeIcons } from './FolderSearchIcon';
 export { default as FolderSecurityIcon } from './FolderSecurityIcon';
@@ -5392,8 +5390,8 @@ export { default as GoBackward15SecIcon } from './GoBackward15SecIcon';
 export { default as GoBackward15SecFreeIcons } from './GoBackward15SecIcon';
 export { default as GoBackward30SecIcon } from './GoBackward30SecIcon';
 export { default as GoBackward30SecFreeIcons } from './GoBackward30SecIcon';
-export { default as GoBackwardFiveSecIcon } from './GoBackwardFiveSecIcon';
-export { default as GoBackwardFiveSecFreeIcons } from './GoBackwardFiveSecIcon';
+export { default as GoBackward5SecIcon } from './GoBackward5SecIcon';
+export { default as GoBackward5SecFreeIcons } from './GoBackward5SecIcon';
 export { default as GoBackward60SecIcon } from './GoBackward60SecIcon';
 export { default as GoBackward60SecFreeIcons } from './GoBackward60SecIcon';
 export { default as GoForward10SecIcon } from './GoForward10SecIcon';
@@ -5402,8 +5400,8 @@ export { default as GoForward15SecIcon } from './GoForward15SecIcon';
 export { default as GoForward15SecFreeIcons } from './GoForward15SecIcon';
 export { default as GoForward30SecIcon } from './GoForward30SecIcon';
 export { default as GoForward30SecFreeIcons } from './GoForward30SecIcon';
-export { default as GoForwardFiveSecIcon } from './GoForwardFiveSecIcon';
-export { default as GoForwardFiveSecFreeIcons } from './GoForwardFiveSecIcon';
+export { default as GoForward5SecIcon } from './GoForward5SecIcon';
+export { default as GoForward5SecFreeIcons } from './GoForward5SecIcon';
 export { default as GoForward60SecIcon } from './GoForward60SecIcon';
 export { default as GoForward60SecFreeIcons } from './GoForward60SecIcon';
 export { default as GoalIcon } from './GoalIcon';
@@ -5502,18 +5500,18 @@ export { default as GridTableIcon } from './GridTableIcon';
 export { default as GridTableFreeIcons } from './GridTableIcon';
 export { default as GridViewIcon } from './GridViewIcon';
 export { default as GridViewFreeIcons } from './GridViewIcon';
-export { default as Grid2X2CheckIcon } from './Grid2X2CheckIcon';
-export { default as Grid2X2CheckFreeIcons } from './Grid2X2CheckIcon';
-export { default as Grid2X2PlusIcon } from './Grid2X2PlusIcon';
-export { default as Grid2X2PlusFreeIcons } from './Grid2X2PlusIcon';
-export { default as Grid2X2Icon } from './Grid2X2Icon';
-export { default as Grid2X2FreeIcons } from './Grid2X2Icon';
-export { default as Grid2X2XIcon } from './Grid2X2XIcon';
-export { default as Grid2X2XFreeIcons } from './Grid2X2XIcon';
-export { default as Grid3X2Icon } from './Grid3X2Icon';
-export { default as Grid3X2FreeIcons } from './Grid3X2Icon';
-export { default as Grid3X3Icon } from './Grid3X3Icon';
-export { default as Grid3X3FreeIcons } from './Grid3X3Icon';
+export { default as Grid2x2CheckIcon } from './Grid2x2CheckIcon';
+export { default as Grid2x2CheckFreeIcons } from './Grid2x2CheckIcon';
+export { default as Grid2x2PlusIcon } from './Grid2x2PlusIcon';
+export { default as Grid2x2PlusFreeIcons } from './Grid2x2PlusIcon';
+export { default as Grid2x2Icon } from './Grid2x2Icon';
+export { default as Grid2x2FreeIcons } from './Grid2x2Icon';
+export { default as Grid2x2XIcon } from './Grid2x2XIcon';
+export { default as Grid2x2XFreeIcons } from './Grid2x2XIcon';
+export { default as Grid3x2Icon } from './Grid3x2Icon';
+export { default as Grid3x2FreeIcons } from './Grid3x2Icon';
+export { default as Grid3x3Icon } from './Grid3x3Icon';
+export { default as Grid3x3FreeIcons } from './Grid3x3Icon';
 export { default as GrimacingIcon } from './GrimacingIcon';
 export { default as GrimacingFreeIcons } from './GrimacingIcon';
 export { default as GrinningIcon } from './GrinningIcon';
@@ -5928,8 +5926,8 @@ export { default as HouseSolarPanelIcon } from './HouseSolarPanelIcon';
 export { default as HouseSolarPanelFreeIcons } from './HouseSolarPanelIcon';
 export { default as HouseWifiIcon } from './HouseWifiIcon';
 export { default as HouseWifiFreeIcons } from './HouseWifiIcon';
-export { default as HtmlFiveIcon } from './HtmlFiveIcon';
-export { default as HtmlFiveFreeIcons } from './HtmlFiveIcon';
+export { default as Html5Icon } from './Html5Icon';
+export { default as Html5FreeIcons } from './Html5Icon';
 export { default as HtmlFile01Icon } from './HtmlFile01Icon';
 export { default as HtmlFile01FreeIcons } from './HtmlFile01Icon';
 export { default as HtmlFileIcon } from './HtmlFile01Icon';
@@ -6474,6 +6472,8 @@ export { default as LastFmIcon } from './LastFmIcon';
 export { default as LastFmFreeIcons } from './LastFmIcon';
 export { default as LatitudeIcon } from './LatitudeIcon';
 export { default as LatitudeFreeIcons } from './LatitudeIcon';
+export { default as LaughIcon } from './LaughIcon';
+export { default as LaughFreeIcons } from './LaughIcon';
 export { default as LaughingIcon } from './LaughingIcon';
 export { default as LaughingFreeIcons } from './LaughingIcon';
 export { default as LaurelWreath01Icon } from './LaurelWreath01Icon';
@@ -6548,14 +6548,14 @@ export { default as Layout06Icon } from './Layout06Icon';
 export { default as Layout06FreeIcons } from './Layout06Icon';
 export { default as Layout07Icon } from './Layout07Icon';
 export { default as Layout07FreeIcons } from './Layout07Icon';
-export { default as LayoutTwoColumnIcon } from './LayoutTwoColumnIcon';
-export { default as LayoutTwoColumnFreeIcons } from './LayoutTwoColumnIcon';
-export { default as LayoutTwoRowIcon } from './LayoutTwoRowIcon';
-export { default as LayoutTwoRowFreeIcons } from './LayoutTwoRowIcon';
-export { default as LayoutThreeColumnIcon } from './LayoutThreeColumnIcon';
-export { default as LayoutThreeColumnFreeIcons } from './LayoutThreeColumnIcon';
-export { default as LayoutThreeRowIcon } from './LayoutThreeRowIcon';
-export { default as LayoutThreeRowFreeIcons } from './LayoutThreeRowIcon';
+export { default as Layout2ColumnIcon } from './Layout2ColumnIcon';
+export { default as Layout2ColumnFreeIcons } from './Layout2ColumnIcon';
+export { default as Layout2RowIcon } from './Layout2RowIcon';
+export { default as Layout2RowFreeIcons } from './Layout2RowIcon';
+export { default as Layout3ColumnIcon } from './Layout3ColumnIcon';
+export { default as Layout3ColumnFreeIcons } from './Layout3ColumnIcon';
+export { default as Layout3RowIcon } from './Layout3RowIcon';
+export { default as Layout3RowFreeIcons } from './Layout3RowIcon';
 export { default as LayoutAlignBottomIcon } from './LayoutAlignBottomIcon';
 export { default as LayoutAlignBottomFreeIcons } from './LayoutAlignBottomIcon';
 export { default as LayoutAlignLeftIcon } from './LayoutAlignLeftIcon';
@@ -8118,14 +8118,14 @@ export { default as MoveUpIcon } from './MoveUpIcon';
 export { default as MoveUpFreeIcons } from './MoveUpIcon';
 export { default as MoveVerticalIcon } from './MoveVerticalIcon';
 export { default as MoveVerticalFreeIcons } from './MoveVerticalIcon';
-export { default as MpThree02Icon } from './MpThree02Icon';
-export { default as MpThree02FreeIcons } from './MpThree02Icon';
-export { default as MpFour01Icon } from './MpFour01Icon';
-export { default as MpFour01FreeIcons } from './MpFour01Icon';
-export { default as MpFourIcon } from './MpFour01Icon';
-export { default as MpFourFreeIcons } from './MpFour01Icon';
-export { default as MpFour02Icon } from './MpFour02Icon';
-export { default as MpFour02FreeIcons } from './MpFour02Icon';
+export { default as Mp302Icon } from './Mp302Icon';
+export { default as Mp302FreeIcons } from './Mp302Icon';
+export { default as Mp401Icon } from './Mp401Icon';
+export { default as Mp401FreeIcons } from './Mp401Icon';
+export { default as Mp4Icon } from './Mp401Icon';
+export { default as Mp4FreeIcons } from './Mp401Icon';
+export { default as Mp402Icon } from './Mp402Icon';
+export { default as Mp402FreeIcons } from './Mp402Icon';
 export { default as Mp301Icon } from './Mp301Icon';
 export { default as Mp301FreeIcons } from './Mp301Icon';
 export { default as Mp3Icon } from './Mp301Icon';
@@ -8146,8 +8146,8 @@ export { default as Music01Icon } from './Music01Icon';
 export { default as Music01FreeIcons } from './Music01Icon';
 export { default as Music02Icon } from './Music02Icon';
 export { default as Music02FreeIcons } from './Music02Icon';
-export { default as MusicThreeIcon } from './MusicThreeIcon';
-export { default as MusicThreeFreeIcons } from './MusicThreeIcon';
+export { default as Music3Icon } from './Music3Icon';
+export { default as Music3FreeIcons } from './Music3Icon';
 export { default as MusicNote01Icon } from './MusicNote01Icon';
 export { default as MusicNote01FreeIcons } from './MusicNote01Icon';
 export { default as MusicNoteIcon } from './MusicNote01Icon';
@@ -8202,10 +8202,10 @@ export { default as Navigation06Icon } from './Navigation06Icon';
 export { default as Navigation06FreeIcons } from './Navigation06Icon';
 export { default as Navigation07Icon } from './Navigation07Icon';
 export { default as Navigation07FreeIcons } from './Navigation07Icon';
-export { default as NavigationTwoOffIcon } from './NavigationTwoOffIcon';
-export { default as NavigationTwoOffFreeIcons } from './NavigationTwoOffIcon';
-export { default as NavigationTwoIcon } from './NavigationTwoIcon';
-export { default as NavigationTwoFreeIcons } from './NavigationTwoIcon';
+export { default as Navigation2OffIcon } from './Navigation2OffIcon';
+export { default as Navigation2OffFreeIcons } from './Navigation2OffIcon';
+export { default as Navigation2Icon } from './Navigation2Icon';
+export { default as Navigation2FreeIcons } from './Navigation2Icon';
 export { default as NavigationOff01Icon } from './NavigationOff01Icon';
 export { default as NavigationOff01FreeIcons } from './NavigationOff01Icon';
 export { default as NavigationOffIcon } from './NavigationOffIcon';
@@ -9812,12 +9812,12 @@ export { default as RowDeleteIcon } from './RowDeleteIcon';
 export { default as RowDeleteFreeIcons } from './RowDeleteIcon';
 export { default as RowInsertIcon } from './RowInsertIcon';
 export { default as RowInsertFreeIcons } from './RowInsertIcon';
-export { default as RowsTwoIcon } from './RowsTwoIcon';
-export { default as RowsTwoFreeIcons } from './RowsTwoIcon';
-export { default as RowsThreeIcon } from './RowsThreeIcon';
-export { default as RowsThreeFreeIcons } from './RowsThreeIcon';
-export { default as RowsFourIcon } from './RowsFourIcon';
-export { default as RowsFourFreeIcons } from './RowsFourIcon';
+export { default as Rows2Icon } from './Rows2Icon';
+export { default as Rows2FreeIcons } from './Rows2Icon';
+export { default as Rows3Icon } from './Rows3Icon';
+export { default as Rows3FreeIcons } from './Rows3Icon';
+export { default as Rows4Icon } from './Rows4Icon';
+export { default as Rows4FreeIcons } from './Rows4Icon';
 export { default as RssConnected01Icon } from './RssConnected01Icon';
 export { default as RssConnected01FreeIcons } from './RssConnected01Icon';
 export { default as RssConnectedIcon } from './RssConnected01Icon';
@@ -11658,16 +11658,16 @@ export { default as TailwindcssIcon } from './TailwindcssIcon';
 export { default as TailwindcssFreeIcons } from './TailwindcssIcon';
 export { default as TajMahalIcon } from './TajMahalIcon';
 export { default as TajMahalFreeIcons } from './TajMahalIcon';
-export { default as TallyOneIcon } from './TallyOneIcon';
-export { default as TallyOneFreeIcons } from './TallyOneIcon';
-export { default as TallyTwoIcon } from './TallyTwoIcon';
-export { default as TallyTwoFreeIcons } from './TallyTwoIcon';
-export { default as TallyThreeIcon } from './TallyThreeIcon';
-export { default as TallyThreeFreeIcons } from './TallyThreeIcon';
-export { default as TallyFourIcon } from './TallyFourIcon';
-export { default as TallyFourFreeIcons } from './TallyFourIcon';
-export { default as TallyFiveIcon } from './TallyFiveIcon';
-export { default as TallyFiveFreeIcons } from './TallyFiveIcon';
+export { default as Tally1Icon } from './Tally1Icon';
+export { default as Tally1FreeIcons } from './Tally1Icon';
+export { default as Tally2Icon } from './Tally2Icon';
+export { default as Tally2FreeIcons } from './Tally2Icon';
+export { default as Tally3Icon } from './Tally3Icon';
+export { default as Tally3FreeIcons } from './Tally3Icon';
+export { default as Tally4Icon } from './Tally4Icon';
+export { default as Tally4FreeIcons } from './Tally4Icon';
+export { default as Tally5Icon } from './Tally5Icon';
+export { default as Tally5FreeIcons } from './Tally5Icon';
 export { default as TanIcon } from './TanIcon';
 export { default as TanFreeIcons } from './TanIcon';
 export { default as TangentIcon } from './TangentIcon';
@@ -12904,8 +12904,8 @@ export { default as Vynil02Icon } from './Vynil02Icon';
 export { default as Vynil02FreeIcons } from './Vynil02Icon';
 export { default as Vynil03Icon } from './Vynil03Icon';
 export { default as Vynil03FreeIcons } from './Vynil03Icon';
-export { default as WThreeSchoolsIcon } from './WThreeSchoolsIcon';
-export { default as WThreeSchoolsFreeIcons } from './WThreeSchoolsIcon';
+export { default as W3SchoolsIcon } from './W3SchoolsIcon';
+export { default as W3SchoolsFreeIcons } from './W3SchoolsIcon';
 export { default as WaiterIcon } from './WaiterIcon';
 export { default as WaiterFreeIcons } from './WaiterIcon';
 export { default as WaitersIcon } from './WaitersIcon';
@@ -13406,6 +13406,216 @@ export { default as ZshIcon } from './ZshIcon';
 export { default as ZshFreeIcons } from './ZshIcon';
 export { default as ZzzIcon } from './ZzzIcon';
 export { default as ZzzFreeIcons } from './ZzzIcon';
+export { default as FingerprintScanIcon } from './FingerPrintScanIcon';
+export { default as FingerprintScanFreeIcons } from './FingerPrintScanIcon';
+export { default as FoursquareIcon } from './FourSquareIcon';
+export { default as FoursquareFreeIcons } from './FourSquareIcon';
+export { default as TrademarkIcon } from './TradeMarkIcon';
+export { default as TrademarkFreeIcons } from './TradeMarkIcon';
+export { default as FullscreenIcon } from './FullScreenIcon';
+export { default as FullscreenFreeIcons } from './FullScreenIcon';
+
+// Deprecated names (renamed to match hugeicons.com; see scripts/deprecated-component-names.json)
+/** @deprecated Renamed to `ArrowDownAZIcon`; this alias will be removed in the next major version. */
+export { default as ArrowDownAzIcon } from './ArrowDownAZIcon';
+/** @deprecated Renamed to `ArrowDownAZFreeIcons`; this alias will be removed in the next major version. */
+export { default as ArrowDownAzFreeIcons } from './ArrowDownAZIcon';
+/** @deprecated Renamed to `ArrowUpZAIcon`; this alias will be removed in the next major version. */
+export { default as ArrowUpZaIcon } from './ArrowUpZAIcon';
+/** @deprecated Renamed to `ArrowUpZAFreeIcons`; this alias will be removed in the next major version. */
+export { default as ArrowUpZaFreeIcons } from './ArrowUpZAIcon';
+/** @deprecated Renamed to `BookUp2Icon`; this alias will be removed in the next major version. */
+export { default as BookUpTwoIcon } from './BookUp2Icon';
+/** @deprecated Renamed to `BookUp2FreeIcons`; this alias will be removed in the next major version. */
+export { default as BookUpTwoFreeIcons } from './BookUp2Icon';
+/** @deprecated Renamed to `CalendarDate1Icon`; this alias will be removed in the next major version. */
+export { default as CalendarDateOneIcon } from './CalendarDate1Icon';
+/** @deprecated Renamed to `CalendarDate1FreeIcons`; this alias will be removed in the next major version. */
+export { default as CalendarDateOneFreeIcons } from './CalendarDate1Icon';
+/** @deprecated Renamed to `CppIcon`; this alias will be removed in the next major version. */
+export { default as CIcon } from './CppIcon';
+/** @deprecated Renamed to `CppFreeIcons`; this alias will be removed in the next major version. */
+export { default as CFreeIcons } from './CppIcon';
+/** @deprecated Renamed to `CircleSlash2Icon`; this alias will be removed in the next major version. */
+export { default as CircleSlashTwoIcon } from './CircleSlash2Icon';
+/** @deprecated Renamed to `CircleSlash2FreeIcons`; this alias will be removed in the next major version. */
+export { default as CircleSlashTwoFreeIcons } from './CircleSlash2Icon';
+/** @deprecated Renamed to `ClockHour8Icon`; this alias will be removed in the next major version. */
+export { default as ClockHourEightIcon } from './ClockHour8Icon';
+/** @deprecated Renamed to `ClockHour8FreeIcons`; this alias will be removed in the next major version. */
+export { default as ClockHourEightFreeIcons } from './ClockHour8Icon';
+/** @deprecated Renamed to `ClockHour5Icon`; this alias will be removed in the next major version. */
+export { default as ClockHourFiveIcon } from './ClockHour5Icon';
+/** @deprecated Renamed to `ClockHour5FreeIcons`; this alias will be removed in the next major version. */
+export { default as ClockHourFiveFreeIcons } from './ClockHour5Icon';
+/** @deprecated Renamed to `ClockHour4Icon`; this alias will be removed in the next major version. */
+export { default as ClockHourFourIcon } from './ClockHour4Icon';
+/** @deprecated Renamed to `ClockHour4FreeIcons`; this alias will be removed in the next major version. */
+export { default as ClockHourFourFreeIcons } from './ClockHour4Icon';
+/** @deprecated Renamed to `ClockHour9Icon`; this alias will be removed in the next major version. */
+export { default as ClockHourNineIcon } from './ClockHour9Icon';
+/** @deprecated Renamed to `ClockHour9FreeIcons`; this alias will be removed in the next major version. */
+export { default as ClockHourNineFreeIcons } from './ClockHour9Icon';
+/** @deprecated Renamed to `ClockHour1Icon`; this alias will be removed in the next major version. */
+export { default as ClockHourOneIcon } from './ClockHour1Icon';
+/** @deprecated Renamed to `ClockHour1FreeIcons`; this alias will be removed in the next major version. */
+export { default as ClockHourOneFreeIcons } from './ClockHour1Icon';
+/** @deprecated Renamed to `ClockHour7Icon`; this alias will be removed in the next major version. */
+export { default as ClockHourSevenIcon } from './ClockHour7Icon';
+/** @deprecated Renamed to `ClockHour7FreeIcons`; this alias will be removed in the next major version. */
+export { default as ClockHourSevenFreeIcons } from './ClockHour7Icon';
+/** @deprecated Renamed to `ClockHour6Icon`; this alias will be removed in the next major version. */
+export { default as ClockHourSixIcon } from './ClockHour6Icon';
+/** @deprecated Renamed to `ClockHour6FreeIcons`; this alias will be removed in the next major version. */
+export { default as ClockHourSixFreeIcons } from './ClockHour6Icon';
+/** @deprecated Renamed to `ClockHour3Icon`; this alias will be removed in the next major version. */
+export { default as ClockHourThreeIcon } from './ClockHour3Icon';
+/** @deprecated Renamed to `ClockHour3FreeIcons`; this alias will be removed in the next major version. */
+export { default as ClockHourThreeFreeIcons } from './ClockHour3Icon';
+/** @deprecated Renamed to `ClockHour2Icon`; this alias will be removed in the next major version. */
+export { default as ClockHourTwoIcon } from './ClockHour2Icon';
+/** @deprecated Renamed to `ClockHour2FreeIcons`; this alias will be removed in the next major version. */
+export { default as ClockHourTwoFreeIcons } from './ClockHour2Icon';
+/** @deprecated Renamed to `Columns3CogIcon`; this alias will be removed in the next major version. */
+export { default as ColumnsThreeCogIcon } from './Columns3CogIcon';
+/** @deprecated Renamed to `Columns3CogFreeIcons`; this alias will be removed in the next major version. */
+export { default as ColumnsThreeCogFreeIcons } from './Columns3CogIcon';
+/** @deprecated Renamed to `Css3Icon`; this alias will be removed in the next major version. */
+export { default as CssThreeIcon } from './Css3Icon';
+/** @deprecated Renamed to `Css3FreeIcons`; this alias will be removed in the next major version. */
+export { default as CssThreeFreeIcons } from './Css3Icon';
+/** @deprecated Renamed to `Disc3Icon`; this alias will be removed in the next major version. */
+export { default as DiscThreeIcon } from './Disc3Icon';
+/** @deprecated Renamed to `Disc3FreeIcons`; this alias will be removed in the next major version. */
+export { default as DiscThreeFreeIcons } from './Disc3Icon';
+/** @deprecated Renamed to `Disc2Icon`; this alias will be removed in the next major version. */
+export { default as DiscTwoIcon } from './Disc2Icon';
+/** @deprecated Renamed to `Disc2FreeIcons`; this alias will be removed in the next major version. */
+export { default as DiscTwoFreeIcons } from './Disc2Icon';
+/** @deprecated Renamed to `FolderGit2Icon`; this alias will be removed in the next major version. */
+export { default as FolderGitTwoIcon } from './FolderGit2Icon';
+/** @deprecated Renamed to `FolderGit2FreeIcons`; this alias will be removed in the next major version. */
+export { default as FolderGitTwoFreeIcons } from './FolderGit2Icon';
+/** @deprecated Renamed to `FolderSearch2Icon`; this alias will be removed in the next major version. */
+export { default as FolderSearchTwoIcon } from './FolderSearch2Icon';
+/** @deprecated Renamed to `FolderSearch2FreeIcons`; this alias will be removed in the next major version. */
+export { default as FolderSearchTwoFreeIcons } from './FolderSearch2Icon';
+/** @deprecated Renamed to `GoBackward5SecIcon`; this alias will be removed in the next major version. */
+export { default as GoBackwardFiveSecIcon } from './GoBackward5SecIcon';
+/** @deprecated Renamed to `GoBackward5SecFreeIcons`; this alias will be removed in the next major version. */
+export { default as GoBackwardFiveSecFreeIcons } from './GoBackward5SecIcon';
+/** @deprecated Renamed to `GoForward5SecIcon`; this alias will be removed in the next major version. */
+export { default as GoForwardFiveSecIcon } from './GoForward5SecIcon';
+/** @deprecated Renamed to `GoForward5SecFreeIcons`; this alias will be removed in the next major version. */
+export { default as GoForwardFiveSecFreeIcons } from './GoForward5SecIcon';
+/** @deprecated Renamed to `Grid2x2CheckIcon`; this alias will be removed in the next major version. */
+export { default as Grid2X2CheckIcon } from './Grid2x2CheckIcon';
+/** @deprecated Renamed to `Grid2x2CheckFreeIcons`; this alias will be removed in the next major version. */
+export { default as Grid2X2CheckFreeIcons } from './Grid2x2CheckIcon';
+/** @deprecated Renamed to `Grid2x2Icon`; this alias will be removed in the next major version. */
+export { default as Grid2X2Icon } from './Grid2x2Icon';
+/** @deprecated Renamed to `Grid2x2FreeIcons`; this alias will be removed in the next major version. */
+export { default as Grid2X2FreeIcons } from './Grid2x2Icon';
+/** @deprecated Renamed to `Grid2x2PlusIcon`; this alias will be removed in the next major version. */
+export { default as Grid2X2PlusIcon } from './Grid2x2PlusIcon';
+/** @deprecated Renamed to `Grid2x2PlusFreeIcons`; this alias will be removed in the next major version. */
+export { default as Grid2X2PlusFreeIcons } from './Grid2x2PlusIcon';
+/** @deprecated Renamed to `Grid2x2XIcon`; this alias will be removed in the next major version. */
+export { default as Grid2X2XIcon } from './Grid2x2XIcon';
+/** @deprecated Renamed to `Grid2x2XFreeIcons`; this alias will be removed in the next major version. */
+export { default as Grid2X2XFreeIcons } from './Grid2x2XIcon';
+/** @deprecated Renamed to `Grid3x2Icon`; this alias will be removed in the next major version. */
+export { default as Grid3X2Icon } from './Grid3x2Icon';
+/** @deprecated Renamed to `Grid3x2FreeIcons`; this alias will be removed in the next major version. */
+export { default as Grid3X2FreeIcons } from './Grid3x2Icon';
+/** @deprecated Renamed to `Grid3x3Icon`; this alias will be removed in the next major version. */
+export { default as Grid3X3Icon } from './Grid3x3Icon';
+/** @deprecated Renamed to `Grid3x3FreeIcons`; this alias will be removed in the next major version. */
+export { default as Grid3X3FreeIcons } from './Grid3x3Icon';
+/** @deprecated Renamed to `Html5Icon`; this alias will be removed in the next major version. */
+export { default as HtmlFiveIcon } from './Html5Icon';
+/** @deprecated Renamed to `Html5FreeIcons`; this alias will be removed in the next major version. */
+export { default as HtmlFiveFreeIcons } from './Html5Icon';
+/** @deprecated Renamed to `Layout3ColumnIcon`; this alias will be removed in the next major version. */
+export { default as LayoutThreeColumnIcon } from './Layout3ColumnIcon';
+/** @deprecated Renamed to `Layout3ColumnFreeIcons`; this alias will be removed in the next major version. */
+export { default as LayoutThreeColumnFreeIcons } from './Layout3ColumnIcon';
+/** @deprecated Renamed to `Layout3RowIcon`; this alias will be removed in the next major version. */
+export { default as LayoutThreeRowIcon } from './Layout3RowIcon';
+/** @deprecated Renamed to `Layout3RowFreeIcons`; this alias will be removed in the next major version. */
+export { default as LayoutThreeRowFreeIcons } from './Layout3RowIcon';
+/** @deprecated Renamed to `Layout2ColumnIcon`; this alias will be removed in the next major version. */
+export { default as LayoutTwoColumnIcon } from './Layout2ColumnIcon';
+/** @deprecated Renamed to `Layout2ColumnFreeIcons`; this alias will be removed in the next major version. */
+export { default as LayoutTwoColumnFreeIcons } from './Layout2ColumnIcon';
+/** @deprecated Renamed to `Layout2RowIcon`; this alias will be removed in the next major version. */
+export { default as LayoutTwoRowIcon } from './Layout2RowIcon';
+/** @deprecated Renamed to `Layout2RowFreeIcons`; this alias will be removed in the next major version. */
+export { default as LayoutTwoRowFreeIcons } from './Layout2RowIcon';
+/** @deprecated Renamed to `Mp401Icon`; this alias will be removed in the next major version. */
+export { default as MpFour01Icon } from './Mp401Icon';
+/** @deprecated Renamed to `Mp401FreeIcons`; this alias will be removed in the next major version. */
+export { default as MpFour01FreeIcons } from './Mp401Icon';
+/** @deprecated Renamed to `Mp402Icon`; this alias will be removed in the next major version. */
+export { default as MpFour02Icon } from './Mp402Icon';
+/** @deprecated Renamed to `Mp402FreeIcons`; this alias will be removed in the next major version. */
+export { default as MpFour02FreeIcons } from './Mp402Icon';
+/** @deprecated Renamed to `Mp4Icon`; this alias will be removed in the next major version. */
+export { default as MpFourIcon } from './Mp401Icon';
+/** @deprecated Renamed to `Mp4FreeIcons`; this alias will be removed in the next major version. */
+export { default as MpFourFreeIcons } from './Mp401Icon';
+/** @deprecated Renamed to `Mp302Icon`; this alias will be removed in the next major version. */
+export { default as MpThree02Icon } from './Mp302Icon';
+/** @deprecated Renamed to `Mp302FreeIcons`; this alias will be removed in the next major version. */
+export { default as MpThree02FreeIcons } from './Mp302Icon';
+/** @deprecated Renamed to `Music3Icon`; this alias will be removed in the next major version. */
+export { default as MusicThreeIcon } from './Music3Icon';
+/** @deprecated Renamed to `Music3FreeIcons`; this alias will be removed in the next major version. */
+export { default as MusicThreeFreeIcons } from './Music3Icon';
+/** @deprecated Renamed to `Navigation2Icon`; this alias will be removed in the next major version. */
+export { default as NavigationTwoIcon } from './Navigation2Icon';
+/** @deprecated Renamed to `Navigation2FreeIcons`; this alias will be removed in the next major version. */
+export { default as NavigationTwoFreeIcons } from './Navigation2Icon';
+/** @deprecated Renamed to `Navigation2OffIcon`; this alias will be removed in the next major version. */
+export { default as NavigationTwoOffIcon } from './Navigation2OffIcon';
+/** @deprecated Renamed to `Navigation2OffFreeIcons`; this alias will be removed in the next major version. */
+export { default as NavigationTwoOffFreeIcons } from './Navigation2OffIcon';
+/** @deprecated Renamed to `Rows4Icon`; this alias will be removed in the next major version. */
+export { default as RowsFourIcon } from './Rows4Icon';
+/** @deprecated Renamed to `Rows4FreeIcons`; this alias will be removed in the next major version. */
+export { default as RowsFourFreeIcons } from './Rows4Icon';
+/** @deprecated Renamed to `Rows3Icon`; this alias will be removed in the next major version. */
+export { default as RowsThreeIcon } from './Rows3Icon';
+/** @deprecated Renamed to `Rows3FreeIcons`; this alias will be removed in the next major version. */
+export { default as RowsThreeFreeIcons } from './Rows3Icon';
+/** @deprecated Renamed to `Rows2Icon`; this alias will be removed in the next major version. */
+export { default as RowsTwoIcon } from './Rows2Icon';
+/** @deprecated Renamed to `Rows2FreeIcons`; this alias will be removed in the next major version. */
+export { default as RowsTwoFreeIcons } from './Rows2Icon';
+/** @deprecated Renamed to `Tally5Icon`; this alias will be removed in the next major version. */
+export { default as TallyFiveIcon } from './Tally5Icon';
+/** @deprecated Renamed to `Tally5FreeIcons`; this alias will be removed in the next major version. */
+export { default as TallyFiveFreeIcons } from './Tally5Icon';
+/** @deprecated Renamed to `Tally4Icon`; this alias will be removed in the next major version. */
+export { default as TallyFourIcon } from './Tally4Icon';
+/** @deprecated Renamed to `Tally4FreeIcons`; this alias will be removed in the next major version. */
+export { default as TallyFourFreeIcons } from './Tally4Icon';
+/** @deprecated Renamed to `Tally1Icon`; this alias will be removed in the next major version. */
+export { default as TallyOneIcon } from './Tally1Icon';
+/** @deprecated Renamed to `Tally1FreeIcons`; this alias will be removed in the next major version. */
+export { default as TallyOneFreeIcons } from './Tally1Icon';
+/** @deprecated Renamed to `Tally3Icon`; this alias will be removed in the next major version. */
+export { default as TallyThreeIcon } from './Tally3Icon';
+/** @deprecated Renamed to `Tally3FreeIcons`; this alias will be removed in the next major version. */
+export { default as TallyThreeFreeIcons } from './Tally3Icon';
+/** @deprecated Renamed to `Tally2Icon`; this alias will be removed in the next major version. */
+export { default as TallyTwoIcon } from './Tally2Icon';
+/** @deprecated Renamed to `Tally2FreeIcons`; this alias will be removed in the next major version. */
+export { default as TallyTwoFreeIcons } from './Tally2Icon';
+/** @deprecated Renamed to `W3SchoolsIcon`; this alias will be removed in the next major version. */
+export { default as WThreeSchoolsIcon } from './W3SchoolsIcon';
+/** @deprecated Renamed to `W3SchoolsFreeIcons`; this alias will be removed in the next major version. */
+export { default as WThreeSchoolsFreeIcons } from './W3SchoolsIcon';
 
 // Icon Aliases (Lucide-style and common shorthand names)
 export { default as AArrowDown } from './ArrowDown01Icon';
@@ -13686,9 +13896,9 @@ export { default as Codesandbox } from './CodesandboxIcon';
 export { default as Coffee } from './Coffee01Icon';
 export { default as Cog } from './Settings01Icon';
 export { default as Coins } from './Coins01Icon';
-export { default as Columns2 } from './LayoutTwoColumnIcon';
-export { default as Columns3 } from './LayoutThreeColumnIcon';
-export { default as Columns4 } from './LayoutTwoColumnIcon';
+export { default as Columns2 } from './Layout2ColumnIcon';
+export { default as Columns3 } from './Layout3ColumnIcon';
+export { default as Columns4 } from './Layout2ColumnIcon';
 export { default as Command } from './CommandIcon';
 export { default as Compass } from './CompassIcon';
 export { default as Component } from './ShapesIcon';
@@ -14173,9 +14383,9 @@ export { default as RotateCcw } from './RotateLeft01Icon';
 export { default as RotateCw } from './RotateClockwiseIcon';
 export { default as Route } from './Route01Icon';
 export { default as Router } from './RouterIcon';
-export { default as Rows2 } from './LayoutTwoRowIcon';
-export { default as Rows3 } from './LayoutThreeRowIcon';
-export { default as Rows4 } from './LayoutTwoRowIcon';
+export { default as Rows2 } from './Layout2RowIcon';
+export { default as Rows3 } from './Layout3RowIcon';
+export { default as Rows4 } from './Layout2RowIcon';
 export { default as Rss } from './RssIcon';
 export { default as Ruler } from './RulerIcon';
 export { default as Sailboat } from './SailboatCoastalIcon';
@@ -14710,7 +14920,7 @@ export { default as Airplay } from './ScreenRotationIcon';
 export { default as Unlock } from './SquareUnlock01Icon';
 export { default as Unlocked } from './SquareUnlock01Icon';
 export { default as LockOpen } from './SquareUnlock01Icon';
-export { default as Columns } from './LayoutThreeColumnIcon';
+export { default as Columns } from './Layout3ColumnIcon';
 export { default as Form } from './InputTextIcon';
 export { default as Input } from './InputTextIcon';
 export { default as TextField } from './InputTextIcon';

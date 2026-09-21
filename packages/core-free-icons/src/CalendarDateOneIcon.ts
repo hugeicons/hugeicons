@@ -1,5 +1,6 @@
 import type { IconSvgObject } from './types';
 
+/** @deprecated Renamed to `CalendarDate1Icon`; this file will be removed in the next major version. */
 const CalendarDateOneIcon: IconSvgObject = [
   ["path", { d: "M16 2V6M8 2V6", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "0" }],
   ["path", { d: "M3 10H21", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "1" }],
