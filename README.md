@@ -7,7 +7,7 @@
 
 ### Beautiful, consistent, pixel-perfect icons for every framework you build with.
 
-**60,000+ icons** · **10 styles** · **6,000+ free** · crafted on a 24×24 grid and trusted by 500,000+ developers.
+**60,000+ icons** · **10 styles** · **6,000+ free** · crafted on a 24×24 grid and trusted by 700,000+ developers.
 
 <br/>
 
@@ -149,7 +149,7 @@ Upgrade any time. [Explore Pro](https://hugeicons.com/pricing).
 
 The free icons (`@hugeicons/core-free-icons`) and all source code in this repository are released under the [MIT License](LICENSE.md). Use, modify and redistribute them in personal and commercial projects.
 
-Pro icon packs (`@hugeicons-pro/*`) are a separate product and require a valid [Hugeicons Pro license](https://hugeicons.com/license-agreement). Pro icons may be used in unlimited end products but may not be redistributed in templates, kits, plugins or open-source code.
+Pro icon packs (`@hugeicons-pro/*`) are a separate product and require a valid [Hugeicons Pro license](https://hugeicons.com/license-agreement). Pro icons may be used in unlimited end products but may not be redistributed in downloadable templates, kits or open-source code.
 
 <div align="center">
 <br/>
