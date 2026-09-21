@@ -207,7 +207,7 @@
     }
   },
   "scripts": {
-    "build": "rollup -c",
+    "build": "pnpm clean && rollup -c",
     "build:main": "rollup -c",
     "build:icons": "BUILD_INDIVIDUAL_ICONS=true node --max-old-space-size=8192 node_modules/.bin/rollup -c",
     "clean": "rm -rf dist",
