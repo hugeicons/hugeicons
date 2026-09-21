@@ -265,7 +265,57 @@ const deprecatedStubsConfig = deprecatedStubs.length > 0 ? {
 
 // Per-icon CommonJS modules for consumers that resolve the `require` condition of
 // exports["./*"] (Jest, webpack require()): dist/cjs/<Icon>.js with module.exports = <Icon>,
-// the shape 4.2.3 shipped. Plain Node still can't require them while "type" is "module".
+// the shape 4.2.3 shipped. The root package.json says "type": "module", so Node would parse
+// these .js files as ESM; a nearer package.json scoped to dist/cjs marks them CommonJS so
+// plain Node can require() them (and the dist/cjs/index.js that `main` points at) too.
+const cjsScopePlugin = () => ({
+  name: 'cjs-scope',
+  writeBundle() {
+    fs.writeFileSync(path.join(outputDir, 'cjs', 'package.json'), '{ "type": "commonjs" }\n');
+  }
+});
+
+// Case-exact check of what was just built (hugeicons/hugeicons#41): the barrel referenced
+// ./Grid2x2Icon.js while a stale macOS dist/ still held Grid2X2Icon.js. macOS resolves both,
+// Linux does not. Everything here compares against readdirSync names, never existsSync,
+// which is case-insensitive on macOS and would hide exactly this bug.
+const verifyDistPlugin = () => ({
+  name: 'verify-dist',
+  closeBundle() {
+    const onDisk = (dir) => new Set(fs.existsSync(dir) ? fs.readdirSync(dir) : []);
+    const esm = onDisk(path.join(outputDir, 'esm'));
+    const cjs = onDisk(path.join(outputDir, 'cjs'));
+    const types = onDisk(path.join(outputDir, 'types'));
+    const failures = [];
+    for (const entry of ['index.js', 'loader.web.js', 'loader.node.js', 'loader.native.js']) {
+      const file = path.join(outputDir, 'esm', entry);
+      if (!fs.existsSync(file)) { failures.push(`dist/esm/${entry} was not built`); continue; }
+      const specs = new Set([...fs.readFileSync(file, 'utf8').matchAll(/(?:from|import\()\s*['"]\.\/([^'"]+)['"]/g)].map(m => m[1]));
+      for (const spec of specs) {
+        if (!esm.has(spec)) failures.push(`dist/esm/${entry} imports './${spec}' but dist/esm has no such file (case-exact)`);
+      }
+    }
+    for (const name of iconFiles) {
+      if (!esm.has(`${name}.js`)) failures.push(`src/${name}.ts has no case-exact dist/esm/${name}.js`);
+      if (!cjs.has(`${name}.js`)) failures.push(`src/${name}.ts has no case-exact dist/cjs/${name}.js`);
+      if (!types.has(`${name}.d.ts`)) failures.push(`src/${name}.ts has no case-exact dist/types/${name}.d.ts`);
+    }
+    const pkg = JSON.parse(fs.readFileSync('package.json', 'utf8'));
+    const dirs = { esm, cjs, types };
+    const check = (target, where) => {
+      if (target && typeof target === 'object') { for (const [c, t] of Object.entries(target)) check(t, `${where}.${c}`); return; }
+      const m = typeof target === 'string' && target.match(/^\.\/dist\/(esm|cjs|types)\/([^/]+)$/);
+      if (m && !dirs[m[1]].has(m[2])) failures.push(`${where} -> ${target} does not exist (case-exact)`);
+    };
+    for (const [key, cond] of Object.entries(pkg.exports)) if (!key.includes('*')) check(cond, `exports["${key}"]`);
+    for (const [key, targets] of Object.entries(pkg.typesVersions?.['*'] ?? {})) if (!key.includes('*')) targets.forEach(t => check(t, `typesVersions["${key}"]`));
+    if (failures.length) {
+      throw new Error(`dist verification failed (${failures.length}):\n  ` + failures.slice(0, 20).join('\n  ') + (failures.length > 20 ? `\n  … +${failures.length - 20} more` : ''));
+    }
+    console.log(`verify-dist: ${iconFiles.length} icons, ${esm.size} esm / ${cjs.size} cjs / ${types.size} types files, all specifiers and package.json targets resolve case-exactly`);
+  }
+});
+
 const iconCjsConfig = {
   input: Object.fromEntries(iconFiles.map(name => [name, `src/${name}.ts`])),
   output: {
@@ -275,7 +325,8 @@ const iconCjsConfig = {
     sourcemap: false,
     entryFileNames: '[name].js'
   },
-  plugins: plugins(false)
+  // Last config in the list, so verify-dist sees the complete dist/.
+  plugins: [...plugins(false), cjsScopePlugin(), verifyDistPlugin()]
 };
 
 // IMPORTANT: Building 4500+ icons at once causes memory issues

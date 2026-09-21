@@ -1,6 +1,6 @@
 {
   "name": "@hugeicons/core-free-icons",
-  "version": "4.3.4",
+  "version": "4.3.5",
   "type": "module",
   "main": "./dist/cjs/index.js",
   "module": "./dist/esm/index.js",
@@ -120,6 +120,54 @@
       "import": "./dist/esm/Grid3x3Icon.js",
       "default": "./dist/esm/Grid3x3Icon.js"
     },
+    "./FingerprintScanIcon": {
+      "types": "./dist/types/FingerPrintScanIcon.d.ts",
+      "require": "./dist/cjs/FingerPrintScanIcon.js",
+      "import": "./dist/esm/FingerPrintScanIcon.js",
+      "default": "./dist/esm/FingerPrintScanIcon.js"
+    },
+    "./dist/esm/FingerprintScanIcon": {
+      "types": "./dist/types/FingerPrintScanIcon.d.ts",
+      "require": "./dist/cjs/FingerPrintScanIcon.js",
+      "import": "./dist/esm/FingerPrintScanIcon.js",
+      "default": "./dist/esm/FingerPrintScanIcon.js"
+    },
+    "./FoursquareIcon": {
+      "types": "./dist/types/FourSquareIcon.d.ts",
+      "require": "./dist/cjs/FourSquareIcon.js",
+      "import": "./dist/esm/FourSquareIcon.js",
+      "default": "./dist/esm/FourSquareIcon.js"
+    },
+    "./dist/esm/FoursquareIcon": {
+      "types": "./dist/types/FourSquareIcon.d.ts",
+      "require": "./dist/cjs/FourSquareIcon.js",
+      "import": "./dist/esm/FourSquareIcon.js",
+      "default": "./dist/esm/FourSquareIcon.js"
+    },
+    "./TrademarkIcon": {
+      "types": "./dist/types/TradeMarkIcon.d.ts",
+      "require": "./dist/cjs/TradeMarkIcon.js",
+      "import": "./dist/esm/TradeMarkIcon.js",
+      "default": "./dist/esm/TradeMarkIcon.js"
+    },
+    "./dist/esm/TrademarkIcon": {
+      "types": "./dist/types/TradeMarkIcon.d.ts",
+      "require": "./dist/cjs/TradeMarkIcon.js",
+      "import": "./dist/esm/TradeMarkIcon.js",
+      "default": "./dist/esm/TradeMarkIcon.js"
+    },
+    "./FullscreenIcon": {
+      "types": "./dist/types/FullScreenIcon.d.ts",
+      "require": "./dist/cjs/FullScreenIcon.js",
+      "import": "./dist/esm/FullScreenIcon.js",
+      "default": "./dist/esm/FullScreenIcon.js"
+    },
+    "./dist/esm/FullscreenIcon": {
+      "types": "./dist/types/FullScreenIcon.d.ts",
+      "require": "./dist/cjs/FullScreenIcon.js",
+      "import": "./dist/esm/FullScreenIcon.js",
+      "default": "./dist/esm/FullScreenIcon.js"
+    },
     "./*": {
       "types": "./dist/types/*.d.ts",
       "require": "./dist/cjs/*.js",
@@ -198,6 +246,30 @@
       "dist/esm/Grid3X3Icon": [
         "./dist/types/Grid3x3Icon.d.ts"
       ],
+      "FingerprintScanIcon": [
+        "./dist/types/FingerPrintScanIcon.d.ts"
+      ],
+      "dist/esm/FingerprintScanIcon": [
+        "./dist/types/FingerPrintScanIcon.d.ts"
+      ],
+      "FoursquareIcon": [
+        "./dist/types/FourSquareIcon.d.ts"
+      ],
+      "dist/esm/FoursquareIcon": [
+        "./dist/types/FourSquareIcon.d.ts"
+      ],
+      "TrademarkIcon": [
+        "./dist/types/TradeMarkIcon.d.ts"
+      ],
+      "dist/esm/TrademarkIcon": [
+        "./dist/types/TradeMarkIcon.d.ts"
+      ],
+      "FullscreenIcon": [
+        "./dist/types/FullScreenIcon.d.ts"
+      ],
+      "dist/esm/FullscreenIcon": [
+        "./dist/types/FullScreenIcon.d.ts"
+      ],
       "loader": [
         "./dist/types/loader.web.d.ts"
       ],
@@ -207,7 +279,7 @@
     }
   },
   "scripts": {
-    "build": "rollup -c",
+    "build": "pnpm clean && rollup -c",
     "build:main": "rollup -c",
     "build:icons": "BUILD_INDIVIDUAL_ICONS=true node --max-old-space-size=8192 node_modules/.bin/rollup -c",
     "clean": "rm -rf dist",
