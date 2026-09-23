@@ -39,9 +39,7 @@ This package (`@hugeicons/solid-js`) is a **rendering library** - it provides th
 - [Examples](#examples)
   - [Basic Usage](#basic-usage)
   - [Custom Size and Color](#custom-size-and-color)
-  - [Stroke Width](#stroke-width)
-  - [Alternate Icon](#alternate-icon)
-  - [Multicolor Icons (Pro)](#multicolor-icons-pro)
+  - [More examples and patterns](#more-examples-and-patterns)
 - [Performance](#performance)
 - [Troubleshooting](#troubleshooting)
 - [Browser Support](#browser-support)
@@ -130,47 +128,9 @@ import { NotificationIcon } from '@hugeicons/core-free-icons';
 />
 ```
 
-### Stroke Width
-```jsx
-import { SearchIcon } from '@hugeicons/core-free-icons';
+### More examples and patterns
 
-// Thicker strokes
-<HugeiconsIcon icon={SearchIcon} strokeWidth={2} />
-
-// Keep the rendered stroke width constant at any size
-<HugeiconsIcon icon={SearchIcon} size={48} strokeWidth={1.5} absoluteStrokeWidth />
-```
-
-### Alternate Icon
-```jsx
-import { createSignal } from 'solid-js';
-import { HugeiconsIcon } from '@hugeicons/solid-js';
-import { EyeIcon, ViewOffIcon } from '@hugeicons/core-free-icons';
-
-function PasswordToggle() {
-  const [visible, setVisible] = createSignal(false);
-
-  return (
-    <button type="button" onClick={() => setVisible(!visible())}>
-      <HugeiconsIcon icon={EyeIcon} altIcon={ViewOffIcon} showAlt={visible()} />
-    </button>
-  );
-}
-```
-
-### Multicolor Icons (Pro)
-```jsx
-import { Notification01Icon } from '@hugeicons-pro/core-duotone-rounded';
-
-<HugeiconsIcon
-  icon={Notification01Icon}
-  primaryColor="#2563EB"
-  secondaryColor="#93C5FD"
-  disableSecondaryOpacity
-/>
-```
-
-For more guides, see the [Hugeicons docs](https://hugeicons.com/docs).
+- Docs: https://hugeicons.com/docs
 
 ## Performance
 
@@ -234,8 +194,8 @@ The code in this package (`@hugeicons/solid-js`) is licensed under the MIT Licen
 This package only provides rendering utilities. It does not include or grant any rights to Hugeicons icon assets. Using Pro icon styles requires a valid Hugeicons Pro license.
 
 Hugeicons icon packs are licensed separately:
-- **Free icon packs**: use the license included with the specific free icon package you install.
-- **Pro icon packs (`@hugeicons-pro/*`)**: require a paid Hugeicons Pro license and are governed by the Hugeicons Pro Terms (see [Pro License](PRO-LICENSE.md).).
+- **Free icon packs** (`@hugeicons/core-free-icons`): MIT License. The `LICENSE.md` ships in the package.
+- **Pro icon packs (`@hugeicons-pro/*`)**: require a paid Hugeicons Pro license and are governed by the [Hugeicons License Agreement](https://hugeicons.com/license-agreement) (summary in the package's `PRO-LICENSE.md`).
 
 ## Related
 
