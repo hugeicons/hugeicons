@@ -1,6 +1,15 @@
 # @hugeicons/angular
 
 
+## 1.0.12
+
+### Patch Changes
+
+- Fixed icons rendering incompletely: `<circle>`, `<ellipse>` and `<rect>` elements were drawn as empty `<path>`s (e.g. missing head on `User02Icon`)
+- Icon stroke attributes (`stroke`, `stroke-width`, `stroke-linecap`, `stroke-linejoin`) plus `clip-rule` and `transform` are now applied; stroke icons no longer render blank without a `strokeWidth` input
+- Added `primaryColor`, `secondaryColor` and `disableSecondaryOpacity` inputs for bulk/duotone icons, matching `@hugeicons/react`
+
+
 ## 1.0.9
 
 ### Patch Changes
