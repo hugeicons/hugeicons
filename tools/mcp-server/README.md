@@ -23,6 +23,7 @@ Platform Documentation (in Markdown format):
 - `hugeicons://docs/platforms/vue` - Vue integration guide
 - `hugeicons://docs/platforms/angular` - Angular integration guide
 - `hugeicons://docs/platforms/svelte` - Svelte integration guide
+- `hugeicons://docs/platforms/solid-js` - SolidJS integration guide
 - `hugeicons://docs/platforms/react-native` - React Native integration guide
 - `hugeicons://docs/platforms/flutter` - Flutter integration guide
 - `hugeicons://docs/platforms/html` - HTML integration guide (font-based)

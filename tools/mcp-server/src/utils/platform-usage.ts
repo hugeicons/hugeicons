@@ -1,4 +1,4 @@
-export type Platform = 'react' | 'vue' | 'angular' | 'svelte' | 'react-native' | 'flutter' | 'html';
+export type Platform = 'react' | 'vue' | 'angular' | 'svelte' | 'solid-js' | 'react-native' | 'flutter' | 'html';
 
 export interface PlatformUsage {
   platform: Platform;
@@ -137,6 +137,31 @@ export class ExampleComponent {
 </script>
 
 <HugeiconsIcon icon={Notification03Icon} size={24} color="currentColor" strokeWidth={1.5} />`,
+    props: [
+      { name: 'icon', type: 'IconSvgObject', default: 'Required', description: 'The main icon component imported from an icon package' },
+      { name: 'altIcon', type: 'IconSvgObject', description: 'Alternative icon component from an icon package for states, interactions, or animations' },
+      { name: 'showAlt', type: 'boolean', default: 'false', description: 'When true, displays the altIcon instead of the main icon' },
+      { name: 'size', type: 'number', default: '24', description: 'Icon size in pixels' },
+      { name: 'color', type: 'string', default: 'currentColor', description: 'Icon color (CSS color value)' },
+      { name: 'strokeWidth', type: 'number', default: '1.5', description: 'Width of the icon strokes (works with stroke-style icons)' },
+      { name: 'class', type: 'string', description: 'Additional CSS classes' }
+    ]
+  },
+  'solid-js': {
+    platform: 'solid-js',
+    installation: {
+      core: 'npm install @hugeicons/solid-js',
+      packages: CORE_PACKAGES
+    },
+    basicUsage: `import { HugeiconsIcon } from '@hugeicons/solid-js'
+// Using free icons (available by default)
+import { Notification03Icon } from '@hugeicons/core-free-icons'
+// Pro icons require authentication via .npmrc or similar config
+// import { Notification03Icon } from '@hugeicons-pro/core-stroke-rounded'
+
+function App() {
+  return <HugeiconsIcon icon={Notification03Icon} size={24} color="currentColor" strokeWidth={1.5} />
+}`,
     props: [
       { name: 'icon', type: 'IconSvgObject', default: 'Required', description: 'The main icon component imported from an icon package' },
       { name: 'altIcon', type: 'IconSvgObject', description: 'Alternative icon component from an icon package for states, interactions, or animations' },
