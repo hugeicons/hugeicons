@@ -5,123 +5,47 @@ import {
   input,
 } from "@angular/core";
 import { IconSvgObject } from "../lib/types";
+import { HugeiconsSvgChildrenDirective } from "./svg-children.directive";
 
 /**
- * One SVG child of an icon. Keys mirror the camelCase attributes of the icon data;
- * `tag` is the element name (icons only use path, circle, ellipse and rect).
+ * One SVG child of an icon: the icon data's props (React-style camelCase names)
+ * plus `tag`, the element name. The named fields are the ones 1.0.11 exposed.
  */
 interface PathData {
   tag: string;
   d?: string;
-  fill: string;
+  fill?: string;
   opacity?: string;
   fillRule?: string;
-  fillOpacity?: string;
-  clipRule?: string;
   stroke?: string;
   strokeWidth?: number | string;
-  strokeLinecap?: string;
-  strokeLinejoin?: string;
-  transform?: string;
-  cx?: string;
-  cy?: string;
-  r?: string;
-  rx?: string;
-  ry?: string;
-  x?: string;
-  y?: string;
-  width?: string;
-  height?: string;
+  [prop: string]: unknown;
 }
+
+/**
+ * 1.0.11 wrote fill="none" on every child it rendered (always path, circle, ellipse or
+ * rect). Kept for those tags so CSS such as `svg { fill: ... }` behaves as before;
+ * any other tag is left untouched, like React.
+ */
+const LEGACY_FILL_NONE_TAGS = new Set(["path", "circle", "ellipse", "rect"]);
 
 @Component({
   selector: "hugeicons-icon",
   standalone: true,
+  imports: [HugeiconsSvgChildrenDirective],
   template: `
     <svg
-      [attr.width]="size()"
-      [attr.height]="size()"
+      [attr.width]="resolvedSize()"
+      [attr.height]="resolvedSize()"
       viewBox="0 0 24 24"
       fill="none"
-      [attr.color]="primaryColor() || color()"
+      [attr.color]="mainColor()"
+      [attr.stroke]="strokeOverride()?.stroke"
+      [attr.stroke-width]="strokeOverride()?.strokeWidth"
       [class]="iconClass()"
       xmlns="http://www.w3.org/2000/svg"
-    >
-      @for (path of paths(); track $index) {
-        @switch (path.tag) {
-          @case ("circle") {
-            <svg:circle
-              [attr.cx]="path.cx"
-              [attr.cy]="path.cy"
-              [attr.r]="path.r"
-              [attr.transform]="path.transform"
-              [attr.fill]="path.fill"
-              [attr.fill-rule]="path.fillRule"
-              [attr.fill-opacity]="path.fillOpacity"
-              [attr.clip-rule]="path.clipRule"
-              [attr.opacity]="path.opacity"
-              [attr.stroke]="path.stroke"
-              [attr.stroke-width]="path.strokeWidth"
-              [attr.stroke-linecap]="path.strokeLinecap"
-              [attr.stroke-linejoin]="path.strokeLinejoin"
-            />
-          }
-          @case ("ellipse") {
-            <svg:ellipse
-              [attr.cx]="path.cx"
-              [attr.cy]="path.cy"
-              [attr.rx]="path.rx"
-              [attr.ry]="path.ry"
-              [attr.transform]="path.transform"
-              [attr.fill]="path.fill"
-              [attr.fill-rule]="path.fillRule"
-              [attr.fill-opacity]="path.fillOpacity"
-              [attr.clip-rule]="path.clipRule"
-              [attr.opacity]="path.opacity"
-              [attr.stroke]="path.stroke"
-              [attr.stroke-width]="path.strokeWidth"
-              [attr.stroke-linecap]="path.strokeLinecap"
-              [attr.stroke-linejoin]="path.strokeLinejoin"
-            />
-          }
-          @case ("rect") {
-            <svg:rect
-              [attr.x]="path.x"
-              [attr.y]="path.y"
-              [attr.width]="path.width"
-              [attr.height]="path.height"
-              [attr.rx]="path.rx"
-              [attr.ry]="path.ry"
-              [attr.transform]="path.transform"
-              [attr.fill]="path.fill"
-              [attr.fill-rule]="path.fillRule"
-              [attr.fill-opacity]="path.fillOpacity"
-              [attr.clip-rule]="path.clipRule"
-              [attr.opacity]="path.opacity"
-              [attr.stroke]="path.stroke"
-              [attr.stroke-width]="path.strokeWidth"
-              [attr.stroke-linecap]="path.strokeLinecap"
-              [attr.stroke-linejoin]="path.strokeLinejoin"
-            />
-          }
-          @default {
-            <svg:path
-              [attr.d]="path.d"
-              [attr.transform]="path.transform"
-              [attr.fill]="path.fill"
-              [attr.fill-rule]="path.fillRule"
-              [attr.fill-opacity]="path.fillOpacity"
-              [attr.clip-rule]="path.clipRule"
-              [attr.opacity]="path.opacity"
-              [attr.stroke]="path.stroke"
-              [attr.stroke-width]="path.strokeWidth"
-              [attr.stroke-linecap]="path.strokeLinecap"
-              [attr.stroke-linejoin]="path.strokeLinejoin"
-            />
-          }
-        }
-      }
-    </svg>
+      [hugeiconsSvgChildren]="paths()"
+    ></svg>
   `,
   host: {
     style:
@@ -143,6 +67,24 @@ export class HugeiconsIconComponent {
   readonly secondaryColor = input<string | undefined>(undefined);
   readonly disableSecondaryOpacity = input<boolean>(false);
 
+  // Like React's default props: an explicitly bound `undefined` still falls back to the default
+  readonly resolvedSize = computed(() => this.size() ?? 24);
+  readonly mainColor = computed(
+    () => this.primaryColor() || (this.color() ?? "currentColor"),
+  );
+
+  /** Stroke width/color forced by the strokeWidth input, applied to the svg and every child. */
+  readonly strokeOverride = computed(() => {
+    const strokeWidthValue = this.strokeWidth();
+    if (strokeWidthValue === undefined) {
+      return undefined;
+    }
+    const strokeWidth = this.absoluteStrokeWidth()
+      ? (Number(strokeWidthValue) * 24) / Number(this.resolvedSize())
+      : strokeWidthValue;
+    return { strokeWidth, stroke: "currentColor" };
+  });
+
   // Computed signal for reactive path updates
   readonly paths = computed<PathData[]>(() => {
     const currentIcon =
@@ -152,44 +94,33 @@ export class HugeiconsIconComponent {
       return [];
     }
 
-    const strokeWidthValue = this.strokeWidth();
-    const calculatedStrokeWidth =
-      strokeWidthValue !== undefined
-        ? this.absoluteStrokeWidth()
-          ? (Number(strokeWidthValue) * 24) / Number(this.size())
-          : strokeWidthValue
-        : undefined;
-
-    const strokeProps =
-      calculatedStrokeWidth !== undefined
-        ? { strokeWidth: calculatedStrokeWidth, stroke: "currentColor" }
-        : {};
-
-    const mainColor = this.primaryColor() || this.color();
+    const strokeOverride = this.strokeOverride();
+    const mainColor = this.mainColor();
     const secondaryColor = this.secondaryColor();
     const disableSecondaryOpacity = this.disableSecondaryOpacity();
 
-    // Children keep the icon's source order, so paint order matches the design.
+    // Children keep the icon's source order: that is the paint order of the original SVG.
     return currentIcon.map(([tag, rawAttrs]) => {
-      const attrs = rawAttrs as Record<string, string | undefined>;
+      const attrs = rawAttrs as Record<string, unknown>;
       const isSecondary = attrs["opacity"] !== undefined;
-      const layerColor = isSecondary ? secondaryColor : mainColor;
       const colorProps = secondaryColor
-        ? attrs["stroke"] !== undefined
-          ? { stroke: layerColor }
-          : { fill: layerColor }
+        ? {
+            [attrs["stroke"] !== undefined ? "stroke" : "fill"]: isSecondary
+              ? secondaryColor
+              : mainColor,
+          }
         : {};
 
       return {
         ...attrs,
         tag,
-        fill: attrs["fill"] || "none",
-        ...strokeProps,
+        fill:
+          (attrs["fill"] as string | undefined) ||
+          (LEGACY_FILL_NONE_TAGS.has(tag) ? "none" : undefined),
+        ...strokeOverride,
         ...colorProps,
         opacity:
-          isSecondary && !disableSecondaryOpacity
-            ? attrs["opacity"]
-            : undefined,
+          isSecondary && !disableSecondaryOpacity ? attrs["opacity"] : undefined,
       } as PathData;
     });
   });
