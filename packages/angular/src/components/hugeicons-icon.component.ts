@@ -99,29 +99,37 @@ export class HugeiconsIconComponent {
     const secondaryColor = this.secondaryColor();
     const disableSecondaryOpacity = this.disableSecondaryOpacity();
 
-    // Children keep the icon's source order: that is the paint order of the original SVG.
-    return currentIcon.map(([tag, rawAttrs]) => {
-      const attrs = rawAttrs as Record<string, unknown>;
-      const isSecondary = attrs["opacity"] !== undefined;
-      const colorProps = secondaryColor
-        ? {
-            [attrs["stroke"] !== undefined ? "stroke" : "fill"]: isSecondary
-              ? secondaryColor
-              : mainColor,
-          }
-        : {};
+    // Same ordering as @hugeicons/react: secondary (opacity) layers first
+    return [...currentIcon]
+      .sort(([, a], [, b]) => {
+        const hasOpacityA = a["opacity"] !== undefined;
+        const hasOpacityB = b["opacity"] !== undefined;
+        return hasOpacityB ? 1 : hasOpacityA ? -1 : 0;
+      })
+      .map(([tag, rawAttrs]) => {
+        const attrs = rawAttrs as Record<string, unknown>;
+        const isSecondary = attrs["opacity"] !== undefined;
+        const colorProps = secondaryColor
+          ? {
+              [attrs["stroke"] !== undefined ? "stroke" : "fill"]: isSecondary
+                ? secondaryColor
+                : mainColor,
+            }
+          : {};
 
-      return {
-        ...attrs,
-        tag,
-        fill:
-          (attrs["fill"] as string | undefined) ||
-          (LEGACY_FILL_NONE_TAGS.has(tag) ? "none" : undefined),
-        ...strokeOverride,
-        ...colorProps,
-        opacity:
-          isSecondary && !disableSecondaryOpacity ? attrs["opacity"] : undefined,
-      } as PathData;
-    });
+        return {
+          ...attrs,
+          tag,
+          fill:
+            (attrs["fill"] as string | undefined) ||
+            (LEGACY_FILL_NONE_TAGS.has(tag) ? "none" : undefined),
+          ...strokeOverride,
+          ...colorProps,
+          opacity:
+            isSecondary && !disableSecondaryOpacity
+              ? attrs["opacity"]
+              : undefined,
+        } as PathData;
+      });
   });
 }
