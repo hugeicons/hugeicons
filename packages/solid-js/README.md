@@ -6,7 +6,7 @@
 
 ## What is Hugeicons?
 
-Hugeicons is a beautiful [icon library](https://hugeicons.com/solid-icons) for modern web and mobile apps. The free package includes 6,000+ Stroke Rounded SolidJS icons. The Pro package provides 60,000+ SolidJS icons across 10 styles, including multicolor support for Bulk, Duotone, and Twotone styles.
+Hugeicons is a beautiful [icon library](https://hugeicons.com/icons) for modern web and mobile apps. The free package includes 6,000+ Stroke Rounded SolidJS icons. The Pro package provides 60,000+ SolidJS icons across 10 styles, including multicolor support for Bulk, Duotone, and Twotone styles.
 
 ## How It Works
 
@@ -39,7 +39,9 @@ This package (`@hugeicons/solid-js`) is a **rendering library** - it provides th
 - [Examples](#examples)
   - [Basic Usage](#basic-usage)
   - [Custom Size and Color](#custom-size-and-color)
-  - [More examples and patterns](#more-examples-and-patterns)
+  - [Stroke Width](#stroke-width)
+  - [Alternate Icon](#alternate-icon)
+  - [Multicolor Icons (Pro)](#multicolor-icons-pro)
 - [Performance](#performance)
 - [Troubleshooting](#troubleshooting)
 - [Browser Support](#browser-support)
@@ -53,7 +55,7 @@ This package (`@hugeicons/solid-js`) is a **rendering library** - it provides th
 - Customizable colors, sizes, and stroke width
 - Multicolor support for Bulk, Duotone, and Twotone styles
 - TypeScript support with full type definitions
-- Tree shakeable builds (ESM, CJS, UMD) for bundlers like Vite, Solid Start, and Astro
+- Tree shakeable builds (ESM, CJS, and Solid source for SSR) for bundlers like Vite, SolidStart, and Astro
 - Optimized SVGs for small payloads and fast render
 - Alternate icon support for dynamic interactions
 
@@ -128,10 +130,47 @@ import { NotificationIcon } from '@hugeicons/core-free-icons';
 />
 ```
 
-### More examples and patterns
+### Stroke Width
+```jsx
+import { SearchIcon } from '@hugeicons/core-free-icons';
 
-- Examples: https://hugeicons.com/docs/integrations/solid/examples
-- Best practices: https://hugeicons.com/docs/integrations/solid/best-practices
+// Thicker strokes
+<HugeiconsIcon icon={SearchIcon} strokeWidth={2} />
+
+// Keep the rendered stroke width constant at any size
+<HugeiconsIcon icon={SearchIcon} size={48} strokeWidth={1.5} absoluteStrokeWidth />
+```
+
+### Alternate Icon
+```jsx
+import { createSignal } from 'solid-js';
+import { HugeiconsIcon } from '@hugeicons/solid-js';
+import { EyeIcon, ViewOffIcon } from '@hugeicons/core-free-icons';
+
+function PasswordToggle() {
+  const [visible, setVisible] = createSignal(false);
+
+  return (
+    <button type="button" onClick={() => setVisible(!visible())}>
+      <HugeiconsIcon icon={EyeIcon} altIcon={ViewOffIcon} showAlt={visible()} />
+    </button>
+  );
+}
+```
+
+### Multicolor Icons (Pro)
+```jsx
+import { Notification01Icon } from '@hugeicons-pro/core-duotone-rounded';
+
+<HugeiconsIcon
+  icon={Notification01Icon}
+  primaryColor="#2563EB"
+  secondaryColor="#93C5FD"
+  disableSecondaryOpacity
+/>
+```
+
+For more guides, see the [Hugeicons docs](https://hugeicons.com/docs).
 
 ## Performance
 
