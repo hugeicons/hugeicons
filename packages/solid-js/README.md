@@ -6,7 +6,7 @@
 
 ## What is Hugeicons?
 
-Hugeicons is a beautiful [icon library](https://hugeicons.com/solid-icons) for modern web and mobile apps. The free package includes 6,000+ Stroke Rounded SolidJS icons. The Pro package provides 60,000+ SolidJS icons across 10 styles, including multicolor support for Bulk, Duotone, and Twotone styles.
+Hugeicons is a beautiful [icon library](https://hugeicons.com/icons) for modern web and mobile apps. The free package includes 6,000+ Stroke Rounded SolidJS icons. The Pro package provides 60,000+ SolidJS icons across 10 styles, including multicolor support for Bulk, Duotone, and Twotone styles.
 
 ## How It Works
 
@@ -53,7 +53,7 @@ This package (`@hugeicons/solid-js`) is a **rendering library** - it provides th
 - Customizable colors, sizes, and stroke width
 - Multicolor support for Bulk, Duotone, and Twotone styles
 - TypeScript support with full type definitions
-- Tree shakeable builds (ESM, CJS, UMD) for bundlers like Vite, Solid Start, and Astro
+- Tree shakeable builds (ESM, CJS, and Solid source for SSR) for bundlers like Vite, SolidStart, and Astro
 - Optimized SVGs for small payloads and fast render
 - Alternate icon support for dynamic interactions
 
@@ -130,8 +130,8 @@ import { NotificationIcon } from '@hugeicons/core-free-icons';
 
 ### More examples and patterns
 
-- Examples: https://hugeicons.com/docs/integrations/solid/examples
-- Best practices: https://hugeicons.com/docs/integrations/solid/best-practices
+- Examples: https://hugeicons.com/docs/integrations/solid-js/examples
+- Best practices: https://hugeicons.com/docs/integrations/solid-js/best-practices
 
 ## Performance
 
@@ -195,8 +195,8 @@ The code in this package (`@hugeicons/solid-js`) is licensed under the MIT Licen
 This package only provides rendering utilities. It does not include or grant any rights to Hugeicons icon assets. Using Pro icon styles requires a valid Hugeicons Pro license.
 
 Hugeicons icon packs are licensed separately:
-- **Free icon packs**: use the license included with the specific free icon package you install.
-- **Pro icon packs (`@hugeicons-pro/*`)**: require a paid Hugeicons Pro license and are governed by the Hugeicons Pro Terms (see [Pro License](PRO-LICENSE.md).).
+- **Free icon packs** (`@hugeicons/core-free-icons`): MIT License. The `LICENSE.md` ships in the package.
+- **Pro icon packs (`@hugeicons-pro/*`)**: require a paid Hugeicons Pro license and are governed by the [Hugeicons License Agreement](https://hugeicons.com/license-agreement) (summary in the package's `PRO-LICENSE.md`).
 
 ## Related
 

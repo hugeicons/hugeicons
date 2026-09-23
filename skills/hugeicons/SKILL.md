@@ -1,6 +1,6 @@
 ---
 name: hugeicons
-description: Use and find Hugeicons icons in any framework — React, Vue, Svelte, Angular, React Native, and Flutter. Covers installation, rendering, props, icon naming, and the full icon catalog. Use whenever a project depends on @hugeicons/*, @hugeicons-pro/*, or the Flutter hugeicons package and you need to add, render, or pick an icon.
+description: Use and find Hugeicons icons in any framework — React, Vue, Svelte, SolidJS, Angular, React Native, and Flutter. Covers installation, rendering, props, icon naming, and the full icon catalog. Use whenever a project depends on @hugeicons/*, @hugeicons-pro/*, or the Flutter hugeicons package and you need to add, render, or pick an icon.
 ---
 
 # Hugeicons
@@ -33,6 +33,7 @@ Check the project's manifest and match the installed package:
 | React | `@hugeicons/react` in package.json | `HugeiconsIcon` |
 | Vue | `@hugeicons/vue` in package.json | `HugeiconsIcon` |
 | Svelte | `@hugeicons/svelte` in package.json | `HugeiconsIcon` |
+| SolidJS | `@hugeicons/solid-js` in package.json | `HugeiconsIcon` |
 | Angular | `@hugeicons/angular` in package.json | `hugeicons-icon` |
 | React Native | `@hugeicons/react-native` in package.json | `HugeiconsIcon` |
 | Flutter | `hugeicons` in pubspec.yaml | `HugeIcon` |
@@ -41,9 +42,9 @@ If more than one matches (e.g. a monorepo), use the one for the file you are edi
 
 ## 2. Two architectures
 
-- **JS frameworks (React, Vue, Svelte, Angular, React Native)** — the `@hugeicons/*` package is a *renderer only*. Icons are
+- **JS frameworks (React, Vue, Svelte, SolidJS, Angular, React Native)** — the `@hugeicons/*` package is a *renderer only*. Icons are
   **named exports** imported from a separate package, `@hugeicons/core-free-icons` (free).
-  The same icon names work across all five frameworks.
+  The same icon names work across all six frameworks.
 - **Flutter** — the `hugeicons` package *bundles* the icon data. Icons are `HugeIcons.*`
   constants of type `List<List<dynamic>>` (SVG path data, **not** Flutter `IconData`), rendered
   with `HugeIcon` — never Flutter's `Icon`.
@@ -157,6 +158,45 @@ Props:
 | `strokeWidth` | `number` | 1.5 | Width of the icon strokes |
 | `class` | `string` | - | Additional CSS classes |
 
+### SolidJS
+
+Install:
+
+```bash
+npm install @hugeicons/solid-js @hugeicons/core-free-icons
+```
+
+> **Note:** The package is `@hugeicons/solid-js` — not `@hugeicons/solid`. "Solid" is also an icon
+> style (`@hugeicons-pro/core-solid-*`), so don't confuse the two.
+
+Render:
+
+```jsx
+import { HugeiconsIcon } from '@hugeicons/solid-js';
+import { Search01Icon } from '@hugeicons/core-free-icons';
+
+function App() {
+  // Only `icon` is required; pass other props only to override a default.
+  return <HugeiconsIcon icon={Search01Icon} />;
+}
+```
+
+Props:
+
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| `icon` | `IconSvgElement` | Required | The main icon to display (a named export from an icon package) |
+| `altIcon` | `IconSvgElement` | - | Alternative icon for states, interactions, or dynamic swapping |
+| `showAlt` | `boolean` | false | When true, displays `altIcon` instead of `icon` |
+| `size` | `number \| string` | 24 | Icon size in pixels |
+| `color` | `string` | currentColor | Icon color (any CSS color value) |
+| `strokeWidth` | `number` | 1.5 | Width of the icon strokes |
+| `absoluteStrokeWidth` | `boolean` | false | When true, stroke width is scaled relative to icon size |
+| `primaryColor` | `string` | - | Primary color for multicolor Pro icons (Bulk, Duotone, Twotone) |
+| `secondaryColor` | `string` | - | Secondary color for multicolor Pro icons |
+| `disableSecondaryOpacity` | `boolean` | false | Disables default opacity applied to the secondary color |
+| `class` | `string` | - | Additional CSS classes |
+
 ### Angular
 
 Install:
@@ -267,7 +307,7 @@ Props:
 
 ## 4. Find an icon
 
-- **React, Vue, Svelte, Angular, React Native** — PascalCase named exports ending in `Icon` (e.g. `Search01Icon`, `Home01Icon`,
+- **React, Vue, Svelte, SolidJS, Angular, React Native** — PascalCase named exports ending in `Icon` (e.g. `Search01Icon`, `Home01Icon`,
   `Notification03Icon`). Number words are spelled out: `1st-bracket` → `FirstBracketIcon`,
   `3d-view` → `ThreeDViewIcon`. Import from `@hugeicons/core-free-icons`.
   Full list: [references/icon-list.md](references/icon-list.md) (5,471 icons).

@@ -1,6 +1,7 @@
 import { splitProps, createMemo, For, Component } from 'solid-js';
 import { Dynamic } from 'solid-js/web';
 import type { JSX } from 'solid-js';
+import { toSvgAttributes } from './svg-attributes';
 
 const defaultAttributes = {
   xmlns: 'http://www.w3.org/2000/svg',
@@ -84,42 +85,39 @@ export const HugeiconsIcon: Component<HugeiconsIconProps> = (props) => {
       {...rest}
     >
       <For each={sortedChildren()}>
-        {([tag, attrs]) => {
-          const isSecondaryPath = attrs.opacity !== undefined;
+        {([tag, iconAttrs]) => {
+          // stroke, stroke-width, fill and opacity are set below; Solid's prop merging skips
+          // undefined values, so leaving them in the spread would keep a value we mean to clear.
+          const { stroke, 'stroke-width': strokeWidth, fill, opacity, ...otherAttrs } =
+            toSvgAttributes(iconAttrs);
+          const isSecondaryPath = opacity !== undefined;
 
-          const getOpacity = () => {
-            if (!isSecondaryPath) return attrs.opacity as string | number | undefined;
-            return local.disableSecondaryOpacity ? undefined : (attrs.opacity as string | number | undefined);
-          };
+          const getOpacity = () =>
+            isSecondaryPath && local.disableSecondaryOpacity ? undefined : opacity;
 
           const getStroke = () => {
-            if (local.secondaryColor && attrs.stroke !== undefined) {
+            if (local.secondaryColor && stroke !== undefined) {
               return isSecondaryPath ? local.secondaryColor : finalColor();
             }
             if (calculatedStrokeWidth() !== undefined) {
               return 'currentColor';
             }
-            return attrs.stroke as string | undefined;
+            return stroke;
           };
 
           const getFill = () => {
-            if (local.secondaryColor && attrs.stroke === undefined) {
+            if (local.secondaryColor && stroke === undefined) {
               return isSecondaryPath ? local.secondaryColor : finalColor();
             }
-            return attrs.fill as string | undefined;
+            return fill;
           };
 
-          const getStrokeWidth = () => {
-            if (calculatedStrokeWidth() !== undefined) {
-              return calculatedStrokeWidth();
-            }
-            return (attrs['stroke-width'] ?? attrs.strokeWidth) as string | number | undefined;
-          };
+          const getStrokeWidth = () => calculatedStrokeWidth() ?? strokeWidth;
 
           return (
             <Dynamic
               component={tag}
-              {...attrs}
+              {...otherAttrs}
               stroke={getStroke()}
               stroke-width={getStrokeWidth()}
               fill={getFill()}

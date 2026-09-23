@@ -35,7 +35,7 @@ Every icon is hand-crafted for consistency, clarity, and balance, so your interf
 - **10 styles:** Stroke, Solid, Bulk, Duotone and Twotone across rounded, sharp, and standard families
 - **Pixel-perfect:** built on a 24×24 grid for crisp rendering at any scale
 - **Tree-shakeable:** ship only the icons you use
-- **Native everywhere:** first-class libraries for React, Vue, Svelte, Angular, React Native and Flutter
+- **Native everywhere:** first-class libraries for React, Vue, Svelte, SolidJS, Angular, React Native and Flutter
 - **6,000+ free icons:** for unlimited personal and commercial use
 - **Always growing:** new icons added regularly
 
@@ -50,6 +50,7 @@ Pick your framework and install:
 | **React** | [`@hugeicons/react`](packages/react) | [![npm](https://img.shields.io/npm/v/@hugeicons/react?style=flat-square&label=)](https://www.npmjs.com/package/@hugeicons/react) | `npm i @hugeicons/react @hugeicons/core-free-icons` |
 | **Vue** | [`@hugeicons/vue`](packages/vue) | [![npm](https://img.shields.io/npm/v/@hugeicons/vue?style=flat-square&label=)](https://www.npmjs.com/package/@hugeicons/vue) | `npm i @hugeicons/vue @hugeicons/core-free-icons` |
 | **Svelte** | [`@hugeicons/svelte`](packages/svelte) | [![npm](https://img.shields.io/npm/v/@hugeicons/svelte?style=flat-square&label=)](https://www.npmjs.com/package/@hugeicons/svelte) | `npm i @hugeicons/svelte @hugeicons/core-free-icons` |
+| **SolidJS** | [`@hugeicons/solid-js`](packages/solid-js) | [![npm](https://img.shields.io/npm/v/@hugeicons/solid-js?style=flat-square&label=)](https://www.npmjs.com/package/@hugeicons/solid-js) | `npm i @hugeicons/solid-js @hugeicons/core-free-icons` |
 | **Angular** | [`@hugeicons/angular`](packages/angular) | [![npm](https://img.shields.io/npm/v/@hugeicons/angular?style=flat-square&label=)](https://www.npmjs.com/package/@hugeicons/angular) | `npm i @hugeicons/angular @hugeicons/core-free-icons` |
 | **React Native** | [`@hugeicons/react-native`](packages/react-native) | [![npm](https://img.shields.io/npm/v/@hugeicons/react-native?style=flat-square&label=)](https://www.npmjs.com/package/@hugeicons/react-native) | `npm i @hugeicons/react-native @hugeicons/core-free-icons react-native-svg` |
 | **Flutter** | [`hugeicons`](packages/flutter) | [![pub](https://img.shields.io/pub/v/hugeicons?style=flat-square&label=)](https://pub.dev/packages/hugeicons) | `flutter pub add hugeicons` |
@@ -84,7 +85,7 @@ Use Hugeicons across your favorite tools and platforms:
 
 One skill covers every framework. The agent detects which one a project uses and applies the right component, props, and icon catalog:
 
-- **Detect → install → render → props** for React, Vue, Svelte, Angular, React Native, and Flutter
+- **Detect → install → render → props** for React, Vue, Svelte, SolidJS, Angular, React Native, and Flutter
 - The complete icon catalog — [`references/icon-list.md`](skills/hugeicons/references/icon-list.md) for the shared JS exports and [`references/icon-list-flutter.md`](skills/hugeicons/references/icon-list-flutter.md) for Flutter constants — so names are copied, never invented
 - Free vs Pro guidance, plus minimal-code conventions (only pass props that override a default)
 
