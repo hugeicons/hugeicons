@@ -25,6 +25,9 @@
   "bugs": {
     "url": "https://github.com/hugeicons/hugeicons/issues"
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "exports": {
     ".": {
       "solid": "./dist/source/index.jsx",
