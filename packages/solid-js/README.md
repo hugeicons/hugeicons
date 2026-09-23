@@ -130,7 +130,8 @@ import { NotificationIcon } from '@hugeicons/core-free-icons';
 
 ### More examples and patterns
 
-- Docs: https://hugeicons.com/docs
+- Examples: https://hugeicons.com/docs/integrations/solid-js/examples
+- Best practices: https://hugeicons.com/docs/integrations/solid-js/best-practices
 
 ## Performance
 
