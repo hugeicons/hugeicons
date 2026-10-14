@@ -61,6 +61,22 @@ npm run watch
 
 ## Installation
 
+### Hosted server (no install)
+
+Connect any MCP client that supports remote servers to:
+
+```
+https://mcp.hugeicons.com/mcp
+```
+
+Claude Code:
+
+```bash
+claude mcp add --transport http hugeicons https://mcp.hugeicons.com/mcp
+```
+
+In claude.ai, ChatGPT, Cursor and other clients, add a custom connector with the same URL.
+
 ### Installing via Smithery
 
 To install Hugeicons MCP Server for Claude Desktop automatically via [Smithery](https://smithery.ai/server/@hugeicons/mcp-server):
@@ -98,6 +114,22 @@ You can also run the server directly using npx:
 
 ```bash
 npx @hugeicons/mcp-server
+```
+
+### Self-hosting (Streamable HTTP)
+
+`build/http.js` serves the MCP endpoint at `/mcp` and a health check at `/health`. It listens on `PORT` (default `3000`) and runs stateless, so it can be scaled to multiple instances.
+
+```bash
+npm run build
+PORT=3000 npm run start:http
+```
+
+The Dockerfile builds the HTTP server and must be built from the repository root:
+
+```bash
+docker build -f tools/mcp-server/Dockerfile -t hugeicons-mcp .
+docker run -p 3000:3000 hugeicons-mcp
 ```
 
 ### Debugging
