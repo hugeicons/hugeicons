@@ -10,16 +10,22 @@
 import { createServer, IncomingMessage, ServerResponse } from "node:http";
 import { StreamableHTTPServerTransport } from "@modelcontextprotocol/sdk/server/streamableHttp.js";
 import { HugeiconsServer } from "./server.js";
+import { getClientIp, RateLimiter } from "./rate-limit.js";
 
 const PORT = Number(process.env.PORT ?? 3000);
 const HOST = process.env.HOST ?? "0.0.0.0";
 const MAX_BODY_BYTES = 1024 * 1024;
+// Requests per minute per client IP on /mcp; 0 disables the limit
+const RATE_LIMIT_PER_MINUTE = Number(process.env.RATE_LIMIT_PER_MINUTE ?? 60);
+const CLIENT_IP_HEADER = process.env.CLIENT_IP_HEADER ?? "x-forwarded-for";
+
+const rateLimiter = RATE_LIMIT_PER_MINUTE > 0 ? new RateLimiter(RATE_LIMIT_PER_MINUTE) : null;
 
 const CORS_HEADERS = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Methods": "GET, POST, DELETE, OPTIONS",
   "Access-Control-Allow-Headers": "Content-Type, Accept, Authorization, Mcp-Session-Id, Mcp-Protocol-Version, Last-Event-ID",
-  "Access-Control-Expose-Headers": "Mcp-Session-Id, Mcp-Protocol-Version",
+  "Access-Control-Expose-Headers": "Mcp-Session-Id, Mcp-Protocol-Version, Retry-After, RateLimit-Limit, RateLimit-Remaining",
 };
 
 function sendJson(res: ServerResponse, status: number, body: unknown, headers: Record<string, string> = {}) {
@@ -46,6 +52,18 @@ async function handleMcp(req: IncomingMessage, res: ServerResponse) {
   if (req.method !== "POST") {
     sendRpcError(res, 405, -32000, "Method not allowed", { Allow: "POST" });
     return;
+  }
+
+  if (rateLimiter) {
+    const { allowed, remaining, retryAfterSeconds } = rateLimiter.hit(getClientIp(req, CLIENT_IP_HEADER));
+    res.setHeader("RateLimit-Limit", String(RATE_LIMIT_PER_MINUTE));
+    res.setHeader("RateLimit-Remaining", String(remaining));
+    if (!allowed) {
+      sendRpcError(res, 429, -32000, `Rate limit exceeded. Try again in ${retryAfterSeconds}s`, {
+        "Retry-After": String(retryAfterSeconds),
+      });
+      return;
+    }
   }
 
   let body: unknown;

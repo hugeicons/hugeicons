@@ -125,6 +125,17 @@ npm run build
 PORT=3000 npm run start:http
 ```
 
+Environment variables:
+
+| Variable | Default | Description |
+| --- | --- | --- |
+| `PORT` | `3000` | Port to listen on |
+| `HOST` | `0.0.0.0` | Interface to bind |
+| `RATE_LIMIT_PER_MINUTE` | `60` | Requests per minute per client IP on `/mcp`. `0` disables it |
+| `CLIENT_IP_HEADER` | `x-forwarded-for` | Header holding the client IP, set by your proxy. Use `cf-connecting-ip` behind Cloudflare |
+
+The rate limit is kept in memory per process, so each replica counts separately. Only expose the server through a proxy that sets `CLIENT_IP_HEADER`, since clients can send that header themselves.
+
 The Dockerfile builds the HTTP server and must be built from the repository root:
 
 ```bash
