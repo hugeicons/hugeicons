@@ -199,21 +199,31 @@ export default function App() {
   'flutter': {
     platform: 'flutter',
     installation: {
-      core: 'hugeicons: ^0.0.10',
+      // pub.dev package (free stroke-rounded icons); adds hugeicons: ^1.2.0 to pubspec.yaml
+      core: 'flutter pub add hugeicons',
       packages: []
     },
     basicUsage: `import 'package:hugeicons/hugeicons.dart';
 
-// Example usage in a widget
+// Color and size follow the surrounding IconTheme by default
+HugeIcon(
+  icon: HugeIcons.strokeRoundedHome01,
+),
+
+// Or set them explicitly
 HugeIcon(
   icon: HugeIcons.strokeRoundedHome01,
   color: Colors.red,
   size: 30.0,
+  strokeWidth: 2.0,
 ),`,
     props: [
-      { name: 'icon', type: 'HugeIcons', default: 'Required', description: 'The icon to display from HugeIcons collection' },
-      { name: 'size', type: 'double', default: '24.0', description: 'Icon size in logical pixels' },
-      { name: 'color', type: 'Color', default: 'Colors.black', description: 'Icon color from Flutter Colors' }
+      { name: 'icon', type: 'List<List<dynamic>>', default: 'Required', description: 'The icon constant, e.g. HugeIcons.strokeRoundedHome01 (the free package includes stroke-rounded icons)' },
+      { name: 'color', type: 'Color?', default: 'Theme color', description: 'Icon color. When omitted it uses IconTheme color, then the text color, then colorScheme.onSurface, so it follows light and dark themes' },
+      { name: 'size', type: 'double?', default: '24.0', description: 'Icon size in logical pixels. Pass null to use the IconTheme size' },
+      { name: 'strokeWidth', type: 'double?', default: 'Icon default', description: 'Overrides the stroke width of stroke icons. No effect on solid icons' },
+      { name: 'secondaryColor', type: 'Color?', default: 'color', description: 'Color of the secondary layer of Duotone, Twotone and Bulk icons' },
+      { name: 'disableSecondaryOpacity', type: 'bool', default: 'false', description: 'Draws the secondary layer at full opacity instead of its reduced opacity' }
     ]
   },
   'html': {
