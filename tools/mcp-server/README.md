@@ -79,13 +79,13 @@ claude mcp add --transport http hugeicons https://mcp.hugeicons.com/mcp
 
 In claude.ai, ChatGPT, Cursor and other clients, add a custom connector with the same URL.
 
-### Installing via Smithery
+### Via Smithery
 
-To install Hugeicons MCP Server for Claude Desktop automatically via [Smithery](https://smithery.ai/server/@hugeicons/mcp-server):
+The hosted server is also listed on [Smithery](https://smithery.ai/server/@hugeicons/mcp-server), which can connect it to your client for you.
 
-```bash
-npx -y @smithery/cli install @hugeicons/mcp-server --client claude
-```
+### Local (stdio)
+
+If your client only supports local servers, run the npm package instead.
 
 To use with Claude Desktop, add the server config:
 
