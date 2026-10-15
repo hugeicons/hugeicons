@@ -10,11 +10,13 @@ This is a TypeScript-based MCP server that provides tools and resources for inte
 
 ### Tools
 
-- `list_icons` - Get a list of all available Hugeicons icons
-- `search_icons` - Search for icons by name or tags
+- `list_icons` - List icon names a page at a time (`offset`, `limit` up to 500), optionally filtered by `category`. The first page also returns every category with its icon count
+- `search_icons` - Search icons by name or tags, with exact name and tag matches ranked first. Separate searches with commas; `limit` sets results per search (default 20, max 50)
 - `get_platform_usage` - Get platform-specific usage instructions for Hugeicons
 - `get_icon_glyphs` - Get all glyphs (unicode characters) for a specific icon across all available styles
 - `get_icon_glyph_by_style` - Get the glyph (unicode character) for a specific icon with a particular style
+
+Icon names are case-insensitive and also accept component names such as `Home01Icon`. Unknown icons and invalid arguments come back as tool results with `isError: true`, so the assistant can correct its call.
 
 ### Resources
 
@@ -29,7 +31,7 @@ Platform Documentation (in Markdown format):
 - `hugeicons://docs/platforms/html` - HTML integration guide (font-based)
 
 Icons Data:
-- `hugeicons://icons/index` - Complete index of all Hugeicons (JSON format)
+- `hugeicons://icons/index` - Name and category of every icon (JSON format)
 
 ### Functionality
 
