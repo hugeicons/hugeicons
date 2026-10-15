@@ -18,9 +18,10 @@ import {
 } from "@modelcontextprotocol/sdk/types.js";
 import axios from "axios";
 import { trackMCP, createConfig } from "agnost";
-import { IconInfo, SearchApiResponse, IconStyle } from "./types.js";
-import { searchIcons } from "./utils/search.js";
-import { getAllGlyphs, getGlyphByStyle } from "./utils/glyphs.js";
+import { IconInfo, IconStyle } from "./types.js";
+import { DEFAULT_SEARCH_LIMIT, MAX_SEARCH_LIMIT, searchIcons } from "./utils/search.js";
+import { getAllGlyphs, getGlyphByStyle, IconNotFoundError } from "./utils/glyphs.js";
+import { normalizeIconName } from "./utils/icon-name.js";
 import { Platform, PLATFORM_USAGE } from "./utils/platform-usage.js";
 import { convertPlatformUsageToMarkdown } from "./utils/markdown-converter.js";
 
@@ -29,6 +30,23 @@ import { convertPlatformUsageToMarkdown } from "./utils/markdown-converter.js";
 const ICONS_CACHE_TTL_MS = 6 * 60 * 60 * 1000;
 let iconsIndex: { icons: IconInfo[]; fetchedAt: number } | null = null;
 let iconsRequest: Promise<IconInfo[]> | null = null;
+
+const DEFAULT_LIST_LIMIT = 200;
+const MAX_LIST_LIMIT = 500;
+
+/**
+ * A problem the assistant can fix (bad arguments, unknown icon). Reported as a
+ * tool result with isError, so the model sees the message instead of a protocol error.
+ */
+class ToolError extends Error {}
+
+function jsonResult(data: unknown) {
+  return { content: [{ type: "text", text: JSON.stringify(data) }] };
+}
+
+function errorResult(message: string) {
+  return { isError: true, content: [{ type: "text", text: message }] };
+}
 
 async function loadIcons(): Promise<IconInfo[]> {
   if (iconsIndex && Date.now() - iconsIndex.fetchedAt < ICONS_CACHE_TTL_MS) {
@@ -89,23 +107,40 @@ export class HugeiconsServer {
       tools: [
         {
           name: "list_icons",
-          description: "Get a list of all available Hugeicons icons",
+          description: "List Hugeicons icon names, a page at a time. Optionally filter by category. The first page without a category also returns every category with its icon count. Prefer search_icons to find an icon for a purpose.",
           inputSchema: {
             type: "object",
-            properties: {},
+            properties: {
+              category: {
+                type: "string",
+                description: "Only list icons in this category (e.g. 'arrows', 'e-commerce')",
+              },
+              offset: {
+                type: "number",
+                description: "Number of icons to skip. Use next_offset from the previous page. Defaults to 0",
+              },
+              limit: {
+                type: "number",
+                description: `Icons per page, 1-${MAX_LIST_LIMIT}. Defaults to ${DEFAULT_LIST_LIMIT}`,
+              },
+            },
             required: [],
           },
         },
         {
           name: "search_icons",
-          description: "Search for icons by name or tags. Use commas to search for multiple icons (e.g. 'home, notification, settings')",
+          description: "Search icons by name or tags. Exact name and tag matches rank first. Separate multiple searches with commas (e.g. 'home, notification, settings') to get results for each.",
           inputSchema: {
             type: "object",
             properties: {
               query: {
                 type: "string",
-                description: "Search query to find relevant icons. Separate multiple searches with commas",
-              }
+                description: "What to search for. Separate multiple searches with commas",
+              },
+              limit: {
+                type: "number",
+                description: `Maximum results per search, 1-${MAX_SEARCH_LIMIT}. Defaults to ${DEFAULT_SEARCH_LIMIT}`,
+              },
             },
             required: ["query"],
           },
@@ -133,7 +168,7 @@ export class HugeiconsServer {
             properties: {
               icon_name: {
                 type: "string",
-                description: "The name of the icon (e.g., 'home-01', 'notification-02')",
+                description: "The icon name (e.g. 'home-01', 'notification-02'). Case and spacing are normalized",
               }
             },
             required: ["icon_name"],
@@ -147,7 +182,7 @@ export class HugeiconsServer {
             properties: {
               icon_name: {
                 type: "string",
-                description: "The name of the icon (e.g., 'home-01', 'notification-02')",
+                description: "The icon name (e.g. 'home-01', 'notification-02'). Case and spacing are normalized",
               },
               style: {
                 type: "string",
@@ -173,23 +208,33 @@ export class HugeiconsServer {
     }));
 
     this.server.setRequestHandler(CallToolRequestSchema, async (request) => {
-      switch (request.params.name) {
-        case "list_icons":
-          return await this.handleListIcons();
-        case "search_icons":
-          return await this.handleSearchIcons(request.params.arguments);
-        case "get_platform_usage":
-          return await this.handleGetPlatformUsage(request.params.arguments);
-        case "get_icon_glyphs":
-          return await this.handleGetIconGlyphs(request.params.arguments);
-        case "get_icon_glyph_by_style":
-          return await this.handleGetIconGlyphByStyle(request.params.arguments);
-        default:
-          throw new McpError(
-            ErrorCode.MethodNotFound,
-            `Unknown tool: ${request.params.name}`
-          );
+      const args = request.params.arguments ?? {};
+      try {
+        switch (request.params.name) {
+          case "list_icons":
+            return await this.handleListIcons(args);
+          case "search_icons":
+            return await this.handleSearchIcons(args);
+          case "get_platform_usage":
+            return this.handleGetPlatformUsage(args);
+          case "get_icon_glyphs":
+            return await this.handleGetIconGlyphs(args);
+          case "get_icon_glyph_by_style":
+            return await this.handleGetIconGlyphByStyle(args);
+        }
+      } catch (error) {
+        // Tool failures go back to the model as results it can act on
+        if (error instanceof ToolError || error instanceof IconNotFoundError) {
+          return errorResult(error.message);
+        }
+        console.error(`[Tool Error] ${request.params.name}`, error);
+        return errorResult(error instanceof Error ? error.message : "Unexpected error");
       }
+
+      throw new McpError(
+        ErrorCode.MethodNotFound,
+        `Unknown tool: ${request.params.name}`
+      );
     });
   }
 
@@ -289,7 +334,7 @@ export class HugeiconsServer {
           contents: [{
             uri,
             mimeType: "application/json",
-            text: JSON.stringify(this.iconsCache, null, 2)
+            text: JSON.stringify(this.iconsCache!.map(({ name, category }) => ({ name, category })))
           }]
         };
       }
@@ -304,133 +349,97 @@ export class HugeiconsServer {
   /**
    * Handle the list_icons tool request
    */
-  private async handleListIcons() {
-    try {
-      await this.ensureIconsLoaded();
-      return {
-        content: [
-          {
-            type: "text",
-            text: JSON.stringify(this.iconsCache, null, 2),
-          },
-        ],
-      };
-    } catch (error) {
-      if (error && typeof error === 'object' && 'isAxiosError' in error) {
-        throw new McpError(
-          ErrorCode.InternalError,
-          `Failed to list icons: ${(error as any).message}`
-        );
-      }
-      throw error;
+  private async handleListIcons(args: any) {
+    const category = this.optionalString(args, "category")?.toLowerCase();
+    const offset = this.intArg(args, "offset", 0, 0, Number.MAX_SAFE_INTEGER);
+    const limit = this.intArg(args, "limit", DEFAULT_LIST_LIMIT, 1, MAX_LIST_LIMIT);
+
+    await this.ensureIconsLoaded();
+    const all = this.iconsCache!;
+    const icons = category ? all.filter((icon) => icon.category === category) : all;
+
+    if (category && icons.length === 0) {
+      throw new ToolError(
+        `Unknown category '${category}'. Categories: ${Object.keys(this.categoryCounts(all)).join(", ")}`
+      );
     }
+
+    const nextOffset = offset + limit;
+    return jsonResult({
+      ...(category ? { category } : {}),
+      total: icons.length,
+      offset,
+      limit,
+      next_offset: nextOffset < icons.length ? nextOffset : null,
+      ...(!category && offset === 0 ? { categories: this.categoryCounts(all) } : {}),
+      icons: icons.slice(offset, nextOffset).map((icon) => icon.name),
+    });
+  }
+
+  /**
+   * Icon count per category, sorted by name
+   */
+  private categoryCounts(icons: IconInfo[]): Record<string, number> {
+    const counts: Record<string, number> = {};
+    for (const icon of icons) counts[icon.category] = (counts[icon.category] ?? 0) + 1;
+    return Object.fromEntries(Object.entries(counts).sort(([a], [b]) => a.localeCompare(b)));
   }
 
   /**
    * Handle the search_icons tool request
    */
   private async handleSearchIcons(args: any) {
-    try {
-      const query = this.validateSearchQuery(args);
-      const results = await searchIcons(query);
-
-      return {
-        content: [
-          {
-            type: "text",
-            text: JSON.stringify(results, null, 2),
-          },
-        ],
-      };
-    } catch (error) {
-      if (error && typeof error === 'object' && 'isAxiosError' in error) {
-        throw new McpError(
-          ErrorCode.InternalError,
-          `Failed to search icons: ${(error as any).message}`
-        );
-      }
-      throw error;
-    }
+    const query = this.validateSearchQuery(args);
+    const limit = this.intArg(args, "limit", DEFAULT_SEARCH_LIMIT, 1, MAX_SEARCH_LIMIT);
+    return jsonResult(await searchIcons(query, limit));
   }
 
   /**
    * Handle the get_platform_usage tool request
    */
-  private async handleGetPlatformUsage(args: any) {
-    try {
-      const platform = this.validatePlatform(args);
-      const usage = PLATFORM_USAGE[platform];
-
-      if (!usage) {
-        throw new McpError(
-          ErrorCode.InvalidRequest,
-          `Platform '${platform}' is not supported`
-        );
-      }
-
-      return {
-        content: [
-          {
-            type: "text",
-            text: JSON.stringify(usage, null, 2),
-          },
-        ],
-      };
-    } catch (error) {
-      throw new McpError(
-        ErrorCode.InternalError,
-        `Failed to get platform usage: ${error instanceof Error ? error.message : "Unknown error"}`
-      );
-    }
+  private handleGetPlatformUsage(args: any) {
+    const platform = this.validatePlatform(args);
+    return jsonResult(PLATFORM_USAGE[platform]);
   }
 
   /**
    * Handle the get_icon_glyphs tool request
    */
   private async handleGetIconGlyphs(args: any) {
-    try {
-      const iconName = this.validateIconName(args);
-      const glyphs = await getAllGlyphs(iconName);
-
-      return {
-        content: [
-          {
-            type: "text",
-            text: JSON.stringify(glyphs, null, 2),
-          },
-        ],
-      };
-    } catch (error) {
-      throw new McpError(
-        ErrorCode.InternalError,
-        `Failed to get icon glyphs: ${error instanceof Error ? error.message : "Unknown error"}`
-      );
-    }
+    const iconName = this.validateIconName(args);
+    return jsonResult(await getAllGlyphs(iconName));
   }
 
   /**
    * Handle the get_icon_glyph_by_style tool request
    */
   private async handleGetIconGlyphByStyle(args: any) {
-    try {
-      const iconName = this.validateIconName(args);
-      const style = this.validateIconStyle(args);
-      const glyph = await getGlyphByStyle(iconName, style);
+    const iconName = this.validateIconName(args);
+    const style = this.validateIconStyle(args);
+    return jsonResult(await getGlyphByStyle(iconName, style));
+  }
 
-      return {
-        content: [
-          {
-            type: "text",
-            text: JSON.stringify(glyph, null, 2),
-          },
-        ],
-      };
-    } catch (error) {
-      throw new McpError(
-        ErrorCode.InternalError,
-        `Failed to get icon glyph by style: ${error instanceof Error ? error.message : "Unknown error"}`
-      );
+  /**
+   * Read an optional string argument
+   */
+  private optionalString(args: any, key: string): string | undefined {
+    const value = args?.[key];
+    if (value === undefined || value === null || value === "") return undefined;
+    if (typeof value !== "string") throw new ToolError(`${key} must be a string`);
+    return value.trim() || undefined;
+  }
+
+  /**
+   * Read an optional integer argument within [min, max]
+   */
+  private intArg(args: any, key: string, fallback: number, min: number, max: number): number {
+    const value = args?.[key];
+    if (value === undefined || value === null || value === "") return fallback;
+    const number = Number(value);
+    if (!Number.isInteger(number) || number < min || number > max) {
+      throw new ToolError(`${key} must be a whole number from ${min} to ${max}`);
     }
+    return number;
   }
 
   /**
@@ -438,8 +447,7 @@ export class HugeiconsServer {
    */
   private validateSearchQuery(args: any): string {
     if (!args || typeof args.query !== "string" || !args.query.trim()) {
-      throw new McpError(
-        ErrorCode.InvalidRequest,
+      throw new ToolError(
         "Search query must be a non-empty string"
       );
     }
@@ -451,16 +459,14 @@ export class HugeiconsServer {
    */
   private validatePlatform(args: any): Platform {
     if (!args || typeof args.platform !== "string" || !args.platform.trim()) {
-      throw new McpError(
-        ErrorCode.InvalidRequest,
+      throw new ToolError(
         "Platform must be a non-empty string"
       );
     }
 
     const platform = args.platform.trim().toLowerCase() as Platform;
     if (!Object.keys(PLATFORM_USAGE).includes(platform)) {
-      throw new McpError(
-        ErrorCode.InvalidRequest,
+      throw new ToolError(
         `Invalid platform. Supported platforms are: ${Object.keys(PLATFORM_USAGE).join(', ')}`
       );
     }
@@ -473,12 +479,11 @@ export class HugeiconsServer {
    */
   private validateIconName(args: any): string {
     if (!args || typeof args.icon_name !== "string" || !args.icon_name.trim()) {
-      throw new McpError(
-        ErrorCode.InvalidRequest,
+      throw new ToolError(
         "Icon name must be a non-empty string"
       );
     }
-    return args.icon_name.trim();
+    return normalizeIconName(args.icon_name);
   }
 
   /**
@@ -486,8 +491,7 @@ export class HugeiconsServer {
    */
   private validateIconStyle(args: any): IconStyle {
     if (!args || typeof args.style !== "string" || !args.style.trim()) {
-      throw new McpError(
-        ErrorCode.InvalidRequest,
+      throw new ToolError(
         "Style must be a non-empty string"
       );
     }
@@ -505,10 +509,9 @@ export class HugeiconsServer {
       'twotone-rounded'
     ];
 
-    const style = args.style.trim() as IconStyle;
+    const style = args.style.trim().toLowerCase() as IconStyle;
     if (!validStyles.includes(style)) {
-      throw new McpError(
-        ErrorCode.InvalidRequest,
+      throw new ToolError(
         `Invalid style. Supported styles are: ${validStyles.join(', ')}`
       );
     }
@@ -525,10 +528,7 @@ export class HugeiconsServer {
     try {
       this.iconsCache = await loadIcons();
     } catch (error) {
-      throw new McpError(
-        ErrorCode.InternalError,
-        "Failed to load icons data"
-      );
+      throw new Error("The Hugeicons icon list is unavailable. Try again shortly.");
     }
   }
 
