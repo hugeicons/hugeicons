@@ -1,9 +1,13 @@
 import axios from 'axios';
 import { SearchApiResponse, SearchResult } from '../types.js';
+import { TtlCache } from './cache.js';
 
 export const DEFAULT_SEARCH_LIMIT = 20;
 export const MAX_SEARCH_LIMIT = 50;
 const MAX_SEARCH_TERMS = 10;
+
+// Raw API results per term, so different limits share one entry
+const searchCache = new TtlCache<SearchResult[]>(60 * 60 * 1000, 2000);
 
 export interface IconMatch {
     name: string;
@@ -76,17 +80,18 @@ function toTags(tags: SearchResult['tags'] | string): string[] {
 }
 
 async function searchTerm(query: string, limit: number): Promise<TermResults> {
-    let results: SearchResult[];
-    try {
-        const response = await axios.get<SearchApiResponse>('https://search.hugeicons.com/search', {
-            params: { q: query },
-            timeout: 10000,
-        });
-        results = response.data.results;
-    } catch (error) {
-        console.error('Failed to search icons:', error);
-        throw new SearchUnavailableError('The Hugeicons search service is unavailable. Try again shortly.');
-    }
+    const results = await searchCache.getOrLoad(query, async () => {
+        try {
+            const response = await axios.get<SearchApiResponse>('https://search.hugeicons.com/search', {
+                params: { q: query },
+                timeout: 10000,
+            });
+            return response.data.results;
+        } catch (error) {
+            console.error('Failed to search icons:', error);
+            throw new SearchUnavailableError('The Hugeicons search service is unavailable. Try again shortly.');
+        }
+    });
 
     const queryWords = words(query);
     const scored = results

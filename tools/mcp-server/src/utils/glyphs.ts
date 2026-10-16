@@ -1,7 +1,12 @@
 import axios from 'axios';
 import { AllGlyphsResponse, SingleGlyphResponse, IconStyle, Glyph } from '../types.js';
+import { TtlCache } from './cache.js';
 
 const HUGEICONS_API_BASE = 'https://api.hugeicons.com/v1';
+
+// Glyph codepoints rarely change, so lookups are cached for a day
+const GLYPH_CACHE_TTL_MS = 24 * 60 * 60 * 1000;
+const GLYPH_CACHE_MAX_ENTRIES = 5000;
 
 /**
  * The fields of a glyph an assistant needs (drops database ids and timestamps)
@@ -43,29 +48,36 @@ async function fetchGlyphs<T extends { success: boolean; message: string | null 
 /**
  * Get all glyphs for a specific icon
  */
-export async function getAllGlyphs(iconName: string): Promise<GlyphInfo[]> {
-    const data = await fetchGlyphs<AllGlyphsResponse>(
-        `/icon/${encodeURIComponent(iconName)}/glyphs`,
-        {},
-        `Icon '${iconName}' not found`,
-    );
-    return data.data.glyphs.map(toGlyphInfo);
+const allGlyphsCache = new TtlCache<GlyphInfo[]>(GLYPH_CACHE_TTL_MS, GLYPH_CACHE_MAX_ENTRIES);
+
+export function getAllGlyphs(iconName: string): Promise<GlyphInfo[]> {
+    return allGlyphsCache.getOrLoad(iconName, async () => {
+        const data = await fetchGlyphs<AllGlyphsResponse>(
+            `/icon/${encodeURIComponent(iconName)}/glyphs`,
+            {},
+            `Icon '${iconName}' not found`,
+        );
+        return data.data.glyphs.map(toGlyphInfo);
+    });
 }
 
 /**
  * Get a specific glyph for an icon with a particular style
  */
-export async function getGlyphByStyle(
-    iconName: string,
-    style: IconStyle,
-): Promise<{ primary: GlyphInfo; secondary: GlyphInfo | null }> {
-    const data = await fetchGlyphs<SingleGlyphResponse>(
-        `/icon/${encodeURIComponent(iconName)}/glyph`,
-        { style },
-        `Icon '${iconName}' with style '${style}' not found`,
-    );
-    return {
-        primary: toGlyphInfo(data.data.primary),
-        secondary: data.data.secondary ? toGlyphInfo(data.data.secondary) : null,
-    };
+type StyleGlyph = { primary: GlyphInfo; secondary: GlyphInfo | null };
+
+const styleGlyphCache = new TtlCache<StyleGlyph>(GLYPH_CACHE_TTL_MS, GLYPH_CACHE_MAX_ENTRIES);
+
+export function getGlyphByStyle(iconName: string, style: IconStyle): Promise<StyleGlyph> {
+    return styleGlyphCache.getOrLoad(`${iconName}:${style}`, async () => {
+        const data = await fetchGlyphs<SingleGlyphResponse>(
+            `/icon/${encodeURIComponent(iconName)}/glyph`,
+            { style },
+            `Icon '${iconName}' with style '${style}' not found`,
+        );
+        return {
+            primary: toGlyphInfo(data.data.primary),
+            secondary: data.data.secondary ? toGlyphInfo(data.data.secondary) : null,
+        };
+    });
 }
