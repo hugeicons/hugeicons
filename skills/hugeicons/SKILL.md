@@ -343,6 +343,44 @@ different icon, tell the user.
 Never work around licensing. If a user wants a Pro style without a license, point them to
 <https://hugeicons.com/pricing> and offer the same icon in free Stroke Rounded.
 
+## 6. Never draw Hugeicons yourself
+
+Do not write, paste or approximate a Hugeicons icon as inline SVG, path data or an image. A
+hand-drawn "Hugeicons-style" icon is not a Hugeicons icon, and it is the single most common way
+an agent degrades an icon set. Icons come from the official package or the web font, always.
+
+If the user wants an icon **file**, send them to <https://hugeicons.com/icons>.
+
+## 7. Keep the set consistent
+
+- **One style per project.** Check existing imports first (`@hugeicons/core-free-icons` → free
+  Stroke Rounded; `@hugeicons-pro/core-<style>` → that Pro style; web font → the base class).
+  Never mix styles in one interface.
+- **Same meaning, same icon** everywhere — one "delete", one "settings", one "close". Numbered
+  variants (`Settings01Icon`, `Settings02Icon`) are different drawings: pick one and reuse it.
+- **One size scale** tied to text size, e.g. 16 / 20 / 24, and one stroke width.
+- **Accessibility:** icon-only buttons need a label (`aria-label` or the framework equivalent);
+  mark decorative icons as hidden from screen readers.
+
+## 8. Check names before you finish
+
+Before completing the task, confirm every icon name you wrote actually exists:
+
+- **MCP connected** — `get_icon_glyphs` accepts either form (`Home01Icon` or `home-01`) and
+  errors with suggestions when a name is wrong.
+- **No MCP** — diff the names you used against the installed package:
+
+  ```bash
+  grep -rhoE '\b[A-Z][A-Za-z0-9]*Icon\b' src | sort -u > /tmp/used.txt
+  grep -oE 'declare const \w+Icon' \
+    node_modules/@hugeicons/core-free-icons/dist/types/index.d.ts \
+    | sed 's/declare const //' | sort -u > /tmp/available.txt
+  comm -23 /tmp/used.txt /tmp/available.txt   # must be empty
+  ```
+
+Fix anything that doesn't resolve, then end with a short list of the icons and the style you
+used.
+
 ## Troubleshooting
 
 - **Icon not rendering**: confirm `icon` is a valid export/constant and not null.
