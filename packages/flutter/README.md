@@ -1,9 +1,9 @@
-![31c9262e-aeea-4403-9086-3c8b88885cab](https://raw.githubusercontent.com/hugeicons/hugeicons/main/assets/banner.png)
+![31c9262e-aeea-4403-9086-3c8b88885cab](https://raw.githubusercontent.com/hugeicons/hugeicons/main/assets/logo.png)
 
 
 # Free Flutter Icons - Hugeicons
 
-Welcome to Hugeicons Flutter Icons, your premier destination for free Flutter icons. Our expansive collection features over 4,500+ stroke-rounded SVG icons, available at no charge and crafted to meet a diverse array of design requirements. These icons are perfect for devs and designers seeking top-quality, customizable options for enhancing their digital product.
+Welcome to Hugeicons Flutter Icons, your premier destination for free Flutter icons. Our expansive collection features over 6,000+ stroke-rounded SVG icons, available at no charge and crafted to meet a diverse array of design requirements. These icons are perfect for devs and designers seeking top-quality, customizable options for enhancing their digital product.
 
 What sets Hugeicons apart is the careful attention to detail—each icon is crafted to be incredibly beautiful and consistent, ensuring that your designs look user-friendly and professional.
 
@@ -24,7 +24,7 @@ You can preview out our full collection of icons on the [Hugeicons website](http
 
 ## Features
 
-- **Extensive Collection**: Access over 4,500+ stroke-rounded SVG icons for free, ready to use in your projects.
+- **Extensive Collection**: Access over 6,000+ stroke-rounded SVG icons for free, ready to use in your projects.
 - **SVG-Based**: High-quality vector icons that scale perfectly at any size.
 - **Scalable Icons**: Easily adjust the size of icons to fit your design perfectly.
 - **Color Customization**: Apply any color to icons to match your brand or design theme.

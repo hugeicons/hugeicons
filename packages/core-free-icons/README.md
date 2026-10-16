@@ -126,6 +126,6 @@ TypeScript types are included and will work out of the box.
 
 ## License
 
-The icons in this package and its source code are licensed under the [MIT License](./LICENSE.md). You can use, modify and redistribute them in personal and commercial projects. No attribution is required in your UI; keep the notice in `LICENSE.md` with copies of the source files.
+The icons in this package and its source code are licensed under the [MIT License](./LICENSE.md). You can use, modify and redistribute them in personal and commercial projects. If you redistribute the source files, keep the MIT notice in `LICENSE.md` with them.
 
 Pro icons (`@hugeicons-pro/*`) are a separate product and require a [Hugeicons Pro license](https://hugeicons.com/license-agreement).

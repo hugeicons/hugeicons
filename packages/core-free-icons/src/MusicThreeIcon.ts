@@ -1,5 +1,6 @@
 import type { IconSvgObject } from './types';
 
+/** @deprecated Renamed to `Music3Icon`; this file will be removed in the next major version. */
 const MusicThreeIcon: IconSvgObject = [
   ["circle", { cx: "18", cy: "16", r: "3", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "0" }],
   ["circle", { cx: "6", cy: "18", r: "3", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "1" }],

@@ -1,5 +1,6 @@
 import type { IconSvgObject } from './types';
 
+/** @deprecated Renamed to `Rows3Icon`; this file will be removed in the next major version. */
 const RowsThreeIcon: IconSvgObject = [
   ["path", { d: "M2.49219 15.5H21.4922", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "0" }],
   ["path", { d: "M2.49219 8.5H21.4922", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "1" }],

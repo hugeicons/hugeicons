@@ -1,5 +1,6 @@
 import type { IconSvgObject } from './types';
 
+/** @deprecated Renamed to `Disc2Icon`; this file will be removed in the next major version. */
 const DiscTwoIcon: IconSvgObject = [
   ["circle", { cx: "12", cy: "12", r: "10", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "0" }],
   ["circle", { cx: "12", cy: "12", r: "4", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "1" }],

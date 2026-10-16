@@ -1,9 +1,9 @@
 import type { IconSvgObject } from './types';
 
 const LassoIcon: IconSvgObject = [
-  ["path", { d: "M6.99609 9.5C6.99609 8.67157 7.66767 8 8.49609 8C9.32452 8 9.99609 8.67157 9.99609 9.5M13.9961 9.5C13.9961 8.67157 14.6677 8 15.4961 8C16.3245 8 16.9961 8.67157 16.9961 9.5", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "0" }],
-  ["path", { d: "M13.995 14C14.9572 14 15.4383 14 15.7288 14.4902C16.0193 14.9804 15.8482 15.2929 15.506 15.9179C14.8268 17.1587 13.5091 18 11.995 18C10.4808 18 9.16308 17.1587 8.48389 15.9179C8.14173 15.2929 7.97065 14.9804 8.26114 14.4902C8.55163 14 9.03274 14 9.99495 14H13.995Z", stroke: "currentColor", strokeWidth: "1.5", key: "1" }],
-  ["circle", { cx: "11.9961", cy: "12", r: "10", stroke: "currentColor", strokeWidth: "1.5", key: "2" }]
+  ["ellipse", { cx: "6.99609", cy: "16", rx: "3", ry: "2", stroke: "currentColor", strokeWidth: "1.5", key: "0" }],
+  ["path", { d: "M8.99609 22C6.23467 22 3.99609 19.3137 3.99609 16", stroke: "currentColor", strokeLinecap: "round", strokeWidth: "1.5", key: "1" }],
+  ["path", { d: "M7.28603 18C8.68956 18.6382 10.2931 19 11.9961 19C17.5189 19 21.9961 15.1944 21.9961 10.5C21.9961 5.80558 17.5189 2 11.9961 2C6.47325 2 1.99609 5.80558 1.99609 10.5C1.99609 12.4139 2.74027 14.1801 3.99609 15.6008", stroke: "currentColor", strokeWidth: "1.5", key: "2" }]
 ];
 
 export default LassoIcon;

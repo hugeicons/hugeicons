@@ -1,6 +1,6 @@
 {
   "name": "@hugeicons/mcp-server",
-  "version": "0.2.2",
+  "version": "0.3.0",
   "description": "MCP server for Hugeicons search and usage documentation",
   "type": "module",
   "bin": {
@@ -11,18 +11,19 @@
     "README.md"
   ],
   "scripts": {
-    "build": "tsc && chmod +x build/index.js",
+    "build": "tsc && chmod +x build/index.js build/http.js",
     "prepare": "npm run build",
     "watch": "tsc --watch",
+    "test": "npm run build && node --test --test-force-exit test/*.test.mjs",
+    "start": "node build/index.js",
+    "start:http": "node build/http.js",
     "inspector": "npx @modelcontextprotocol/inspector build/index.js"
   },
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.18.2",
-    "agnost": "^0.1.3",
-    "axios": "^1.8.4"
+    "agnost": "^0.1.3"
   },
   "devDependencies": {
-    "@types/axios": "^0.9.36",
     "@types/node": "^20.17.30",
     "typescript": "^5.3.3"
   },

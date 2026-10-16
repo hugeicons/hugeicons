@@ -57,4 +57,7 @@ export interface HugeiconsProps {
   color?: string;
   class?: string;
   showAlt?: boolean;
+  primaryColor?: string;
+  secondaryColor?: string;
+  disableSecondaryOpacity?: boolean;
 } 

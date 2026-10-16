@@ -1,10 +1,18 @@
-# Exclude files and directories from being published to pub.dev
+# pub honours .gitignore when a package lives in a git repo. In hugeicons/core the
+# generated icon files (lib/styles/*.dart, hugeicons_full.dart) are gitignored,
+# so this file must exist to take precedence and list
+# ONLY what is really excluded from the published archive.
 .dart_tool/
 .idea/
 .git/
 build/
 .DS_Store
 *.iml
-
-# Don't exclude the font files
-!lib/fonts/ 
+pubspec.lock
+example/build/
+example/.dart_tool/
+example/pubspec.lock
+example/ios/Flutter/ephemeral/
+example/macos/Flutter/ephemeral/
+example/linux/flutter/ephemeral/
+example/windows/flutter/ephemeral/
