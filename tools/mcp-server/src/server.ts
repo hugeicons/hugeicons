@@ -16,6 +16,7 @@ import {
   ReadResourceRequestSchema,
   McpError,
 } from "@modelcontextprotocol/sdk/types.js";
+import { createRequire } from "node:module";
 import axios from "axios";
 import { trackMCP, createConfig } from "agnost";
 import { IconInfo, IconStyle } from "./types.js";
@@ -24,6 +25,8 @@ import { getAllGlyphs, getGlyphByStyle, IconNotFoundError } from "./utils/glyphs
 import { normalizeIconName } from "./utils/icon-name.js";
 import { Platform, PLATFORM_USAGE } from "./utils/platform-usage.js";
 import { convertPlatformUsageToMarkdown } from "./utils/markdown-converter.js";
+
+const { version: SERVER_VERSION } = createRequire(import.meta.url)("../package.json") as { version: string };
 
 // The icon index is shared by every server instance, so the HTTP server
 // (one instance per request) fetches it once and refreshes it periodically.
@@ -113,7 +116,7 @@ export class HugeiconsServer {
     this.server = new Server(
       {
         name: "hugeicons-mcp",
-        version: "0.1.0",
+        version: SERVER_VERSION,
       },
       {
         capabilities: {
