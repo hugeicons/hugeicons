@@ -131,6 +131,7 @@ httpServer.listen(PORT, HOST, () => {
 for (const signal of ["SIGINT", "SIGTERM"] as const) {
   process.on(signal, () => {
     httpServer.close(() => process.exit(0));
-    setTimeout(() => process.exit(0), 10_000).unref();
+    // Requests still open after the grace period are cut off
+    setTimeout(() => process.exit(1), 10_000).unref();
   });
 }
