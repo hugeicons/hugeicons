@@ -14,6 +14,7 @@
     "build": "tsc && chmod +x build/index.js build/http.js",
     "prepare": "npm run build",
     "watch": "tsc --watch",
+    "test": "npm run build && node --test --test-force-exit test/*.test.mjs",
     "start": "node build/index.js",
     "start:http": "node build/http.js",
     "inspector": "npx @modelcontextprotocol/inspector build/index.js"
