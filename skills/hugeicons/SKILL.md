@@ -76,21 +76,6 @@ function App() {
 }
 ```
 
-Props:
-
-| Prop | Type | Default | Description |
-|------|------|---------|-------------|
-| `icon` | `IconSvgElement` | Required | The main icon to display (a named export from an icon package) |
-| `altIcon` | `IconSvgElement` | - | Alternative icon for states, interactions, or dynamic swapping |
-| `showAlt` | `boolean` | false | When true, displays `altIcon` instead of `icon` |
-| `size` | `number \| string` | 24 | Icon size in pixels |
-| `color` | `string` | currentColor | Icon color (any CSS color value) |
-| `strokeWidth` | `number` | 1.5 | Width of the icon strokes |
-| `absoluteStrokeWidth` | `boolean` | false | When true, stroke width is scaled relative to icon size |
-| `primaryColor` | `string` | - | Primary color for multicolor Pro icons (Bulk, Duotone, Twotone) |
-| `secondaryColor` | `string` | - | Secondary color for multicolor Pro icons |
-| `disableSecondaryOpacity` | `boolean` | false | Disables default opacity applied to the secondary color |
-| `className` | `string` | - | Additional CSS classes |
 
 ### Vue
 
@@ -114,17 +99,6 @@ import { Search01Icon } from '@hugeicons/core-free-icons'
 </template>
 ```
 
-Props:
-
-| Prop | Type | Default | Description |
-|------|------|---------|-------------|
-| `icon` | `IconSvgObject` | Required | The main icon to display (a named export from an icon package) |
-| `altIcon` | `IconSvgObject` | - | Alternative icon for states, interactions, or animations |
-| `showAlt` | `boolean` | false | When true, displays `altIcon` instead of `icon` |
-| `size` | `number` | 24 | Icon size in pixels |
-| `color` | `string` | currentColor | Icon color (any CSS color value) |
-| `strokeWidth` | `number` | 1.5 | Width of the icon strokes |
-| `class` | `string` | - | Additional CSS classes |
 
 ### Svelte
 
@@ -146,17 +120,6 @@ Render:
 <HugeiconsIcon icon={Search01Icon} />
 ```
 
-Props:
-
-| Prop | Type | Default | Description |
-|------|------|---------|-------------|
-| `icon` | `IconSvgObject` | Required | The main icon to display (a named export from an icon package) |
-| `altIcon` | `IconSvgObject` | - | Alternative icon for states, interactions, or animations |
-| `showAlt` | `boolean` | false | When true, displays `altIcon` instead of `icon` |
-| `size` | `number` | 24 | Icon size in pixels |
-| `color` | `string` | currentColor | Icon color (any CSS color value) |
-| `strokeWidth` | `number` | 1.5 | Width of the icon strokes |
-| `class` | `string` | - | Additional CSS classes |
 
 ### SolidJS
 
@@ -181,21 +144,6 @@ function App() {
 }
 ```
 
-Props:
-
-| Prop | Type | Default | Description |
-|------|------|---------|-------------|
-| `icon` | `IconSvgElement` | Required | The main icon to display (a named export from an icon package) |
-| `altIcon` | `IconSvgElement` | - | Alternative icon for states, interactions, or dynamic swapping |
-| `showAlt` | `boolean` | false | When true, displays `altIcon` instead of `icon` |
-| `size` | `number \| string` | 24 | Icon size in pixels |
-| `color` | `string` | currentColor | Icon color (any CSS color value) |
-| `strokeWidth` | `number` | 1.5 | Width of the icon strokes |
-| `absoluteStrokeWidth` | `boolean` | false | When true, stroke width is scaled relative to icon size |
-| `primaryColor` | `string` | - | Primary color for multicolor Pro icons (Bulk, Duotone, Twotone) |
-| `secondaryColor` | `string` | - | Secondary color for multicolor Pro icons |
-| `disableSecondaryOpacity` | `boolean` | false | Disables default opacity applied to the secondary color |
-| `class` | `string` | - | Additional CSS classes |
 
 ### Angular
 
@@ -227,17 +175,6 @@ export class ExampleComponent {
 }
 ```
 
-Props:
-
-| Prop | Type | Default | Description |
-|------|------|---------|-------------|
-| `icon` | `IconSvgObject` | Required | The main icon to display (a named export from an icon package) |
-| `altIcon` | `IconSvgObject` | - | Alternative icon for states, interactions, or animations |
-| `showAlt` | `boolean` | false | When true, displays `altIcon` instead of `icon` |
-| `size` | `number` | 24 | Icon size in pixels |
-| `color` | `string` | currentColor | Icon color (any CSS color value) |
-| `strokeWidth` | `number` | 1.5 | Width of the icon strokes |
-| `class` | `string` | - | Additional CSS classes |
 
 ### React Native
 
@@ -261,16 +198,6 @@ export default function App() {
 }
 ```
 
-Props:
-
-| Prop | Type | Default | Description |
-|------|------|---------|-------------|
-| `icon` | `IconSvgObject` | Required | The main icon to display (a named export from an icon package) |
-| `altIcon` | `IconSvgObject` | - | Alternative icon for states, interactions, or animations |
-| `showAlt` | `boolean` | false | When true, displays `altIcon` instead of `icon` |
-| `size` | `number` | 24 | Icon size in pixels |
-| `color` | `string` | #000000 | Icon color (color string) |
-| `strokeWidth` | `number` | 1.5 | Width of the icon strokes |
 
 ### Flutter
 
@@ -295,15 +222,36 @@ HugeIcon(
 )
 ```
 
-Props:
 
-| Prop | Type | Default | Description |
-|------|------|---------|-------------|
-| `icon` | `List<List<dynamic>>` | Required | The icon data (a `HugeIcons.*` constant) — NOT a Flutter `IconData` |
-| `color` | `Color` | IconTheme color | Icon color; falls back to the ambient `IconTheme` |
-| `size` | `double` | 24.0 | Icon size in logical pixels; falls back to `IconTheme` size |
-| `strokeWidth` | `double` | - | Stroke thickness for stroke-style icons |
 
+### Props (all JS frameworks)
+
+`icon` is the only required prop. **Don't write a prop that repeats its default** — no
+`size={24}`, `color="currentColor"` or `strokeWidth={1.5}`.
+
+| Prop | Type | Default | React | Vue | Svelte | Solid | Angular | RN |
+|------|------|---------|:-:|:-:|:-:|:-:|:-:|:-:|
+| `icon` | `IconSvgObject` | required | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
+| `altIcon` | `IconSvgObject` | – | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
+| `showAlt` | `boolean` | `false` | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
+| `size` | `number \| string` | `24` | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
+| `color` | `string` | `currentColor` ¹ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
+| `strokeWidth` | `number` | `1.5` | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
+| `absoluteStrokeWidth` | `boolean` | `false` | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
+| `primaryColor` | `string` | – | ✓ | – | – | ✓ | ✓ | – |
+| `secondaryColor` | `string` | – | ✓ | – | – | ✓ | ✓ | – |
+| `disableSecondaryOpacity` | `boolean` | `false` | ✓ | – | – | ✓ | ✓ | – |
+| CSS classes | `string` | – | `className` | `class` | `class` | `class` | `class` | `className` |
+
+¹ React Native defaults to `#000` — it has no CSS color inheritance.
+
+The three multicolor props only affect Pro styles that have two layers (Bulk, Duotone, Twotone).
+
+`get_platform_usage` returns this per framework and is generated from the packages — prefer it
+when the MCP is connected, and treat it as authoritative if it ever disagrees with this table.
+
+Flutter is different: `HugeIcon` takes `icon` (a `HugeIcons.*` constant), `color`, `size` and
+`strokeWidth`; `color` and `size` fall back to the ambient `IconTheme`.
 
 ## 4. Find an icon
 
