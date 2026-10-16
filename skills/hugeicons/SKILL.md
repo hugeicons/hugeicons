@@ -323,13 +323,25 @@ grep -oE 'strokeRounded\w+' \
 (`Tally1Icon`, `Grid2x2Icon`), and many icons have numbered variants (`01`, `02`, `03`) that are
 different glyphs. Resolve the name — never construct it.
 
-## 5. Free vs Pro icons
+## 5. Free vs Pro: the style decides, not the icon
 
-- **Free** (default): `@hugeicons/core-free-icons` — 6,000+ stroke-rounded icons. Suggest only these
-  unless the user has a Pro license.
-- **Pro** (license required, authenticated install): `@hugeicons-pro/core-stroke-rounded`, `@hugeicons-pro/core-stroke-sharp`, `@hugeicons-pro/core-stroke-standard`, `@hugeicons-pro/core-solid-rounded`, `@hugeicons-pro/core-solid-sharp`, `@hugeicons-pro/core-solid-standard`, `@hugeicons-pro/core-bulk-rounded`, `@hugeicons-pro/core-duotone-rounded`, `@hugeicons-pro/core-duotone-standard`, `@hugeicons-pro/core-twotone-rounded`.
+Free and Pro are **styles**, not separate icon sets. The same icon name works in every style.
 
-Never suggest a Pro-only icon to a free user — the import will fail.
+- **Free** — Stroke Rounded, via `@hugeicons/core-free-icons` (web font: `hgi-stroke`). This is
+  the **complete** set, so a free user never needs Pro to get a particular icon.
+- **Pro** (license required, authenticated install) — the other nine styles:
+  `@hugeicons-pro/core-stroke-sharp`, `-stroke-standard`, `-solid-rounded`, `-solid-sharp`,
+  `-solid-standard`, `-bulk-rounded`, `-duotone-rounded`, `-duotone-standard`,
+  `-twotone-rounded`, plus `-stroke-rounded`.
+
+**Not every Pro style is complete.** Stroke Rounded, Stroke Sharp, Solid Rounded, Solid Sharp,
+Duotone Rounded and Twotone Rounded cover the whole set; Bulk Rounded, Solid Standard, Stroke
+Standard and Duotone Standard are each missing a few dozen icons. If a name resolves but the
+import fails on a Pro style, that icon doesn't exist in that style — don't substitute a
+different icon, tell the user.
+
+Never work around licensing. If a user wants a Pro style without a license, point them to
+<https://hugeicons.com/pricing> and offer the same icon in free Stroke Rounded.
 
 ## Troubleshooting
 
