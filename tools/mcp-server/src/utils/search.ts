@@ -3,7 +3,7 @@ import { TtlCache } from './cache.js';
 import { fetchJson } from './fetch-json.js';
 import { componentName } from './icon-name.js';
 
-export const DEFAULT_SEARCH_LIMIT = 20;
+export const DEFAULT_SEARCH_LIMIT = 8;
 export const MAX_SEARCH_LIMIT = 50;
 export const MAX_SEARCH_TERMS = 10;
 
@@ -15,7 +15,8 @@ export interface IconMatch {
     /** Export name in the JavaScript packages, e.g. Home01Icon */
     component: string;
     category: string;
-    tags: string[];
+    /** Only when the caller asks for them: tags are ~63% of a response and the ranking already used them */
+    tags?: string[];
 }
 
 export interface TermResults {
@@ -82,7 +83,7 @@ export function toTags(tags: string[] | string): string[] {
     return tags.split(',').map((t) => t.trim()).filter(Boolean);
 }
 
-async function searchTerm(query: string, limit: number): Promise<TermResults> {
+async function searchTerm(query: string, limit: number, includeTags: boolean): Promise<TermResults> {
     const results = await searchCache.getOrLoad(query, async () => {
         try {
             const response = await fetchJson<SearchApiResponse>('https://search.hugeicons.com/search', {
@@ -123,17 +124,24 @@ async function searchTerm(query: string, limit: number): Promise<TermResults> {
             name: result.name,
             component: componentName(result.name),
             category: result.category,
-            tags,
+            ...(includeTags ? { tags } : {}),
         })),
     };
 }
 
 /**
  * Search for icons using the Hugeicons API. Comma-separated queries are searched separately.
+ *
+ * Tags are omitted unless asked for: they are ~63% of a response, and relevance() has already
+ * used them to rank, so the caller is paying for the engine's working data.
  */
-export async function searchIcons(searchQuery: string, limit = DEFAULT_SEARCH_LIMIT): Promise<TermResults[]> {
+export async function searchIcons(
+    searchQuery: string,
+    limit = DEFAULT_SEARCH_LIMIT,
+    includeTags = false,
+): Promise<TermResults[]> {
     const terms = splitTerms(searchQuery).slice(0, MAX_SEARCH_TERMS);
-    return Promise.all(terms.map((term) => searchTerm(term, limit)));
+    return Promise.all(terms.map((term) => searchTerm(term, limit, includeTags)));
 }
 
 /**

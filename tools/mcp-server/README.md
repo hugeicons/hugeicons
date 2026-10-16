@@ -10,7 +10,7 @@ This is a TypeScript-based MCP server that provides tools and resources for inte
 
 ### Tools
 
-- `search_icons` - Search icons by name or tags, with exact name and tag matches ranked first. Separate searches with commas; `limit` sets results per search (default 20, max 50). Each result includes the icon's JavaScript export name (`component`)
+- `search_icons` - Search icons by name or tags, with exact name and tag matches ranked first. Separate searches with commas to resolve several icons in one call (up to 10 terms; more is an error rather than a silent truncation). `limit` sets results per search (default 8, max 50). Each result includes the icon's JavaScript export name (`component`). Tags are omitted unless `include_tags: true` — they are most of the response and the ranking has already used them
 - `get_icon_code` - Get the install command, import and usage snippet for an icon on a platform (`react`, `vue`, `angular`, `svelte`, `solid-js`, `react-native`, `flutter`, `html`) in a `style` (default `stroke-rounded`, the free style), with the exact export name, Flutter constant or web font classes
 - `list_icons` - List icon names a page at a time (`offset`, `limit` up to 500), optionally filtered by `category`. The first page also returns every category with its icon count
 - `get_platform_usage` - Get platform-specific setup instructions and component props for Hugeicons

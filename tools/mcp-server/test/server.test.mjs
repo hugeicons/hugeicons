@@ -47,7 +47,6 @@ function stubFetch(input) {
         }
         return json({ success: false, message: 'not found', data: null });
     }
-    // Analytics and anything else
     return json({}, 404);
 }
 
@@ -91,13 +90,21 @@ test('every tool is read-only and declares an output schema', async () => {
     }
 });
 
-test('search_icons returns export names', async () => {
+test('search_icons returns export names, without tags by default', async () => {
     const result = await call('search_icons', { query: 'home, cart', limit: 1 });
     assert.ok(!result.isError);
     const [home, cart] = result.structuredContent.searches;
-    assert.deepEqual(home.results, [{ name: 'home-01', component: 'Home01Icon', category: 'home', tags: ['house', 'main'] }]);
+    assert.deepEqual(home.results, [{ name: 'home-01', component: 'Home01Icon', category: 'home' }]);
     assert.equal(home.total, 2);
     assert.equal(cart.query, 'cart');
+});
+
+test('search_icons includes tags only when asked', async () => {
+    const result = await call('search_icons', { query: 'home', limit: 1, include_tags: true });
+    assert.ok(!result.isError);
+    assert.deepEqual(result.structuredContent.searches[0].results, [
+        { name: 'home-01', component: 'Home01Icon', category: 'home', tags: ['house', 'main'] },
+    ]);
 });
 
 test('search_icons rejects more terms than it can search, rather than dropping them', async () => {

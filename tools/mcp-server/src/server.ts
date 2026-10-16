@@ -236,7 +236,8 @@ export class HugeiconsServer {
       );
     }
     const limit = this.intArg(args, "limit", DEFAULT_SEARCH_LIMIT, 1, MAX_SEARCH_LIMIT);
-    return jsonResult({ searches: await searchIcons(query, limit) });
+    const includeTags = args?.include_tags === true;
+    return jsonResult({ searches: await searchIcons(query, limit, includeTags) });
   }
 
   /**

@@ -16,7 +16,7 @@ export const MAX_LIST_LIMIT = 500;
 export const SERVER_INSTRUCTIONS = `Hugeicons is an icon library with 6,000+ icons in 10 styles. Only stroke-rounded is free; the other styles need a Hugeicons Pro license.
 
 To add an icon to code:
-1. Find it with search_icons (separate several searches with commas). Each result has the icon name and its JavaScript export name (component).
+1. Find it with search_icons. Search for every icon the task needs in ONE call, separating the terms with commas, and lower the limit when you know what you want — one call per icon is the most common way to waste context here. Each result has the icon name and its JavaScript export name (component).
 2. Call get_icon_code with the icon name, the platform, and a style (default ${FREE_STYLE}) for the exact install command, import and usage.
 Don't guess export names: some are spelled out (2nd-bracket is SecondBracketIcon, sorting-1-9 is SortingOneNineIcon).
 
@@ -56,7 +56,7 @@ export const TOOLS: Tool[] = [
   {
     name: "search_icons",
     title: "Search icons",
-    description: "Search icons by name or tags. Exact name and tag matches rank first. Separate multiple searches with commas (e.g. 'home, notification, settings') to get results for each. Each result includes its JavaScript export name.",
+    description: "Search icons by name or tags. Exact name and tag matches rank first. Each result includes its JavaScript export name. Search for every icon you need in ONE call by separating the terms with commas (e.g. 'home, notification, settings') — far cheaper than one call per icon.",
     annotations: { title: "Search icons", ...READ_ONLY },
     inputSchema: {
       type: "object",
@@ -69,7 +69,11 @@ export const TOOLS: Tool[] = [
           type: "integer",
           minimum: 1,
           maximum: MAX_SEARCH_LIMIT,
-          description: `Maximum results per search. Defaults to ${DEFAULT_SEARCH_LIMIT}`,
+          description: `Maximum results per search. Defaults to ${DEFAULT_SEARCH_LIMIT}; lower it to 1-3 when you know what you want`,
+        },
+        include_tags: {
+          type: "boolean",
+          description: "Include each icon's tags. Off by default — tags roughly triple the response and ranking already accounts for them. Only turn this on to compare icons that look equally plausible",
         },
       },
       required: ["query"],
@@ -93,9 +97,9 @@ export const TOOLS: Tool[] = [
                     name: { type: "string" },
                     component: { type: "string", description: "Export name in the JavaScript packages" },
                     category: { type: "string" },
-                    tags: { type: "array", items: { type: "string" } },
+                    tags: { type: "array", items: { type: "string" }, description: "Only present when include_tags is true" },
                   },
-                  required: ["name", "component", "category", "tags"],
+                  required: ["name", "component", "category"],
                 },
               },
             },
