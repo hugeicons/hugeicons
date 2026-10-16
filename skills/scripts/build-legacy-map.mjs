@@ -1,22 +1,20 @@
 #!/usr/bin/env node
 // Diffs the icon exports of the deprecated Hugeicons packages (and, optionally, an older
-// @hugeicons/core-free-icons release) against the current free catalog in
-// skills/hugeicons/references/icon-list.md, and prints markdown table skeletons for the
-// names that no longer exist. Successors are curated by hand into
-// skills/hugeicons-migrate/references/legacy-hugeicons.md.
+// @hugeicons/core-free-icons release) against the latest published free catalog, and prints
+// markdown table skeletons for the names that no longer exist. Successors are curated by hand
+// into skills/hugeicons-migrate/references/legacy-hugeicons.md.
 //
 // Usage:
 //   node skills/scripts/build-legacy-map.mjs                 # legacy packages vs current catalog
 //   node skills/scripts/build-legacy-map.mjs --compare 4.2.1 # also diff core-free-icons@4.2.1 vs current
 //
-// Run build-icon-list.mjs first so the catalog is current. No dependencies — Node >= 18.
+// The catalog is read live from npm — nothing is committed to the repo. No dependencies — Node >= 18.
 
-import { readFile } from 'node:fs/promises';
 import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '../..');
-const CATALOG = resolve(ROOT, 'skills/hugeicons/references/icon-list.md');
+const FREE_PKG = '@hugeicons/core-free-icons';
 
 // Last published version of each deprecated package and where its per-icon files live.
 const LEGACY = [
@@ -62,10 +60,9 @@ async function legacyExports({ pkg, version, dir }) {
 }
 
 async function currentCatalog() {
-  const md = await readFile(CATALOG, 'utf8');
-  const names = [...md.matchAll(/^- `(\w+Icon)`$/gm)].map((m) => m[1]);
-  const source = md.match(/^Source: `(.+?)`/m)?.[1] ?? 'unknown';
-  return { names: new Set(names), source };
+  const meta = await fetchJson(`https://registry.npmjs.org/${encodeURIComponent(FREE_PKG)}`);
+  const version = meta['dist-tags'].latest;
+  return { names: await oldCatalog(version), source: `${FREE_PKG}@${version}` };
 }
 
 async function oldCatalog(version) {

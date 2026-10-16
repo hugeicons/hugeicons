@@ -3,8 +3,8 @@
 // review queue for the name maps in skills/hugeicons-migrate/references/from-*.md.
 //
 // For each seed name it queries the Hugeicons search API (same endpoint the MCP server uses)
-// and keeps only results that exist in the FREE catalog (skills/hugeicons/references/icon-list.md)
-// — the API also indexes Pro icons, which a free user cannot import.
+// and keeps only results that exist in the FREE catalog (read live from the latest published
+// @hugeicons/core-free-icons) — the API also indexes Pro icons, which a free user cannot import.
 //
 // Usage:
 //   node skills/scripts/build-foreign-map.mjs                 # all libraries
@@ -16,12 +16,12 @@
 //   candidates = up to 5 free-catalog names from the search API, best first
 // A human picks one per row; nothing here is final. No dependencies — Node >= 18.
 
-import { mkdir, readFile, writeFile } from 'node:fs/promises';
+import { mkdir, writeFile } from 'node:fs/promises';
 import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '../..');
-const CATALOG = resolve(ROOT, 'skills/hugeicons/references/icon-list.md');
+const FREE_PKG = '@hugeicons/core-free-icons';
 const SEARCH = 'https://search.hugeicons.com/search?q=';
 const CONCURRENCY = 4;
 
@@ -110,6 +110,22 @@ function directGuess(lib, name, catalog) {
   return '';
 }
 
+// The free catalog, read from the latest published package rather than a committed copy.
+async function freeCatalog() {
+  const fetchText = async (url) => {
+    const res = await fetch(url);
+    if (!res.ok) throw new Error(`${res.status} ${res.statusText} for ${url}`);
+    return res.text();
+  };
+  const meta = JSON.parse(await fetchText(`https://registry.npmjs.org/${encodeURIComponent(FREE_PKG)}`));
+  const version = meta['dist-tags'].latest;
+  const dts = await fetchText(`https://unpkg.com/${FREE_PKG}@${version}/dist/types/index.d.ts`);
+  const names = [...dts.matchAll(/^declare const (\w+Icon): IconSvgObject;/gm)].map((m) => m[1]);
+  if (names.length === 0) throw new Error('No icon declarations found — did the package layout change?');
+  console.error(`catalog: ${FREE_PKG}@${version} (${names.length} icons)`);
+  return new Set(names);
+}
+
 async function search(term) {
   try {
     const res = await fetch(SEARCH + encodeURIComponent(term), { signal: AbortSignal.timeout(10_000) });
@@ -159,8 +175,7 @@ const o = args.indexOf('--out');
 const outDir = resolve(o !== -1 ? args[o + 1] : resolve(ROOT, 'skills/scripts/_review'));
 const libs = args.filter((a, i) => !a.startsWith('--') && (o === -1 || i !== o + 1));
 
-const md = await readFile(CATALOG, 'utf8');
-const catalog = new Set([...md.matchAll(/^- `(\w+Icon)`$/gm)].map((m) => m[1]));
+const catalog = await freeCatalog();
 await mkdir(outDir, { recursive: true });
 for (const lib of libs.length ? libs : Object.keys(SEEDS)) {
   if (!SEEDS[lib]) throw new Error(`Unknown library "${lib}". Known: ${Object.keys(SEEDS).join(', ')}`);
