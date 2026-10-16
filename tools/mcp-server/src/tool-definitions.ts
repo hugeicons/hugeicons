@@ -4,7 +4,7 @@
 
 import type { Tool } from "@modelcontextprotocol/sdk/types.js";
 import { FREE_STYLE, ICON_STYLES } from "./types.js";
-import { DEFAULT_SEARCH_LIMIT, MAX_SEARCH_LIMIT } from "./utils/search.js";
+import { DEFAULT_SEARCH_LIMIT, MAX_SEARCH_LIMIT, MAX_SEARCH_TERMS } from "./utils/search.js";
 import { PLATFORMS } from "./utils/platform-usage.js";
 
 export const DEFAULT_LIST_LIMIT = 200;
@@ -63,7 +63,7 @@ export const TOOLS: Tool[] = [
       properties: {
         query: {
           type: "string",
-          description: "What to search for. Separate multiple searches with commas",
+          description: `What to search for. Separate multiple searches with commas, up to ${MAX_SEARCH_TERMS} per call`,
         },
         limit: {
           type: "integer",

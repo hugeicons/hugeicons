@@ -100,6 +100,12 @@ test('search_icons returns export names', async () => {
     assert.equal(cart.query, 'cart');
 });
 
+test('search_icons rejects more terms than it can search, rather than dropping them', async () => {
+    const result = await call('search_icons', { query: Array.from({ length: 11 }, (_, i) => `q${i}`).join(', ') });
+    assert.equal(result.isError, true);
+    assert.match(result.content[0].text, /Too many search terms \(11\)/);
+});
+
 test('get_icon_code resolves export names and builds snippets', async () => {
     const result = await call('get_icon_code', { icon_name: 'SecondBracketIcon', platform: 'react' });
     assert.ok(!result.isError, result.content[0].text);

@@ -5,7 +5,7 @@ import { componentName } from './icon-name.js';
 
 export const DEFAULT_SEARCH_LIMIT = 20;
 export const MAX_SEARCH_LIMIT = 50;
-const MAX_SEARCH_TERMS = 10;
+export const MAX_SEARCH_TERMS = 10;
 
 // Raw API results per term, so different limits share one entry
 const searchCache = new TtlCache<SearchResult[]>(60 * 60 * 1000, 2000);
@@ -132,9 +132,17 @@ async function searchTerm(query: string, limit: number): Promise<TermResults> {
  * Search for icons using the Hugeicons API. Comma-separated queries are searched separately.
  */
 export async function searchIcons(searchQuery: string, limit = DEFAULT_SEARCH_LIMIT): Promise<TermResults[]> {
-    const terms = [...new Set(
-        searchQuery.split(',').map((t) => t.trim().toLowerCase()).filter(Boolean)
-    )].slice(0, MAX_SEARCH_TERMS);
-
+    const terms = splitTerms(searchQuery).slice(0, MAX_SEARCH_TERMS);
     return Promise.all(terms.map((term) => searchTerm(term, limit)));
+}
+
+/**
+ * The distinct terms in a comma-separated query. Callers check the count before searching:
+ * batching is the cheap way to use this tool, so quietly dropping the overflow would lose
+ * icons a migration thinks it has resolved.
+ */
+export function splitTerms(searchQuery: string): string[] {
+    return [...new Set(
+        searchQuery.split(',').map((t) => t.trim().toLowerCase()).filter(Boolean)
+    )];
 }
