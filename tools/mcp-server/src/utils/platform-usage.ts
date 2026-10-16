@@ -100,6 +100,7 @@ import { Notification03Icon } from '@hugeicons/core-free-icons'
     },
     basicUsage: `// your.component.ts
 import { Component } from '@angular/core'
+import { HugeiconsIconComponent } from '@hugeicons/angular'
 // Using free icons (available by default)
 import { Notification03Icon } from '@hugeicons/core-free-icons'
 // Pro icons require authentication via .npmrc or similar config
@@ -107,7 +108,9 @@ import { Notification03Icon } from '@hugeicons/core-free-icons'
 
 @Component({
     selector: 'app-example',
-    template: \` <hugeicons-icon [icon]="notification03Icon" [size]="24" color="currentColor" [strokeWidth]="1.5"></hugeicons-icon> \`,
+    standalone: true,
+    imports: [HugeiconsIconComponent],
+    template: \` <hugeicons-icon [icon]="notification03Icon" [size]="24" color="currentColor" [strokeWidth]="1.5" /> \`,
 })
 export class ExampleComponent {
     notification03Icon = Notification03Icon
@@ -269,3 +272,18 @@ HugeIcon(
     ]
   }
 }; 
+export const PLATFORMS = Object.keys(PLATFORM_USAGE) as Platform[];
+
+/**
+ * Display names for the platform guides
+ */
+export const PLATFORM_LABELS: Record<Platform, string> = {
+  'react': 'React',
+  'vue': 'Vue',
+  'angular': 'Angular',
+  'svelte': 'Svelte',
+  'solid-js': 'SolidJS',
+  'react-native': 'React Native',
+  'flutter': 'Flutter',
+  'html': 'HTML (web font)',
+};

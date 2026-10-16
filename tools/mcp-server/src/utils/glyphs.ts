@@ -1,6 +1,6 @@
-import axios from 'axios';
 import { AllGlyphsResponse, SingleGlyphResponse, IconStyle, Glyph } from '../types.js';
 import { TtlCache } from './cache.js';
+import { fetchJson, HttpError } from './fetch-json.js';
 
 const HUGEICONS_API_BASE = 'https://api.hugeicons.com/v1';
 
@@ -29,15 +29,10 @@ async function fetchGlyphs<T extends { success: boolean; message: string | null 
 ): Promise<T> {
     let data: T;
     try {
-        const response = await axios.get<T>(`${HUGEICONS_API_BASE}${path}`, {
-            params,
-            headers: { accept: 'application/json' },
-            timeout: 10000,
-        });
-        data = response.data;
-    } catch (error: any) {
-        if (error.response?.status === 404) throw new IconNotFoundError(notFoundMessage);
-        throw new Error(`The Hugeicons glyph service is unavailable: ${error.message ?? 'unknown error'}`);
+        data = await fetchJson<T>(`${HUGEICONS_API_BASE}${path}`, { params, timeoutMs: 10000 });
+    } catch (error) {
+        if (error instanceof HttpError && error.status === 404) throw new IconNotFoundError(notFoundMessage);
+        throw new Error(`The Hugeicons glyph service is unavailable: ${error instanceof Error ? error.message : 'unknown error'}`);
     }
 
     // The API answers unknown icons with 200 and success: false

@@ -9,7 +9,8 @@
 
 import { createServer, IncomingMessage, ServerResponse } from "node:http";
 import { StreamableHTTPServerTransport } from "@modelcontextprotocol/sdk/server/streamableHttp.js";
-import { HugeiconsServer, preloadIcons } from "./server.js";
+import { HugeiconsServer } from "./server.js";
+import { preloadIcons } from "./icons-index.js";
 import { getClientIp, RateLimiter } from "./rate-limit.js";
 
 const PORT = Number(process.env.PORT ?? 3000);

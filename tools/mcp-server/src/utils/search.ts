@@ -1,6 +1,7 @@
-import axios from 'axios';
 import { SearchApiResponse, SearchResult } from '../types.js';
 import { TtlCache } from './cache.js';
+import { fetchJson } from './fetch-json.js';
+import { componentName } from './icon-name.js';
 
 export const DEFAULT_SEARCH_LIMIT = 20;
 export const MAX_SEARCH_LIMIT = 50;
@@ -11,6 +12,8 @@ const searchCache = new TtlCache<SearchResult[]>(60 * 60 * 1000, 2000);
 
 export interface IconMatch {
     name: string;
+    /** Export name in the JavaScript packages, e.g. Home01Icon */
+    component: string;
     category: string;
     tags: string[];
 }
@@ -33,7 +36,7 @@ export class SearchUnavailableError extends Error {}
 /**
  * Lowercased words in a name or tag ("shopping-cart-01" -> ["shopping", "cart", "01"])
  */
-function words(text: string): string[] {
+export function words(text: string): string[] {
     return text.toLowerCase().split(/[^a-z0-9]+/).filter(Boolean);
 }
 
@@ -74,7 +77,7 @@ export function relevance(queryWords: string[], name: string, tags: string[]): n
     return 0;
 }
 
-function toTags(tags: SearchResult['tags'] | string): string[] {
+export function toTags(tags: string[] | string): string[] {
     if (Array.isArray(tags)) return tags;
     return tags.split(',').map((t) => t.trim()).filter(Boolean);
 }
@@ -82,11 +85,11 @@ function toTags(tags: SearchResult['tags'] | string): string[] {
 async function searchTerm(query: string, limit: number): Promise<TermResults> {
     const results = await searchCache.getOrLoad(query, async () => {
         try {
-            const response = await axios.get<SearchApiResponse>('https://search.hugeicons.com/search', {
+            const response = await fetchJson<SearchApiResponse>('https://search.hugeicons.com/search', {
                 params: { q: query },
-                timeout: 10000,
+                timeoutMs: 10000,
             });
-            return response.data.results;
+            return response.results;
         } catch (error) {
             console.error('Failed to search icons:', error);
             throw new SearchUnavailableError('The Hugeicons search service is unavailable. Try again shortly.');
@@ -118,6 +121,7 @@ async function searchTerm(query: string, limit: number): Promise<TermResults> {
         fuzzy,
         results: matches.slice(0, limit).map(({ result, tags }) => ({
             name: result.name,
+            component: componentName(result.name),
             category: result.category,
             tags,
         })),

@@ -241,13 +241,7 @@ importers:
       agnost:
         specifier: ^0.1.3
         version: 0.1.11
-      axios:
-        specifier: ^1.8.4
-        version: 1.18.0
     devDependencies:
-      '@types/axios':
-        specifier: ^0.9.36
-        version: 0.9.36
       '@types/node':
         specifier: ^20.17.30
         version: 20.19.43
@@ -2133,9 +2127,6 @@ packages:
 
   '@tsconfig/svelte@5.0.8':
     resolution: {integrity: sha512-UkNnw1/oFEfecR8ypyHIQuWYdkPvHiwcQ78sh+ymIiYoF+uc5H1UBetbjyqT+vgGJ3qQN6nhucJviX6HesWtKQ==}
-
-  '@types/axios@0.9.36':
-    resolution: {integrity: sha512-NLOpedx9o+rxo/X5ChbdiX6mS1atE4WHmEEIcR9NLenRVa5HoVjAvjafwU3FPTqnZEstpoqCaW7fagqSoTDNeg==}
 
   '@types/body-parser@1.19.6':
     resolution: {integrity: sha512-HLFeCYgz89uk22N5Qg3dvGvsv46B8GLvKKo1zKG4NybA8U2DiEO3w9lqGg29t/tfLRJpJ6iQxnVw4OnB7MoM9g==}
@@ -7730,8 +7721,6 @@ snapshots:
       - supports-color
 
   '@tsconfig/svelte@5.0.8': {}
-
-  '@types/axios@0.9.36': {}
 
   '@types/body-parser@1.19.6':
     dependencies:

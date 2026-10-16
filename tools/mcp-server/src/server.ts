@@ -2,8 +2,8 @@
  * MCP server for Hugeicons search and usage documentation
  * This server provides tools to:
  * - Search icons by name or tags
- * - Get icon details and usage information
- * - List all available icons
+ * - Get ready-to-paste code and platform usage for an icon
+ * - List all available icons and look up web font glyphs
  */
 
 import { Server } from "@modelcontextprotocol/sdk/server/index.js";
@@ -13,33 +13,26 @@ import {
   ErrorCode,
   ListToolsRequestSchema,
   ListResourcesRequestSchema,
+  ListResourceTemplatesRequestSchema,
   ReadResourceRequestSchema,
   McpError,
 } from "@modelcontextprotocol/sdk/types.js";
 import { createRequire } from "node:module";
-import axios from "axios";
 import { trackMCP, createConfig } from "agnost";
-import { IconInfo, IconStyle } from "./types.js";
+import { FREE_STYLE, ICON_STYLES, IconStyle } from "./types.js";
+import { IconIndex, loadIconIndex } from "./icons-index.js";
+import { DEFAULT_LIST_LIMIT, MAX_LIST_LIMIT, SERVER_INSTRUCTIONS, TOOLS } from "./tool-definitions.js";
 import { DEFAULT_SEARCH_LIMIT, MAX_SEARCH_LIMIT, searchIcons } from "./utils/search.js";
 import { getAllGlyphs, getGlyphByStyle, IconNotFoundError } from "./utils/glyphs.js";
-import { normalizeIconName } from "./utils/icon-name.js";
-import { Platform, PLATFORM_USAGE } from "./utils/platform-usage.js";
+import { getIconCode } from "./utils/code-snippets.js";
+import { normalizeIconName, webfontName } from "./utils/icon-name.js";
+import { Platform, PLATFORM_LABELS, PLATFORM_USAGE, PLATFORMS } from "./utils/platform-usage.js";
 import { convertPlatformUsageToMarkdown } from "./utils/markdown-converter.js";
 
 const { version: SERVER_VERSION } = createRequire(import.meta.url)("../package.json") as { version: string };
 
-// The icon index is shared by every server instance, so the HTTP server
-// (one instance per request) fetches it once and refreshes it periodically.
-const ICONS_CACHE_TTL_MS = 6 * 60 * 60 * 1000;
-const ICONS_FETCH_TIMEOUT_MS = 15_000;
-// After a failed fetch, wait this long before trying the API again
-const ICONS_RETRY_DELAY_MS = 30_000;
-let iconsIndex: { icons: IconInfo[]; fetchedAt: number } | null = null;
-let iconsRequest: Promise<IconInfo[]> | null = null;
-let iconsFailure: { error: unknown; at: number } | null = null;
-
-const DEFAULT_LIST_LIMIT = 200;
-const MAX_LIST_LIMIT = 500;
+const PLATFORM_DOCS_PREFIX = "hugeicons://docs/platforms/";
+const ICONS_INDEX_URI = "hugeicons://icons/index";
 
 /**
  * A problem the assistant can fix (bad arguments, unknown icon). Reported as a
@@ -47,62 +40,16 @@ const MAX_LIST_LIMIT = 500;
  */
 class ToolError extends Error {}
 
-function jsonResult(data: unknown) {
-  return { content: [{ type: "text", text: JSON.stringify(data) }] };
+/**
+ * A tool result with structured content, plus the same JSON as text for clients
+ * that don't read structuredContent
+ */
+function jsonResult(data: object) {
+  return { content: [{ type: "text", text: JSON.stringify(data) }], structuredContent: data as Record<string, unknown> };
 }
 
 function errorResult(message: string) {
   return { isError: true, content: [{ type: "text", text: message }] };
-}
-
-function fetchIcons(): Promise<IconInfo[]> {
-  // Concurrent callers share one in-flight request
-  iconsRequest ??= (async () => {
-    try {
-      const response = await axios.get<{ icons: IconInfo[] }>("https://hugeicons.com/api/icons", {
-        timeout: ICONS_FETCH_TIMEOUT_MS,
-      });
-      iconsIndex = { icons: response.data.icons, fetchedAt: Date.now() };
-      iconsFailure = null;
-      return iconsIndex.icons;
-    } catch (error) {
-      iconsFailure = { error, at: Date.now() };
-      throw error;
-    } finally {
-      iconsRequest = null;
-    }
-  })();
-
-  return iconsRequest;
-}
-
-/**
- * Get the icon index. A stale index is served while it refreshes in the
- * background, and is kept if the refresh fails.
- */
-async function loadIcons(): Promise<IconInfo[]> {
-  const backingOff = iconsFailure !== null && Date.now() - iconsFailure.at < ICONS_RETRY_DELAY_MS;
-
-  if (iconsIndex) {
-    const stale = Date.now() - iconsIndex.fetchedAt >= ICONS_CACHE_TTL_MS;
-    if (stale && !backingOff) {
-      fetchIcons().catch((error) => console.error("Failed to refresh the icon index:", error));
-    }
-    return iconsIndex.icons;
-  }
-
-  if (backingOff) throw iconsFailure!.error;
-  return fetchIcons();
-}
-
-/**
- * Fetch the icon index ahead of the first request (used by the HTTP server at startup)
- */
-export function preloadIcons(): Promise<void> {
-  return loadIcons().then(
-    () => undefined,
-    (error) => console.error("Failed to preload the icon index:", error),
-  );
 }
 
 /**
@@ -110,12 +57,12 @@ export function preloadIcons(): Promise<void> {
  */
 export class HugeiconsServer {
   private server: Server;
-  private iconsCache: IconInfo[] | null = null;
 
   constructor() {
     this.server = new Server(
       {
         name: "hugeicons-mcp",
+        title: "Hugeicons",
         version: SERVER_VERSION,
       },
       {
@@ -123,17 +70,18 @@ export class HugeiconsServer {
           tools: {},
           resources: {}
         },
+        instructions: SERVER_INSTRUCTIONS,
       }
     );
 
     this.setupToolHandlers();
     this.setupResourceHandlers();
-    
+
     // Add analytics tracking
     trackMCP(this.server, "54bfb286-b439-4dc8-9fbe-d08ce48c5d8d", createConfig({
       endpoint: "https://api.agnost.ai"
     }));
-    
+
     this.server.onerror = (error) => console.error("[MCP Error]", error);
   }
 
@@ -141,118 +89,18 @@ export class HugeiconsServer {
    * Set up the tool handlers for the server
    */
   private setupToolHandlers() {
-    this.server.setRequestHandler(ListToolsRequestSchema, async () => ({
-      tools: [
-        {
-          name: "list_icons",
-          description: "List Hugeicons icon names, a page at a time. Optionally filter by category. The first page without a category also returns every category with its icon count. Prefer search_icons to find an icon for a purpose.",
-          inputSchema: {
-            type: "object",
-            properties: {
-              category: {
-                type: "string",
-                description: "Only list icons in this category (e.g. 'arrows', 'e-commerce')",
-              },
-              offset: {
-                type: "number",
-                description: "Number of icons to skip. Use next_offset from the previous page. Defaults to 0",
-              },
-              limit: {
-                type: "number",
-                description: `Icons per page, 1-${MAX_LIST_LIMIT}. Defaults to ${DEFAULT_LIST_LIMIT}`,
-              },
-            },
-            required: [],
-          },
-        },
-        {
-          name: "search_icons",
-          description: "Search icons by name or tags. Exact name and tag matches rank first. Separate multiple searches with commas (e.g. 'home, notification, settings') to get results for each.",
-          inputSchema: {
-            type: "object",
-            properties: {
-              query: {
-                type: "string",
-                description: "What to search for. Separate multiple searches with commas",
-              },
-              limit: {
-                type: "number",
-                description: `Maximum results per search, 1-${MAX_SEARCH_LIMIT}. Defaults to ${DEFAULT_SEARCH_LIMIT}`,
-              },
-            },
-            required: ["query"],
-          },
-        },
-        {
-          name: "get_platform_usage",
-          description: "Get platform-specific usage instructions for Hugeicons",
-          inputSchema: {
-            type: "object",
-            properties: {
-              platform: {
-                type: "string",
-                description: "Platform name (react, vue, angular, svelte, solid-js, react-native, flutter, html)",
-                enum: ["react", "vue", "angular", "svelte", "solid-js", "react-native", "flutter", "html"]
-              },
-            },
-            required: ["platform"],
-          },
-        },
-        {
-          name: "get_icon_glyphs",
-          description: "Get all glyphs (unicode characters) for a specific icon across all available styles",
-          inputSchema: {
-            type: "object",
-            properties: {
-              icon_name: {
-                type: "string",
-                description: "The icon name (e.g. 'home-01', 'notification-02'). Case and spacing are normalized",
-              }
-            },
-            required: ["icon_name"],
-          },
-        },
-        {
-          name: "get_icon_glyph_by_style",
-          description: "Get the glyph (unicode character) for a specific icon with a particular style",
-          inputSchema: {
-            type: "object",
-            properties: {
-              icon_name: {
-                type: "string",
-                description: "The icon name (e.g. 'home-01', 'notification-02'). Case and spacing are normalized",
-              },
-              style: {
-                type: "string",
-                description: "The icon style",
-                enum: [
-                  "bulk-rounded",
-                  "duotone-rounded",
-                  "duotone-standard",
-                  "solid-rounded",
-                  "solid-sharp",
-                  "solid-standard",
-                  "stroke-rounded",
-                  "stroke-sharp",
-                  "stroke-standard",
-                  "twotone-rounded"
-                ]
-              }
-            },
-            required: ["icon_name", "style"],
-          },
-        },
-      ],
-    }));
+    this.server.setRequestHandler(ListToolsRequestSchema, async () => ({ tools: TOOLS }));
 
     this.server.setRequestHandler(CallToolRequestSchema, async (request) => {
       const args = request.params.arguments ?? {};
       try {
         switch (request.params.name) {
-          case "list_icons":
-            return await this.handleListIcons(args);
           case "search_icons":
             return await this.handleSearchIcons(args);
+          case "get_icon_code":
+            return await this.handleGetIconCode(args);
+          case "list_icons":
+            return await this.handleListIcons(args);
           case "get_platform_usage":
             return this.handleGetPlatformUsage(args);
           case "get_icon_glyphs":
@@ -280,105 +128,68 @@ export class HugeiconsServer {
    * Set up the resource handlers for the server
    */
   private setupResourceHandlers() {
-    // List available documentation resources
-    this.server.setRequestHandler(ListResourcesRequestSchema, async () => {
-      return {
-        resources: [
-          {
-            uri: "hugeicons://docs/platforms/react",
-            name: "React Usage Guide",
-            mimeType: "text/markdown",
-            description: "React implementation guide for Hugeicons"
-          },
-          {
-            uri: "hugeicons://docs/platforms/vue",
-            name: "Vue Usage Guide",
-            mimeType: "text/markdown",
-            description: "Vue implementation guide for Hugeicons"
-          },
-          {
-            uri: "hugeicons://docs/platforms/angular",
-            name: "Angular Usage Guide",
-            mimeType: "text/markdown",
-            description: "Angular implementation guide for Hugeicons"
-          },
-          {
-            uri: "hugeicons://docs/platforms/svelte",
-            name: "Svelte Usage Guide",
-            mimeType: "text/markdown",
-            description: "Svelte implementation guide for Hugeicons"
-          },
-          {
-            uri: "hugeicons://docs/platforms/solid-js",
-            name: "SolidJS Usage Guide",
-            mimeType: "text/markdown",
-            description: "SolidJS implementation guide for Hugeicons"
-          },
-          {
-            uri: "hugeicons://docs/platforms/react-native",
-            name: "React Native Usage Guide",
-            mimeType: "text/markdown",
-            description: "React Native implementation guide for Hugeicons"
-          },
-          {
-            uri: "hugeicons://docs/platforms/flutter",
-            name: "Flutter Usage Guide",
-            mimeType: "text/markdown",
-            description: "Flutter implementation guide for Hugeicons"
-          },
-          {
-            uri: "hugeicons://docs/platforms/html",
-            name: "HTML Usage Guide",
-            mimeType: "text/markdown",
-            description: "HTML implementation guide for Hugeicons (font-based)"
-          },
-          {
-            uri: "hugeicons://icons/index",
-            name: "Icons Index",
-            mimeType: "application/json",
-            description: "Complete index of all Hugeicons"
-          }
-        ]
-      };
-    });
+    this.server.setRequestHandler(ListResourcesRequestSchema, async () => ({
+      resources: [
+        ...PLATFORMS.map((platform) => ({
+          uri: `${PLATFORM_DOCS_PREFIX}${platform}`,
+          name: `${PLATFORM_LABELS[platform]} Usage Guide`,
+          mimeType: "text/markdown",
+          description: `${PLATFORM_LABELS[platform]} implementation guide for Hugeicons`,
+        })),
+        {
+          uri: ICONS_INDEX_URI,
+          name: "Icons Index",
+          mimeType: "application/json",
+          description: "Complete index of all Hugeicons",
+        },
+      ],
+    }));
 
-    // Handle resource reading
+    this.server.setRequestHandler(ListResourceTemplatesRequestSchema, async () => ({
+      resourceTemplates: [
+        {
+          uriTemplate: `${PLATFORM_DOCS_PREFIX}{platform}`,
+          name: "Platform Usage Guide",
+          mimeType: "text/markdown",
+          description: `Implementation guide for Hugeicons on a platform: ${PLATFORMS.join(", ")}`,
+        },
+      ],
+    }));
+
     this.server.setRequestHandler(ReadResourceRequestSchema, async (request) => {
       const uri = request.params.uri;
-      
-      if (uri.startsWith("hugeicons://docs/platforms/")) {
-        const platform = uri.split("/").pop() as Platform;
-        const usage = PLATFORM_USAGE[platform];
-        
-        if (!usage) {
+
+      if (uri.startsWith(PLATFORM_DOCS_PREFIX)) {
+        const platform = uri.slice(PLATFORM_DOCS_PREFIX.length) as Platform;
+        if (!PLATFORMS.includes(platform)) {
           throw new McpError(
-            ErrorCode.InvalidRequest,
-            `Platform documentation not found for: ${platform}`
+            ErrorCode.InvalidParams,
+            `Platform documentation not found for: ${platform}. Platforms: ${PLATFORMS.join(", ")}`
           );
         }
-        
+
         return {
           contents: [{
             uri,
             mimeType: "text/markdown",
-            text: convertPlatformUsageToMarkdown(usage)
+            text: convertPlatformUsageToMarkdown(PLATFORM_USAGE[platform])
           }]
         };
       }
-      
-      if (uri === "hugeicons://icons/index") {
-        await this.ensureIconsLoaded();
+
+      if (uri === ICONS_INDEX_URI) {
+        const index = await this.iconIndex();
         return {
           contents: [{
             uri,
             mimeType: "application/json",
-            text: JSON.stringify(this.iconsCache!.map(({ name, category }) => ({ name, category })))
+            text: index.toResourceJson()
           }]
         };
       }
 
       throw new McpError(
-        ErrorCode.InvalidRequest,
+        ErrorCode.InvalidParams,
         `Resource not found: ${uri}`
       );
     });
@@ -392,13 +203,12 @@ export class HugeiconsServer {
     const offset = this.intArg(args, "offset", 0, 0, Number.MAX_SAFE_INTEGER);
     const limit = this.intArg(args, "limit", DEFAULT_LIST_LIMIT, 1, MAX_LIST_LIMIT);
 
-    await this.ensureIconsLoaded();
-    const all = this.iconsCache!;
-    const icons = category ? all.filter((icon) => icon.category === category) : all;
+    const index = await this.iconIndex();
+    const icons = category ? index.icons.filter((icon) => icon.category === category) : index.icons;
 
     if (category && icons.length === 0) {
       throw new ToolError(
-        `Unknown category '${category}'. Categories: ${Object.keys(this.categoryCounts(all)).join(", ")}`
+        `Unknown category '${category}'. Categories: ${Object.keys(index.categoryCounts).join(", ")}`
       );
     }
 
@@ -409,27 +219,28 @@ export class HugeiconsServer {
       offset,
       limit,
       next_offset: nextOffset < icons.length ? nextOffset : null,
-      ...(!category && offset === 0 ? { categories: this.categoryCounts(all) } : {}),
+      ...(!category && offset === 0 ? { categories: index.categoryCounts } : {}),
       icons: icons.slice(offset, nextOffset).map((icon) => icon.name),
     });
-  }
-
-  /**
-   * Icon count per category, sorted by name
-   */
-  private categoryCounts(icons: IconInfo[]): Record<string, number> {
-    const counts: Record<string, number> = {};
-    for (const icon of icons) counts[icon.category] = (counts[icon.category] ?? 0) + 1;
-    return Object.fromEntries(Object.entries(counts).sort(([a], [b]) => a.localeCompare(b)));
   }
 
   /**
    * Handle the search_icons tool request
    */
   private async handleSearchIcons(args: any) {
-    const query = this.validateSearchQuery(args);
+    const query = this.requiredString(args, "query", "Search query");
     const limit = this.intArg(args, "limit", DEFAULT_SEARCH_LIMIT, 1, MAX_SEARCH_LIMIT);
-    return jsonResult(await searchIcons(query, limit));
+    return jsonResult({ searches: await searchIcons(query, limit) });
+  }
+
+  /**
+   * Handle the get_icon_code tool request
+   */
+  private async handleGetIconCode(args: any) {
+    const platform = this.validatePlatform(args);
+    const style = this.validateIconStyle(args, FREE_STYLE);
+    const icon = await this.resolveIconName(args);
+    return jsonResult(getIconCode(icon, platform, style));
   }
 
   /**
@@ -444,17 +255,18 @@ export class HugeiconsServer {
    * Handle the get_icon_glyphs tool request
    */
   private async handleGetIconGlyphs(args: any) {
-    const iconName = this.validateIconName(args);
-    return jsonResult(await getAllGlyphs(iconName));
+    const icon = await this.resolveIconName(args);
+    // The glyph API keys icons by their web font name ("3d-move" is "three-d-move")
+    return jsonResult({ icon, glyphs: await getAllGlyphs(webfontName(icon)) });
   }
 
   /**
    * Handle the get_icon_glyph_by_style tool request
    */
   private async handleGetIconGlyphByStyle(args: any) {
-    const iconName = this.validateIconName(args);
+    const icon = await this.resolveIconName(args);
     const style = this.validateIconStyle(args);
-    return jsonResult(await getGlyphByStyle(iconName, style));
+    return jsonResult({ icon, style, ...(await getGlyphByStyle(webfontName(icon), style)) });
   }
 
   /**
@@ -465,6 +277,17 @@ export class HugeiconsServer {
     if (value === undefined || value === null || value === "") return undefined;
     if (typeof value !== "string") throw new ToolError(`${key} must be a string`);
     return value.trim() || undefined;
+  }
+
+  /**
+   * Read a required, non-empty string argument
+   */
+  private requiredString(args: any, key: string, label: string): string {
+    const value = args?.[key];
+    if (typeof value !== "string" || !value.trim()) {
+      throw new ToolError(`${label} must be a non-empty string`);
+    }
+    return value.trim();
   }
 
   /**
@@ -481,91 +304,61 @@ export class HugeiconsServer {
   }
 
   /**
-   * Validate the search query argument
-   */
-  private validateSearchQuery(args: any): string {
-    if (!args || typeof args.query !== "string" || !args.query.trim()) {
-      throw new ToolError(
-        "Search query must be a non-empty string"
-      );
-    }
-    return args.query.trim();
-  }
-
-  /**
    * Validate the platform argument
    */
   private validatePlatform(args: any): Platform {
-    if (!args || typeof args.platform !== "string" || !args.platform.trim()) {
-      throw new ToolError(
-        "Platform must be a non-empty string"
-      );
+    const platform = this.requiredString(args, "platform", "Platform").toLowerCase() as Platform;
+    if (!PLATFORMS.includes(platform)) {
+      throw new ToolError(`Invalid platform. Supported platforms are: ${PLATFORMS.join(", ")}`);
     }
-
-    const platform = args.platform.trim().toLowerCase() as Platform;
-    if (!Object.keys(PLATFORM_USAGE).includes(platform)) {
-      throw new ToolError(
-        `Invalid platform. Supported platforms are: ${Object.keys(PLATFORM_USAGE).join(', ')}`
-      );
-    }
-
     return platform;
   }
 
   /**
-   * Validate the icon name argument
+   * Validate the style argument, falling back to `fallback` when it's optional and missing
    */
-  private validateIconName(args: any): string {
-    if (!args || typeof args.icon_name !== "string" || !args.icon_name.trim()) {
-      throw new ToolError(
-        "Icon name must be a non-empty string"
-      );
+  private validateIconStyle(args: any, fallback?: IconStyle): IconStyle {
+    const value = fallback ? this.optionalString(args, "style") ?? fallback : this.requiredString(args, "style", "Style");
+    const style = value.toLowerCase() as IconStyle;
+    if (!ICON_STYLES.includes(style)) {
+      throw new ToolError(`Invalid style. Supported styles are: ${ICON_STYLES.join(", ")}`);
     }
-    return normalizeIconName(args.icon_name);
-  }
-
-  /**
-   * Validate the icon style argument
-   */
-  private validateIconStyle(args: any): IconStyle {
-    if (!args || typeof args.style !== "string" || !args.style.trim()) {
-      throw new ToolError(
-        "Style must be a non-empty string"
-      );
-    }
-
-    const validStyles: IconStyle[] = [
-      'bulk-rounded',
-      'duotone-rounded',
-      'duotone-standard',
-      'solid-rounded',
-      'solid-sharp',
-      'solid-standard',
-      'stroke-rounded',
-      'stroke-sharp',
-      'stroke-standard',
-      'twotone-rounded'
-    ];
-
-    const style = args.style.trim().toLowerCase() as IconStyle;
-    if (!validStyles.includes(style)) {
-      throw new ToolError(
-        `Invalid style. Supported styles are: ${validStyles.join(', ')}`
-      );
-    }
-
     return style;
   }
 
   /**
-   * Ensure the icons data is loaded
+   * Resolve the icon_name argument to an icon in the index, suggesting close
+   * matches when there isn't one. If the index can't be loaded, fall back to the
+   * normalized name and let the glyph API decide.
    */
-  private async ensureIconsLoaded() {
-    if (this.iconsCache) return;
+  private async resolveIconName(args: any): Promise<string> {
+    const input = this.requiredString(args, "icon_name", "Icon name");
 
+    let index: IconIndex;
     try {
-      this.iconsCache = await loadIcons();
-    } catch (error) {
+      index = await loadIconIndex();
+    } catch {
+      return normalizeIconName(input);
+    }
+
+    const name = index.resolve(input);
+    if (name) return name;
+
+    const suggestions = index.suggest(input);
+    throw new ToolError(
+      suggestions.length > 0
+        ? `Icon '${input}' not found. Did you mean: ${suggestions.join(", ")}?`
+        : `Icon '${input}' not found. Use search_icons to find icon names.`
+    );
+  }
+
+  /**
+   * The icon index, or an error the model can read when it can't be loaded
+   */
+  private async iconIndex(): Promise<IconIndex> {
+    try {
+      return await loadIconIndex();
+    } catch {
       throw new Error("The Hugeicons icon list is unavailable. Try again shortly.");
     }
   }
