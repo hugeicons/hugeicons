@@ -10,17 +10,20 @@ This is a TypeScript-based MCP server that provides tools and resources for inte
 
 ### Tools
 
+- `search_icons` - Search icons by name or tags, with exact name and tag matches ranked first. Separate searches with commas; `limit` sets results per search (default 20, max 50). Each result includes the icon's JavaScript export name (`component`)
+- `get_icon_code` - Get the install command, import and usage snippet for an icon on a platform (`react`, `vue`, `angular`, `svelte`, `solid-js`, `react-native`, `flutter`, `html`) in a `style` (default `stroke-rounded`, the free style), with the exact export name, Flutter constant or web font classes
 - `list_icons` - List icon names a page at a time (`offset`, `limit` up to 500), optionally filtered by `category`. The first page also returns every category with its icon count
-- `search_icons` - Search icons by name or tags, with exact name and tag matches ranked first. Separate searches with commas; `limit` sets results per search (default 20, max 50)
-- `get_platform_usage` - Get platform-specific usage instructions for Hugeicons
+- `get_platform_usage` - Get platform-specific setup instructions and component props for Hugeicons
 - `get_icon_glyphs` - Get all glyphs (unicode characters) for a specific icon across all available styles
 - `get_icon_glyph_by_style` - Get the glyph (unicode character) for a specific icon with a particular style
 
-Icon names are case-insensitive and also accept component names such as `Home01Icon`. Unknown icons and invalid arguments come back as tool results with `isError: true`, so the assistant can correct its call.
+Every tool is read-only (annotated with `readOnlyHint`) and returns `structuredContent` matching its `outputSchema`, with the same JSON as text for older clients. The server also sends `instructions` on initialize describing how the tools fit together.
+
+Icon names are case-insensitive and also accept export and constant names such as `Home01Icon`, `SecondBracketIcon` or `strokeRoundedHome01`. An unknown icon name gets a "did you mean" list of close matches. Unknown icons and invalid arguments come back as tool results with `isError: true`, so the assistant can correct its call.
 
 ### Resources
 
-Platform Documentation (in Markdown format):
+Platform Documentation (in Markdown format), also available through the `hugeicons://docs/platforms/{platform}` resource template:
 - `hugeicons://docs/platforms/react` - React integration guide
 - `hugeicons://docs/platforms/vue` - Vue integration guide
 - `hugeicons://docs/platforms/angular` - Angular integration guide
@@ -59,6 +62,11 @@ npm run build
 For development with auto-rebuild:
 ```bash
 npm run watch
+```
+
+Run the tests (they build first, and stub the Hugeicons APIs so they run offline):
+```bash
+npm test
 ```
 
 ## Installation
@@ -137,6 +145,8 @@ Environment variables:
 | `CLIENT_IP_HEADER` | `x-forwarded-for` | Header holding the client IP, set by your proxy. Use `cf-connecting-ip` behind Cloudflare |
 
 The rate limit is kept in memory per process, so each replica counts separately. Only expose the server through a proxy that sets `CLIENT_IP_HEADER`, since clients can send that header themselves.
+
+The server doesn't use credentials, so it drops `Authorization`, `Proxy-Authorization` and `Cookie` headers before handling a request. That keeps them out of the usage analytics, which record request headers.
 
 The Dockerfile builds the HTTP server and must be built from the repository root:
 
