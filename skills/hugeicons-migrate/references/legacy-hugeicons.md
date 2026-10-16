@@ -211,8 +211,11 @@ and removed these 36. Anyone upgrading a working 4.2 project hits them as
 # 1. every icon name the project uses, once
 grep -rhoE '\b[A-Z][A-Za-z0-9]*Icon\b' src | sort -u > /tmp/icons.txt
 
-# 2. which of them are not in the current catalog (fix these via §5 before touching code)
-while read n; do grep -q "\`$n\`" <path-to>/skills/hugeicons/references/icon-list.md || echo "$n"; done < /tmp/icons.txt
+# 2. which of them no longer exist (fix these via §5 before touching code)
+#    the installed .d.ts is the source of truth for the version this project builds against
+grep -oE 'declare const \w+Icon' node_modules/@hugeicons/core-free-icons/dist/types/index.d.ts \
+  | sed 's/declare const //' | sort -u > /tmp/catalog.txt
+comm -23 /tmp/icons.txt /tmp/catalog.txt
 
 # 3. rewrite files, then confirm nothing legacy is left
 grep -rnE "hugeicons-react|@hugeicons/react-pro|hugeicons-react-native|react-native-pro|hugeiconsLicense" src

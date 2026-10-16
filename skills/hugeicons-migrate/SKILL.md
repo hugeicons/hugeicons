@@ -5,24 +5,39 @@ description: Migrate a project's icons to Hugeicons — from the deprecated huge
 
 # Migrate to Hugeicons
 
-Companion to the `hugeicons` skill (required — this skill greps its icon catalog). That skill
-covers *using* Hugeicons; this one covers *replacing* another icon setup with it, in bulk,
+Companion to the `hugeicons` skill (required — read its §4 for how to resolve icon names). That
+skill covers *using* Hugeicons; this one covers *replacing* another icon setup with it, in bulk,
 without inventing a single icon name.
 
-> ## ⚠️ Every icon name goes through the catalog
+> ## ⚠️ Every icon name gets resolved before it is written
 >
-> The `hugeicons` skill's `references/icon-list.md` lists every free export (6,000+). It's in the
-> sibling skill directory — `../hugeicons/references/icon-list.md` from this folder. Before you
-> write a name into code, grep it there and copy the exact match:
+> Neither skill ships an icon list — the catalog changes with every release. Resolve every target
+> name against a live source before it goes into code:
 >
-> ```bash
-> grep -i "trash" ../hugeicons/references/icon-list.md
-> ```
+> - **MCP connected** — one `search_icons` call with every unmapped name, comma-separated, and
+>   use the `component` field verbatim. A migration resolves dozens of names, so batching is the
+>   difference between one call and dozens; keep `limit` low and let tags stay off:
 >
-> Never read that file whole, and never emit a name you haven't seen in it. A migration that
-> guesses one name breaks the whole build (`Module has no exported member`). **"No confident
-> match" is a valid outcome:** leave that call site untouched, list the name as unmapped, and ask
-> — do not substitute a look-alike silently.
+>   ```
+>   search_icons(query: "trash, settings, chevron down, ...", limit: 3)
+>   ```
+>
+>   `search_icons` takes up to 10 terms per call — chunk a long list into batches of 10.
+>
+> - **No MCP** — grep the installed package, which matches the project's own version:
+>
+>   ```bash
+>   grep -oE 'declare const \w+Icon' \
+>     node_modules/@hugeicons/core-free-icons/dist/types/index.d.ts \
+>     | sed 's/declare const //' | grep -i trash
+>   ```
+>
+> Never emit a name you haven't resolved. One guessed name breaks the whole build
+> (`Module has no exported member`). **"No confident match" is a valid outcome:** leave that call
+> site untouched, list the name as unmapped, and ask — do not substitute a look-alike silently.
+>
+> The per-source name maps in `references/` were verified when written. Treat them as candidates:
+> if a mapped name fails to resolve, it was renamed in a later release — re-resolve it.
 
 ## 1. Detect the source — from imports, not package.json
 

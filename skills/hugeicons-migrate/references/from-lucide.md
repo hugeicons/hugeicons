@@ -69,12 +69,14 @@ map of the names the app actually uses.
 
 ## 4. Resolving names
 
-Work through these in order and stop at the first hit. Every step is a grep against
-`skills/hugeicons/references/icon-list.md`; never emit a name you haven't seen there.
+Work through these in order and stop at the first hit. Every candidate must be resolved against
+a live source (`search_icons`, or the installed `index.d.ts` — see the callout in SKILL.md)
+before it goes into code; never emit a name you haven't resolved.
 
 1. **Exact:** `<Name>Icon` — `Menu` → `MenuIcon`, `ChevronDown` → `ChevronDownIcon`,
    `PanelLeft` → `PanelLeftIcon`. ~70 % of common lucide names hit here.
-   Casing quirks: `Grid2x2` → `Grid2X2Icon`, `Fingerprint` → `FingerPrintIcon`.
+   Casing quirks: `Fingerprint` → `FingerPrintIcon`. Casing is not predictable — `Grid2x2Icon`
+   keeps its lowercase `x` — so confirm the exact spelling rather than normalising it.
 2. **Lucide's own alias:** lucide renamed many icons (old ↔ new); the catalog may have either
    spelling. Try both: `AlertTriangle`/`TriangleAlert` → `TriangleAlertIcon`,
    `CheckCircle`/`CircleCheck` → `CircleCheckIcon`, `HelpCircle`/`CircleHelp` → `HelpCircleIcon`,
@@ -84,8 +86,8 @@ Work through these in order and stop at the first hit. Every step is a grep agai
    `Settings` → `Settings01Icon`, `Mail` → `Mail01Icon`, `Calendar` → `Calendar01Icon`. The
    `01` is the canonical variant; `02`…`0n` are alternatives, not "newer".
 4. **Table below.**
-5. **grep the catalog** by concept (`grep -i sidebar icon-list.md`); if nothing convincing turns
-   up, list the name as unmapped and ask.
+5. **Search by concept** (`search_icons("sidebar")`, or grep the installed `index.d.ts`); if
+   nothing convincing turns up, list the name as unmapped and ask.
 
 ### Curated exceptions (no exact/alias/numbered hit)
 
