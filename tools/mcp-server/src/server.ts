@@ -28,8 +28,12 @@ import { convertPlatformUsageToMarkdown } from "./utils/markdown-converter.js";
 // The icon index is shared by every server instance, so the HTTP server
 // (one instance per request) fetches it once and refreshes it periodically.
 const ICONS_CACHE_TTL_MS = 6 * 60 * 60 * 1000;
+const ICONS_FETCH_TIMEOUT_MS = 15_000;
+// After a failed fetch, wait this long before trying the API again
+const ICONS_RETRY_DELAY_MS = 30_000;
 let iconsIndex: { icons: IconInfo[]; fetchedAt: number } | null = null;
 let iconsRequest: Promise<IconInfo[]> | null = null;
+let iconsFailure: { error: unknown; at: number } | null = null;
 
 const DEFAULT_LIST_LIMIT = 200;
 const MAX_LIST_LIMIT = 500;
@@ -48,23 +52,54 @@ function errorResult(message: string) {
   return { isError: true, content: [{ type: "text", text: message }] };
 }
 
-async function loadIcons(): Promise<IconInfo[]> {
-  if (iconsIndex && Date.now() - iconsIndex.fetchedAt < ICONS_CACHE_TTL_MS) {
-    return iconsIndex.icons;
-  }
-
+function fetchIcons(): Promise<IconInfo[]> {
   // Concurrent callers share one in-flight request
   iconsRequest ??= (async () => {
     try {
-      const response = await axios.get<{ icons: IconInfo[] }>("https://hugeicons.com/api/icons");
+      const response = await axios.get<{ icons: IconInfo[] }>("https://hugeicons.com/api/icons", {
+        timeout: ICONS_FETCH_TIMEOUT_MS,
+      });
       iconsIndex = { icons: response.data.icons, fetchedAt: Date.now() };
+      iconsFailure = null;
       return iconsIndex.icons;
+    } catch (error) {
+      iconsFailure = { error, at: Date.now() };
+      throw error;
     } finally {
       iconsRequest = null;
     }
   })();
 
   return iconsRequest;
+}
+
+/**
+ * Get the icon index. A stale index is served while it refreshes in the
+ * background, and is kept if the refresh fails.
+ */
+async function loadIcons(): Promise<IconInfo[]> {
+  const backingOff = iconsFailure !== null && Date.now() - iconsFailure.at < ICONS_RETRY_DELAY_MS;
+
+  if (iconsIndex) {
+    const stale = Date.now() - iconsIndex.fetchedAt >= ICONS_CACHE_TTL_MS;
+    if (stale && !backingOff) {
+      fetchIcons().catch((error) => console.error("Failed to refresh the icon index:", error));
+    }
+    return iconsIndex.icons;
+  }
+
+  if (backingOff) throw iconsFailure!.error;
+  return fetchIcons();
+}
+
+/**
+ * Fetch the icon index ahead of the first request (used by the HTTP server at startup)
+ */
+export function preloadIcons(): Promise<void> {
+  return loadIcons().then(
+    () => undefined,
+    (error) => console.error("Failed to preload the icon index:", error),
+  );
 }
 
 /**

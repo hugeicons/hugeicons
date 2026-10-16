@@ -9,7 +9,7 @@
 
 import { createServer, IncomingMessage, ServerResponse } from "node:http";
 import { StreamableHTTPServerTransport } from "@modelcontextprotocol/sdk/server/streamableHttp.js";
-import { HugeiconsServer } from "./server.js";
+import { HugeiconsServer, preloadIcons } from "./server.js";
 import { getClientIp, RateLimiter } from "./rate-limit.js";
 
 const PORT = Number(process.env.PORT ?? 3000);
@@ -118,6 +118,7 @@ const httpServer = createServer(async (req, res) => {
 
 httpServer.listen(PORT, HOST, () => {
   console.error(`hugeicons MCP server listening on http://${HOST}:${PORT}/mcp`);
+  void preloadIcons();
 });
 
 for (const signal of ["SIGINT", "SIGTERM"] as const) {
