@@ -2,9 +2,9 @@
  * Interface for icon information from the API
  */
 export interface IconInfo {
-    id: string;
     name: string;
-    tags: string[];
+    /** The index API sends a comma-separated string, the search API an array */
+    tags: string | string[];
     category: string;
     featured: boolean;
     version: string;
@@ -25,7 +25,7 @@ export interface SearchResult {
     id: string;
     score: number;
     name: string;
-    tags: string[];
+    tags: string[] | string;
     category: string;
     featured: boolean;
     version: string;
@@ -43,19 +43,24 @@ export interface SearchApiResponse {
 }
 
 /**
- * Icon style types
+ * Every icon style, in the order tools list them. Only stroke-rounded is free.
  */
-export type IconStyle = 
-    | 'bulk-rounded'
-    | 'duotone-rounded'
-    | 'duotone-standard'
-    | 'solid-rounded'
-    | 'solid-sharp'
-    | 'solid-standard'
-    | 'stroke-rounded'
-    | 'stroke-sharp'
-    | 'stroke-standard'
-    | 'twotone-rounded';
+export const ICON_STYLES = [
+    'bulk-rounded',
+    'duotone-rounded',
+    'duotone-standard',
+    'solid-rounded',
+    'solid-sharp',
+    'solid-standard',
+    'stroke-rounded',
+    'stroke-sharp',
+    'stroke-standard',
+    'twotone-rounded',
+] as const;
+
+export type IconStyle = typeof ICON_STYLES[number];
+
+export const FREE_STYLE: IconStyle = 'stroke-rounded';
 
 /**
  * Interface for a single glyph
@@ -91,4 +96,4 @@ export interface SingleGlyphResponse {
         primary: Glyph;
         secondary: Glyph | null;
     };
-} 
+}

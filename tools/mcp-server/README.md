@@ -10,15 +10,20 @@ This is a TypeScript-based MCP server that provides tools and resources for inte
 
 ### Tools
 
-- `list_icons` - Get a list of all available Hugeicons icons
-- `search_icons` - Search for icons by name or tags
-- `get_platform_usage` - Get platform-specific usage instructions for Hugeicons
+- `search_icons` - Search icons by name or tags, with exact name and tag matches ranked first. Separate searches with commas; `limit` sets results per search (default 20, max 50). Each result includes the icon's JavaScript export name (`component`)
+- `get_icon_code` - Get the install command, import and usage snippet for an icon on a platform (`react`, `vue`, `angular`, `svelte`, `solid-js`, `react-native`, `flutter`, `html`) in a `style` (default `stroke-rounded`, the free style), with the exact export name, Flutter constant or web font classes
+- `list_icons` - List icon names a page at a time (`offset`, `limit` up to 500), optionally filtered by `category`. The first page also returns every category with its icon count
+- `get_platform_usage` - Get platform-specific setup instructions and component props for Hugeicons
 - `get_icon_glyphs` - Get all glyphs (unicode characters) for a specific icon across all available styles
 - `get_icon_glyph_by_style` - Get the glyph (unicode character) for a specific icon with a particular style
 
+Every tool is read-only (annotated with `readOnlyHint`) and returns `structuredContent` matching its `outputSchema`, with the same JSON as text for older clients. The server also sends `instructions` on initialize describing how the tools fit together.
+
+Icon names are case-insensitive and also accept export and constant names such as `Home01Icon`, `SecondBracketIcon` or `strokeRoundedHome01`. An unknown icon name gets a "did you mean" list of close matches. Unknown icons and invalid arguments come back as tool results with `isError: true`, so the assistant can correct its call.
+
 ### Resources
 
-Platform Documentation (in Markdown format):
+Platform Documentation (in Markdown format), also available through the `hugeicons://docs/platforms/{platform}` resource template:
 - `hugeicons://docs/platforms/react` - React integration guide
 - `hugeicons://docs/platforms/vue` - Vue integration guide
 - `hugeicons://docs/platforms/angular` - Angular integration guide
@@ -29,7 +34,7 @@ Platform Documentation (in Markdown format):
 - `hugeicons://docs/platforms/html` - HTML integration guide (font-based)
 
 Icons Data:
-- `hugeicons://icons/index` - Complete index of all Hugeicons (JSON format)
+- `hugeicons://icons/index` - Name and category of every icon (JSON format)
 
 ### Functionality
 
@@ -59,15 +64,36 @@ For development with auto-rebuild:
 npm run watch
 ```
 
+Run the tests (they build first, and stub the Hugeicons APIs so they run offline):
+```bash
+npm test
+```
+
 ## Installation
 
-### Installing via Smithery
+### Hosted server (no install)
 
-To install Hugeicons MCP Server for Claude Desktop automatically via [Smithery](https://smithery.ai/server/@hugeicons/mcp-server):
+Connect any MCP client that supports remote servers to:
+
+```
+https://mcp.hugeicons.com/mcp
+```
+
+Claude Code:
 
 ```bash
-npx -y @smithery/cli install @hugeicons/mcp-server --client claude
+claude mcp add --transport http hugeicons https://mcp.hugeicons.com/mcp
 ```
+
+In claude.ai, ChatGPT, Cursor and other clients, add a custom connector with the same URL.
+
+### Via Smithery
+
+The hosted server is also listed on [Smithery](https://smithery.ai/server/@hugeicons/mcp-server), which can connect it to your client for you.
+
+### Local (stdio)
+
+If your client only supports local servers, run the npm package instead.
 
 To use with Claude Desktop, add the server config:
 
@@ -98,6 +124,35 @@ You can also run the server directly using npx:
 
 ```bash
 npx @hugeicons/mcp-server
+```
+
+### Self-hosting (Streamable HTTP)
+
+`build/http.js` serves the MCP endpoint at `/mcp` and a health check at `/health`. It listens on `PORT` (default `3000`) and runs stateless, so it can be scaled to multiple instances.
+
+```bash
+npm run build
+PORT=3000 npm run start:http
+```
+
+Environment variables:
+
+| Variable | Default | Description |
+| --- | --- | --- |
+| `PORT` | `3000` | Port to listen on |
+| `HOST` | `0.0.0.0` | Interface to bind |
+| `RATE_LIMIT_PER_MINUTE` | `60` | Requests per minute per client IP on `/mcp`. `0` disables it |
+| `CLIENT_IP_HEADER` | `x-forwarded-for` | Header holding the client IP, set by your proxy. Use `cf-connecting-ip` behind Cloudflare |
+
+The rate limit is kept in memory per process, so each replica counts separately. Only expose the server through a proxy that sets `CLIENT_IP_HEADER`, since clients can send that header themselves.
+
+The server doesn't use credentials, so it drops `Authorization`, `Proxy-Authorization` and `Cookie` headers before handling a request. That keeps them out of the usage analytics, which record request headers.
+
+The Dockerfile builds the HTTP server and must be built from the repository root:
+
+```bash
+docker build -f tools/mcp-server/Dockerfile -t hugeicons-mcp .
+docker run -p 3000:3000 hugeicons-mcp
 ```
 
 ### Debugging
