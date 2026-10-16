@@ -146,8 +146,6 @@ Environment variables:
 
 The rate limit is kept in memory per process, so each replica counts separately. Only expose the server through a proxy that sets `CLIENT_IP_HEADER`, since clients can send that header themselves.
 
-The server doesn't use credentials, so it drops `Authorization`, `Proxy-Authorization` and `Cookie` headers before handling a request. That keeps them out of the usage analytics, which record request headers.
-
 The Dockerfile builds the HTTP server and must be built from the repository root:
 
 ```bash

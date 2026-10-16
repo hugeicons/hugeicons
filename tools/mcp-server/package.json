@@ -20,8 +20,7 @@
     "inspector": "npx @modelcontextprotocol/inspector build/index.js"
   },
   "dependencies": {
-    "@modelcontextprotocol/sdk": "^1.18.2",
-    "agnost": "^0.1.3"
+    "@modelcontextprotocol/sdk": "^1.18.2"
   },
   "devDependencies": {
     "@types/node": "^20.17.30",

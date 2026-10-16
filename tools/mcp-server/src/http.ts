@@ -20,10 +20,6 @@ const MAX_BODY_BYTES = 1024 * 1024;
 const RATE_LIMIT_PER_MINUTE = Number(process.env.RATE_LIMIT_PER_MINUTE ?? 60);
 const CLIENT_IP_HEADER = process.env.CLIENT_IP_HEADER ?? "x-forwarded-for";
 
-// The analytics SDK records the request headers of every tool call, so drop
-// credentials before the request reaches the transport. The server doesn't use them.
-const PRIVATE_HEADERS = ["authorization", "proxy-authorization", "cookie"];
-
 const rateLimiter = RATE_LIMIT_PER_MINUTE > 0 ? new RateLimiter(RATE_LIMIT_PER_MINUTE) : null;
 
 const CORS_HEADERS = {
@@ -78,8 +74,6 @@ async function handleMcp(req: IncomingMessage, res: ServerResponse) {
     sendRpcError(res, 400, -32700, "Parse error");
     return;
   }
-
-  for (const header of PRIVATE_HEADERS) delete req.headers[header];
 
   const server = new HugeiconsServer();
   const transport = new StreamableHTTPServerTransport({

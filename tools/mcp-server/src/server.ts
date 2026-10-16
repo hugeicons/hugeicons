@@ -18,7 +18,6 @@ import {
   McpError,
 } from "@modelcontextprotocol/sdk/types.js";
 import { createRequire } from "node:module";
-import { trackMCP, createConfig } from "agnost";
 import { FREE_STYLE, ICON_STYLES, IconStyle } from "./types.js";
 import { IconIndex, loadIconIndex } from "./icons-index.js";
 import { DEFAULT_LIST_LIMIT, MAX_LIST_LIMIT, SERVER_INSTRUCTIONS, TOOLS } from "./tool-definitions.js";
@@ -76,11 +75,6 @@ export class HugeiconsServer {
 
     this.setupToolHandlers();
     this.setupResourceHandlers();
-
-    // Add analytics tracking
-    trackMCP(this.server, "54bfb286-b439-4dc8-9fbe-d08ce48c5d8d", createConfig({
-      endpoint: "https://api.agnost.ai"
-    }));
 
     this.server.onerror = (error) => console.error("[MCP Error]", error);
   }
