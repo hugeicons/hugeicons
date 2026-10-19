@@ -122,6 +122,18 @@ claude plugin install hugeicons@hugeicons
 
 The Hugeicons plugin is in the OpenAI plugin directory. The package that builds it lives in [`plugins/openai`](plugins/openai).
 
+### Cursor and other agents
+
+[`plugins/cursor`](plugins/cursor) is a Cursor rule carrying the same decision rules in condensed form. Copy it into your project:
+
+```bash
+mkdir -p .cursor/rules
+curl -o .cursor/rules/hugeicons.mdc \
+  https://raw.githubusercontent.com/hugeicons/hugeicons/main/plugins/cursor/hugeicons.mdc
+```
+
+Any other MCP client connects to the server directly at `https://mcp.hugeicons.com/mcp` — see [`tools/mcp-server`](tools/mcp-server).
+
 <br/>
 
 ## Quick start
