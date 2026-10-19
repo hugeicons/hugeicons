@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "hugeicons": {
+      "type": "http",
+      "url": "https://mcp.hugeicons.com/mcp"
+    }
+  }
+}

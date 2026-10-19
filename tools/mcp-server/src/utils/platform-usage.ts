@@ -39,6 +39,32 @@ const CORE_PACKAGES = [FREE_PACKAGE, ...PRO_PACKAGES];
 // with the appropriate registry token. Without authentication, only the free package (@hugeicons/core-free-icons)
 // will be accessible.
 
+/**
+ * Props the JavaScript renderers accept, read from the component prop types in
+ * packages/<framework>/src. Composed from one definition so a prop can't be documented
+ * for one framework and quietly missing from another.
+ */
+function jsProps(opts: { classProp: string; colorDefault?: string; multicolor?: boolean }) {
+  const props = [
+    { name: 'icon', type: 'IconSvgObject', default: 'Required', description: 'The icon to render (a named export from an icon package)' },
+    { name: 'altIcon', type: 'IconSvgObject', description: 'Alternative icon for states, interactions or dynamic swapping' },
+    { name: 'showAlt', type: 'boolean', default: 'false', description: 'When true, displays altIcon instead of icon' },
+    { name: 'size', type: 'number | string', default: '24', description: 'Icon size in pixels' },
+    { name: 'color', type: 'string', default: opts.colorDefault ?? 'currentColor', description: 'Icon color (any CSS color value)' },
+    { name: 'strokeWidth', type: 'number', default: '1.5', description: 'Width of the icon strokes (stroke styles only)' },
+    { name: 'absoluteStrokeWidth', type: 'boolean', default: 'false', description: 'When true, stroke width stays constant instead of scaling with size' },
+  ];
+  if (opts.multicolor) {
+    props.push(
+      { name: 'primaryColor', type: 'string', description: 'Primary color for multicolor Pro styles (Bulk, Duotone, Twotone)' },
+      { name: 'secondaryColor', type: 'string', description: 'Secondary color for multicolor Pro styles' },
+      { name: 'disableSecondaryOpacity', type: 'boolean', default: 'false', description: 'Disables the default opacity applied to the secondary color' },
+    );
+  }
+  props.push({ name: opts.classProp, type: 'string', description: 'Additional CSS classes' });
+  return props;
+}
+
 export const PLATFORM_USAGE: Record<Platform, PlatformUsage> = {
   'react': {
     platform: 'react',
@@ -53,17 +79,9 @@ import { Notification03Icon } from '@hugeicons/core-free-icons'
 // import { Notification03Icon } from '@hugeicons-pro/core-stroke-rounded'
 
 function App() {
-    return <HugeiconsIcon icon={Notification03Icon} size={24} color="currentColor" strokeWidth={1.5} />
+    return <HugeiconsIcon icon={Notification03Icon} />
 }`,
-    props: [
-      { name: 'icon', type: 'IconSvgObject', default: 'Required', description: 'The main icon component imported from an icon package' },
-      { name: 'altIcon', type: 'IconSvgObject', description: 'Alternative icon component from an icon package for states, interactions, or animations' },
-      { name: 'showAlt', type: 'boolean', default: 'false', description: 'When true, displays the altIcon instead of the main icon' },
-      { name: 'size', type: 'number', default: '24', description: 'Icon size in pixels' },
-      { name: 'color', type: 'string', default: 'currentColor', description: 'Icon color (CSS color value)' },
-      { name: 'strokeWidth', type: 'number', default: '1.5', description: 'Width of the icon strokes (works with stroke-style icons)' },
-      { name: 'className', type: 'string', description: 'Additional CSS classes' }
-    ]
+    props: jsProps({ classProp: 'className', multicolor: true })
   },
   'vue': {
     platform: 'vue',
@@ -80,17 +98,9 @@ import { Notification03Icon } from '@hugeicons/core-free-icons'
 </script>
 
 <template>
-    <HugeiconsIcon :icon="Notification03Icon" :size="24" color="currentColor" :strokeWidth="1.5" />
+    <HugeiconsIcon :icon="Notification03Icon" />
 </template>`,
-    props: [
-      { name: 'icon', type: 'IconSvgObject', default: 'Required', description: 'The main icon component imported from an icon package' },
-      { name: 'altIcon', type: 'IconSvgObject', description: 'Alternative icon component from an icon package for states, interactions, or animations' },
-      { name: 'showAlt', type: 'boolean', default: 'false', description: 'When true, displays the altIcon instead of the main icon' },
-      { name: 'size', type: 'number', default: '24', description: 'Icon size in pixels' },
-      { name: 'color', type: 'string', default: 'currentColor', description: 'Icon color (CSS color value)' },
-      { name: 'strokeWidth', type: 'number', default: '1.5', description: 'Width of the icon strokes (works with stroke-style icons)' },
-      { name: 'class', type: 'string', description: 'Additional CSS classes' }
-    ]
+    props: jsProps({ classProp: 'class' })
   },
   'angular': {
     platform: 'angular',
@@ -110,20 +120,12 @@ import { Notification03Icon } from '@hugeicons/core-free-icons'
     selector: 'app-example',
     standalone: true,
     imports: [HugeiconsIconComponent],
-    template: \` <hugeicons-icon [icon]="notification03Icon" [size]="24" color="currentColor" [strokeWidth]="1.5" /> \`,
+    template: \` <hugeicons-icon [icon]="notification03Icon" /> \`,
 })
 export class ExampleComponent {
     notification03Icon = Notification03Icon
 }`,
-    props: [
-      { name: 'icon', type: 'IconSvgObject', default: 'Required', description: 'The main icon component imported from an icon package' },
-      { name: 'altIcon', type: 'IconSvgObject', description: 'Alternative icon component from an icon package for states, interactions, or animations' },
-      { name: 'showAlt', type: 'boolean', default: 'false', description: 'When true, displays the altIcon instead of the main icon' },
-      { name: 'size', type: 'number', default: '24', description: 'Icon size in pixels' },
-      { name: 'color', type: 'string', default: 'currentColor', description: 'Icon color (CSS color value)' },
-      { name: 'strokeWidth', type: 'number', default: '1.5', description: 'Width of the icon strokes (works with stroke-style icons)' },
-      { name: 'class', type: 'string', description: 'Additional CSS classes' }
-    ]
+    props: jsProps({ classProp: 'class', multicolor: true })
   },
   'svelte': {
     platform: 'svelte',
@@ -139,16 +141,8 @@ export class ExampleComponent {
   // import { Notification03Icon } from '@hugeicons-pro/core-stroke-rounded'
 </script>
 
-<HugeiconsIcon icon={Notification03Icon} size={24} color="currentColor" strokeWidth={1.5} />`,
-    props: [
-      { name: 'icon', type: 'IconSvgObject', default: 'Required', description: 'The main icon component imported from an icon package' },
-      { name: 'altIcon', type: 'IconSvgObject', description: 'Alternative icon component from an icon package for states, interactions, or animations' },
-      { name: 'showAlt', type: 'boolean', default: 'false', description: 'When true, displays the altIcon instead of the main icon' },
-      { name: 'size', type: 'number', default: '24', description: 'Icon size in pixels' },
-      { name: 'color', type: 'string', default: 'currentColor', description: 'Icon color (CSS color value)' },
-      { name: 'strokeWidth', type: 'number', default: '1.5', description: 'Width of the icon strokes (works with stroke-style icons)' },
-      { name: 'class', type: 'string', description: 'Additional CSS classes' }
-    ]
+<HugeiconsIcon icon={Notification03Icon} />`,
+    props: jsProps({ classProp: 'class' })
   },
   'solid-js': {
     platform: 'solid-js',
@@ -163,17 +157,9 @@ import { Notification03Icon } from '@hugeicons/core-free-icons'
 // import { Notification03Icon } from '@hugeicons-pro/core-stroke-rounded'
 
 function App() {
-  return <HugeiconsIcon icon={Notification03Icon} size={24} color="currentColor" strokeWidth={1.5} />
+  return <HugeiconsIcon icon={Notification03Icon} />
 }`,
-    props: [
-      { name: 'icon', type: 'IconSvgObject', default: 'Required', description: 'The main icon component imported from an icon package' },
-      { name: 'altIcon', type: 'IconSvgObject', description: 'Alternative icon component from an icon package for states, interactions, or animations' },
-      { name: 'showAlt', type: 'boolean', default: 'false', description: 'When true, displays the altIcon instead of the main icon' },
-      { name: 'size', type: 'number', default: '24', description: 'Icon size in pixels' },
-      { name: 'color', type: 'string', default: 'currentColor', description: 'Icon color (CSS color value)' },
-      { name: 'strokeWidth', type: 'number', default: '1.5', description: 'Width of the icon strokes (works with stroke-style icons)' },
-      { name: 'class', type: 'string', description: 'Additional CSS classes' }
-    ]
+    props: jsProps({ classProp: 'class', multicolor: true })
   },
   'react-native': {
     platform: 'react-native',
@@ -188,16 +174,9 @@ import { Notification03Icon } from '@hugeicons/core-free-icons'
 // import { Notification03Icon } from '@hugeicons-pro/core-stroke-rounded'
 
 export default function App() {
-  return <HugeiconsIcon icon={Notification03Icon} size={24} color="#000000" strokeWidth={1.5} />
+  return <HugeiconsIcon icon={Notification03Icon} />
 }`,
-    props: [
-      { name: 'icon', type: 'IconSvgObject', default: 'Required', description: 'The main icon component imported from an icon package' },
-      { name: 'altIcon', type: 'IconSvgObject', description: 'Alternative icon component from an icon package for states, interactions, or animations' },
-      { name: 'showAlt', type: 'boolean', default: 'false', description: 'When true, displays the altIcon instead of the main icon' },
-      { name: 'size', type: 'number', default: '24', description: 'Icon size in pixels' },
-      { name: 'color', type: 'string', default: '#000000', description: 'Icon color (color string)' },
-      { name: 'strokeWidth', type: 'number', default: '1.5', description: 'Width of the icon strokes (works with stroke-style icons)' }
-    ]
+    props: jsProps({ classProp: 'className', colorDefault: '#000' })
   },
   'flutter': {
     platform: 'flutter',

@@ -1,0 +1,45 @@
+name: Agent packaging
+
+# The skills in skills/ are shipped through three channels: the Claude Code plugin, the OpenAI
+# plugin package and `npx skills add`. The Claude plugin holds committed copies, because it
+# installs straight from git, so those copies can drift. This catches that.
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'skills/**'
+      - 'plugins/claude/**'
+      - 'plugins/openai/**'
+      - '.claude-plugin/**'
+      - '.github/workflows/agent-packaging.yml'
+  pull_request:
+    paths:
+      - 'skills/**'
+      - 'plugins/claude/**'
+      - 'plugins/openai/**'
+      - '.claude-plugin/**'
+      - '.github/workflows/agent-packaging.yml'
+
+jobs:
+  packaging:
+    name: Skills in sync and manifests valid
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Claude plugin skills match skills/
+        run: python3 plugins/claude/sync.py --check
+
+      - name: OpenAI plugin package is valid
+        run: python3 plugins/openai/check.py --check
+
+      # check.py syncs its own skill copies before validating. Those copies are gitignored, so
+      # a dirty tree here means something tracked changed and needs committing.
+      - name: No tracked files changed
+        run: |
+          if [ -n "$(git status --porcelain)" ]; then
+            echo "These tracked files changed during the checks:"
+            git status --porcelain
+            exit 1
+          fi

@@ -16,13 +16,16 @@ import { getClientIp, RateLimiter } from "./rate-limit.js";
 const PORT = Number(process.env.PORT ?? 3000);
 const HOST = process.env.HOST ?? "0.0.0.0";
 const MAX_BODY_BYTES = 1024 * 1024;
-// Requests per minute per client IP on /mcp; 0 disables the limit
-const RATE_LIMIT_PER_MINUTE = Number(process.env.RATE_LIMIT_PER_MINUTE ?? 60);
+// Requests per minute per client IP on /mcp; 0 disables the limit.
+// Agent clients arrive from shared egress IPs — one ChatGPT or Codex IP carries many
+// users, and a single task can fire a dozen calls — so this is set well above what one
+// user needs. Lower it only if a proxy gives you a per-user address.
+const RATE_LIMIT_PER_MINUTE = Number(process.env.RATE_LIMIT_PER_MINUTE ?? 300);
 const CLIENT_IP_HEADER = process.env.CLIENT_IP_HEADER ?? "x-forwarded-for";
 
-// The analytics SDK records the request headers of every tool call, so drop
-// credentials before the request reaches the transport. The server doesn't use them.
-const PRIVATE_HEADERS = ["authorization", "proxy-authorization", "cookie"];
+// Domain verification for the OpenAI plugin directory. The portal issues a token and fetches it
+// from /.well-known/openai-apps-challenge as plain text. Unset leaves the route closed.
+const OPENAI_APPS_CHALLENGE = process.env.OPENAI_APPS_CHALLENGE ?? "";
 
 const rateLimiter = RATE_LIMIT_PER_MINUTE > 0 ? new RateLimiter(RATE_LIMIT_PER_MINUTE) : null;
 
@@ -79,8 +82,6 @@ async function handleMcp(req: IncomingMessage, res: ServerResponse) {
     return;
   }
 
-  for (const header of PRIVATE_HEADERS) delete req.headers[header];
-
   const server = new HugeiconsServer();
   const transport = new StreamableHTTPServerTransport({
     sessionIdGenerator: undefined,
@@ -112,6 +113,15 @@ const httpServer = createServer(async (req, res) => {
 
   if (pathname === "/health") {
     sendJson(res, 200, { status: "ok" });
+    return;
+  }
+
+  if (pathname === "/.well-known/openai-apps-challenge") {
+    if (!OPENAI_APPS_CHALLENGE) {
+      sendJson(res, 404, { error: "Not found" });
+      return;
+    }
+    res.writeHead(200, { "Content-Type": "text/plain; charset=utf-8" }).end(OPENAI_APPS_CHALLENGE);
     return;
   }
 

@@ -18,11 +18,10 @@ import {
   McpError,
 } from "@modelcontextprotocol/sdk/types.js";
 import { createRequire } from "node:module";
-import { trackMCP, createConfig } from "agnost";
 import { FREE_STYLE, ICON_STYLES, IconStyle } from "./types.js";
 import { IconIndex, loadIconIndex } from "./icons-index.js";
 import { DEFAULT_LIST_LIMIT, MAX_LIST_LIMIT, SERVER_INSTRUCTIONS, TOOLS } from "./tool-definitions.js";
-import { DEFAULT_SEARCH_LIMIT, MAX_SEARCH_LIMIT, searchIcons } from "./utils/search.js";
+import { DEFAULT_SEARCH_LIMIT, MAX_SEARCH_LIMIT, MAX_SEARCH_TERMS, searchIcons, splitTerms } from "./utils/search.js";
 import { getAllGlyphs, getGlyphByStyle, IconNotFoundError } from "./utils/glyphs.js";
 import { getIconCode } from "./utils/code-snippets.js";
 import { normalizeIconName, webfontName } from "./utils/icon-name.js";
@@ -76,11 +75,6 @@ export class HugeiconsServer {
 
     this.setupToolHandlers();
     this.setupResourceHandlers();
-
-    // Add analytics tracking
-    trackMCP(this.server, "54bfb286-b439-4dc8-9fbe-d08ce48c5d8d", createConfig({
-      endpoint: "https://api.agnost.ai"
-    }));
 
     this.server.onerror = (error) => console.error("[MCP Error]", error);
   }
@@ -229,8 +223,15 @@ export class HugeiconsServer {
    */
   private async handleSearchIcons(args: any) {
     const query = this.requiredString(args, "query", "Search query");
+    const terms = splitTerms(query);
+    if (terms.length > MAX_SEARCH_TERMS) {
+      throw new ToolError(
+        `Too many search terms (${terms.length}). Search at most ${MAX_SEARCH_TERMS} per call — split the rest into another call.`,
+      );
+    }
     const limit = this.intArg(args, "limit", DEFAULT_SEARCH_LIMIT, 1, MAX_SEARCH_LIMIT);
-    return jsonResult({ searches: await searchIcons(query, limit) });
+    const includeTags = args?.include_tags === true;
+    return jsonResult({ searches: await searchIcons(query, limit, includeTags) });
   }
 
   /**

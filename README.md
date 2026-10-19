@@ -83,10 +83,10 @@ Use Hugeicons across your favorite tools and platforms:
 
 [`skills/hugeicons`](skills/hugeicons) is an [agent skill](https://www.skills.sh) that gives coding agents like Claude Code, Codex, and other AI coding agents accurate, first-party guidance on using Hugeicons — so they stop guessing icon names and props from stale training data.
 
-One skill covers every framework. The agent detects which one a project uses and applies the right component, props, and icon catalog:
+One skill covers every framework. The agent detects which one a project uses and applies the right component, props, and icon names:
 
 - **Detect → install → render → props** for React, Vue, Svelte, SolidJS, Angular, React Native, and Flutter
-- The complete icon catalog — [`references/icon-list.md`](skills/hugeicons/references/icon-list.md) for the shared JS exports and [`references/icon-list-flutter.md`](skills/hugeicons/references/icon-list-flutter.md) for Flutter constants — so names are copied, never invented
+- Icon names resolved against the live catalog through the [Hugeicons MCP server](tools/mcp-server) — so names are looked up, never invented. No icon list is bundled: the catalog changes with every release, and a copy frozen at install time goes stale. Without the MCP, the skill falls back to grepping the project's own installed package, which always matches the version it builds against
 - Free vs Pro guidance, plus minimal-code conventions (only pass props that override a default)
 
 Install it with the [`skills`](https://www.skills.sh) CLI from your project root — your agent picks it up on the next session:
@@ -94,6 +94,45 @@ Install it with the [`skills`](https://www.skills.sh) CLI from your project root
 ```bash
 npx skills add hugeicons/hugeicons
 ```
+
+### Migrating to Hugeicons
+
+[`skills/hugeicons-migrate`](skills/hugeicons-migrate) is a second skill for switching an existing project to Hugeicons in bulk — it needs the `hugeicons` skill installed alongside it. It covers:
+
+- The deprecated `hugeicons-react`, `@hugeicons/react-pro`, `hugeicons-react-native` and `@hugeicons/react-native-pro` packages → the current renderer + icon packages, including the `variant`/`type` → Pro package mapping and every renamed icon
+- `@hugeicons/core-free-icons` upgrades where exports were renamed or removed between releases
+- `lucide-react`, `@heroicons/react` and `react-icons` → Hugeicons, with prop translation and verified name maps for the common icons
+
+```bash
+npx skills add hugeicons/hugeicons-migrate
+```
+
+Both skills resolve icon names the same way — through the MCP server, or the installed package — so neither needs regenerating after an icon release.
+
+### Claude Code plugin
+
+[`plugins/claude`](plugins/claude) bundles both skills together with the MCP server, so one install wires up everything:
+
+```bash
+claude plugin marketplace add hugeicons/hugeicons
+claude plugin install hugeicons@hugeicons
+```
+
+### ChatGPT and Codex
+
+The Hugeicons plugin is in the OpenAI plugin directory. The package that builds it lives in [`plugins/openai`](plugins/openai).
+
+### Cursor and other agents
+
+[`plugins/cursor`](plugins/cursor) is a Cursor rule carrying the same decision rules in condensed form. Copy it into your project:
+
+```bash
+mkdir -p .cursor/rules
+curl -o .cursor/rules/hugeicons.mdc \
+  https://raw.githubusercontent.com/hugeicons/hugeicons/main/plugins/cursor/hugeicons.mdc
+```
+
+Any other MCP client connects to the server directly at `https://mcp.hugeicons.com/mcp` — see [`tools/mcp-server`](tools/mcp-server).
 
 <br/>
 
