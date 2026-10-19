@@ -23,6 +23,10 @@ const MAX_BODY_BYTES = 1024 * 1024;
 const RATE_LIMIT_PER_MINUTE = Number(process.env.RATE_LIMIT_PER_MINUTE ?? 300);
 const CLIENT_IP_HEADER = process.env.CLIENT_IP_HEADER ?? "x-forwarded-for";
 
+// Domain verification for the OpenAI plugin directory. The portal issues a token and fetches it
+// from /.well-known/openai-apps-challenge as plain text. Unset leaves the route closed.
+const OPENAI_APPS_CHALLENGE = process.env.OPENAI_APPS_CHALLENGE ?? "";
+
 const rateLimiter = RATE_LIMIT_PER_MINUTE > 0 ? new RateLimiter(RATE_LIMIT_PER_MINUTE) : null;
 
 const CORS_HEADERS = {
@@ -109,6 +113,15 @@ const httpServer = createServer(async (req, res) => {
 
   if (pathname === "/health") {
     sendJson(res, 200, { status: "ok" });
+    return;
+  }
+
+  if (pathname === "/.well-known/openai-apps-challenge") {
+    if (!OPENAI_APPS_CHALLENGE) {
+      sendJson(res, 404, { error: "Not found" });
+      return;
+    }
+    res.writeHead(200, { "Content-Type": "text/plain; charset=utf-8" }).end(OPENAI_APPS_CHALLENGE);
     return;
   }
 
