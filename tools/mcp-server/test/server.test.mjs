@@ -33,6 +33,8 @@ function stubFetch(input) {
     if (url.href === 'https://hugeicons.com/api/icons') return json({ icons: ICONS });
     if (url.host === 'search.hugeicons.com') {
         const q = url.searchParams.get('q');
+        // One term whose upstream request always fails, for the partial-failure tests
+        if (q.startsWith('boom')) return json({ error: 'upstream exploded' }, 500);
         const results = ICONS.filter((icon) => icon.name.includes(q.split(' ')[0])).map((icon, i) => ({
             ...icon, id: String(i), score: 1, tags: icon.tags.split(', '), highlights: {},
         }));
@@ -111,6 +113,24 @@ test('search_icons rejects more terms than it can search, rather than dropping t
     const result = await call('search_icons', { query: Array.from({ length: 11 }, (_, i) => `q${i}`).join(', ') });
     assert.equal(result.isError, true);
     assert.match(result.content[0].text, /Too many search terms \(11\)/);
+});
+
+test('one failing term keeps the terms that did resolve', async () => {
+    const result = await call('search_icons', { query: 'home, boom', limit: 1 });
+    assert.ok(!result.isError, result.content[0]?.text);
+    const [home, boom] = result.structuredContent.searches;
+    assert.deepEqual(home.results, [{ name: 'home-01', component: 'Home01Icon', category: 'home' }]);
+    assert.equal(home.error, undefined);
+    assert.equal(boom.query, 'boom');
+    assert.deepEqual(boom.results, []);
+    // The empty list must be labelled, or it reads as "no such icon"
+    assert.match(boom.error, /says nothing about whether the icon exists/);
+});
+
+test('search_icons reports the service as down only when every term fails', async () => {
+    const result = await call('search_icons', { query: 'boom, boom boom' });
+    assert.equal(result.isError, true);
+    assert.match(result.content[0].text, /search service is unavailable/i);
 });
 
 test('get_icon_code resolves export names and builds snippets', async () => {

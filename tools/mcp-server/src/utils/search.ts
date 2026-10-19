@@ -26,6 +26,8 @@ export interface TermResults {
     /** True when nothing matched closely, so these are the search API's best fuzzy guesses */
     fuzzy: boolean;
     results: IconMatch[];
+    /** Set when this one term failed upstream: `results` is empty because the lookup broke, not because the icon is missing */
+    error?: string;
 }
 
 /**
@@ -141,7 +143,28 @@ export async function searchIcons(
     includeTags = false,
 ): Promise<TermResults[]> {
     const terms = splitTerms(searchQuery).slice(0, MAX_SEARCH_TERMS);
-    return Promise.all(terms.map((term) => searchTerm(term, limit, includeTags)));
+    const settled = await Promise.allSettled(terms.map((term) => searchTerm(term, limit, includeTags)));
+
+    // A batched search is several upstream requests. One flaky request used to reject the whole
+    // call and throw away the terms that did resolve, so keep those and mark only what failed.
+    const searches: TermResults[] = settled.map((outcome, i) => outcome.status === 'fulfilled'
+        ? outcome.value
+        : {
+            query: terms[i],
+            total: 0,
+            fuzzy: false,
+            results: [],
+            // Empty results must never read as "this icon doesn't exist" — that is how a model
+            // talks itself into inventing a name.
+            error: 'This term could not be searched, which says nothing about whether the icon exists. Search it again on its own.',
+        });
+
+    // Nothing came back at all: the service is down, and the caller should hear that rather than
+    // a list of empty results.
+    if (searches.length > 0 && searches.every((s) => s.error)) {
+        throw new SearchUnavailableError('The Hugeicons search service is unavailable. Try again shortly.');
+    }
+    return searches;
 }
 
 /**

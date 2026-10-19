@@ -16,8 +16,11 @@ import { getClientIp, RateLimiter } from "./rate-limit.js";
 const PORT = Number(process.env.PORT ?? 3000);
 const HOST = process.env.HOST ?? "0.0.0.0";
 const MAX_BODY_BYTES = 1024 * 1024;
-// Requests per minute per client IP on /mcp; 0 disables the limit
-const RATE_LIMIT_PER_MINUTE = Number(process.env.RATE_LIMIT_PER_MINUTE ?? 60);
+// Requests per minute per client IP on /mcp; 0 disables the limit.
+// Agent clients arrive from shared egress IPs — one ChatGPT or Codex IP carries many
+// users, and a single task can fire a dozen calls — so this is set well above what one
+// user needs. Lower it only if a proxy gives you a per-user address.
+const RATE_LIMIT_PER_MINUTE = Number(process.env.RATE_LIMIT_PER_MINUTE ?? 300);
 const CLIENT_IP_HEADER = process.env.CLIENT_IP_HEADER ?? "x-forwarded-for";
 
 const rateLimiter = RATE_LIMIT_PER_MINUTE > 0 ? new RateLimiter(RATE_LIMIT_PER_MINUTE) : null;

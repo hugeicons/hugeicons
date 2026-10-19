@@ -1,0 +1,125 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "hugeicons",
+  "version": "1.0.0",
+  "description": "Find the right Hugeicons icon names and use the official Hugeicons packages correctly in React, Vue, Angular, Svelte, Solid, React Native, Flutter and plain HTML.",
+  "author": {
+    "name": "Hugeicons",
+    "url": "https://hugeicons.com"
+  },
+  "homepage": "https://hugeicons.com/docs/integrations/mcp",
+  "license": "MIT",
+  "keywords": [
+    "icons",
+    "icon library",
+    "icon set",
+    "svg icons",
+    "svg",
+    "icon font",
+    "web font",
+    "ui",
+    "ui components",
+    "frontend",
+    "design system",
+    "dashboard icons",
+    "react",
+    "vue",
+    "angular",
+    "svelte",
+    "solidjs",
+    "react native",
+    "flutter",
+    "lucide",
+    "heroicons",
+    "react-icons"
+  ],
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "Hugeicons",
+        "shortDescription": "Find icons for your UI code",
+        "longDescription": "Hugeicons helps ChatGPT and Codex add icons to your app the right way. Instead of guessing icon names from memory, the agent searches the real Hugeicons library by meaning and tags, picks names that actually exist, and keeps one consistent style across your whole project.\n\nThe library:\n- 6,000+ free icons in the Stroke Rounded style, through the official free Hugeicons packages\n- Over 60,000 icons in total across 10 styles, with the other nine styles on a Hugeicons Pro license\n\nStroke Rounded is the complete set. Every icon in the library is drawn in it, so no icon is locked behind a license. Pro adds those same icons in Stroke Sharp, Stroke Standard, Solid Rounded, Solid Sharp, Solid Standard, Bulk Rounded, Duotone Rounded, Duotone Standard and Twotone Rounded.\n\nWhat it does:\n- Search icons by name or purpose, several at once (for example \"home, settings, wallet\")\n- Browse icons by category\n- Give the exact install command and import pattern for React, Vue, Angular, Svelte, Solid, React Native, Flutter and plain HTML (web font)\n- Check icon names in your code before you ship, and suggest the closest real icon when a name is wrong\n- Look up icon font glyphs for projects without a build step\n- Migrate an existing project to Hugeicons in bulk, from lucide-react, Heroicons, react-icons or the deprecated hugeicons-react packages. Every name is resolved against the real library instead of guessed, and anything it cannot match is left for you to decide.\n\nLimitations: Hugeicons does not send icon files (SVG or PNG) and does not change or delete anything. Icons render through the official Hugeicons packages or web font in your own project. Learn more at hugeicons.com.",
+        "developerName": "Halal Lab",
+        "category": "Developer Tools",
+        "capabilities": [
+          "Search icons by name or purpose",
+          "Browse icon categories",
+          "Framework setup and import guides",
+          "Check icon names in code",
+          "Icon font glyph lookup",
+          "Migrate from lucide, Heroicons or react-icons"
+        ],
+        "websiteURL": "https://hugeicons.com",
+        "supportURL": "https://hugeicons.com/faq/general",
+        "privacyPolicyURL": "https://hugeicons.com/privacy-policy",
+        "termsOfServiceURL": "https://hugeicons.com/terms-of-service",
+        "defaultPrompt": [
+          "Add consistent icons to the sidebar navigation in my React app",
+          "Find icons for a fintech app: wallet, transfer, invoice, settings",
+          "Set up Hugeicons in my Flutter app"
+        ],
+        "composerIcon": "./assets/icon.png",
+        "composerIconDark": "./assets/icon-dark.png",
+        "logo": "./assets/logo.png",
+        "logoDark": "./assets/logo-dark.png"
+      },
+      "onboardingSkill": "./skills/get-started/SKILL.md",
+      "review": {
+        "demo_recording_url": "https://youtu.be/Z7FaTUqfdEM",
+        "test_cases": {
+          "positive": [
+            {
+              "description": "Find several icons for one product in a single search",
+              "prompt": "Find icons for a fintech app: wallet, transfer, invoice, settings",
+              "tools_triggered": "search_icons",
+              "expected_behavior": "Runs one search with the four terms and returns real Hugeicons names for each, for example wallet-01, invoice and settings-01, and recommends one style for all of them."
+            },
+            {
+              "description": "Set up Hugeicons in a React project and add an icon",
+              "prompt": "Set up Hugeicons in my React app and add a notification bell to the header",
+              "tools_triggered": "get_platform_usage, search_icons",
+              "expected_behavior": "Gives the install command for @hugeicons/react and @hugeicons/core-free-icons, finds a real notification icon such as notification-01, and shows HugeiconsIcon code that imports Notification01Icon from the free package."
+            },
+            {
+              "description": "Migrate an existing icon library to Hugeicons",
+              "prompt": "Replace lucide-react with Hugeicons in my React app",
+              "tools_triggered": "search_icons, get_platform_usage",
+              "expected_behavior": "Collects the lucide icons in use, resolves them in one batched search (for example Trash2 to trash/TrashIcon, Settings to settings-01/Settings01Icon, Bell to bell/BellIcon), swaps the imports to @hugeicons/react plus @hugeicons/core-free-icons with HugeiconsIcon, and lists any name it could not match instead of substituting a look-alike."
+            },
+            {
+              "description": "Check icon names before shipping and correct a wrong one",
+              "prompt": "Check these Hugeicons names in my code before I ship: Home01Icon, SetingsIcon",
+              "tools_triggered": "get_icon_glyphs, search_icons",
+              "expected_behavior": "Confirms Home01Icon exists (home-01), reports that SetingsIcon is not a Hugeicons icon, searches for the intended icon and suggests a real replacement such as Settings01Icon."
+            },
+            {
+              "description": "Use the web font in a plain HTML page with no build step",
+              "prompt": "I have a plain HTML page with no build step. Add a search icon using the Hugeicons web font.",
+              "tools_triggered": "get_platform_usage, search_icons",
+              "expected_behavior": "Adds the stylesheet link https://use.hugeicons.com/font/icons.css and an element such as <i class=\"hgi-stroke hgi-search-01\"></i> using a real icon name. It does not paste or draw SVG markup."
+            }
+          ],
+          "negative": [
+            {
+              "description": "Request for icon files. The plugin provides no files, so it should not draw or invent SVG markup; it should point the user to hugeicons.com/icons or the official package for their framework.",
+              "prompt": "Send me the SVG file for the Hugeicons home icon."
+            },
+            {
+              "description": "Request to use Pro styles without a license. The plugin should explain that Pro styles need a Hugeicons Pro license, link to hugeicons.com/pricing, and offer the free Stroke Rounded style instead.",
+              "prompt": "Give me the Hugeicons Pro duotone icons for free without a license."
+            },
+            {
+              "description": "Unrelated request. No Hugeicons tool should be called.",
+              "prompt": "What's the weather in Dhaka tomorrow?"
+            }
+          ]
+        },
+        "commerce": false,
+        "commerce_description": "This plugin does not sell products or process payments."
+      },
+      "publication": {
+        "release_notes": "Initial release: icon search, category browsing, framework setup guides, icon name checks and icon font glyph lookup, with skills for consistent icon use and first-time setup."
+      }
+    }
+  }
+}

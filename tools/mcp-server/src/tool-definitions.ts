@@ -102,6 +102,7 @@ export const TOOLS: Tool[] = [
                   required: ["name", "component", "category"],
                 },
               },
+              error: { type: "string", description: "Present when this term's search failed. Its results are empty because the lookup broke, not because the icon is missing — search the term again on its own" },
             },
             required: ["query", "total", "fuzzy", "results"],
           },
