@@ -109,6 +109,19 @@ npx skills add hugeicons/hugeicons-migrate
 
 Both skills resolve icon names the same way — through the MCP server, or the installed package — so neither needs regenerating after an icon release.
 
+### Claude Code plugin
+
+[`plugins/claude`](plugins/claude) bundles both skills together with the MCP server, so one install wires up everything:
+
+```bash
+claude plugin marketplace add hugeicons/hugeicons
+claude plugin install hugeicons@hugeicons
+```
+
+### ChatGPT and Codex
+
+The Hugeicons plugin is in the OpenAI plugin directory. The package that builds it lives in [`plugins/openai`](plugins/openai).
+
 <br/>
 
 ## Quick start
