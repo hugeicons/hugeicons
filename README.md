@@ -122,6 +122,10 @@ claude plugin install hugeicons@hugeicons
 
 The Hugeicons plugin is in the OpenAI plugin directory. The package that builds it lives in [`plugins/openai`](plugins/openai).
 
+### Grok Build
+
+[`plugins/grok`](plugins/grok) is the same pairing — both skills plus the MCP server — packaged for Grok Build. The [xAI plugin marketplace](https://github.com/xai-org/plugin-marketplace) is an index rather than a host, so its catalog entry points at a pinned commit of this repository; see the plugin README for the entry and the submission steps.
+
 ### Cursor and other agents
 
 [`plugins/cursor`](plugins/cursor) is a Cursor rule carrying the same decision rules in condensed form. Copy it into your project:
