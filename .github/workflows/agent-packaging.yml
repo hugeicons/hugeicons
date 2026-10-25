@@ -1,8 +1,9 @@
 name: Agent packaging
 
-# The skills in skills/ are shipped through three channels: the Claude Code plugin, the OpenAI
-# plugin package and `npx skills add`. The Claude plugin holds committed copies, because it
-# installs straight from git, so those copies can drift. This catches that.
+# The skills in skills/ are shipped through four channels: the Claude Code plugin, the Grok
+# Build plugin, the OpenAI plugin package and `npx skills add`. The Claude and Grok plugins hold
+# committed copies, because they install straight from git, so those copies can drift. This
+# catches that.
 
 on:
   push:
@@ -10,14 +11,18 @@ on:
     paths:
       - 'skills/**'
       - 'plugins/claude/**'
+      - 'plugins/grok/**'
       - 'plugins/openai/**'
+      - 'plugins/sync-skills.py'
       - '.claude-plugin/**'
       - '.github/workflows/agent-packaging.yml'
   pull_request:
     paths:
       - 'skills/**'
       - 'plugins/claude/**'
+      - 'plugins/grok/**'
       - 'plugins/openai/**'
+      - 'plugins/sync-skills.py'
       - '.claude-plugin/**'
       - '.github/workflows/agent-packaging.yml'
 
@@ -28,8 +33,13 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Claude plugin skills match skills/
-        run: python3 plugins/claude/sync.py --check
+      - name: Claude and Grok plugin skills match skills/
+        run: python3 plugins/sync-skills.py --check
+
+      - name: Grok plugin manifests are valid JSON
+        run: |
+          python3 -c "import json; json.load(open('plugins/grok/.grok-plugin/plugin.json'))"
+          python3 -c "import json; json.load(open('plugins/grok/.mcp.json'))"
 
       - name: OpenAI plugin package is valid
         run: python3 plugins/openai/check.py --check

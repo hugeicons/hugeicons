@@ -18,20 +18,20 @@ claude plugin install hugeicons@hugeicons
 | `.mcp.json` | The Hugeicons MCP server, HTTP transport, no authentication |
 | `skills/hugeicons/` | Main skill. Copied from `../../skills/hugeicons` |
 | `skills/hugeicons-migrate/` | Migration skill. Copied from `../../skills/hugeicons-migrate` |
-| `sync.py` | Refreshes those copies from `../../skills` |
 
 ## Editing the skills
 
-Edit them in `../../skills`, never here, then run:
+Edit them in `../../skills`, never here, then run from the repository root:
 
 ```bash
-python3 sync.py          # copy the canonical skills into this plugin
-python3 sync.py --check  # exit 1 if these copies are stale
+python3 plugins/sync-skills.py          # copy the canonical skills into this plugin
+python3 plugins/sync-skills.py --check  # exit 1 if these copies are stale
 ```
 
 A Claude Code plugin installs straight from git, so unlike the OpenAI package these copies are
-committed rather than built. That means they can drift: run `sync.py` after changing anything
-under `../../skills` and commit the result. `--check` is there to catch it in CI.
+committed rather than built. That means they can drift: run the script after changing anything
+under `../../skills` and commit the result. `--check` is there to catch it in CI. The same
+script also syncs [`plugins/grok`](../grok), which ships committed copies for the same reason.
 
 ## Validate
 
