@@ -37,7 +37,7 @@ To install and start using Hugeicons Flutter Icons in your project, follow the s
 
 ```dart
 dependencies:
-  hugeicons: ^1.0.0
+  hugeicons: ^4.4.0
 ```
 
 Then run:

@@ -1,5 +1,22 @@
 # Changelog
 
+## [4.4.0] - 2026-10-30
+
+### Versioning
+- **Package versions now follow the Hugeicons icon library release** (1.2.0 → 4.4.0), like the npm packages. This is a version-number change only: no public API was removed, so updating from 1.x needs only the new constraint (`hugeicons: ^4.4.0`).
+
+### Added
+- **30 New Icons** from Hugeicons 4.4.0 — 6,065 stroke-rounded icons: `strokeRoundedSuperIntelligence…` (15 icons), `strokeRoundedArchiveOff`, `strokeRoundedAttachmentOff`, `strokeRoundedCarTransmission`, `strokeRoundedChartColumnDots`, `strokeRoundedCreditCardLink`, `strokeRoundedEditMultiple`, `strokeRoundedEditMultiple01`, `strokeRoundedFolderSearch01`, `strokeRoundedHammer01`, `strokeRoundedLaugh`, `strokeRoundedListOrderedAz`, `strokeRoundedMicrosoftTeams`, `strokeRoundedMoneyBagTime`, `strokeRoundedUnionCircle`, `strokeRoundedUnionHorizontalCircle`
+
+### Changed
+- **Updated Icons**: 798 icons redrawn in Hugeicons 4.4.0 (the bookmark, folder, message and AI families among others) now ship their new drawings
+
+### Deprecated
+- Old names whose drawings were renamed in the icon set now point at the current icon instead of a frozen copy: `strokeRounded4Square` … `strokeRounded9Square` → `strokeRoundedFourSquare` … `strokeRoundedNineSquare`, `strokeRoundedAdvertisement` → `strokeRoundedAdvertisiment`, `strokeRoundedRubikSCube` → `strokeRoundedRubiksCube` (same for every style that has them)
+- `…SingleFire` and `…SquareSingleFire` are no longer in the icon set; they keep their 1.2.0 drawing and stay `@Deprecated` until the next major version
+
+---
+
 ## [1.2.0] - 2026-09-16
 
 ### Added

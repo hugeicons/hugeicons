@@ -26,6 +26,12 @@ class HugeIcons {
       HugeIconsStrokeRounded.strokeRounded2ndBracketCircle;
   static const List<List<dynamic>> strokeRounded2ndBracketSquare =
       HugeIconsStrokeRounded.strokeRounded2ndBracketSquare;
+  static const List<List<dynamic>> strokeRounded3DMove =
+      HugeIconsStrokeRounded.strokeRounded3DMove;
+  static const List<List<dynamic>> strokeRounded3DRotate =
+      HugeIconsStrokeRounded.strokeRounded3DRotate;
+  static const List<List<dynamic>> strokeRounded3DScale =
+      HugeIconsStrokeRounded.strokeRounded3DScale;
   static const List<List<dynamic>> strokeRounded3DView =
       HugeIconsStrokeRounded.strokeRounded3DView;
   static const List<List<dynamic>> strokeRounded3GSignal =
@@ -46,6 +52,8 @@ class HugeIcons {
       HugeIconsStrokeRounded.strokeRounded3rdBracketSquare;
   static const List<List<dynamic>> strokeRounded4GSignal =
       HugeIconsStrokeRounded.strokeRounded4GSignal;
+  static const List<List<dynamic>> strokeRoundedFourK =
+      HugeIconsStrokeRounded.strokeRoundedFourK;
   static const List<List<dynamic>> strokeRounded4K =
       HugeIconsStrokeRounded.strokeRounded4K;
   static const List<List<dynamic>> strokeRounded5GSignal =
@@ -657,6 +665,8 @@ class HugeIcons {
       HugeIconsStrokeRounded.strokeRoundedArchiveArrowDown;
   static const List<List<dynamic>> strokeRoundedArchiveArrowUp =
       HugeIconsStrokeRounded.strokeRoundedArchiveArrowUp;
+  static const List<List<dynamic>> strokeRoundedArchiveOff =
+      HugeIconsStrokeRounded.strokeRoundedArchiveOff;
   static const List<List<dynamic>> strokeRoundedArchiveOff03 =
       HugeIconsStrokeRounded.strokeRoundedArchiveOff03;
   static const List<List<dynamic>> strokeRoundedArchiveOff04 =
@@ -921,6 +931,8 @@ class HugeIcons {
       HugeIconsStrokeRounded.strokeRoundedAttachment02;
   static const List<List<dynamic>> strokeRoundedAttachmentCircle =
       HugeIconsStrokeRounded.strokeRoundedAttachmentCircle;
+  static const List<List<dynamic>> strokeRoundedAttachmentOff =
+      HugeIconsStrokeRounded.strokeRoundedAttachmentOff;
   static const List<List<dynamic>> strokeRoundedAttachmentSquare =
       HugeIconsStrokeRounded.strokeRoundedAttachmentSquare;
   static const List<List<dynamic>> strokeRoundedAuction =
@@ -1789,6 +1801,8 @@ class HugeIcons {
       HugeIconsStrokeRounded.strokeRoundedBus03;
   static const List<List<dynamic>> strokeRoundedBusFront =
       HugeIconsStrokeRounded.strokeRoundedBusFront;
+  static const List<List<dynamic>> strokeRoundedC =
+      HugeIconsStrokeRounded.strokeRoundedC;
   static const List<List<dynamic>> strokeRoundedCProgramming =
       HugeIconsStrokeRounded.strokeRoundedCProgramming;
   static const List<List<dynamic>> strokeRoundedCabinet01 =
@@ -2131,6 +2145,8 @@ class HugeIcons {
       HugeIconsStrokeRounded.strokeRoundedCarTaxiFront;
   static const List<List<dynamic>> strokeRoundedCarTime =
       HugeIconsStrokeRounded.strokeRoundedCarTime;
+  static const List<List<dynamic>> strokeRoundedCarTransmission =
+      HugeIconsStrokeRounded.strokeRoundedCarTransmission;
   static const List<List<dynamic>> strokeRoundedCaravan =
       HugeIconsStrokeRounded.strokeRoundedCaravan;
   static const List<List<dynamic>> strokeRoundedCardExchange01 =
@@ -2291,6 +2307,8 @@ class HugeIcons {
       HugeIconsStrokeRounded.strokeRoundedChartColumnBig;
   static const List<List<dynamic>> strokeRoundedChartColumnDecreasing =
       HugeIconsStrokeRounded.strokeRoundedChartColumnDecreasing;
+  static const List<List<dynamic>> strokeRoundedChartColumnDots =
+      HugeIconsStrokeRounded.strokeRoundedChartColumnDots;
   static const List<List<dynamic>> strokeRoundedChartColumnIncreasing =
       HugeIconsStrokeRounded.strokeRoundedChartColumnIncreasing;
   static const List<List<dynamic>> strokeRoundedChartColumnStacked =
@@ -3274,6 +3292,8 @@ class HugeIcons {
       HugeIconsStrokeRounded.strokeRoundedCreditCardDefrost;
   static const List<List<dynamic>> strokeRoundedCreditCardFreeze =
       HugeIconsStrokeRounded.strokeRoundedCreditCardFreeze;
+  static const List<List<dynamic>> strokeRoundedCreditCardLink =
+      HugeIconsStrokeRounded.strokeRoundedCreditCardLink;
   static const List<List<dynamic>> strokeRoundedCreditCardNotAccept =
       HugeIconsStrokeRounded.strokeRoundedCreditCardNotAccept;
   static const List<List<dynamic>> strokeRoundedCreditCardNotFound =
@@ -3970,6 +3990,10 @@ class HugeIcons {
       HugeIconsStrokeRounded.strokeRoundedEdit03;
   static const List<List<dynamic>> strokeRoundedEdit04 =
       HugeIconsStrokeRounded.strokeRoundedEdit04;
+  static const List<List<dynamic>> strokeRoundedEditMultiple =
+      HugeIconsStrokeRounded.strokeRoundedEditMultiple;
+  static const List<List<dynamic>> strokeRoundedEditMultiple01 =
+      HugeIconsStrokeRounded.strokeRoundedEditMultiple01;
   static const List<List<dynamic>> strokeRoundedEditOff =
       HugeIconsStrokeRounded.strokeRoundedEditOff;
   static const List<List<dynamic>> strokeRoundedEditOff03 =
@@ -4632,6 +4656,10 @@ class HugeIcons {
       HugeIconsStrokeRounded.strokeRoundedFolderManagement;
   static const List<List<dynamic>> strokeRoundedFolderMinus =
       HugeIconsStrokeRounded.strokeRoundedFolderMinus;
+  static const List<List<dynamic>> strokeRoundedFolderMoveIn =
+      HugeIconsStrokeRounded.strokeRoundedFolderMoveIn;
+  static const List<List<dynamic>> strokeRoundedFolderMoveTo =
+      HugeIconsStrokeRounded.strokeRoundedFolderMoveTo;
   static const List<List<dynamic>> strokeRoundedFolderMusic =
       HugeIconsStrokeRounded.strokeRoundedFolderMusic;
   static const List<List<dynamic>> strokeRoundedFolderOff =
@@ -4654,6 +4682,8 @@ class HugeIcons {
       HugeIconsStrokeRounded.strokeRoundedFolderRoot;
   static const List<List<dynamic>> strokeRoundedFolderSearch =
       HugeIconsStrokeRounded.strokeRoundedFolderSearch;
+  static const List<List<dynamic>> strokeRoundedFolderSearch01 =
+      HugeIconsStrokeRounded.strokeRoundedFolderSearch01;
   static const List<List<dynamic>> strokeRoundedFolderSearch2 =
       HugeIconsStrokeRounded.strokeRoundedFolderSearch2;
   static const List<List<dynamic>> strokeRoundedFolderSecurity =
@@ -5088,6 +5118,8 @@ class HugeIcons {
       HugeIconsStrokeRounded.strokeRoundedHamburger02;
   static const List<List<dynamic>> strokeRoundedHammer =
       HugeIconsStrokeRounded.strokeRoundedHammer;
+  static const List<List<dynamic>> strokeRoundedHammer01 =
+      HugeIconsStrokeRounded.strokeRoundedHammer01;
   static const List<List<dynamic>> strokeRoundedHand =
       HugeIconsStrokeRounded.strokeRoundedHand;
   static const List<List<dynamic>> strokeRoundedHandBag01 =
@@ -5912,6 +5944,8 @@ class HugeIcons {
       HugeIconsStrokeRounded.strokeRoundedLastFm;
   static const List<List<dynamic>> strokeRoundedLatitude =
       HugeIconsStrokeRounded.strokeRoundedLatitude;
+  static const List<List<dynamic>> strokeRoundedLaugh =
+      HugeIconsStrokeRounded.strokeRoundedLaugh;
   static const List<List<dynamic>> strokeRoundedLaughing =
       HugeIconsStrokeRounded.strokeRoundedLaughing;
   static const List<List<dynamic>> strokeRoundedLaurelWreath01 =
@@ -6170,6 +6204,8 @@ class HugeIcons {
       HugeIconsStrokeRounded.strokeRoundedListMusic;
   static const List<List<dynamic>> strokeRoundedListOrdered =
       HugeIconsStrokeRounded.strokeRoundedListOrdered;
+  static const List<List<dynamic>> strokeRoundedListOrderedAz =
+      HugeIconsStrokeRounded.strokeRoundedListOrderedAz;
   static const List<List<dynamic>> strokeRoundedListPlus =
       HugeIconsStrokeRounded.strokeRoundedListPlus;
   static const List<List<dynamic>> strokeRoundedListRestart =
@@ -6894,6 +6930,8 @@ class HugeIcons {
       HugeIconsStrokeRounded.strokeRoundedMicrosoft;
   static const List<List<dynamic>> strokeRoundedMicrosoftAdmin =
       HugeIconsStrokeRounded.strokeRoundedMicrosoftAdmin;
+  static const List<List<dynamic>> strokeRoundedMicrosoftTeams =
+      HugeIconsStrokeRounded.strokeRoundedMicrosoftTeams;
   static const List<List<dynamic>> strokeRoundedMicrowave =
       HugeIconsStrokeRounded.strokeRoundedMicrowave;
   static const List<List<dynamic>> strokeRoundedMilestone =
@@ -7002,6 +7040,8 @@ class HugeIcons {
       HugeIconsStrokeRounded.strokeRoundedMoneyBag01;
   static const List<List<dynamic>> strokeRoundedMoneyBag02 =
       HugeIconsStrokeRounded.strokeRoundedMoneyBag02;
+  static const List<List<dynamic>> strokeRoundedMoneyBagTime =
+      HugeIconsStrokeRounded.strokeRoundedMoneyBagTime;
   static const List<List<dynamic>> strokeRoundedMoneyExchange01 =
       HugeIconsStrokeRounded.strokeRoundedMoneyExchange01;
   static const List<List<dynamic>> strokeRoundedMoneyExchange02 =
@@ -7324,14 +7364,14 @@ class HugeIcons {
       HugeIconsStrokeRounded.strokeRoundedMoveUpRight;
   static const List<List<dynamic>> strokeRoundedMoveVertical =
       HugeIconsStrokeRounded.strokeRoundedMoveVertical;
+  static const List<List<dynamic>> strokeRoundedMp301 =
+      HugeIconsStrokeRounded.strokeRoundedMp301;
   static const List<List<dynamic>> strokeRoundedMp302 =
       HugeIconsStrokeRounded.strokeRoundedMp302;
   static const List<List<dynamic>> strokeRoundedMp401 =
       HugeIconsStrokeRounded.strokeRoundedMp401;
   static const List<List<dynamic>> strokeRoundedMp402 =
       HugeIconsStrokeRounded.strokeRoundedMp402;
-  static const List<List<dynamic>> strokeRoundedMp301 =
-      HugeIconsStrokeRounded.strokeRoundedMp301;
   static const List<List<dynamic>> strokeRoundedMuhammad =
       HugeIconsStrokeRounded.strokeRoundedMuhammad;
   static const List<List<dynamic>> strokeRoundedMultiplicationSign =
@@ -8898,8 +8938,6 @@ class HugeIcons {
       HugeIconsStrokeRounded.strokeRoundedRubElHizb;
   static const List<List<dynamic>> strokeRoundedRubberDuck =
       HugeIconsStrokeRounded.strokeRoundedRubberDuck;
-  static const List<List<dynamic>> strokeRoundedRubikSCube =
-      HugeIconsStrokeRounded.strokeRoundedRubikSCube;
   static const List<List<dynamic>> strokeRoundedRubiksCube =
       HugeIconsStrokeRounded.strokeRoundedRubiksCube;
   static const List<List<dynamic>> strokeRoundedRuku =
@@ -10326,6 +10364,36 @@ class HugeIcons {
       HugeIconsStrokeRounded.strokeRoundedSunrise;
   static const List<List<dynamic>> strokeRoundedSunset =
       HugeIconsStrokeRounded.strokeRoundedSunset;
+  static const List<List<dynamic>> strokeRoundedSuperIntelligence =
+      HugeIconsStrokeRounded.strokeRoundedSuperIntelligence;
+  static const List<List<dynamic>> strokeRoundedSuperIntelligence01 =
+      HugeIconsStrokeRounded.strokeRoundedSuperIntelligence01;
+  static const List<List<dynamic>> strokeRoundedSuperIntelligence02 =
+      HugeIconsStrokeRounded.strokeRoundedSuperIntelligence02;
+  static const List<List<dynamic>> strokeRoundedSuperIntelligence03 =
+      HugeIconsStrokeRounded.strokeRoundedSuperIntelligence03;
+  static const List<List<dynamic>> strokeRoundedSuperIntelligenceChat =
+      HugeIconsStrokeRounded.strokeRoundedSuperIntelligenceChat;
+  static const List<List<dynamic>> strokeRoundedSuperIntelligenceCloud =
+      HugeIconsStrokeRounded.strokeRoundedSuperIntelligenceCloud;
+  static const List<List<dynamic>> strokeRoundedSuperIntelligenceFile =
+      HugeIconsStrokeRounded.strokeRoundedSuperIntelligenceFile;
+  static const List<List<dynamic>> strokeRoundedSuperIntelligenceFolder =
+      HugeIconsStrokeRounded.strokeRoundedSuperIntelligenceFolder;
+  static const List<List<dynamic>> strokeRoundedSuperIntelligenceRobot =
+      HugeIconsStrokeRounded.strokeRoundedSuperIntelligenceRobot;
+  static const List<List<dynamic>> strokeRoundedSuperIntelligenceSearch =
+      HugeIconsStrokeRounded.strokeRoundedSuperIntelligenceSearch;
+  static const List<List<dynamic>> strokeRoundedSuperIntelligenceSetting =
+      HugeIconsStrokeRounded.strokeRoundedSuperIntelligenceSetting;
+  static const List<List<dynamic>> strokeRoundedSuperIntelligenceShield =
+      HugeIconsStrokeRounded.strokeRoundedSuperIntelligenceShield;
+  static const List<List<dynamic>> strokeRoundedSuperIntelligenceSpeech =
+      HugeIconsStrokeRounded.strokeRoundedSuperIntelligenceSpeech;
+  static const List<List<dynamic>> strokeRoundedSuperIntelligenceVideo =
+      HugeIconsStrokeRounded.strokeRoundedSuperIntelligenceVideo;
+  static const List<List<dynamic>> strokeRoundedSuperIntelligenceVoice =
+      HugeIconsStrokeRounded.strokeRoundedSuperIntelligenceVoice;
   static const List<List<dynamic>> strokeRoundedSuperMario =
       HugeIconsStrokeRounded.strokeRoundedSuperMario;
   static const List<List<dynamic>> strokeRoundedSuperMarioToad =
@@ -10886,6 +10954,10 @@ class HugeIcons {
       HugeIconsStrokeRounded.strokeRoundedTimerOff;
   static const List<List<dynamic>> strokeRoundedTimerReset =
       HugeIconsStrokeRounded.strokeRoundedTimerReset;
+  static const List<List<dynamic>> strokeRoundedTinder =
+      HugeIconsStrokeRounded.strokeRoundedTinder;
+  static const List<List<dynamic>> strokeRoundedTinderSquare =
+      HugeIconsStrokeRounded.strokeRoundedTinderSquare;
   static const List<List<dynamic>> strokeRoundedTips =
       HugeIconsStrokeRounded.strokeRoundedTips;
   static const List<List<dynamic>> strokeRoundedTire =
@@ -11252,6 +11324,10 @@ class HugeIcons {
       HugeIconsStrokeRounded.strokeRoundedUngroupLayers;
   static const List<List<dynamic>> strokeRoundedUnhappy =
       HugeIconsStrokeRounded.strokeRoundedUnhappy;
+  static const List<List<dynamic>> strokeRoundedUnionCircle =
+      HugeIconsStrokeRounded.strokeRoundedUnionCircle;
+  static const List<List<dynamic>> strokeRoundedUnionHorizontalCircle =
+      HugeIconsStrokeRounded.strokeRoundedUnionHorizontalCircle;
   static const List<List<dynamic>> strokeRoundedUniversalAccess =
       HugeIconsStrokeRounded.strokeRoundedUniversalAccess;
   static const List<List<dynamic>> strokeRoundedUniversalAccessCircle =
@@ -12118,28 +12194,22 @@ class HugeIcons {
   @Deprecated('Use strokeRoundedThreeSquare instead.')
   static const List<List<dynamic>> strokeRounded3Square =
       HugeIconsStrokeRounded.strokeRounded3Square;
-  @Deprecated(
-      'strokeRounded4Square is not part of the published icon set and will be removed in the next major version.')
+  @Deprecated('Use strokeRoundedFourSquare instead.')
   static const List<List<dynamic>> strokeRounded4Square =
       HugeIconsStrokeRounded.strokeRounded4Square;
-  @Deprecated(
-      'strokeRounded5Square is not part of the published icon set and will be removed in the next major version.')
+  @Deprecated('Use strokeRoundedFiveSquare instead.')
   static const List<List<dynamic>> strokeRounded5Square =
       HugeIconsStrokeRounded.strokeRounded5Square;
-  @Deprecated(
-      'strokeRounded6Square is not part of the published icon set and will be removed in the next major version.')
+  @Deprecated('Use strokeRoundedSixSquare instead.')
   static const List<List<dynamic>> strokeRounded6Square =
       HugeIconsStrokeRounded.strokeRounded6Square;
-  @Deprecated(
-      'strokeRounded7Square is not part of the published icon set and will be removed in the next major version.')
+  @Deprecated('Use strokeRoundedSevenSquare instead.')
   static const List<List<dynamic>> strokeRounded7Square =
       HugeIconsStrokeRounded.strokeRounded7Square;
-  @Deprecated(
-      'strokeRounded8Square is not part of the published icon set and will be removed in the next major version.')
+  @Deprecated('Use strokeRoundedEightSquare instead.')
   static const List<List<dynamic>> strokeRounded8Square =
       HugeIconsStrokeRounded.strokeRounded8Square;
-  @Deprecated(
-      'strokeRounded9Square is not part of the published icon set and will be removed in the next major version.')
+  @Deprecated('Use strokeRoundedNineSquare instead.')
   static const List<List<dynamic>> strokeRounded9Square =
       HugeIconsStrokeRounded.strokeRounded9Square;
   @Deprecated('Use strokeRounded1stBracket instead.')
@@ -12178,39 +12248,15 @@ class HugeIcons {
   @Deprecated('Use strokeRoundedRoot3rdBracket instead.')
   static const List<List<dynamic>> strokeRoundedRoot3rdBrecket =
       HugeIconsStrokeRounded.strokeRoundedRoot3rdBrecket;
-  @Deprecated('Use strokeRounded3dMove instead.')
-  static const List<List<dynamic>> strokeRounded3DMove =
-      HugeIconsStrokeRounded.strokeRounded3DMove;
-  @Deprecated('Use strokeRounded3dRotate instead.')
-  static const List<List<dynamic>> strokeRounded3DRotate =
-      HugeIconsStrokeRounded.strokeRounded3DRotate;
-  @Deprecated('Use strokeRounded3dScale instead.')
-  static const List<List<dynamic>> strokeRounded3DScale =
-      HugeIconsStrokeRounded.strokeRounded3DScale;
-  @Deprecated('Use strokeRounded4K instead.')
-  static const List<List<dynamic>> strokeRoundedFourK =
-      HugeIconsStrokeRounded.strokeRoundedFourK;
   @Deprecated('Use strokeRoundedModernTvFourK instead.')
   static const List<List<dynamic>> strokeRoundedModernTv4K =
       HugeIconsStrokeRounded.strokeRoundedModernTv4K;
-  @Deprecated('Use strokeRoundedCpp instead.')
-  static const List<List<dynamic>> strokeRoundedC =
-      HugeIconsStrokeRounded.strokeRoundedC;
   @Deprecated('Use strokeRoundedTropicalStormTracks02 instead.')
   static const List<List<dynamic>> strokeRoundedTropicalStormTracks =
       HugeIconsStrokeRounded.strokeRoundedTropicalStormTracks;
-  @Deprecated(
-      'strokeRoundedAdvertisement is not part of the published icon set and will be removed in the next major version.')
+  @Deprecated('Use strokeRoundedAdvertisiment instead.')
   static const List<List<dynamic>> strokeRoundedAdvertisement =
       HugeIconsStrokeRounded.strokeRoundedAdvertisement;
-  @Deprecated(
-      'strokeRoundedFolderMoveIn is not part of the published icon set and will be removed in the next major version.')
-  static const List<List<dynamic>> strokeRoundedFolderMoveIn =
-      HugeIconsStrokeRounded.strokeRoundedFolderMoveIn;
-  @Deprecated(
-      'strokeRoundedFolderMoveTo is not part of the published icon set and will be removed in the next major version.')
-  static const List<List<dynamic>> strokeRoundedFolderMoveTo =
-      HugeIconsStrokeRounded.strokeRoundedFolderMoveTo;
   @Deprecated(
       'strokeRoundedSingleFire is not part of the published icon set and will be removed in the next major version.')
   static const List<List<dynamic>> strokeRoundedSingleFire =
@@ -12219,14 +12265,9 @@ class HugeIcons {
       'strokeRoundedSquareSingleFire is not part of the published icon set and will be removed in the next major version.')
   static const List<List<dynamic>> strokeRoundedSquareSingleFire =
       HugeIconsStrokeRounded.strokeRoundedSquareSingleFire;
-  @Deprecated(
-      'strokeRoundedTinder is not part of the published icon set and will be removed in the next major version.')
-  static const List<List<dynamic>> strokeRoundedTinder =
-      HugeIconsStrokeRounded.strokeRoundedTinder;
-  @Deprecated(
-      'strokeRoundedTinderSquare is not part of the published icon set and will be removed in the next major version.')
-  static const List<List<dynamic>> strokeRoundedTinderSquare =
-      HugeIconsStrokeRounded.strokeRoundedTinderSquare;
+  @Deprecated('Use strokeRoundedRubiksCube instead.')
+  static const List<List<dynamic>> strokeRoundedRubikSCube =
+      HugeIconsStrokeRounded.strokeRoundedRubikSCube;
   // GENERATED ICONS END
 }
 
