@@ -1,8 +1,13 @@
 import type { IconSvgObject } from './types';
 
 const AiDnaIcon: IconSvgObject = [
-  ["path", { d: "M7.49114 14.0015C3.00094 11.6015 3.00094 10.4015 3.00094 10.0015C3.00094 9.60146 3.00094 8.40146 7.49114 6.00146M7.49114 14.0015C3.00094 16.4015 3.00006 17.2015 3.00006 18.0015M7.49114 14.0015C11.9804 11.602 11.9804 10.402 11.9804 10.0017C11.9804 9.60147 11.9804 8.40099 7.49114 6.00146M7.49114 6.00146C11.9813 3.60146 11.9813 2.80146 11.9813 2.00146M7.49114 6.00146L5.30787 4.74576C3.00063 3.28295 3.00006 2.64221 3.00006 2.00146", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "0" }],
-  ["path", { d: "M14.4119 12.0005V13.9795M10.9249 15.5009H12.9768M18.9479 15.5009H20.9999M18.9479 18.4741H20.9999M10.9249 18.4741H12.9768M14.4119 20.0197V21.9987M17.4373 20.0197V21.9987M17.4266 12.0005V13.9795M13.9768 19.968H17.9479C18.5002 19.968 18.9479 19.5203 18.9479 18.968V14.9795C18.9479 14.4272 18.5002 13.9795 17.9479 13.9795H13.9768C13.4246 13.9795 12.9768 14.4272 12.9768 14.9795V18.968C12.9768 19.5203 13.4246 19.968 13.9768 19.968Z", stroke: "currentColor", strokeLinecap: "round", strokeWidth: "1.5", key: "1" }]
+  ["path", { d: "M16 3.00012C16 12.0001 4 12.0001 4 21.0001", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "0" }],
+  ["path", { d: "M4 3.00012C4 9.35521 9.98328 11.2228 13.5 14.9404", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "1" }],
+  ["path", { d: "M6 8.00012L14 8.00012", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "2" }],
+  ["path", { d: "M4.5 4.00012H15.5", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "3" }],
+  ["path", { d: "M6 16.0001H10", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "4" }],
+  ["path", { d: "M4.5 20.0001H10", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "5" }],
+  ["path", { d: "M17.5 16.9376V18.5001M17.5 18.5001V20.0626M17.5 18.5001H16.25M17.5 18.5001H18.75M20 18.5001L18.9156 18.1386C18.4179 17.9728 18.0274 17.5822 17.8615 17.0846L17.5 16.0001L17.1385 17.0846C16.9726 17.5822 16.5821 17.9728 16.0844 18.1386L15 18.5001L16.0844 18.8616C16.5821 19.0275 16.9726 19.418 17.1385 19.9157L17.5 21.0001L17.8615 19.9157C18.0274 19.418 18.4179 19.0275 18.9156 18.8616L20 18.5001Z", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "6" }]
 ];
 
 export default AiDnaIcon;

@@ -1,12 +1,9 @@
 import type { IconSvgObject } from './types';
 
 const AiComputerIcon: IconSvgObject = [
-  ["path", { d: "M10.014 2C6.23617 2 4.34725 2 3.17362 3.17157C2 4.34315 2 6.22876 2 10C2 13.7712 2 15.6569 3.17362 16.8284C4.34725 18 6.23617 18 10.014 18H14.021C17.7989 18 19.6878 18 20.8614 16.8284C21.671 16.0203 21.9221 14.8723 22 13", stroke: "currentColor", strokeLinecap: "round", strokeWidth: "1.5", key: "0" }],
-  ["path", { d: "M12 18V22", stroke: "currentColor", strokeWidth: "1.5", key: "1" }],
-  ["path", { d: "M8 22H16", stroke: "currentColor", strokeLinecap: "round", strokeWidth: "1.5", key: "2" }],
-  ["path", { d: "M11 15H13", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "3" }],
-  ["path", { d: "M18 4H16C15.0572 4 14.5858 4 14.2929 4.29289C14 4.58579 14 5.05719 14 6V8C14 8.94281 14 9.41421 14.2929 9.70711C14.5858 10 15.0572 10 16 10H18C18.9428 10 19.4142 10 19.7071 9.70711C20 9.41421 20 8.94281 20 8V6C20 5.05719 20 4.58579 19.7071 4.29289C19.4142 4 18.9428 4 18 4Z", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "4" }],
-  ["path", { d: "M15.5 10V12M18.5 10V12M15.5 2V4M18.5 2V4M14 5.5H12M14 8.5H12M22 5.5H20M22 8.5H20", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "5" }]
+  ["path", { d: "M8 3H16C18.8284 3 20.2426 3 21.1213 3.87868C22 4.75736 22 6.17157 22 9V11C22 13.8284 22 15.2426 21.1213 16.1213C20.2426 17 18.8284 17 16 17H8C5.17157 17 3.75736 17 2.87868 16.1213C2 15.2426 2 13.8284 2 11V9C2 6.17157 2 4.75736 2.87868 3.87868C3.75736 3 5.17157 3 8 3Z", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "0" }],
+  ["path", { d: "M14 21H16M14 21C13.1716 21 12.5 20.3284 12.5 19.5V17H12M14 21H12M10 21H8M10 21C10.8284 21 11.5 20.3284 11.5 19.5V17H12M10 21H12M12 17V21", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "1" }],
+  ["path", { d: "M12 8.125V10M12 10V11.875M12 10H10.5M12 10H13.5M15 10L13.6987 9.56623C13.1015 9.36716 12.6328 8.89853 12.4338 8.30132L12 7L11.5662 8.30132C11.3672 8.89853 10.8985 9.36716 10.3013 9.56623L9 10L10.3013 10.4338C10.8985 10.6328 11.3672 11.1015 11.5662 11.6987L12 13L12.4338 11.6987C12.6328 11.1015 13.1015 10.6328 13.6987 10.4338L15 10Z", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "2" }]
 ];
 
 export default AiComputerIcon;

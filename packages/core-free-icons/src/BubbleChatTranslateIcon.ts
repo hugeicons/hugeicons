@@ -1,8 +1,8 @@
 import type { IconSvgObject } from './types';
 
 const BubbleChatTranslateIcon: IconSvgObject = [
-  ["path", { d: "M21.5 12C21.5 17.2467 17.2467 21.5 12 21.5C10.3719 21.5 8.8394 21.0904 7.5 20.3687C5.63177 19.362 4.37462 20.2979 3.26592 20.4658C3.09774 20.4913 2.93024 20.4302 2.80997 20.31C2.62741 20.1274 2.59266 19.8451 2.6935 19.6074C3.12865 18.5818 3.5282 16.6382 2.98341 15C2.6698 14.057 2.5 13.0483 2.5 12C2.5 6.75329 6.75329 2.5 12 2.5C17.2467 2.5 21.5 6.75329 21.5 12Z", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "0" }],
-  ["path", { d: "M12 9V7.5M8 9H16M9 16.5C11.7116 14.6923 13.8451 12.2747 14.5 9M13.5 15C11.8882 13.7106 11.0341 12.3345 10.6761 11.5", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "1" }]
+  ["path", { d: "M12 21.5C17.2467 21.5 21.5 17.2467 21.5 12C21.5 6.75329 17.2467 2.5 12 2.5C6.75329 2.5 2.5 6.75329 2.5 12C2.5 13.3377 2.66372 14.5604 3.1189 15.6954C3.81756 17.4374 3.68195 18.9241 2.5 20.5C3.86146 21.1644 5.86811 21.1419 7 20.0725C8.45323 20.9748 10.1636 21.5 12 21.5Z", stroke: "currentColor", strokeLinecap: "square", strokeLinejoin: "round", strokeWidth: "1.5", key: "0" }],
+  ["path", { d: "M12 9V7.5M12 9H8M12 9H14.5M14.5 9H16M14.5 9C14.1329 10.8353 13.3014 12.4014 12.164 13.7418M9 16.5C10.1918 15.7054 11.272 14.793 12.164 13.7418M12.164 13.7418C11.3872 12.8764 10.9182 12.0644 10.6761 11.5M12.164 13.7418C12.5359 14.1561 12.9782 14.5826 13.5 15", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "1" }]
 ];
 
 export default BubbleChatTranslateIcon;

@@ -1,9 +1,9 @@
 import type { IconSvgObject } from './types';
 
 const CreditCardAddIcon: IconSvgObject = [
-  ["path", { d: "M12.5 20H10.5C6.74142 20 4.86213 20 3.60746 19.0091C3.40678 18.8506 3.22119 18.676 3.0528 18.4871C2 17.3062 2 15.5375 2 12C2 8.46252 2 6.69377 3.0528 5.5129C3.22119 5.32403 3.40678 5.14935 3.60746 4.99087C4.86213 4 6.74142 4 10.5 4H13.5C17.2586 4 19.1379 4 20.3925 4.99087C20.5932 5.14935 20.7788 5.32403 20.9472 5.5129C21.8394 6.51358 21.9755 7.93642 21.9963 10.5", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "0" }],
-  ["path", { d: "M18.5 20L18.5 13M15 16.5H22", stroke: "currentColor", strokeLinecap: "round", strokeWidth: "1.5", key: "1" }],
-  ["path", { d: "M2 9H22", stroke: "currentColor", strokeLinejoin: "round", strokeWidth: "1.5", key: "2" }]
+  ["path", { d: "M13 19.5H10C6.22876 19.5 4.34315 19.5 3.17157 18.3284C2 17.1569 2 15.2712 2 11.5C2 7.72876 2 5.84315 3.17157 4.67157C4.34315 3.5 6.22876 3.5 10 3.5H14C17.7712 3.5 19.6569 3.5 20.8284 4.67157C22 5.84315 22 7.72876 22 11.5V12.5", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "0" }],
+  ["path", { d: "M2.5 8.5H21.5", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "1" }],
+  ["path", { d: "M22 17.5H16M19 14.5V20.5", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "2" }]
 ];
 
 export default CreditCardAddIcon;

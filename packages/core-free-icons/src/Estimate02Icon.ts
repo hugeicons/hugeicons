@@ -1,15 +1,10 @@
 import type { IconSvgObject } from './types';
 
 const Estimate02Icon: IconSvgObject = [
-  ["path", { d: "M17.5 11V7.3C17.5 5.03726 17.5 3.90589 16.7247 3.20294C15.9494 2.5 14.7016 2.5 12.2059 2.5H7.79412C5.29845 2.5 4.05061 2.5 3.27531 3.20294C2.5 3.90589 2.5 5.03726 2.5 7.3V13.7C2.5 15.9627 2.5 17.0941 3.27531 17.7971C4.05061 18.5 5.29845 18.5 7.79412 18.5H11", stroke: "currentColor", strokeLinecap: "round", strokeWidth: "1.5", key: "0" }],
-  ["path", { d: "M5.5 6.5L14.5 6.5", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "1" }],
-  ["path", { d: "M5.5 10.5H6.5", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "2" }],
-  ["path", { d: "M9.5 10.5H10.5", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "3" }],
-  ["path", { d: "M13.5 10.5H14.5", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "4" }],
-  ["path", { d: "M5.5 14.5H6.5", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "5" }],
-  ["path", { d: "M9.5 14.5H10.5", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "6" }],
-  ["circle", { cx: "17.5", cy: "17.5", r: "4", stroke: "currentColor", strokeWidth: "1.5", key: "7" }],
-  ["path", { d: "M18.5 18L17.5 17.5V16", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "8" }]
+  ["path", { d: "M8 8H15", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "0" }],
+  ["path", { d: "M20 10C20 7.66111 20 6.49167 19.4635 5.63789C19.1838 5.19267 18.8073 4.81621 18.3621 4.53647C17.5083 4 16.3389 4 14 4H10C6.70017 4 5.05025 4 4.02513 5.02513C3 6.05025 3 7.70017 3 11V14C3 17.2998 3 18.9497 4.02513 19.9749C4.94101 20.8908 6.35561 20.9884 9 20.9988", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "1" }],
+  ["path", { d: "M7 4V2M16 2V4", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "2" }],
+  ["path", { d: "M17.85 17.95L16.5 17.5V15.7M21 17.5C21 19.9853 18.9853 22 16.5 22C14.0147 22 12 19.9853 12 17.5C12 15.0147 14.0147 13 16.5 13C18.9853 13 21 15.0147 21 17.5Z", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "3" }]
 ];
 
 export default Estimate02Icon;

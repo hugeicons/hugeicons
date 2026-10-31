@@ -1,0 +1,8 @@
+import type { IconSvgObject } from './types';
+
+const SuperIntelligenceFileIcon: IconSvgObject = [
+  ["path", { d: "M4 12.5V9.45584C4 6.21082 4 4.58831 4.88607 3.48933C5.06508 3.26731 5.26731 3.06508 5.48933 2.88607C6.58831 2 8.21082 2 11.4558 2C12.1614 2 12.5141 2 12.8372 2.11401C12.9044 2.13772 12.9702 2.165 13.0345 2.19575C13.3436 2.34355 13.593 2.593 14.0919 3.09188L18.8284 7.82843C19.4065 8.40649 19.6955 8.69552 19.8478 9.06306C20 9.4306 20 9.83935 20 10.6569V14C20 17.7712 20 19.6569 18.8284 20.8284C17.8853 21.7715 16.4796 21.9641 14 22H13.5M13 2.5V3C13 5.82843 13 7.24264 13.8787 8.12132C14.7574 9 16.1716 9 19 9H19.5", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "0" }],
+  ["path", { d: "M6.5 16L4 16C3.44772 16 3 16.4477 3 17V18C3 18.5523 3.44772 19 4 19L5.5 19C6.05228 19 6.5 19.4477 6.5 20V21C6.5 21.5523 6.05228 22 5.5 22L3 22M10 16V22", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "1" }]
+];
+
+export default SuperIntelligenceFileIcon;

@@ -1,11 +1,11 @@
 import type { IconSvgObject } from './types';
 
 const ConferenceIcon: IconSvgObject = [
-  ["path", { d: "M19 15V9C19 6.17157 19 4.75736 18.1213 3.87868C17.2426 3 15.8284 3 13 3H11C8.17157 3 6.75736 3 5.87868 3.87868C5 4.75736 5 6.17157 5 9V15C5 17.8284 5 19.2426 5.87868 20.1213C6.75736 21 8.17157 21 11 21H13C15.8284 21 17.2426 21 18.1213 20.1213C19 19.2426 19 17.8284 19 15Z", stroke: "currentColor", strokeWidth: "1.5", key: "0" }],
-  ["path", { d: "M22 7V17", stroke: "currentColor", strokeLinecap: "round", strokeWidth: "1.5", key: "1" }],
-  ["path", { d: "M2 7V17", stroke: "currentColor", strokeLinecap: "round", strokeWidth: "1.5", key: "2" }],
-  ["path", { d: "M13.9995 8.50873C13.9995 9.61326 13.1041 10.5087 11.9995 10.5087C10.895 10.5087 9.99958 9.61326 9.99958 8.50873C9.99958 7.40419 10.895 6.50879 11.9995 6.50879C13.1041 6.50879 13.9995 7.40419 13.9995 8.50873Z", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "3" }],
-  ["path", { d: "M8.04443 15.7322C9.10278 14.1029 10.7835 13.4923 11.9995 13.4935C13.2156 13.4948 14.847 14.1029 15.9054 15.7322C15.9738 15.8376 15.9926 15.9673 15.9309 16.0768C15.6834 16.5157 14.9149 17.3866 14.3598 17.4457C13.7221 17.5135 12.0537 17.523 12.0008 17.5233C11.9478 17.523 10.228 17.5135 9.58996 17.4457C9.0349 17.3866 8.26641 16.5157 8.0189 16.0768C7.95714 15.9673 7.976 15.8376 8.04443 15.7322Z", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "4" }]
+  ["path", { d: "M11.5 4H12.5C15.3284 4 16.7426 4 17.6213 4.87868C18.5 5.75736 18.5 7.17157 18.5 10V14C18.5 16.8284 18.5 18.2426 17.6213 19.1213C16.7426 20 15.3284 20 12.5 20H11.5C8.67157 20 7.25736 20 6.37868 19.1213C5.5 18.2426 5.5 16.8284 5.5 14V10C5.5 7.17157 5.5 5.75736 6.37868 4.87868C7.25736 4 8.67157 4 11.5 4Z", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "0" }],
+  ["path", { d: "M14.25 10.25C14.25 11.4926 13.2426 12.5 12 12.5C10.7574 12.5 9.75 11.4926 9.75 10.25C9.75 9.00736 10.7574 8 12 8C13.2426 8 14.25 9.00736 14.25 10.25Z", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "1" }],
+  ["path", { d: "M22 7V17", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "2" }],
+  ["path", { d: "M2 7V17", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "3" }],
+  ["path", { d: "M7 19.5008C7.18092 17.3802 9.10095 15.6085 11.4571 15.5043C11.6561 15.4955 11.7731 15.5099 11.9994 15.5043C12.2257 15.5099 12.3439 15.4948 12.5429 15.5036C14.8991 15.6077 16.8191 17.3794 17 19.5", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "4" }]
 ];
 
 export default ConferenceIcon;

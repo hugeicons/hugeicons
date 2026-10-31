@@ -1,8 +1,8 @@
 import type { IconSvgObject } from './types';
 
 const EraserAddIcon: IconSvgObject = [
-  ["path", { d: "M2 12C2 8.22876 2 6.34315 3.17157 5.17157C4.34315 4 6.22876 4 10 4H13C14.9628 4 15.9443 4 16.7889 4.42229C17.6334 4.84458 18.2223 5.62972 19.4 7.2C21.1333 9.51111 22 10.6667 22 12C22 13.3333 21.1333 14.4889 19.4 16.8C18.2223 18.3703 17.6334 19.1554 16.7889 19.5777C15.9443 20 14.9628 20 13 20H10C6.22876 20 4.34315 20 3.17157 18.8284C2 17.6569 2 15.7712 2 12Z", stroke: "currentColor", strokeWidth: "1.5", key: "0" }],
-  ["path", { d: "M11 8V16M15 12L7 12", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "1" }]
+  ["path", { d: "M18 11.9999L10 11.9996M13.9999 16L13.9996 8", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "0" }],
+  ["path", { d: "M10.5714 4H15.0435C18.3228 4 19.9625 4 20.9812 5.02513C22 6.05025 22 7.70017 22 11V13C22 16.2998 22 17.9497 20.9812 18.9749C19.9625 20 18.3228 20 15.0435 20H10.5714C8.8646 20 8.01119 20 7.27677 19.6305C6.54235 19.261 6.03031 18.574 5.00621 17.2L4.26087 16.2C2.75362 14.1778 2 13.1667 2 12C2 10.8333 2.75362 9.82222 4.26087 7.8L5.00621 6.8C6.0303 5.42601 6.54235 4.73901 7.27677 4.3695C8.01119 4 8.8646 4 10.5714 4Z", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "1" }]
 ];
 
 export default EraserAddIcon;

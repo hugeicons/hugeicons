@@ -1,9 +1,9 @@
 import type { IconSvgObject } from './types';
 
 const CreditCardDefrostIcon: IconSvgObject = [
-  ["path", { d: "M22 9.5C21.9635 7.24771 21.7892 5.94656 20.9564 5.0129C20.7879 4.82403 20.6022 4.64935 20.4014 4.49087C19.1461 3.5 17.2659 3.5 13.5056 3.5H10.5041C6.74371 3.5 4.86352 3.5 3.60823 4.49087C3.40746 4.64935 3.22178 4.82403 3.05331 5.0129C2 6.19377 2 7.96252 2 11.5C2 15.0375 2 16.8062 3.05331 17.9871C3.22178 18.176 3.40746 18.3506 3.60823 18.5091C4.86352 19.5 6.74371 19.5 10.5041 19.5H11.5", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "0" }],
-  ["path", { d: "M2 8.5H22", stroke: "currentColor", strokeLinejoin: "round", strokeWidth: "1.5", key: "1" }],
-  ["path", { d: "M15.0161 12.5C11.8458 15.2942 17.3195 17.2518 15.0161 20.5M18.2161 12.5C15.0458 15.2942 20.5195 17.2518 18.2161 20.5M21.4161 12.5C18.2458 15.2942 23.7195 17.2518 21.4161 20.5", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "2" }]
+  ["path", { d: "M11 19H10C6.22876 19 4.34315 19 3.17157 17.8284C2 16.6569 2 14.7712 2 11C2 7.22876 2 5.34315 3.17157 4.17157C4.34315 3 6.22876 3 10 3H14C17.7712 3 19.6569 3 20.8284 4.17157C21.947 5.29018 21.9976 7.05974 21.9999 10.5", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "0" }],
+  ["path", { d: "M2.5 8H21.5", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "1" }],
+  ["path", { d: "M14.5 21C14.75 20.5625 15 20.125 15 19.25C15 18.6529 14.7256 18.0559 14.5 17.5C14.2744 16.9441 14 16.3471 14 15.75C14 14.875 14.25 14.4375 14.5 14M18 21C18.25 20.5625 18.5 20.125 18.5 19.25C18.5 18.6529 18.2256 18.0559 18 17.5C17.7744 16.9441 17.5 16.3471 17.5 15.75C17.5 14.875 17.75 14.4375 18 14M21.5 21C21.75 20.5625 22 20.125 22 19.25C22 18.6529 21.7256 18.0559 21.5 17.5C21.2744 16.9441 21 16.3471 21 15.75C21 14.875 21.25 14.4375 21.5 14", stroke: "currentColor", strokeLinecap: "round", strokeWidth: "1.5", key: "2" }]
 ];
 
 export default CreditCardDefrostIcon;

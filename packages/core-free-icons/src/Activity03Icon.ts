@@ -1,8 +1,8 @@
 import type { IconSvgObject } from './types';
 
 const Activity03Icon: IconSvgObject = [
-  ["path", { d: "M4.31802 19.682C3 18.364 3 16.2426 3 12C3 7.75736 3 5.63604 4.31802 4.31802C5.63604 3 7.75736 3 12 3C16.2426 3 18.364 3 19.682 4.31802C21 5.63604 21 7.75736 21 12C21 16.2426 21 18.364 19.682 19.682C18.364 21 16.2426 21 12 21C7.75736 21 5.63604 21 4.31802 19.682Z", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "0" }],
-  ["path", { d: "M6 12H8.5L10.5 8L13.5 16L15.5 12H18", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "1" }]
+  ["path", { d: "M12 21C7.75736 21 5.63604 21 4.31802 19.682C3 18.364 3 16.2426 3 12C3 7.75736 3 5.63604 4.31802 4.31802C5.63604 3 7.75736 3 12 3C16.2426 3 18.364 3 19.682 4.31802C21 5.63604 21 7.75736 21 12C21 16.2426 21 18.364 19.682 19.682C18.364 21 16.2426 21 12 21Z", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "0" }],
+  ["path", { d: "M7 12H7.114C7.78442 12 8.11963 12 8.37659 11.8219C8.63356 11.6439 8.75126 11.33 8.98666 10.7022L9.83489 8.44028C9.93421 8.17545 10.1874 8 10.4702 8C10.7816 8 11.053 8.2119 11.1285 8.51396L12.8715 15.486C12.947 15.7881 13.2184 16 13.5298 16C13.8126 16 14.0658 15.8246 14.1651 15.5597L15.0133 13.2978C15.2487 12.67 15.3664 12.3561 15.6234 12.1781C15.8804 12 16.2156 12 16.886 12H17", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "1" }]
 ];
 
 export default Activity03Icon;

@@ -1,9 +1,9 @@
 import type { IconSvgObject } from './types';
 
 const PayByCheckIcon: IconSvgObject = [
-  ["path", { d: "M7 11H6C2.69067 11 2 11.6907 2 15V18C2 21.3093 2.69067 22 6 22H18C21.3093 22 22 21.3093 22 18V15C22 12.7889 21.6917 11.7468 20.5 11.2987", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "0" }],
-  ["path", { d: "M12 18L18 18", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "1" }],
-  ["path", { d: "M17.2442 3.13291C17.6913 2.64778 17.9149 2.40522 18.1524 2.26374C18.7256 1.92234 19.4315 1.91173 20.0142 2.23573C20.2557 2.37001 20.4862 2.60575 20.947 3.07721C21.4079 3.54868 21.6383 3.78441 21.7696 4.03149C22.0863 4.62767 22.0759 5.34971 21.7422 5.93611C21.6039 6.17913 21.3668 6.40783 20.8926 6.86523L15.2504 12.3075C13.7556 13.7493 12.8297 14.0483 10.7592 13.9941C10.3833 13.9842 10.1954 13.9793 10.0862 13.8551C9.9769 13.731 9.99182 13.5393 10.0216 13.1558C10.1592 11.3881 10.4706 10.4824 11.6737 9.17706L17.2442 3.13291Z", stroke: "currentColor", strokeLinejoin: "round", strokeWidth: "1.5", key: "2" }]
+  ["path", { d: "M9 9H8C5.17157 9 3.75736 9 2.87868 9.87868C2 10.7574 2 12.1716 2 15C2 17.8284 2 19.2426 2.87868 20.1213C3.75736 21 5.17157 21 8 21H16C18.8284 21 20.2426 21 21.1213 20.1213C22 19.2426 22 17.8284 22 15V12", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "0" }],
+  ["path", { d: "M6 17H12", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "1" }],
+  ["path", { d: "M18 5L20 7M12.8431 13H12V12.1569C12 11.3394 12 10.9306 12.1522 10.5631C12.3045 10.1955 12.5935 9.90649 13.1716 9.32843L18.9697 3.53033C19.3092 3.19077 19.7698 3 20.25 3H20.2929C20.7456 3 21.1799 3.17986 21.5 3.5C21.8201 3.82014 22 4.25435 22 4.70711V4.75C22 5.23022 21.8092 5.69077 21.4697 6.03033L15.6716 11.8284C15.0935 12.4065 14.8045 12.6955 14.4369 12.8478C14.0694 13 13.6606 13 12.8431 13Z", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "2" }]
 ];
 
 export default PayByCheckIcon;

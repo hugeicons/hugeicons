@@ -1,9 +1,9 @@
 import type { IconSvgObject } from './types';
 
 const MailDownload02Icon: IconSvgObject = [
-  ["path", { d: "M22 11C22 10.5086 21.9947 10.0172 21.9842 9.52439C21.9189 6.45886 21.8862 4.92609 20.7551 3.79066C19.6239 2.65523 18.0497 2.61568 14.9012 2.53657C12.9607 2.48781 11.0393 2.48781 9.09882 2.53656C5.95033 2.61566 4.37608 2.65521 3.24495 3.79065C2.11382 4.92608 2.08114 6.45885 2.01576 9.52438C1.99474 10.5101 1.99475 11.4899 2.01577 12.4756C2.08114 15.5412 2.11383 17.0739 3.24496 18.2094C4.37608 19.3448 5.95033 19.3843 9.09883 19.4634C10.5713 19.5004 12.0328 19.5094 13.5 19.4902", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "0" }],
-  ["path", { d: "M7 7.5L9.94202 9.23943C11.6572 10.2535 12.3428 10.2535 14.058 9.23943L17 7.5", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "1" }],
-  ["path", { d: "M17 19C17.4915 19.5057 18.7998 21.5 19.5 21.5M22 19C21.5085 19.5057 20.2002 21.5 19.5 21.5M19.5 21.5V13.5", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "2" }]
+  ["path", { d: "M22 12.5V8.5C22 5.67157 22 4.25736 21.1213 3.37868C20.2426 2.5 18.8284 2.5 16 2.5H8C5.17157 2.5 3.75736 2.5 2.87868 3.37868C2 4.25736 2 5.67157 2 8.5V12.5C2 15.3284 2 16.7426 2.87868 17.6213C3.75736 18.5 5.17157 18.5 8 18.5H12.5", stroke: "currentColor", strokeLinecap: "round", strokeWidth: "1.5", key: "0" }],
+  ["path", { d: "M6 7L10.9923 10.2322C11.615 10.5954 12.385 10.5954 13.0077 10.2322L18 7", stroke: "currentColor", strokeLinecap: "round", strokeWidth: "1.5", key: "1" }],
+  ["path", { d: "M16 19L16.8787 19.9235C17.8787 20.9745 18.3787 21.5 19 21.5C19.6213 21.5 20.1213 20.9745 21.1213 19.9235L22 19M19 14.5L19 21", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "2" }]
 ];
 
 export default MailDownload02Icon;

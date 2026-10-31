@@ -1,10 +1,10 @@
 import type { IconSvgObject } from './types';
 
 const AiSchedulingIcon: IconSvgObject = [
-  ["path", { d: "M18 2V5M6 2V5", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "0" }],
-  ["path", { d: "M10.5 3.5H13.5C17.2712 3.5 19.1569 3.5 20.3284 4.67157C21.5 5.84315 21.5 7.72876 21.5 11.5V14C21.5 17.7712 21.5 19.6569 20.3284 20.8284C19.1569 22 17.2712 22 13.5 22H10.5C6.72876 22 4.84315 22 3.67157 20.8284C2.5 19.6569 2.5 17.7712 2.5 14V11.5C2.5 7.72876 2.5 5.84315 3.67157 4.67157C4.84315 3.5 6.72876 3.5 10.5 3.5Z", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "1" }],
-  ["path", { d: "M3 8H21", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "2" }],
-  ["path", { d: "M8.44356 14.5282C10.0526 14.3279 11.3279 13.0526 11.5282 11.4436C11.5585 11.2 11.7545 11 12 11C12.2455 11 12.4415 11.2 12.4718 11.4436C12.6721 13.0526 13.9474 14.3279 15.5564 14.5282C15.8 14.5585 16 14.7545 16 15C16 15.2455 15.8 15.4415 15.5564 15.4718C13.9474 15.6721 12.6721 16.9474 12.4718 18.5564C12.4415 18.8 12.2455 19 12 19C11.7545 19 11.5585 18.8 11.5282 18.5564C11.3279 16.9474 10.0526 15.6721 8.44356 15.4718C8.19998 15.4415 8 15.2455 8 15C8 14.7545 8.19998 14.5585 8.44356 14.5282Z", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "3" }]
+  ["path", { d: "M17 2V4M7 2V4", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "0" }],
+  ["path", { d: "M13 4H11C7.22876 4 5.34315 4 4.17157 5.17157C3 6.34315 3 8.22876 3 12V14C3 17.7712 3 19.6569 4.17157 20.8284C5.34315 22 7.22876 22 11 22H13C16.7712 22 18.6569 22 19.8284 20.8284C21 19.6569 21 17.7712 21 14V12C21 8.22876 21 6.34315 19.8284 5.17157C18.6569 4 16.7712 4 13 4Z", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "1" }],
+  ["path", { d: "M8 8H16", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "2" }],
+  ["path", { d: "M12 13.125V15M12 15V16.875M12 15H10.5M12 15H13.5M15 15L13.6987 14.5662C13.1015 14.3672 12.6328 13.8985 12.4338 13.3013L12 12L11.5662 13.3013C11.3672 13.8985 10.8985 14.3672 10.3013 14.5662L9 15L10.3013 15.4338C10.8985 15.6328 11.3672 16.1015 11.5662 16.6987L12 18L12.4338 16.6987C12.6328 16.1015 13.1015 15.6328 13.6987 15.4338L15 15Z", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "3" }]
 ];
 
 export default AiSchedulingIcon;

@@ -5,7 +5,7 @@ const PerplexityAiIcon: IconSvgObject = [
   ["path", { d: "M12 2V22", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "1" }],
   ["path", { d: "M5 8V2.70711C5 2.31658 5.31658 2 5.70711 2C5.89464 2 6.0745 2.0745 6.20711 2.20711L12 8", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "2" }],
   ["path", { d: "M19 8V2.70711C19 2.31658 18.6834 2 18.2929 2C18.1054 2 17.9255 2.0745 17.7929 2.20711L12 8", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "3" }],
-  ["path", { d: "M6.64855 12.9055L12 8L17.3514 12.9055C17.7647 13.2843 18 13.8192 18 14.3798V20.3067C18 20.6896 17.6896 21 17.3067 21C17.1114 21 16.9251 20.9176 16.7937 20.7731L12 15.5L7.20631 20.7731C7.07491 20.9176 6.88864 21 6.6933 21C6.3104 21 6 20.6896 6 20.3067V14.3798C6 13.8192 6.23529 13.2843 6.64855 12.9055Z", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "4" }]
+  ["path", { d: "M12 8L6.64855 12.9055C6.23529 13.2843 6 13.8192 6 14.3798V20.3067C6 20.6896 6.3104 21 6.6933 21C6.88864 21 7.07491 20.9176 7.20631 20.7731L12 15.5L16.7937 20.7731C16.9251 20.9176 17.1114 21 17.3067 21C17.6896 21 18 20.6896 18 20.3067V14.3798C18 13.8192 17.7647 13.2843 17.3514 12.9055L12 8Z", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "4" }]
 ];
 
 export default PerplexityAiIcon;

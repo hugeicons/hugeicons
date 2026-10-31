@@ -1,9 +1,9 @@
 import type { IconSvgObject } from './types';
 
 const WasteIcon: IconSvgObject = [
-  ["path", { d: "M3 5H8.42963C9.09834 5 9.7228 4.6658 10.0937 4.1094L10.9063 2.8906C11.2772 2.3342 11.9017 2 12.5704 2H17.0585C17.9193 2 18.6836 2.55086 18.9558 3.36754L19.5 5M21 5H8", stroke: "currentColor", strokeLinecap: "round", strokeWidth: "1.5", key: "0" }],
-  ["path", { d: "M19.5 5L18.8803 14.906C18.8588 15.2333 18.8387 15.5385 18.8185 15.8235M4.5 5L5.10461 14.8966C5.25945 17.3107 5.33688 18.5177 5.97868 19.3857C6.296 19.8149 6.7048 20.1771 7.17905 20.4493C8.1383 21 9.42312 21 11.9927 21H14.5", stroke: "currentColor", strokeLinecap: "round", strokeWidth: "1.5", key: "1" }],
-  ["path", { d: "M20 19C20 17.3431 18.6569 16 17 16C15.3431 16 14 17.3431 14 19C14 20.6569 15.3431 22 17 22C18.6569 22 20 20.6569 20 19Z", stroke: "currentColor", strokeWidth: "1.5", key: "2" }]
+  ["path", { d: "M20 19C20 17.3431 18.6569 16 17 16C15.3431 16 14 17.3431 14 19C14 20.6569 15.3431 22 17 22C18.6569 22 20 20.6569 20 19Z", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "0" }],
+  ["path", { d: "M18.5 16L19.5 6H4.5L5.4597 15.597C5.71648 18.1648 5.84487 19.4487 6.70195 20.2244C7.55902 21 8.84932 21 11.4299 21H14.5", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "1" }],
+  ["path", { d: "M3 6L10.5 5.99728M10.5 5.99728L12.3 3.59894C12.8888 2.81429 13.1833 2.42197 13.6055 2.21097C14.0276 1.99997 14.5185 1.99997 15.5004 1.99997C17.3849 1.99997 18.3272 1.99997 18.9127 2.58426L18.9157 2.58725C19.5 3.17278 19.5 4.11428 19.5 5.99728M10.5 5.99728L21 6", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "2" }]
 ];
 
 export default WasteIcon;

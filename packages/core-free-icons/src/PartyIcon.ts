@@ -1,7 +1,7 @@
 import type { IconSvgObject } from './types';
 
 const PartyIcon: IconSvgObject = [
-  ["path", { d: "M5.65784 11.0022L4.18747 14.3105C2.3324 18.4844 1.40486 20.5713 2.41719 21.5837C3.42951 22.596 5.51646 21.6685 9.69037 19.8134L12.9987 18.343C15.5161 17.2242 16.7748 16.6647 16.9751 15.586C17.1754 14.5073 16.2014 13.5333 14.2535 11.5854L12.4155 9.7474C10.4675 7.79944 9.49353 6.82546 8.41482 7.02575C7.33611 7.22604 6.77669 8.48475 5.65784 11.0022Z", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "0" }],
+  ["path", { d: "M4.18747 14.3105L5.65784 11.0022C6.77669 8.48475 7.33611 7.22604 8.41482 7.02575C9.49353 6.82546 10.4675 7.79944 12.4155 9.7474L14.2535 11.5854C16.2014 13.5333 17.1754 14.5073 16.9751 15.586C16.7748 16.6647 15.5161 17.2242 12.9987 18.343L9.69037 19.8134C5.51646 21.6685 3.42951 22.596 2.41719 21.5837C1.40486 20.5713 2.3324 18.4844 4.18747 14.3105Z", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "0" }],
   ["path", { d: "M6.50085 10.5L13.5009 17.5M4.50085 15.5L8.50085 19.5", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "1" }],
   ["path", { d: "M16.0009 8L19.0009 5", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "2" }],
   ["path", { d: "M21.8759 6H21.7509M22.0009 6C22.0009 6.13807 21.8889 6.25 21.7509 6.25C21.6128 6.25 21.5009 6.13807 21.5009 6C21.5009 5.86193 21.6128 5.75 21.7509 5.75C21.8889 5.75 22.0009 5.86193 22.0009 6Z", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "3" }],

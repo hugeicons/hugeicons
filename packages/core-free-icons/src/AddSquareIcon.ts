@@ -1,8 +1,8 @@
 import type { IconSvgObject } from './types';
 
 const AddSquareIcon: IconSvgObject = [
-  ["path", { d: "M2.5 12.0001C2.5 7.52171 2.5 5.28254 3.89124 3.8913C5.28249 2.50005 7.52166 2.50005 12 2.50005C16.4783 2.50005 18.7175 2.50005 20.1088 3.8913C21.5 5.28254 21.5 7.52171 21.5 12.0001C21.5 16.4784 21.5 18.7176 20.1088 20.1088C18.7175 21.5001 16.4783 21.5001 12 21.5001C7.52166 21.5001 5.28249 21.5001 3.89124 20.1088C2.5 18.7176 2.5 16.4784 2.5 12.0001Z", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "0" }],
-  ["path", { d: "M12 8.00005V16.0001M16 12.0001L8 12.0001", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "1" }]
+  ["path", { d: "M12 3.00005C16.2426 3.00005 18.364 3.00005 19.682 4.31807C21 5.63609 21 7.75741 21 12.0001C21 16.2427 21 18.364 19.682 19.682C18.364 21.0001 16.2426 21.0001 12 21.0001C7.75736 21.0001 5.63604 21.0001 4.31802 19.682C3 18.364 3 16.2427 3 12.0001C3 7.75741 3 5.63609 4.31802 4.31807C5.63604 3.00005 7.75736 3.00005 12 3.00005Z", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "0" }],
+  ["path", { d: "M12.0001 8.00005V12.0001M12.0001 12.0001V16.0001M12.0001 12.0001H16.0001M12.0001 12.0001H8.00006", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "1" }]
 ];
 
 export default AddSquareIcon;

@@ -1,10 +1,9 @@
 import type { IconSvgObject } from './types';
 
 const BookmarkOff01Icon: IconSvgObject = [
-  ["path", { d: "M20 19.9429C19.9381 20.9761 19.7617 21.5725 19.259 21.8481C17.7592 22.6701 14.946 19.9276 13.61 19.1019C12.8352 18.623 12.4478 18.3836 12.0167 18.3836C11.5856 18.3836 11.1982 18.623 10.4234 19.1019C9.08741 19.9276 6.27421 22.6701 4.77446 21.8481C4 21.4236 4 20.2377 4 17.866V9.35632C4 7.18055 4 5.63815 4.23168 4.5", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "0" }],
-  ["path", { d: "M20 16V9.70753C20 6.07416 20 4.25748 18.8284 3.12874C17.6569 2 15.7712 2 12 2C9.39647 2 7.69163 2 6.5 2.37139", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "1" }],
-  ["path", { d: "M11 7L19.5 7", stroke: "currentColor", strokeLinecap: "round", strokeWidth: "1.5", key: "2" }],
-  ["path", { d: "M2 2L22 22", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "3" }]
+  ["path", { d: "M2 4L22 20", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "0" }],
+  ["path", { d: "M6.5 2.5H13.5C16.3284 2.5 17.7426 2.5 18.6213 3.37868C19.5 4.25736 19.5 5.67157 19.5 8.5V13", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "1" }],
+  ["path", { d: "M19.5 18V18.2119C19.5 20.1274 19.5 21.0852 18.8987 21.4076C18.2975 21.7301 17.5234 21.1875 15.9753 20.1023L14.1245 18.805C13.0964 18.0843 12.5824 17.724 12 17.724C11.4176 17.724 10.9036 18.0843 9.87552 18.805L8.02469 20.1023C6.47657 21.1875 5.70252 21.7301 5.10126 21.4076C4.5 21.0852 4.5 20.1274 4.5 18.2119V8.23515C4.5 7.41502 4.5 6.71928 4.52299 6.1245", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "2" }]
 ];
 
 export default BookmarkOff01Icon;

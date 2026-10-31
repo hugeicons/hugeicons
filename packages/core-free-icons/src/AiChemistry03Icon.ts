@@ -2,9 +2,9 @@ import type { IconSvgObject } from './types';
 
 const AiChemistry03Icon: IconSvgObject = [
   ["path", { d: "M6.5 2H14.5", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "0" }],
-  ["path", { d: "M17.5 15L17.2421 15.697C16.9039 16.611 16.7348 17.068 16.4014 17.4014C16.068 17.7348 15.611 17.9039 14.697 18.2421L14 18.5L14.697 18.7579C15.611 19.0961 16.068 19.2652 16.4014 19.5986C16.7348 19.932 16.9039 20.389 17.2421 21.303L17.5 22L17.7579 21.303C18.0961 20.389 18.2652 19.932 18.5986 19.5986C18.932 19.2652 19.389 19.0961 20.303 18.7579L21 18.5L20.303 18.2421C19.389 17.9039 18.932 17.7348 18.5986 17.4014C18.2652 17.068 18.0961 16.611 17.7579 15.697L17.5 15Z", stroke: "currentColor", strokeLinejoin: "round", strokeWidth: "1.5", key: "1" }],
-  ["path", { d: "M17.5 11.8018C16.7142 9.76446 15.0645 8.15647 13 7.42676V2H8V7.42676C5.08702 8.45636 3 11.2345 3 14.5C3 18.6421 6.35786 22 10.5 22C11.5667 22 12.5813 21.7773 13.5 21.3759", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "2" }],
-  ["path", { d: "M4 11H17", stroke: "currentColor", strokeLinecap: "round", strokeWidth: "1.5", key: "3" }]
+  ["path", { d: "M8 2V6.71959C8 7.1434 7.7297 7.51529 7.34529 7.69377C4.77934 8.8851 3 11.4848 3 14.5C3 18.6421 6.35786 22 10.5 22C11.3766 22 12.2181 21.8496 13 21.5732M13 2V6.71959C13 7.1434 13.2703 7.51528 13.6547 7.69375C15.9321 8.75111 17.5899 10.9179 17.9339 13.5", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "1" }],
+  ["path", { d: "M4 11H17", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "2" }],
+  ["path", { d: "M18.5 17.9375V19.5M18.5 19.5V21.0625M18.5 19.5H17.25M18.5 19.5H19.75M21 19.5L19.9156 19.1385C19.4179 18.9726 19.0274 18.5821 18.8615 18.0844L18.5 17L18.1385 18.0844C17.9726 18.5821 17.5821 18.9726 17.0844 19.1385L16 19.5L17.0844 19.8615C17.5821 20.0274 17.9726 20.4179 18.1385 20.9156L18.5 22L18.8615 20.9156C19.0274 20.4179 19.4179 20.0274 19.9156 19.8615L21 19.5Z", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "3" }]
 ];
 
 export default AiChemistry03Icon;

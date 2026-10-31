@@ -1,11 +1,11 @@
 import type { IconSvgObject } from './types';
 
 const MoneySafeIcon: IconSvgObject = [
-  ["path", { d: "M13 2H11C6.75736 2 4.63604 2 3.31802 3.31802C2 4.63604 2 6.75736 2 11C2 15.2426 2 17.364 3.31802 18.682C4.63604 20 6.75736 20 11 20H13C17.2426 20 19.364 20 20.682 18.682C22 17.364 22 15.2426 22 11C22 6.75736 22 4.63604 20.682 3.31802C19.364 2 17.2426 2 13 2Z", stroke: "currentColor", strokeWidth: "1.5", key: "0" }],
-  ["path", { d: "M17 15C18 14.4692 18 13.6148 18 11.9062V10.0938C18 8.38516 18 7.53082 17 7", stroke: "currentColor", strokeLinecap: "round", strokeWidth: "1.5", key: "1" }],
-  ["path", { d: "M18 22V20", stroke: "currentColor", strokeLinecap: "round", strokeWidth: "1.5", key: "2" }],
-  ["path", { d: "M6 22V20", stroke: "currentColor", strokeLinecap: "round", strokeWidth: "1.5", key: "3" }],
-  ["path", { d: "M9.49983 13C10.6158 13 11.5205 12.1046 11.5205 11C11.5205 9.89543 10.6158 9 9.49983 9M9.49983 13C8.38384 13 7.47914 12.1046 7.47914 11C7.47914 9.89543 8.38384 9 9.49983 9M9.49983 13V15M9.49983 9V7M7.74987 12L5.9999 13M12.9998 9L11.2498 10M11.2499 12L12.9999 13M6 9L7.74997 10", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "4" }]
+  ["path", { d: "M9 3H15C18.2998 3 19.9497 3 20.9749 4.02513C22 5.05025 22 6.70017 22 10V12C22 15.2998 22 16.9497 20.9749 17.9749C19.9497 19 18.2998 19 15 19H9C5.70017 19 4.05025 19 3.02513 17.9749C2 16.9497 2 15.2998 2 12V10C2 6.70017 2 5.05025 3.02513 4.02513C4.05025 3 5.70017 3 9 3Z", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "0" }],
+  ["path", { d: "M18 13.5L18 8.5", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "1" }],
+  ["path", { d: "M19 21V19", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "2" }],
+  ["path", { d: "M5 21V19", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "3" }],
+  ["path", { d: "M12.1 8.9L13.5 7.5M12.1 13.1L13.5 14.5M6.5 14.5L7.9 13.1M6.5 7.5L7.9 8.9M12.8 11C12.8 12.5463 11.5464 13.8 10 13.8C8.4536 13.8 7.2 12.5463 7.2 11C7.2 9.4536 8.4536 8.2 10 8.2C11.5464 8.2 12.8 9.4536 12.8 11Z", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "4" }]
 ];
 
 export default MoneySafeIcon;

@@ -1,10 +1,11 @@
 import type { IconSvgObject } from './types';
 
 const ArtificialIntelligence04Icon: IconSvgObject = [
-  ["path", { d: "M4 12C4 8.22876 4 6.34315 5.17157 5.17157C6.34315 4 8.22876 4 12 4C15.7712 4 17.6569 4 18.8284 5.17157C20 6.34315 20 8.22876 20 12C20 15.7712 20 17.6569 18.8284 18.8284C17.6569 20 15.7712 20 12 20C8.22876 20 6.34315 20 5.17157 18.8284C4 17.6569 4 15.7712 4 12Z", stroke: "currentColor", strokeLinejoin: "round", strokeWidth: "1.5", key: "0" }],
-  ["path", { d: "M7.5 15L9.34189 9.47434C9.43631 9.19107 9.7014 9 10 9C10.2986 9 10.5637 9.19107 10.6581 9.47434L12.5 15M8.5 13H11.5", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "1" }],
-  ["path", { d: "M15.5 9V15", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "2" }],
-  ["path", { d: "M8 2V4M16 2V4M12 2V4M8 20V22M12 20V22M16 20V22M22 16H20M4 8H2M4 16H2M4 12H2M22 8H20M22 12H20", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "3" }]
+  ["path", { d: "M13 20H11C7.70017 20 6.05025 20 5.02513 18.9749C4 17.9497 4 16.2998 4 13V11C4 7.70017 4 6.05025 5.02513 5.02513C6.05025 4 7.70017 4 11 4H13C16.2998 4 17.9497 4 18.9749 5.02513C20 6.05025 20 7.70017 20 11V13C20 16.2998 20 17.9497 18.9749 18.9749C17.9497 20 16.2998 20 13 20Z", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "0" }],
+  ["path", { d: "M8 15.5V10.5C8 9.39544 8.89543 8.50001 10 8.50001C11.1046 8.50001 12 9.39544 12 10.5V15.5", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "1" }],
+  ["path", { d: "M8 13H12", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "2" }],
+  ["path", { d: "M16 8.50001V15.5", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "3" }],
+  ["path", { d: "M22 9.00003L20 9.00003M4 9.00003L2 9.00003M20 15L22 15M4 15H2M9 2L9 4M9 20L9 22M15 4L15 2M15 20L15 22", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "4" }]
 ];
 
 export default ArtificialIntelligence04Icon;

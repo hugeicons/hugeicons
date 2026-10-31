@@ -1,9 +1,9 @@
 import type { IconSvgObject } from './types';
 
 const MailRemove02Icon: IconSvgObject = [
-  ["path", { d: "M7 7.5L9.94202 9.23943C11.6572 10.2535 12.3428 10.2535 14.058 9.23943L17 7.5", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "0" }],
-  ["path", { d: "M21.9928 11C22.0047 10.1743 22.0019 10.3514 21.9842 9.52439C21.9189 6.45886 21.8862 4.92609 20.7551 3.79066C19.6239 2.65523 18.0497 2.61568 14.9012 2.53657C12.9607 2.48781 11.0393 2.48781 9.09882 2.53656C5.95033 2.61566 4.37608 2.65521 3.24495 3.79065C2.11382 4.92608 2.08114 6.45885 2.01576 9.52438C1.99474 10.5101 1.99475 11.4899 2.01577 12.4756C2.08114 15.5412 2.11383 17.0739 3.24496 18.2094C4.37608 19.3448 5.95033 19.3843 9.09883 19.4634C10.0691 19.4878 11.0345 19.5 12 19.5", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "1" }],
-  ["path", { d: "M15 14.5L18.5 18M18.5 18L22 21.5M18.5 18L15 21.5M18.5 18L22 14.5", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "2" }]
+  ["path", { d: "M22 12.5V8.5C22 5.67157 22 4.25736 21.1213 3.37868C20.2426 2.5 18.8284 2.5 16 2.5H8C5.17157 2.5 3.75736 2.5 2.87868 3.37868C2 4.25736 2 5.67157 2 8.5V12.5C2 15.3284 2 16.7426 2.87868 17.6213C3.75736 18.5 5.17157 18.5 8 18.5H14", stroke: "currentColor", strokeLinecap: "round", strokeWidth: "1.5", key: "0" }],
+  ["path", { d: "M6 7L10.9923 10.2322C11.615 10.5954 12.385 10.5954 13.0077 10.2322L18 7", stroke: "currentColor", strokeLinecap: "round", strokeWidth: "1.5", key: "1" }],
+  ["path", { d: "M16 15.5L19 18.5M19 18.5L22 21.5M19 18.5L16 21.5M19 18.5L22 15.5", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "2" }]
 ];
 
 export default MailRemove02Icon;

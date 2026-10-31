@@ -1,15 +1,12 @@
 import type { IconSvgObject } from './types';
 
 const SlidersVerticalIcon: IconSvgObject = [
-  ["path", { d: "M5.00018 20.0001L4.99994 14.0001", stroke: "currentColor", strokeLinecap: "round", strokeWidth: "1.5", key: "0" }],
-  ["path", { d: "M4.99994 11.0001V4.00006", stroke: "currentColor", strokeLinecap: "round", strokeWidth: "1.5", key: "1" }],
-  ["path", { d: "M8.99994 8.00006H14.9999", stroke: "currentColor", strokeLinecap: "round", strokeWidth: "1.5", key: "2" }],
-  ["path", { d: "M1.99994 14.0001H7.99994", stroke: "currentColor", strokeLinecap: "round", strokeWidth: "1.5", key: "3" }],
-  ["path", { d: "M15.9999 12.0001H21.9999", stroke: "currentColor", strokeLinecap: "round", strokeWidth: "1.5", key: "4" }],
-  ["path", { d: "M11.9997 8.00006L11.9999 4.00006", stroke: "currentColor", strokeLinecap: "round", strokeWidth: "1.5", key: "5" }],
-  ["path", { d: "M12.0002 20.0001L11.9999 11.0001", stroke: "currentColor", strokeLinecap: "round", strokeWidth: "1.5", key: "6" }],
-  ["path", { d: "M18.9999 12.0001L18.9999 4.00006", stroke: "currentColor", strokeLinecap: "round", strokeWidth: "1.5", key: "7" }],
-  ["path", { d: "M19.0002 20.0001L18.9999 15.0001", stroke: "currentColor", strokeLinecap: "round", strokeWidth: "1.5", key: "8" }]
+  ["path", { d: "M4.99994 3.00006V10.0001", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "0" }],
+  ["path", { d: "M2.99994 14.0001H4.99994M4.99994 14.0001H6.99994M4.99994 14.0001V21.0001", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "1" }],
+  ["path", { d: "M9.99994 9.00006H11.9999M11.9999 9.00006H13.9999M11.9999 9.00006V3.00006", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "2" }],
+  ["path", { d: "M16.9999 16.0001H18.9999M18.9999 16.0001H20.9999M18.9999 16.0001V21.0001", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "3" }],
+  ["path", { d: "M11.9999 13.0001V21.0001", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "4" }],
+  ["path", { d: "M18.9999 3.00006V12.0001", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "5" }]
 ];
 
 export default SlidersVerticalIcon;

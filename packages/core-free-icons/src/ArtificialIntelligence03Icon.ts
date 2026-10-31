@@ -1,9 +1,11 @@
 import type { IconSvgObject } from './types';
 
 const ArtificialIntelligence03Icon: IconSvgObject = [
-  ["path", { d: "M16 22V21.5C16 20.3954 16.9321 19.5005 17.9223 19.011C18.8846 18.5354 19.6943 17.7511 19.7965 16.8313L20 15L22 14L19.5 10.25C19.5 5.69365 15.8063 2 11.25 2C10.096 2 8.99733 2.23694 8 2.66482M6.5 16.9962V22M6.5 16.9962C5.13927 16.0364 4.08188 14.6752 3.5 13.085M6.5 16.9962C7.25065 17.5257 8.09362 17.9331 9 18.1895", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "0" }],
-  ["path", { d: "M2.75 3.25L6 5.5H10M3.5 3.25C3.5 3.66421 3.16421 4 2.75 4C2.33579 4 2 3.66421 2 3.25C2 2.83579 2.33579 2.5 2.75 2.5C3.16421 2.5 3.5 2.83579 3.5 3.25Z", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "1" }],
-  ["path", { d: "M2.75 8.75H10M3.5 8.75C3.5 9.16421 3.16421 9.5 2.75 9.5C2.33579 9.5 2 9.16421 2 8.75C2 8.33579 2.33579 8 2.75 8C3.16421 8 3.5 8.33579 3.5 8.75Z", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "2" }]
+  ["path", { d: "M20.4185 14C20.7935 13.0736 21 12.0609 21 11C21 8.66111 21 7.49167 20.4635 6.63789C20.1838 6.19267 19.8073 5.81621 19.3621 5.53647C18.5083 5 17.3389 5 15 5H9C6.66111 5 5.49167 5 4.63789 5.53647C4.19267 5.81621 3.81621 6.19267 3.53647 6.63789C3 7.49167 3 8.66111 3 11C3 15.4183 6.58172 19 11 19H12", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "0" }],
+  ["path", { d: "M8 10.375V11.125M8.75 10.75C8.75 11.1642 8.41421 11.5 8 11.5C7.58579 11.5 7.25 11.1642 7.25 10.75C7.25 10.3358 7.58579 10 8 10C8.41421 10 8.75 10.3358 8.75 10.75Z", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "1" }],
+  ["path", { d: "M16 10.375V11.125M16.75 10.75C16.75 11.1642 16.4142 11.5 16 11.5C15.5858 11.5 15.25 11.1642 15.25 10.75C15.25 10.3358 15.5858 10 16 10C16.4142 10 16.75 10.3358 16.75 10.75Z", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "2" }],
+  ["path", { d: "M12 5V2", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "3" }],
+  ["path", { d: "M18.5 17.9375V19.5M18.5 19.5V21.0625M18.5 19.5H17.25M18.5 19.5H19.75M21 19.5L19.9156 19.1385C19.4179 18.9726 19.0274 18.5821 18.8615 18.0844L18.5 17L18.1385 18.0844C17.9726 18.5821 17.5821 18.9726 17.0844 19.1385L16 19.5L17.0844 19.8615C17.5821 20.0274 17.9726 20.4179 18.1385 20.9156L18.5 22L18.8615 20.9156C19.0274 20.4179 19.4179 20.0274 19.9156 19.8615L21 19.5Z", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "4" }]
 ];
 
 export default ArtificialIntelligence03Icon;

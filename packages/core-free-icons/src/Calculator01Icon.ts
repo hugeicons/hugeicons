@@ -1,11 +1,11 @@
 import type { IconSvgObject } from './types';
 
 const Calculator01Icon: IconSvgObject = [
-  ["path", { d: "M3 10H21", stroke: "currentColor", strokeLinejoin: "round", strokeWidth: "1.5", key: "0" }],
-  ["path", { d: "M15 6L17 6", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "1" }],
-  ["path", { d: "M21 13V11C21 6.75736 21 4.63604 19.682 3.31802C18.364 2 16.2426 2 12 2C7.75736 2 5.63604 2 4.31802 3.31802C3 4.63604 3 6.75736 3 11V13C3 17.2426 3 19.364 4.31802 20.682C5.63604 22 7.75736 22 12 22C16.2426 22 18.364 22 19.682 20.682C21 19.364 21 17.2426 21 13Z", stroke: "currentColor", strokeWidth: "1.5", key: "2" }],
-  ["path", { d: "M7 14H7.52632M11.7368 14H12.2632M16.4737 14H17", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "3" }],
-  ["path", { d: "M7 18H7.52632M11.7368 18H12.2632M16.4737 18H17", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "4" }]
+  ["path", { d: "M4 10H20", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "0" }],
+  ["path", { d: "M12 13.875V14M16 13.875V14M8 13.875V14M12.25 14C12.25 13.8619 12.1381 13.75 12 13.75C11.8619 13.75 11.75 13.8619 11.75 14C11.75 14.1381 11.8619 14.25 12 14.25C12.1381 14.25 12.25 14.1381 12.25 14ZM16.25 14C16.25 13.8619 16.1381 13.75 16 13.75C15.8619 13.75 15.75 13.8619 15.75 14C15.75 14.1381 15.8619 14.25 16 14.25C16.1381 14.25 16.25 14.1381 16.25 14ZM8.25 14C8.25 13.8619 8.13807 13.75 8 13.75C7.86193 13.75 7.75 13.8619 7.75 14C7.75 14.1381 7.86193 14.25 8 14.25C8.13807 14.25 8.25 14.1381 8.25 14Z", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "1" }],
+  ["path", { d: "M12 17.875V18M16 17.875V18M8 17.875V18M12.25 18C12.25 17.8619 12.1381 17.75 12 17.75C11.8619 17.75 11.75 17.8619 11.75 18C11.75 18.1381 11.8619 18.25 12 18.25C12.1381 18.25 12.25 18.1381 12.25 18ZM16.25 18C16.25 17.8619 16.1381 17.75 16 17.75C15.8619 17.75 15.75 17.8619 15.75 18C15.75 18.1381 15.8619 18.25 16 18.25C16.1381 18.25 16.25 18.1381 16.25 18ZM8.25 18C8.25 17.8619 8.13807 17.75 8 17.75C7.86193 17.75 7.75 17.8619 7.75 18C7.75 18.1381 7.86193 18.25 8 18.25C8.13807 18.25 8.25 18.1381 8.25 18Z", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "2" }],
+  ["path", { d: "M13 6L16 6", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "3" }],
+  ["path", { d: "M20 9V15C20 18.2998 20 19.9497 18.9749 20.9749C17.9497 22 16.2998 22 13 22H11C7.70017 22 6.05025 22 5.02513 20.9749C4 19.9497 4 18.2998 4 15V9C4 5.70017 4 4.05025 5.02513 3.02513C6.05025 2 7.70017 2 11 2H13C16.2998 2 17.9497 2 18.9749 3.02513C20 4.05025 20 5.70017 20 9Z", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "4" }]
 ];
 
 export default Calculator01Icon;

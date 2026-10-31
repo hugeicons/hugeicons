@@ -1,11 +1,9 @@
 import type { IconSvgObject } from './types';
 
 const ComputerDollarIcon: IconSvgObject = [
-  ["path", { d: "M14.5 22L14.1845 21.5811C13.4733 20.6369 13.2969 19.1944 13.7468 18", stroke: "currentColor", strokeLinecap: "round", strokeWidth: "1.5", key: "0" }],
-  ["path", { d: "M9.5 22L9.8155 21.5811C10.5267 20.6369 10.7031 19.1944 10.2532 18", stroke: "currentColor", strokeLinecap: "round", strokeWidth: "1.5", key: "1" }],
-  ["path", { d: "M7 22H17", stroke: "currentColor", strokeLinecap: "round", strokeWidth: "1.5", key: "2" }],
-  ["path", { d: "M12 7C10.8954 7 10 7.67157 10 8.5C10 9.32843 10.8954 10 12 10C13.1046 10 14 10.6716 14 11.5C14 12.3284 13.1046 13 12 13M12 7C12.8708 7 13.6116 7.4174 13.8862 8M12 7V6M12 13C11.1292 13 10.3884 12.5826 10.1138 12M12 13V14", stroke: "currentColor", strokeLinecap: "round", strokeWidth: "1.5", key: "3" }],
-  ["path", { d: "M14 2H10C6.72077 2 5.08116 2 3.91891 2.81382C3.48891 3.1149 3.1149 3.48891 2.81382 3.91891C2 5.08116 2 6.72077 2 10C2 13.2792 2 14.9188 2.81382 16.0811C3.1149 16.5111 3.48891 16.8851 3.91891 17.1862C5.08116 18 6.72077 18 10 18H14C17.2792 18 18.9188 18 20.0811 17.1862C20.5111 16.8851 20.8851 16.5111 21.1862 16.0811C22 14.9188 22 13.2792 22 10C22 6.72077 22 5.08116 21.1862 3.91891C20.8851 3.48891 20.5111 3.1149 20.0811 2.81382C18.9188 2 17.2792 2 14 2Z", stroke: "currentColor", strokeLinecap: "round", strokeWidth: "1.5", key: "4" }]
+  ["path", { d: "M8 3H16C18.8284 3 20.2426 3 21.1213 3.87868C22 4.75736 22 6.17157 22 9V11C22 13.8284 22 15.2426 21.1213 16.1213C20.2426 17 18.8284 17 16 17H8C5.17157 17 3.75736 17 2.87868 16.1213C2 15.2426 2 13.8284 2 11V9C2 6.17157 2 4.75736 2.87868 3.87868C3.75736 3 5.17157 3 8 3Z", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "0" }],
+  ["path", { d: "M14 21H16M14 21C13.1716 21 12.5 20.3284 12.5 19.5V17H12M14 21H12M10 21H8M10 21C10.8284 21 11.5 20.3284 11.5 19.5V17H12M10 21H12M12 17V21", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "1" }],
+  ["path", { d: "M12 13H13C13.8284 13 14.5 12.3284 14.5 11.5C14.5 10.6716 13.8284 10 13 10H11C10.1716 10 9.5 9.32843 9.5 8.5C9.5 7.67157 10.1716 7 11 7H12M12 13H9.5M12 13V14M14.5 7H12M12 7V6", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "2" }]
 ];
 
 export default ComputerDollarIcon;

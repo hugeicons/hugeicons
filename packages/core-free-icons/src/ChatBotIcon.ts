@@ -1,13 +1,13 @@
 import type { IconSvgObject } from './types';
 
 const ChatBotIcon: IconSvgObject = [
-  ["path", { d: "M11 8H13C15.8284 8 17.2426 8 18.1213 8.87868C19 9.75736 19 11.1716 19 14C19 16.8284 19 18.2426 18.1213 19.1213C17.2426 20 15.8284 20 13 20H12C12 20 11.5 22 8 22C8 22 9 20.9913 9 19.9827C7.44655 19.9359 6.51998 19.7626 5.87868 19.1213C5 18.2426 5 16.8284 5 14C5 11.1716 5 9.75736 5.87868 8.87868C6.75736 8 8.17157 8 11 8Z", stroke: "currentColor", strokeLinejoin: "round", strokeWidth: "1.5", key: "0" }],
-  ["path", { d: "M19 11.5H19.5C20.4346 11.5 20.9019 11.5 21.25 11.701C21.478 11.8326 21.6674 12.022 21.799 12.25C22 12.5981 22 13.0654 22 14C22 14.9346 22 15.4019 21.799 15.75C21.6674 15.978 21.478 16.1674 21.25 16.299C20.9019 16.5 20.4346 16.5 19.5 16.5H19", stroke: "currentColor", strokeLinejoin: "round", strokeWidth: "1.5", key: "1" }],
-  ["path", { d: "M5 11.5H4.5C3.56538 11.5 3.09808 11.5 2.75 11.701C2.52197 11.8326 2.33261 12.022 2.20096 12.25C2 12.5981 2 13.0654 2 14C2 14.9346 2 15.4019 2.20096 15.75C2.33261 15.978 2.52197 16.1674 2.75 16.299C3.09808 16.5 3.56538 16.5 4.5 16.5H5", stroke: "currentColor", strokeLinejoin: "round", strokeWidth: "1.5", key: "2" }],
-  ["path", { d: "M13.5 3.5C13.5 4.32843 12.8284 5 12 5C11.1716 5 10.5 4.32843 10.5 3.5C10.5 2.67157 11.1716 2 12 2C12.8284 2 13.5 2.67157 13.5 3.5Z", stroke: "currentColor", strokeWidth: "1.5", key: "3" }],
-  ["path", { d: "M12 5V8", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "4" }],
-  ["path", { d: "M9 12V13M15 12V13", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "5" }],
-  ["path", { d: "M10 16.5C10 16.5 10.6667 17 12 17C13.3333 17 14 16.5 14 16.5", stroke: "currentColor", strokeLinecap: "round", strokeWidth: "1.5", key: "6" }]
+  ["path", { d: "M14.001 5.99609H10.001C7.17255 5.99609 5.75834 5.99609 4.87966 6.87477C4.00098 7.75345 4.00098 9.16767 4.00098 11.9961V14.9961C4.00098 15.9261 4.00098 16.3911 4.1032 16.7725C4.3806 17.8078 5.18924 18.6165 6.22452 18.8939C6.60602 18.9961 7.071 18.9961 8.00098 18.9961V21.2938C8.00098 21.6838 8.31716 22 8.7072 22C8.89466 22 9.07444 21.9255 9.2069 21.7928L12 18.9961H14.001C16.8294 18.9961 18.2436 18.9961 19.1223 18.1174C20.001 17.2387 20.001 15.8245 20.001 12.9961V11.9961C20.001 9.16767 20.001 7.75345 19.1223 6.87477C18.2436 5.99609 16.8294 5.99609 14.001 5.99609Z", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "0" }],
+  ["path", { d: "M4 12.0039H2", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "1" }],
+  ["path", { d: "M22 12.0039H20", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "2" }],
+  ["path", { d: "M16 10V11", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "3" }],
+  ["path", { d: "M8 10V11", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "4" }],
+  ["path", { d: "M10 14.5C10.3333 14.6667 11 15 12 15C13 15 13.6667 14.6667 14 14.5", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "5" }],
+  ["path", { d: "M12 6C12 4.11438 12 3.17157 11.4142 2.58579C10.8284 2 9.88562 2 8 2", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "6" }]
 ];
 
 export default ChatBotIcon;

@@ -1,8 +1,8 @@
 import type { IconSvgObject } from './types';
 
 const Dollar02Icon: IconSvgObject = [
-  ["path", { d: "M18.4167 8.14815C18.4167 5.85719 15.5438 4 12 4C8.45617 4 5.58333 5.85719 5.58333 8.14815C5.58333 10.4391 7.33333 11.7037 12 11.7037C16.6667 11.7037 19 12.8889 19 15.8519C19 18.8148 15.866 20 12 20C8.13401 20 5 18.1428 5 15.8519", stroke: "currentColor", strokeLinecap: "round", strokeWidth: "1.5", key: "0" }],
-  ["path", { d: "M12 2V22", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "1" }]
+  ["path", { d: "M6 15.5C6 17.433 7.567 19 9.5 19H14.5C16.433 19 18 17.433 18 15.5C18 13.567 16.433 12 14.5 12H9.5C7.567 12 6 10.433 6 8.5C6 6.567 7.567 5 9.5 5H14.5C16.433 5 18 6.567 18 8.5", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "0" }],
+  ["path", { d: "M12 2.5V5M12 19V21.5", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "1" }]
 ];
 
 export default Dollar02Icon;

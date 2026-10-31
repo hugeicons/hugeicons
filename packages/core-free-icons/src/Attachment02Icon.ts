@@ -1,7 +1,7 @@
 import type { IconSvgObject } from './types';
 
 const Attachment02Icon: IconSvgObject = [
-  ["path", { d: "M8 8.00049V6.00049C8 3.79135 9.79086 2.00049 12 2.00049C14.2091 2.00049 16 3.79135 16 6.00049V18.0005C16 20.2096 14.2091 22.0005 12 22.0005C9.79086 22.0005 8 20.2096 8 18.0005V13.5005C8 12.1198 9.11929 11.0005 10.5 11.0005C11.8807 11.0005 13 12.1198 13 13.5005V16.0005", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "0" }]
+  ["path", { d: "M7.5 14.5005L16.7751 5.22536C17.2393 4.76123 17.8687 4.50049 18.5251 4.50049C19.892 4.50049 21 5.60853 21 6.97536C21 7.63174 20.7393 8.26123 20.2751 8.72536L10.2426 18.7578C9.44699 19.5535 8.36786 20.0005 7.24264 20.0005C4.89949 20.0005 3 18.101 3 15.7578C3 14.6326 3.44699 13.5535 4.24264 12.7578L13 4.00049", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "0" }]
 ];
 
 export default Attachment02Icon;

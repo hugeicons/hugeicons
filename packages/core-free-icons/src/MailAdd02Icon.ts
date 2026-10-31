@@ -1,9 +1,9 @@
 import type { IconSvgObject } from './types';
 
 const MailAdd02Icon: IconSvgObject = [
-  ["path", { d: "M7 7.5L9.94202 9.23943C11.6572 10.2535 12.3428 10.2535 14.058 9.23943L17 7.5", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "0" }],
-  ["path", { d: "M11.5 19.5C11.5 19.5 10.0691 19.4878 9.09883 19.4634C5.95033 19.3843 4.37608 19.3448 3.24496 18.2094C2.11383 17.0739 2.08114 15.5412 2.01577 12.4756C1.99475 11.4899 1.99474 10.5101 2.01576 9.52438C2.08114 6.45885 2.11382 4.92608 3.24495 3.79065C4.37608 2.65521 5.95033 2.61566 9.09882 2.53656C11.0393 2.48781 12.9607 2.48781 14.9012 2.53657C18.0497 2.61568 19.6239 2.65523 20.7551 3.79066C21.8862 4.92609 21.9189 6.45886 21.9842 9.52439C21.9918 9.88124 21.9967 10.4995 21.9988 11", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "1" }],
-  ["path", { d: "M14 17.5H22M18 21.5L18 13.5", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "2" }]
+  ["path", { d: "M21.9985 13.5C22.0053 13.0441 21.9985 13.0599 21.9985 12.5V8.5C21.9985 5.67157 21.9985 4.25736 21.1198 3.37868C20.2411 2.5 18.8269 2.5 15.9985 2.5H7.99849C5.17006 2.5 3.75585 2.5 2.87717 3.37868C1.99849 4.25736 1.99849 5.67157 1.99849 8.5V12.5C1.99849 15.3284 1.99849 16.7426 2.87717 17.6213C3.75585 18.5 5.17006 18.5 7.99849 18.5H11.9985", stroke: "currentColor", strokeLinecap: "round", strokeWidth: "1.5", key: "0" }],
+  ["path", { d: "M5.99849 7L10.9907 10.2322C11.6135 10.5954 12.3835 10.5954 13.0062 10.2322L17.9985 7", stroke: "currentColor", strokeLinecap: "round", strokeWidth: "1.5", key: "1" }],
+  ["path", { d: "M18.4985 14.5V21.5M21.9985 18H14.9985", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "2" }]
 ];
 
 export default MailAdd02Icon;

@@ -1,12 +1,11 @@
 import type { IconSvgObject } from './types';
 
 const MachineRobotIcon: IconSvgObject = [
-  ["path", { d: "M17 13V8C17 5.23858 14.7614 3 12 3C9.23858 3 7 5.23858 7 8V13C7 14.8692 7 15.8038 7.40192 16.5C7.66523 16.9561 8.04394 17.3348 8.5 17.5981C9.19615 18 10.1308 18 12 18C13.8692 18 14.8038 18 15.5 17.5981C15.9561 17.3348 16.3348 16.9561 16.5981 16.5C17 15.8038 17 14.8692 17 13Z", stroke: "currentColor", strokeLinejoin: "round", strokeWidth: "1.5", key: "0" }],
-  ["path", { d: "M18 21C18 19.8954 18.8954 19 20 19C21.1046 19 22 19.8954 22 21", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "1" }],
-  ["path", { d: "M2 21C2 19.8954 2.89543 19 4 19C5.10457 19 6 19.8954 6 21", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "2" }],
-  ["path", { d: "M10.125 7.25H10M10.25 7.25C10.25 7.38807 10.1381 7.5 10 7.5C9.86193 7.5 9.75 7.38807 9.75 7.25C9.75 7.11193 9.86193 7 10 7C10.1381 7 10.25 7.11193 10.25 7.25Z", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "3" }],
-  ["path", { d: "M14.125 7.25H14M14.25 7.25C14.25 7.38807 14.1381 7.5 14 7.5C13.8619 7.5 13.75 7.38807 13.75 7.25C13.75 7.11193 13.8619 7 14 7C14.1381 7 14.25 7.11193 14.25 7.25Z", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "4" }],
-  ["path", { d: "M20 19V15C20 13.1144 20 12.1716 19.4142 11.5858C18.8284 11 17.8856 11 16 11H8C6.11438 11 5.17157 11 4.58579 11.5858C4 12.1716 4 13.1144 4 15V19", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "5" }]
+  ["path", { d: "M18 9V15C18 17.8284 18 19.2426 17.1213 20.1213C16.2426 21 14.8284 21 12 21C9.17157 21 7.75736 21 6.87868 20.1213C6 19.2426 6 17.8284 6 15V9C6 5.68629 8.68629 3 12 3C15.3137 3 18 5.68629 18 9Z", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "0" }],
+  ["path", { d: "M10.125 9.25H10M10.25 9.25C10.25 9.38807 10.1381 9.5 10 9.5C9.86193 9.5 9.75 9.38807 9.75 9.25C9.75 9.11193 9.86193 9 10 9C10.1381 9 10.25 9.11193 10.25 9.25Z", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "1" }],
+  ["path", { d: "M14.125 9.25H14M14.25 9.25C14.25 9.38807 14.1381 9.5 14 9.5C13.8619 9.5 13.75 9.38807 13.75 9.25C13.75 9.11193 13.8619 9 14 9C14.1381 9 14.25 9.11193 14.25 9.25Z", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "2" }],
+  ["path", { d: "M22 21V18C22 15.643 22 14.4645 21.2678 13.7322C20.5355 13 19.357 13 17 13H7C4.64298 13 3.46447 13 2.73223 13.7322C2 14.4645 2 15.643 2 18V21", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "3" }],
+  ["path", { d: "M10 17H14", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", key: "4" }]
 ];
 
 export default MachineRobotIcon;
