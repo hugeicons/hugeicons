@@ -6,6 +6,9 @@
     "name": "Halal Lab",
     "url": "https://hugeicons.com"
   },
+  "homepage": "https://hugeicons.com/docs/integrations/mcp",
+  "repository": "https://github.com/hugeicons/claude-plugin",
+  "license": "MIT",
   "keywords": [
     "icons",
     "icon library",

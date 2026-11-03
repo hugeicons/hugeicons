@@ -1,0 +1,58 @@
+name: Claude plugin mirror
+
+# Anthropic's plugin directory rejects repositories with more than 10,000 files, so it tracks
+# github.com/hugeicons/claude-plugin, a small repository holding only the plugin. This keeps
+# that repository equal to plugins/claude. It's generated, so never commit to it by hand.
+#
+# Pushing needs a deploy key with write access on hugeicons/claude-plugin. Its private half is
+# stored in this repository as the CLAUDE_PLUGIN_DEPLOY_KEY secret.
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'plugins/claude/**'
+      - 'plugins/claude-mirror/**'
+      - 'LICENSE.md'
+      - '.github/workflows/claude-plugin-mirror.yml'
+  workflow_dispatch:
+
+concurrency:
+  group: claude-plugin-mirror
+  cancel-in-progress: false
+
+jobs:
+  mirror:
+    name: Push plugins/claude to hugeicons/claude-plugin
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          path: source
+
+      - uses: actions/checkout@v4
+        with:
+          repository: hugeicons/claude-plugin
+          ssh-key: ${{ secrets.CLAUDE_PLUGIN_DEPLOY_KEY }}
+          path: mirror
+
+      - name: Skill copies are current
+        working-directory: source
+        run: python3 plugins/sync-skills.py --check
+
+      - name: Build the plugin
+        run: python3 source/plugins/claude-mirror/build.py mirror
+
+      - name: Commit and push if anything changed
+        working-directory: mirror
+        run: |
+          git add -A
+          if git diff --cached --quiet; then
+            echo "hugeicons/claude-plugin is already up to date."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898299+github-actions[bot]@users.noreply.github.com"
+          git commit -m "Sync from hugeicons/hugeicons@${GITHUB_SHA::7}" \
+                     -m "https://github.com/hugeicons/hugeicons/commit/${GITHUB_SHA}"
+          git push origin HEAD
