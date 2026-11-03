@@ -1,0 +1,21 @@
+{
+  "name": "hugeicons",
+  "version": "1.0.0",
+  "description": "Hugeicons integration for Grok Build (MCP server + skills). Search 6,000+ Hugeicons icons by meaning, get the exact install command and import for React, Vue, Angular, Svelte, SolidJS, React Native, Flutter and the web font, and migrate a project to Hugeicons from lucide, Heroicons or react-icons. Resolves every icon name against the live catalog instead of guessing it.",
+  "author": {
+    "name": "Halal Lab",
+    "url": "https://hugeicons.com"
+  },
+  "homepage": "https://hugeicons.com/docs/integrations/mcp",
+  "repository": "https://github.com/hugeicons/hugeicons",
+  "license": "MIT",
+  "keywords": [
+    "hugeicons",
+    "hugeicons icons",
+    "hugeicons react",
+    "hugeicons flutter",
+    "hugeicons mcp",
+    "hugeicons migrate"
+  ],
+  "logo": "assets/logo.svg"
+}
