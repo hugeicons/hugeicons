@@ -1,8 +1,7 @@
 name: Portable file names
 
-# A file name Windows can't create breaks `git clone` for every Windows user, and Anthropic's
-# plugin directory rejects the whole repository over it. icons/re:.svg got in through an icon
-# sync, so this checks every tracked path, not only hand-written ones.
+# A file name Windows can't create breaks `git clone` on Windows. This checks every tracked path,
+# including generated ones.
 
 on:
   push:
