@@ -1,0 +1,46 @@
+name: Portable file names
+
+# A file name Windows can't create breaks `git clone` for every Windows user, and Anthropic's
+# plugin directory rejects the whole repository over it. icons/re:.svg got in through an icon
+# sync, so this checks every tracked path, not only hand-written ones.
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  check:
+    name: Every tracked path is valid on Windows, macOS and Linux
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Check tracked paths
+        run: |
+          git ls-files -z | python3 -c '
+          import re, sys
+          reserved = re.compile(r"^(con|prn|aux|nul|com[1-9]|lpt[1-9])(\..*)?$", re.I)
+          bad = []
+          for raw in sys.stdin.buffer.read().split(b"\0"):
+              if not raw:
+                  continue
+              try:
+                  path = raw.decode("utf-8")
+              except UnicodeDecodeError:
+                  bad.append((repr(raw), "not valid UTF-8"))
+                  continue
+              for part in path.split("/"):
+                  if any(c in part for c in "<>:\"\\|?*") or any(ord(c) < 32 for c in part):
+                      bad.append((path, "contains a character Windows forbids"))
+                  elif part.endswith((".", " ")):
+                      bad.append((path, "ends in a dot or a space"))
+                  elif reserved.match(part):
+                      bad.append((path, "is a reserved Windows device name"))
+                  else:
+                      continue
+                  break
+          for path, why in bad:
+              print(f"::error file={path}::{path} {why}")
+          sys.exit(1 if bad else 0)
+          '
