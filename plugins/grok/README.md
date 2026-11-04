@@ -84,8 +84,10 @@ back in review for misfiring on unrelated requests. This is the opposite of the 
 plugin, whose keywords are deliberately generic for marketplace search. Don't copy one to the
 other.
 
-**To update a published plugin,** bump the `sha` in the existing entry and regenerate the index.
-Don't open a second entry.
+**To update a published plugin,** bump `version` in `.grok-plugin/plugin.json` and merge. A
+daily job in the marketplace repo moves the pinned `sha` to our latest commit whenever `version`
+changes, and leaves it alone when it doesn't, so a merge without a version bump never ships.
+Never open a second entry.
 
 ## Validate locally
 
