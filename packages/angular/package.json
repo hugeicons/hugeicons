@@ -28,7 +28,7 @@
   "scripts": {
     "build": "pnpm clean && ng-packagr -p ng-package.json",
     "clean": "rm -rf dist",
-    "test": "ng test",
+    "test": "pnpm build && node --test test/*.test.mjs",
     "publish:beta": "pnpm build && npm publish --tag beta --no-git-checks",
     "publish:prod": "pnpm build && npm publish --no-git-checks"
   },
@@ -40,11 +40,14 @@
     "@angular/core": ">=17.1.0 <23.0.0"
   },
   "devDependencies": {
+    "@angular/animations": "^17.0.0",
     "@angular/common": "^17.0.0",
     "@angular/compiler": "^17.0.0",
     "@angular/compiler-cli": "^17.0.0",
     "@angular/core": "^17.0.0",
+    "@angular/platform-browser": "^17.0.0",
     "@angular-devkit/build-angular": "^17.0.0",
+    "jsdom": "^24.1.3",
     "ng-packagr": "^17.0.0",
     "typescript": "~5.2.0"
   },
