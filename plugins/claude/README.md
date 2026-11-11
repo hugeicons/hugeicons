@@ -43,3 +43,12 @@ claude plugin validate ./skills                       # skill frontmatter
 
 The marketplace manifest lives at the repository root so the plugin installs from the repo
 itself.
+
+## Anthropic's plugin directory
+
+The directory rejects repositories with more than 10,000 files, which this one is well past, so
+the listing points at [`hugeicons/claude-plugin`](https://github.com/hugeicons/claude-plugin)
+instead. That repository is generated from this folder by
+[`../claude-mirror/build.py`](../claude-mirror/build.py) and pushed by the
+`claude-plugin-mirror` workflow on every change to `main`. Never edit it by hand. The directory
+follows its default branch, so merging here is all it takes to ship an update.
