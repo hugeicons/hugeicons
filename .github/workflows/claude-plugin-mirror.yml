@@ -17,6 +17,9 @@ on:
       - '.github/workflows/claude-plugin-mirror.yml'
   workflow_dispatch:
 
+permissions:
+  contents: read
+
 concurrency:
   group: claude-plugin-mirror
   cancel-in-progress: false
@@ -24,8 +27,19 @@ concurrency:
 jobs:
   mirror:
     name: Push plugins/claude to hugeicons/claude-plugin
+    # A manual run from another branch would publish unmerged changes.
+    if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     steps:
+      - name: Deploy key is set
+        env:
+          DEPLOY_KEY: ${{ secrets.CLAUDE_PLUGIN_DEPLOY_KEY }}
+        run: |
+          if [ -z "$DEPLOY_KEY" ]; then
+            echo "::error::The CLAUDE_PLUGIN_DEPLOY_KEY secret is missing. See the comment at the top of this workflow."
+            exit 1
+          fi
+
       - uses: actions/checkout@v4
         with:
           path: source
