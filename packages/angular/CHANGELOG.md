@@ -1,6 +1,13 @@
 # @hugeicons/angular
 
 
+## 1.0.13
+
+### Patch Changes
+
+- Fixed the browser tab freezing (infinite loop, memory climbing by GBs) when the `icon` input changes in apps that use `@angular/animations` (`provideAnimations()`, `BrowserAnimationsModule` or the noop variants), a regression in 1.0.12 ([#46](https://github.com/hugeicons/hugeicons/issues/46))
+
+
 ## 1.0.12
 
 ### Patch Changes
