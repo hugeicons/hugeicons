@@ -37,6 +37,14 @@ if len(sys.argv) != 2:
 out = os.path.abspath(sys.argv[1])
 os.makedirs(out, exist_ok=True)
 
+# Everything in OUT_DIR is deleted, so refuse a directory that holds anything the mirror
+# doesn't, such as this repository or a mistyped path.
+mirror_names = {dst.split("/")[0] for dst in FILES.values()} | {".git"}
+unexpected = sorted(set(os.listdir(out)) - mirror_names)
+if unexpected:
+    sys.exit(f"Refusing to build into {out}: it holds files the mirror doesn't "
+             f"({', '.join(unexpected[:5])}). Use an empty directory or a clone of the mirror.")
+
 for name in os.listdir(out):
     if name == ".git":
         continue
