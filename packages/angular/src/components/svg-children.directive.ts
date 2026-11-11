@@ -34,8 +34,10 @@ export class HugeiconsSvgChildrenDirective implements OnChanges {
   ngOnChanges(): void {
     const svg = this.host.nativeElement;
 
-    while (svg.firstChild) {
-      this.renderer.removeChild(svg, svg.firstChild);
+    // Iterate over a snapshot: with @angular/animations the renderer only queues the
+    // removal until change detection ends, so svg.firstChild would never change.
+    for (const child of Array.from(svg.childNodes)) {
+      this.renderer.removeChild(svg, child);
     }
 
     for (const { tag, ...props } of this.hugeiconsSvgChildren ?? []) {
