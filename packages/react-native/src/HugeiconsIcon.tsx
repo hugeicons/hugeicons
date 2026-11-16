@@ -1,5 +1,5 @@
 import { createElement, forwardRef, ForwardRefExoticComponent, RefAttributes } from 'react';
-import { Circle, G, Line, Path, Rect, Svg, SvgProps } from 'react-native-svg';
+import { Circle, Ellipse, G, Line, Path, Polygon, Polyline, Rect, Svg, SvgProps } from 'react-native-svg';
 import { StyleProp, ViewStyle } from 'react-native';
 
 export type IconSvgElement = readonly (readonly [string, { readonly [key: string]: string | number }])[];
@@ -21,8 +21,11 @@ const SVGComponents: { [key: string]: any } = {
   svg: Svg,
   path: Path,
   circle: Circle,
+  ellipse: Ellipse,
   rect: Rect,
   line: Line,
+  polygon: Polygon,
+  polyline: Polyline,
   g: G,
 };
 
