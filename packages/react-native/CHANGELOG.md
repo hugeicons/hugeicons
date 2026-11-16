@@ -1,5 +1,10 @@
 # @hugeicons/react-native
 
+## 1.0.17
+
+### Patch Changes
+
+- Render `ellipse`, `polygon` and `polyline` elements. They were dropped before, so icons such as InternetIcon drew incompletely.
 
 ## 1.0.13
 
