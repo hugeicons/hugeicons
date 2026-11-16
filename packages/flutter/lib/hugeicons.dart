@@ -12297,6 +12297,12 @@ class HugeIcons {
 ///   color: Colors.indigo,
 ///   secondaryColor: Colors.pink,
 /// );
+///
+/// // Directional icon that mirrors in right-to-left layouts
+/// HugeIcon(
+///   icon: HugeIcons.strokeRoundedArrowLeft01,
+///   matchTextDirection: true,
+/// );
 /// ```
 class HugeIcon extends StatefulWidget {
   /// The icon data as JSON structure (List<List<dynamic>>).
@@ -12324,6 +12330,20 @@ class HugeIcon extends StatefulWidget {
   /// Has no effect on solid/filled icons.
   final double? strokeWidth;
 
+  /// Whether to mirror the icon horizontally when the ambient
+  /// [Directionality] is [TextDirection.rtl].
+  ///
+  /// Enable it for icons that point along the reading direction, such as
+  /// back and forward arrows or chevrons, so they point the right way in
+  /// right-to-left languages like Arabic and Kurdish. Leave it off for icons
+  /// that keep their orientation in every language, such as logos, clocks or
+  /// media playback controls.
+  ///
+  /// Works like [IconData.matchTextDirection] for Flutter's [Icon]. When
+  /// enabled, the icon needs a [Directionality] ancestor, which [MaterialApp],
+  /// [CupertinoApp] and [WidgetsApp] provide. Defaults to false.
+  final bool matchTextDirection;
+
   /// Creates a new [HugeIcon] widget.
   const HugeIcon({
     super.key,
@@ -12333,6 +12353,7 @@ class HugeIcon extends StatefulWidget {
     this.disableSecondaryOpacity = false,
     this.size = 24.0,
     this.strokeWidth,
+    this.matchTextDirection = false,
   });
 
   @override
@@ -12508,13 +12529,26 @@ class _HugeIconState extends State<HugeIcon> {
     _rebuildIfNeeded(context);
     final double effectiveSize =
         widget.size ?? IconTheme.of(context).size ?? 24.0;
+    Widget picture = SvgPicture.string(
+      _cachedSvg!,
+      width: effectiveSize,
+      height: effectiveSize,
+    );
+    if (widget.matchTextDirection) {
+      // The Transform stays in the tree in both directions, so a runtime
+      // direction switch only updates the matrix instead of remounting the
+      // picture, which can leave it blank until it reloads.
+      final bool isRtl = Directionality.of(context) == TextDirection.rtl;
+      picture = Transform(
+        transform: Matrix4.diagonal3Values(isRtl ? -1.0 : 1.0, 1.0, 1.0),
+        alignment: Alignment.center,
+        transformHitTests: false,
+        child: picture,
+      );
+    }
     return SizedBox.square(
       dimension: effectiveSize,
-      child: SvgPicture.string(
-        _cachedSvg!,
-        width: effectiveSize,
-        height: effectiveSize,
-      ),
+      child: picture,
     );
   }
 }

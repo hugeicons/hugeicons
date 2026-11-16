@@ -1,5 +1,12 @@
 # Changelog
 
+## [Unreleased]
+
+### Added
+- **`matchTextDirection`** on `HugeIcon`: mirror directional icons (arrows, chevrons) horizontally when the ambient `Directionality` is right-to-left, like `IconData.matchTextDirection` for Flutter's `Icon`. Opt-in and `false` by default, so existing icons render exactly as before
+
+---
+
 ## [4.4.0] - 2026-10-30
 
 ### Versioning

@@ -29,6 +29,7 @@ You can preview out our full collection of icons on the [Hugeicons website](http
 - **Scalable Icons**: Easily adjust the size of icons to fit your design perfectly.
 - **Color Customization**: Apply any color to icons to match your brand or design theme.
 - **Stroke Width Control**: Customize stroke width for fine-tuned design control.
+- **RTL Mirroring**: Opt-in mirroring of directional icons in right-to-left layouts.
 - **Tree Shaking**: Only include the icons you use in your final app bundle.
 
 ## Installation
@@ -72,6 +73,21 @@ HugeIcon(
   strokeWidth: 2.5, // Custom stroke width
 ),
 ```
+
+### Right-to-Left (RTL) Mirroring
+
+Directional icons such as arrows and chevrons can flip automatically in right-to-left languages like Arabic and Kurdish. Set `matchTextDirection: true` and the icon is mirrored horizontally whenever the ambient `Directionality` is `TextDirection.rtl`:
+
+```dart
+HugeIcon(
+  icon: HugeIcons.strokeRoundedArrowLeft01,
+  matchTextDirection: true, // Points right in RTL layouts
+),
+```
+
+- `matchTextDirection` defaults to `false`: icons keep their original drawing unless you opt in.
+- Enable it only for icons that point along the reading direction, such as back and forward arrows or chevrons. Leave it off for icons that keep their orientation in every language, such as logos, clocks or media playback controls.
+- It works like `IconData.matchTextDirection` for Flutter's `Icon`, and needs a `Directionality` ancestor (`MaterialApp`, `CupertinoApp` and `WidgetsApp` provide one).
 
 ### Available Icons
 
